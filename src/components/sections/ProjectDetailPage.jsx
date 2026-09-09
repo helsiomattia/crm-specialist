@@ -12,7 +12,7 @@ import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import { useTranslation } from 'react-i18next';
 import { getLocalizedString } from '../../utils/i18nHelper';
-import { getPortfolioProjectById } from '../../data/portfolioProjects';
+import { getPortfolioProjectById, getPortfolioProjectsByParent } from '../../data/portfolioProjects';
 import { visualColors } from '../../theme/tokens';
 
 const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -24,28 +24,183 @@ const PROJECT_EMBED_LOADERS = {
   'intelligence-360': () => import('../../../projects/Intelligence360_Generic.html?raw'),
   'revenue-churn-intelligence': () => import('../../../projects/Revenue_Churn_Intelligence_Generic.html?raw'),
   'salesforce-architecture-control-center': () => import('../../../projects/Salesforce_Architecture_Control_Center_Generic.html?raw'),
+  'lwc-enterprise-integration-reliability-hub': () => import('../../../projects/lwc/enterprise-integration-reliability-hub-preview.html?raw'),
+  'lwc-deal-governance-center': () => import('../../../projects/lwc/deal-governance-center-preview.html?raw'),
+  'lwc-customer-relationship-graph': () => import('../../../projects/lwc/customer-relationship-graph-preview.html?raw'),
+  'lwc-customer-data-quality-center': () => import('../../../projects/lwc/customer-data-quality-center-preview.html?raw'),
+  'lwc-lead-account-routing-studio': () => import('../../../projects/lwc/lead-account-routing-studio-preview.html?raw'),
+  'lwc-intelligent-workload-routing-studio': () => import('../../../projects/lwc/intelligent-workload-routing-studio-preview.html?raw'),
+  'lwc-omni-transfer-intelligence': () => import('../../../projects/lwc/omni-transfer-intelligence-preview.html?raw'),
+  'lwc-pipeline-risk-inspector': () => import('../../../projects/lwc/pipeline-risk-inspector-preview.html?raw'),
+  'lwc-sla-escalation-control-tower': () => import('../../../projects/lwc/sla-escalation-control-tower-preview.html?raw'),
+  'lwc-unified-interaction-timeline': () => import('../../../projects/lwc/unified-interaction-timeline-preview.html?raw'),
 };
 
 function getHomeProjectsPath() {
   return `${BASE_PATH || ''}/projects${window.location.search}`;
 }
 
+function LwcDemoMenu({ demos, activeDemo, lang, onSelect }) {
+  return (
+    <Box
+      component="nav"
+      aria-label="Demonstrações LWC"
+      sx={{
+        bgcolor: visualColors.commandNavy,
+        color: visualColors.surfaceWhite,
+        borderRadius: { xs: '20px', lg: '28px 0 0 28px' },
+        minWidth: 0,
+        p: { xs: 1, md: 1.2 },
+        display: 'flex',
+        flexDirection: { xs: 'row', lg: 'column' },
+        gap: 0.65,
+        overflowX: { xs: 'auto', lg: 'visible' },
+        overflowY: { xs: 'hidden', lg: 'auto' },
+        maxHeight: { xs: 'none', lg: 'calc(100dvh - 220px)' },
+        scrollbarWidth: 'thin',
+        '&::-webkit-scrollbar': {
+          height: 8,
+          width: 8,
+        },
+        '&::-webkit-scrollbar-thumb': {
+          bgcolor: alpha(visualColors.flowCyan, 0.48),
+          borderRadius: 999,
+        },
+      }}
+    >
+      {demos.map((demo) => {
+        const isActive = demo.id === activeDemo?.id;
+
+        return (
+          <Box
+            component="button"
+            key={demo.id}
+            type="button"
+            onClick={() => onSelect(demo.id)}
+            aria-current={isActive ? 'page' : undefined}
+            sx={{
+              width: { xs: 240, lg: '100%' },
+              flex: { xs: '0 0 auto', lg: '0 0 auto' },
+              border: 0,
+              borderRadius: { xs: '15px', lg: '18px' },
+              p: { xs: 1.2, md: 1.35 },
+              textAlign: 'left',
+              cursor: 'pointer',
+              color: visualColors.surfaceWhite,
+              bgcolor: isActive ? alpha(demo.accent, 0.34) : 'transparent',
+              boxShadow: isActive ? `inset 4px 0 0 ${demo.accent}` : `inset 1px 0 0 ${alpha(visualColors.surfaceWhite, 0.08)}`,
+              transition: 'background-color 180ms ease, box-shadow 180ms ease',
+              '&:hover': {
+                bgcolor: isActive ? alpha(demo.accent, 0.38) : alpha(visualColors.surfaceWhite, 0.08),
+              },
+              '&:focus-visible': {
+                outline: `3px solid ${alpha(visualColors.flowCyan, 0.7)}`,
+                outlineOffset: 2,
+              },
+            }}
+          >
+            <Typography sx={{ fontSize: '0.86rem', fontWeight: 850, lineHeight: 1.2 }}>
+              {getLocalizedString(demo.title, lang)}
+            </Typography>
+            <Typography sx={{ mt: 0.55, color: alpha(visualColors.surfaceWhite, 0.7), fontSize: '0.68rem', lineHeight: 1.35 }}>
+              {demo.tags.slice(1, 3).join(' / ')}
+            </Typography>
+          </Box>
+        );
+      })}
+    </Box>
+  );
+}
+
+function EmbeddedProjectPreview({ project, lang, t, embedHtml, iframeHeight, iframeRef, isLoadingEmbed }) {
+  return (
+    <Paper
+      className="embedded-html-view"
+      elevation={0}
+      sx={{
+        borderRadius: { xs: '20px', md: '28px' },
+        border: `1px solid ${alpha(project.accent, 0.24)}`,
+        bgcolor: 'rgba(255,255,255,0.88)',
+        boxShadow: `0 24px 80px ${alpha(visualColors.commandNavy, 0.12)}`,
+        height: 'auto',
+        maxHeight: 'none',
+        overflow: 'visible',
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 0.9,
+          px: { xs: 1.5, md: 2 },
+          py: 1.2,
+          borderBottom: '1px solid rgba(15,37,55,0.12)',
+          borderTopLeftRadius: 'inherit',
+          borderTopRightRadius: 'inherit',
+          background: `linear-gradient(90deg, ${alpha(visualColors.consoleMist, 0.78)} 0%, ${alpha(project.accent, 0.08)} 100%)`,
+        }}
+      >
+        {['#D94A5F', visualColors.signalAmber, visualColors.successGreen].map((color) => (
+          <Box key={color} sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: color }} />
+        ))}
+        <Typography sx={{ ml: 0.6, fontFamily: '"Fira Code", monospace', fontSize: '0.72rem', fontWeight: 850, color: 'text.secondary' }}>
+          {t('portfolioProjects.frameTitle')}
+        </Typography>
+      </Box>
+
+      {embedHtml ? (
+        <Box
+          component="iframe"
+          ref={iframeRef}
+          title={`${getLocalizedString(project.title, lang)} preview`}
+          srcDoc={embedHtml}
+          sandbox="allow-scripts allow-same-origin"
+          scrolling="no"
+          sx={{
+            display: 'block',
+            width: '100%',
+            height: `${iframeHeight}px`,
+            maxHeight: 'none',
+            border: 0,
+            borderBottomLeftRadius: 'inherit',
+            borderBottomRightRadius: 'inherit',
+            bgcolor: '#fff',
+            overflow: 'hidden',
+          }}
+        />
+      ) : (
+        <Box sx={{ p: { xs: 3, md: 5 }, textAlign: 'center', bgcolor: '#fff' }}>
+          <Typography sx={{ color: 'text.primary', fontWeight: 700 }}>
+            {isLoadingEmbed ? t('portfolioProjects.loadingDemo') : t('portfolioProjects.demoUnavailable')}
+          </Typography>
+        </Box>
+      )}
+    </Paper>
+  );
+}
+
 export default function ProjectDetailPage({ projectId }) {
   const { i18n, t } = useTranslation();
   const lang = i18n.resolvedLanguage || 'pt';
   const project = getPortfolioProjectById(projectId);
+  const childProjects = project?.kind === 'collection' ? getPortfolioProjectsByParent(project.id) : [];
+  const [activeCollectionProjectId, setActiveCollectionProjectId] = useState('');
+  const activeCollectionProject = childProjects.find((childProject) => childProject.id === activeCollectionProjectId) || childProjects[0];
+  const previewProject = project?.kind === 'collection' ? activeCollectionProject : project;
+  const pageAccent = previewProject?.accent || project?.accent || visualColors.salesforceCore;
   const iframeRef = useRef(null);
   const [iframeHeight, setIframeHeight] = useState(DEFAULT_IFRAME_HEIGHT);
   const [embedHtml, setEmbedHtml] = useState('');
   const [isLoadingEmbed, setIsLoadingEmbed] = useState(false);
 
   useEffect(() => {
-    if (!project || project.kind !== 'embed') {
+    if (!previewProject || previewProject.kind !== 'embed') {
       setEmbedHtml('');
+      setIsLoadingEmbed(false);
       return undefined;
     }
 
-    const loadEmbed = PROJECT_EMBED_LOADERS[project.id];
+    const loadEmbed = PROJECT_EMBED_LOADERS[previewProject.id];
     if (!loadEmbed) {
       setEmbedHtml('');
       return undefined;
@@ -69,7 +224,7 @@ export default function ProjectDetailPage({ projectId }) {
     return () => {
       cancelled = true;
     };
-  }, [project]);
+  }, [previewProject]);
 
   useEffect(() => {
     const iframe = iframeRef.current;
@@ -201,7 +356,7 @@ export default function ProjectDetailPage({ projectId }) {
           width: { xs: 280, md: 460 },
           height: { xs: 280, md: 460 },
           borderRadius: '50%',
-          background: `radial-gradient(circle, ${alpha(project.accent, 0.2)} 0%, transparent 70%)`,
+          background: `radial-gradient(circle, ${alpha(pageAccent, 0.2)} 0%, transparent 70%)`,
           filter: 'blur(36px)',
           pointerEvents: 'none',
         }}
@@ -239,68 +394,71 @@ export default function ProjectDetailPage({ projectId }) {
           </Typography>
         </Box>
 
-        <Paper
-          className="embedded-html-view"
-          elevation={0}
-          sx={{
-            borderRadius: { xs: '20px', md: '28px' },
-            border: `1px solid ${alpha(project.accent, 0.24)}`,
-            bgcolor: 'rgba(255,255,255,0.88)',
-            boxShadow: `0 24px 80px ${alpha(visualColors.commandNavy, 0.12)}`,
-            height: 'auto',
-            maxHeight: 'none',
-            overflow: 'visible',
-          }}
-        >
-          <Box
+        {project.kind === 'collection' ? (
+          <Paper
+            elevation={0}
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 0.9,
-              px: { xs: 1.5, md: 2 },
-              py: 1.2,
-              borderBottom: '1px solid rgba(15,37,55,0.12)',
-              borderTopLeftRadius: 'inherit',
-              borderTopRightRadius: 'inherit',
-              background: `linear-gradient(90deg, ${alpha(visualColors.consoleMist, 0.78)} 0%, ${alpha(project.accent, 0.08)} 100%)`,
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', lg: '310px minmax(0, 1fr)' },
+              gap: { xs: 1.2, lg: 0 },
+              alignItems: 'stretch',
+              borderRadius: { xs: '24px', lg: '30px' },
+              border: `1px solid ${alpha(pageAccent, 0.24)}`,
+              bgcolor: alpha(visualColors.consoleMist, 0.76),
+              boxShadow: `0 28px 90px ${alpha(visualColors.commandNavy, 0.14)}`,
+              overflow: 'hidden',
             }}
           >
-            {['#D94A5F', visualColors.signalAmber, visualColors.successGreen].map((color) => (
-              <Box key={color} sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: color }} />
-            ))}
-            <Typography sx={{ ml: 0.6, fontFamily: '"Fira Code", monospace', fontSize: '0.72rem', fontWeight: 850, color: 'text.secondary' }}>
-              {t('portfolioProjects.frameTitle')}
-            </Typography>
-          </Box>
-
-          {embedHtml ? (
-            <Box
-              component="iframe"
-              ref={iframeRef}
-              title={`${getLocalizedString(project.title, lang)} preview`}
-              srcDoc={embedHtml}
-              sandbox="allow-scripts allow-same-origin"
-              scrolling="no"
-              sx={{
-                display: 'block',
-                width: '100%',
-                height: `${iframeHeight}px`,
-                maxHeight: 'none',
-                border: 0,
-                borderBottomLeftRadius: 'inherit',
-                borderBottomRightRadius: 'inherit',
-                bgcolor: '#fff',
-                overflow: 'hidden',
-              }}
+            <LwcDemoMenu
+              demos={childProjects}
+              activeDemo={activeCollectionProject}
+              lang={lang}
+              onSelect={setActiveCollectionProjectId}
             />
-          ) : (
-            <Box sx={{ p: { xs: 3, md: 5 }, textAlign: 'center', bgcolor: '#fff' }}>
-              <Typography sx={{ color: 'text.primary', fontWeight: 700 }}>
-                {isLoadingEmbed ? t('portfolioProjects.loadingDemo') : t('portfolioProjects.demoUnavailable')}
-              </Typography>
+            <Box sx={{ minWidth: 0, p: { xs: 1, md: 1.4, lg: 1.6 } }}>
+              {activeCollectionProject ? (
+                <>
+                  <Box sx={{ px: { xs: 0.6, md: 1 }, py: { xs: 1, md: 1.2 }, mb: 1.1 }}>
+                    <Typography sx={{ color: activeCollectionProject.accent, fontSize: '0.78rem', fontWeight: 850 }}>
+                      {activeCollectionProject.tags.join(' / ')}
+                    </Typography>
+                    <Typography variant="h2" sx={{ mt: 0.45, mb: 0.65, fontSize: { xs: '1.7rem', md: '2.35rem' }, fontWeight: 900, lineHeight: 1.04 }}>
+                      {getLocalizedString(activeCollectionProject.title, lang)}
+                    </Typography>
+                    <Typography sx={{ maxWidth: 720, color: 'text.primary', fontSize: { xs: '0.88rem', md: '0.96rem' }, lineHeight: 1.62, fontWeight: 520 }}>
+                      {getLocalizedString(activeCollectionProject.description, lang)}
+                    </Typography>
+                  </Box>
+                  <EmbeddedProjectPreview
+                    project={activeCollectionProject}
+                    lang={lang}
+                    t={t}
+                    embedHtml={embedHtml}
+                    iframeHeight={iframeHeight}
+                    iframeRef={iframeRef}
+                    isLoadingEmbed={isLoadingEmbed}
+                  />
+                </>
+              ) : (
+                <Box sx={{ p: { xs: 3, md: 5 }, textAlign: 'center' }}>
+                  <Typography sx={{ color: 'text.primary', fontWeight: 700 }}>
+                    {t('portfolioProjects.demoUnavailable')}
+                  </Typography>
+                </Box>
+              )}
             </Box>
-          )}
-        </Paper>
+          </Paper>
+        ) : (
+          <EmbeddedProjectPreview
+            project={project}
+            lang={lang}
+            t={t}
+            embedHtml={embedHtml}
+            iframeHeight={iframeHeight}
+            iframeRef={iframeRef}
+            isLoadingEmbed={isLoadingEmbed}
+          />
+        )}
       </Container>
     </Box>
   );

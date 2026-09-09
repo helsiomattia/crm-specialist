@@ -13,7 +13,7 @@ import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import { useTranslation } from 'react-i18next';
 import AnimatedBox from '../ui/AnimatedBox';
 import SectionTitle from '../ui/SectionTitle';
-import { portfolioProjects } from '../../data/portfolioProjects';
+import { getRootPortfolioProjects } from '../../data/portfolioProjects';
 import { getLocalizedString } from '../../utils/i18nHelper';
 import { visualColors } from '../../theme/tokens';
 
@@ -305,6 +305,7 @@ function PortfolioProjectsBoard({ projects, lang }) {
 export default function PortfolioProjects() {
   const { i18n, t } = useTranslation();
   const lang = i18n.resolvedLanguage || 'pt';
+  const projects = getRootPortfolioProjects();
 
   return (
     <Box
@@ -329,7 +330,7 @@ export default function PortfolioProjects() {
           subtitle={t('portfolioProjects.subtitle')}
         />
 
-        <PortfolioProjectsBoard projects={portfolioProjects} lang={lang} />
+        <PortfolioProjectsBoard projects={projects} lang={lang} />
 
       </Container>
     </Box>

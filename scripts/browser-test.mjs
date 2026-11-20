@@ -3,6 +3,7 @@ import { startTestServer } from './lib/test-server.mjs';
 import { verifyRoutes } from '../tests/browser/routes.mjs';
 import { verifyEmbeds, verifyEmbedFailure } from '../tests/browser/embeds.mjs';
 import { verifyDevelopment } from '../tests/browser/development.mjs';
+import { verifyBlogNavigation } from '../tests/browser/blog.mjs';
 
 const { chromium } = await import(process.env.HM_PLAYWRIGHT_MODULE || 'playwright');
 const server = await startTestServer();
@@ -16,6 +17,7 @@ try {
     context.on('page', page => page.on('pageerror', error => report.errors.push(`${page.url()}: ${error.stack}`)));
     if (!process.argv.includes('--embeds')) {
       await verifyRoutes(context, server.origin, report.checks);
+      await verifyBlogNavigation(context, server.origin, report.checks);
       console.log(`Rotas verificadas em ${width}px.`);
     }
     if (!process.argv.includes('--routes')) await verifyEmbeds(context, server.origin, report.checks);
@@ -28,6 +30,7 @@ try {
   await blocked.route('**/*', route => new URL(route.request().url()).origin === server.origin ? route.continue() : route.abort());
   if (!process.argv.includes('--embeds')) {
     await verifyRoutes(blocked, server.origin, report.checks);
+    await verifyBlogNavigation(blocked, server.origin, report.checks);
     report.checks.push('Rotas e histórico também passam com sessionStorage indisponível');
   }
   await blocked.close();

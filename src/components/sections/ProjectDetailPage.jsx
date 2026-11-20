@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { getLocalizedString } from '../../utils/i18nHelper';
 import { getPortfolioProjectById, getPortfolioProjectsByParent } from '../../data/portfolioProjects';
 import { visualColors } from '../../theme/tokens';
+import { glassSurface, glassPageGlow } from '../../theme/glass';
 import { getHomeProjectsUrl as getHomeProjectsPath } from '../../utils/routes';
 
 const DEFAULT_IFRAME_HEIGHT = 640;
@@ -26,7 +27,7 @@ function LwcDemoMenu({ demos, activeDemo, lang, onSelect }) {
       component="nav"
       aria-label="Demonstrações LWC"
       sx={{
-        bgcolor: visualColors.commandNavy,
+        ...glassSurface('dark'),
         color: visualColors.surfaceWhite,
         borderRadius: { xs: '20px', lg: '28px 0 0 28px' },
         minWidth: 0,
@@ -100,8 +101,7 @@ function EmbeddedProjectPreview({ project, lang, t, embedHtml, embedToken, ifram
       sx={{
         borderRadius: { xs: '20px', md: '28px' },
         border: `1px solid ${alpha(project.accent, 0.24)}`,
-        bgcolor: 'rgba(255,255,255,0.88)',
-        boxShadow: `0 24px 80px ${alpha(visualColors.commandNavy, 0.12)}`,
+        ...glassSurface('panel', project.accent),
         height: 'auto',
         maxHeight: 'none',
         overflow: 'visible',
@@ -261,7 +261,7 @@ export default function ProjectDetailPage({ projectId }) {
     return (
       <Box component="main" sx={{ minHeight: '100dvh', pt: 'calc(var(--header-height) + 48px)', pb: 8 }}>
         <Container maxWidth="md">
-          <Paper elevation={0} sx={{ p: { xs: 3, md: 5 }, borderRadius: '24px', bgcolor: 'rgba(224,236,245,0.9)' }}>
+          <Paper elevation={0} sx={{ p: { xs: 3, md: 5 }, borderRadius: '24px', ...glassSurface('panel') }}>
             <Typography variant="h3" sx={{ mb: 1, fontWeight: 850 }}>
               {t('portfolioProjects.notFoundTitle')}
             </Typography>
@@ -284,7 +284,7 @@ export default function ProjectDetailPage({ projectId }) {
         minHeight: '100dvh',
         pt: 'calc(var(--header-height) + 34px)',
         pb: { xs: 5, md: 7 },
-        background: 'linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)',
+        background: `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)`,
         position: 'relative',
         overflow: 'visible',
       }}

@@ -2,6 +2,12 @@
 
 > Auditoria de 20/11/2026 · Projeto HM.crm · Base: commit `cc01bc8`.
 
+## Evolução visual autorizada — 20/11/2026
+
+Após a estabilização, foi autorizada uma revisão exclusivamente visual com glassmorphism, preservando estrutura e textos. A direção atual usa vidro claro azul/ciano, reflexos, bordas iluminadas e sombras suaves. O material está centralizado em `src/theme/glass.js`, com desfoque menor no celular e fundo sólido quando o usuário prefere menos transparência ou maior contraste.
+
+O [relatório visual](GLASS_VISUAL_REVIEW.md) registra os testes e seus limites. O [comparativo interativo](../audit/glass/index.html) contém 30 cenários antes/depois. Esta atualização prevalece sobre a descrição histórica das superfícies abaixo; tipografia, geometria, conteúdo e demonstrações foram preservados.
+
 ## Atualização corretiva — 20/11/2026
 
 A estabilização técnica preserva tema, tokens, tipografia, componentes visuais, textos e os 16 HTMLs. As correções estão na navegação e na comunicação dos embeds. O [relatório de estabilização](STABILIZATION_REPORT.md) registra as comparações em desktop/mobile e seus limites.

@@ -1,5 +1,6 @@
 import { createTheme, alpha } from '@mui/material/styles';
-import { visualColors, visualGradients, visualMotion, visualRadii, visualShadows } from './tokens';
+import { visualColors, visualMotion, visualRadii, visualShadows } from './tokens';
+import { glassSurface } from './glass';
 
 const PRIMARY = visualColors.salesforceCore;
 const SECONDARY = visualColors.flowCyan;
@@ -93,14 +94,16 @@ const theme = createTheme({
           },
         },
         containedPrimary: {
-          background: visualGradients.crmFlowCurrent,
-          boxShadow: `0 4px 18px ${alpha(PRIMARY, 0.22)}`,
+          background: `linear-gradient(135deg, #1255A5 0%, #087F91 100%)`,
+          boxShadow: `0 7px 20px ${alpha(PRIMARY, 0.22)}, inset 0 1px 0 rgba(255,255,255,0.32), inset 0 -1px 0 rgba(6,24,39,0.15)`,
           '&:hover': {
             boxShadow: visualShadows.panel,
             transform: 'translateY(-2px)',
           },
         },
         outlinedPrimary: {
+          backgroundImage: 'linear-gradient(135deg, rgba(255,255,255,0.66), rgba(255,255,255,0.18))',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.9)',
           borderColor: alpha(PRIMARY, 0.7),
           color: PRIMARY,
           '&:hover': {
@@ -125,8 +128,7 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          backgroundImage: 'none',
-          backgroundColor: SURFACE,
+          ...glassSurface('card'),
           border: `1px solid ${alpha(TEXT, 0.12)}`,
           borderRadius: visualRadii.card,
           transition: `border-color ${visualMotion.normal}, box-shadow ${visualMotion.normal}, transform ${visualMotion.normal}`,

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-20T14:35:59.054Z",
+  "checks": [
+    "docs/DESIGN_STYLE.html: título, links e layout em três larguras",
+    "docs/GLASS_VISUAL_REVIEW.html: título, links e layout em três larguras",
+    "audit/glass/index.html: título, links e layout em três larguras",
+    "Comparador: 60 imagens carregam, com dez páginas e três larguras",
+    "Comparador: modos, slider e teclado funcionam",
+    "Relatório: busca inclui glassmorphism e impressão preserva o conteúdo"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "status": "passed"
+}

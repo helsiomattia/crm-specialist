@@ -19,6 +19,7 @@ import { useTranslation } from 'react-i18next';
 import SectionTitle from '../ui/SectionTitle';
 import { skillCategories } from '../../data/skills';
 import { visualColors } from '../../theme/tokens';
+import { glassSurface, glassPageGlow } from '../../theme/glass';
 import { getLocalizedString, getLocalizedStringArray } from '../../utils/i18nHelper';
 
 const ICON_MAP = {
@@ -161,10 +162,9 @@ function CapabilityMap({ lang, onOpen }) {
         minHeight: { xs: 'auto', lg: 500 },
         borderRadius: '30px',
         border: `1px solid ${alpha(visualColors.salesforceLegacy, 0.18)}`,
-        bgcolor: 'rgba(224,236,245,0.62)',
+        ...glassSurface('panel'),
         overflow: 'hidden',
         p: { xs: 1.1, sm: 1.35, lg: 2.4 },
-        boxShadow: `inset 0 0 0 1px ${alpha(visualColors.surfaceWhite, 0.48)}`,
         '&::before': {
           content: '""',
           display: { xs: 'none', lg: 'block' },
@@ -216,10 +216,9 @@ function CapabilityMap({ lang, onOpen }) {
                   minHeight: { xs: 124, lg: 150 },
                   textAlign: 'left',
                   border: `1px solid ${alpha(category.color, 0.24)}`,
+                  ...glassSurface('card', category.color),
                   borderTop: `3px solid ${category.color}`,
                   borderRadius: '18px',
-                  bgcolor: 'rgba(255,255,255,0.84)',
-                  boxShadow: '0 10px 24px rgba(15,37,55,0.055)',
                   p: { xs: 1.35, md: 1.45 },
                   cursor: 'pointer',
                   color: 'text.primary',
@@ -274,10 +273,8 @@ function ExpertiseDialog({ category, lang, onClose }) {
       PaperProps={{
         sx: {
           borderRadius: '24px',
-          bgcolor: 'var(--site-surface)',
           border: `1px solid ${alpha(category.color, 0.28)}`,
-          backgroundImage: `linear-gradient(135deg, ${alpha(category.color, 0.1)} 0%, rgba(224,236,245,0.98) 42%, rgba(193,212,227,0.96) 100%)`,
-          boxShadow: `0 24px 80px ${alpha(visualColors.commandNavy, 0.28)}`,
+          ...glassSurface('floating', category.color),
           overflow: 'hidden',
         },
       }}
@@ -399,7 +396,7 @@ export default function Skills() {
         display: 'flex',
         alignItems: 'center',
         py: { xs: 5, md: 'clamp(28px, 4vh, 52px)' },
-        background: 'linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)',
+        background: `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)`,
         position: 'relative',
         overflow: 'hidden',
       }}

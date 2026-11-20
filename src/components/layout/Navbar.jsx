@@ -4,12 +4,16 @@ import {
   alpha,
 } from '@mui/material';
 import LanguageSwitcher from '../LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
+import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded';
 import { profile } from '../../data/profile';
 import { visualColors, visualGradients } from '../../theme/tokens';
+import { glassSurface } from '../../theme/glass';
 import { scrollToSection } from '../../utils/scrollToSection';
-import { getHomeUrl as getHomePath, isPlainLeftClick, navigateToUrl } from '../../utils/routes';
+import { getHomeUrl as getHomePath, getBlogUrl, isPlainLeftClick, navigateToUrl } from '../../utils/routes';
 
-export default function Navbar() {
+export default function Navbar({ activePage }) {
+  const { t } = useTranslation();
   return (
     <Box
       component="nav"
@@ -24,17 +28,11 @@ export default function Navbar() {
         p: { xs: 0.7, md: 0.8 },
         borderRadius: { xs: '999px', md: '22px' },
         border: `1px solid ${alpha(visualColors.commandNavy, 0.14)}`,
-        bgcolor: alpha(visualColors.consoleMist, 0.78),
-        boxShadow: `0 18px 46px ${alpha(visualColors.commandNavy, 0.1)}`,
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
+        ...glassSurface('floating'),
         display: 'flex',
         flexDirection: { xs: 'row', md: 'column' },
         alignItems: 'center',
         gap: { xs: 0.85, md: 1 },
-        '@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)))': {
-          bgcolor: alpha(visualColors.consoleMist, 0.96),
-        },
       }}
     >
       <Box
@@ -97,6 +95,20 @@ export default function Navbar() {
 
       <LanguageSwitcher orientation="horizontal" sx={{ display: { xs: 'flex', md: 'none' } }} />
       <LanguageSwitcher orientation="vertical" sx={{ display: { xs: 'none', md: 'flex' } }} />
+      <Box
+        component="a"
+        href={getBlogUrl()}
+        aria-current={activePage === 'blog' ? 'page' : undefined}
+        onClick={event => {
+          if (!isPlainLeftClick(event)) return;
+          event.preventDefault();
+          navigateToUrl(getBlogUrl());
+        }}
+        sx={{ display: 'flex', flexDirection: { xs: 'row', md: 'column' }, gap: 0.5, alignItems: 'center', justifyContent: 'center', minHeight: 44, minWidth: { xs: 60, md: 40 }, px: { xs: 0.5, md: 0 }, borderRadius: '12px', color: 'primary.main', bgcolor: activePage === 'blog' ? 'rgba(13,77,165,0.12)' : 'transparent', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 750, '&:hover': { bgcolor: 'rgba(13,77,165,0.1)' }, '&:focus-visible': { outline: '3px solid #0D4DA5', outlineOffset: 2 } }}
+      >
+        <MenuBookRoundedIcon sx={{ fontSize: 19 }} />
+        {t('nav.blog')}
+      </Box>
     </Box>
   );
 }

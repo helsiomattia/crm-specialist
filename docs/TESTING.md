@@ -2,6 +2,12 @@
 
 > Auditoria de 20/11/2026 · Projeto HM.crm · Base: commit `cc01bc8`.
 
+## Validação do Blog — 20/11/2026
+
+A inclusão do Blog passou em 34 testes unitários, 83 verificações da suíte de navegador, validação de dados/traduções (127 chaves por idioma), lint, formato, smoke e build. A navegação foi conferida em larguras de 320, 390, 768 e 1440 px. A auditoria de dependências retornou zero alertas; as versões das dependências preexistentes foram preservadas.
+
+O novo `npm run test:blog` constrói um site com conteúdo temporário isolado para verificar listagem, busca, categorias, leitura, histórico, teclado, Markdown, metadados e idiomas. Confirma também que rascunhos não entram no JavaScript ou no sitemap. Consulte o [guia do Blog](BLOG.md), [regressão do navegador](../audit/blog/browser-results.json), [teste dos artigos](../audit/blog/blog-results.json) e [auditoria de dependências](../audit/blog/dependencies.json). O estado entregue contém zero artigos publicados e um modelo ignorado pelo catálogo. Não houve execução remota de CI ou deploy nesta entrega.
+
 ## Atualização corretiva — 20/11/2026
 
 A validação final passou: instalação limpa; 29 testes unitários; configuração Vite e 404 executados; 18 registros, 16 loaders reais e 103 chaves por idioma; lint, formato e build. O navegador usa um servidor estático com 404 real para o build e um servidor Vite para testar React StrictMode.

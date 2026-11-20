@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from '@mui/material';
 import { profile } from '../../data/profile';
 import { visualGradients } from '../../theme/tokens';
+import { glassSurface } from '../../theme/glass';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,8 +10,8 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        bgcolor: 'rgba(224,236,245,0.94)',
         borderTop: '1px solid rgba(11,33,51,0.14)',
+        ...glassSurface('panel'),
         py: { xs: 2.5, md: 3 },
       }}
     >

@@ -3,6 +3,7 @@
     "label": "Select language"
   },
   "nav": {
+    "blog": "Blog",
     "home": "Home",
     "about": "About",
     "experience": "Experience",
@@ -65,6 +66,7 @@
     "backToProjects": "Back to projects"
   },
   "contact": {
+    "downloadResume": "Download my resume",
     "overline": "06. contact",
     "title": "Let's Talk",
     "subtitle": "A direct channel for conversations about Salesforce, solution architecture, integrations and operational evolution.",
@@ -165,6 +167,31 @@
       "title": "A portfolio designed as a positioning system.",
       "description": "The current version combines professional narrative, distinct visual language, compact boards, ATS content, internationalization, SEO and static publishing to reinforce Helsio Mattia's positioning in Salesforce CRM, automation and solution architecture."
     }
+  },
+  "blog": {
+    "eyebrow": "HM.crm / Blog",
+    "title": "Ideas put into practice.",
+    "description": "Articles and reflections on Salesforce, solution architecture, and technology applied to business.",
+    "backToPortfolio": "Back to portfolio",
+    "backToBlog": "All articles",
+    "emptyTitle": "New articles are on the way.",
+    "emptyDescription": "This space will bring together lessons, experiences, and ideas that connect technology with results. In the meantime, explore the portfolio projects.",
+    "exploreProjects": "Explore projects",
+    "search": "Search articles",
+    "categories": "Filter by topic",
+    "allCategories": "All topics",
+    "results": "{{count}} articles found",
+    "results_one": "{{count}} article found",
+    "results_other": "{{count}} articles found",
+    "readingTime": "{{count}} min read",
+    "noResults": "No articles found.",
+    "noResultsDescription": "Try another search term or choose a different topic.",
+    "clearFilters": "Clear filters",
+    "notFound": "Article not found",
+    "notFoundDescription": "This article is not available yet or its address has changed. Explore the available posts on the Blog.",
+    "loading": "Loading article…",
+    "loadError": "This article could not be loaded.",
+    "retry": "Try again"
   },
   "footer": {
     "copyrightSuffix": "Salesforce CRM & Solution Architecture"

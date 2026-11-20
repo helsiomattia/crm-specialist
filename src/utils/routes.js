@@ -30,6 +30,10 @@ export function resolveRoute(location, basePath = BASE_PATH) {
     return { type: 'project', projectId: parts[1] };
   }
   if (parts.length === 1 && parts[0] === ABOUT_PROJECT_ROUTE) return { type: 'aboutProject' };
+  if (parts.length === 1 && parts[0] === 'blog') return { type: 'blog' };
+  if (parts.length === 2 && parts[0] === 'blog' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(parts[1])) {
+    return { type: 'blogArticle', slug: parts[1] };
+  }
   if (parts.length > 1) return home;
   return { type: 'home', sectionId: sectionId(hash) || sectionId(parts[0]) || 'home' };
 }
@@ -87,6 +91,14 @@ export function getHomeProjectsUrl(search = window.location.search) {
 
 export function getAboutProjectUrl(search = window.location.search) {
   return `${BASE_PATH}/${ABOUT_PROJECT_ROUTE}${search}`;
+}
+
+export function getBlogUrl(search = '') {
+  return `${BASE_PATH}/blog${search}`;
+}
+
+export function getBlogArticleUrl(slug) {
+  return `${BASE_PATH}/blog/${encodeURIComponent(slug)}`;
 }
 
 export function isPlainLeftClick(event) {

@@ -18,6 +18,17 @@ test('development root and production base are independent', () => {
   assert.equal(resolveRoute(new URL(`${origin}/expertise`), '').sectionId, 'expertise');
   assert.equal(resolveRoute(new URL(`${origin}/crm-specialist-other/expertise`), base).sectionId, 'home');
 });
+
+test('blog index and article URLs survive production and development routing', () => {
+  assert.deepEqual(route('blog?q=crm'), { type: 'blog' });
+  assert.deepEqual(route('blog/meu-artigo?from=blog'), { type: 'blogArticle', slug: 'meu-artigo' });
+  assert.deepEqual(route('blog/artigo/extra'), { type: 'home', sectionId: 'home' });
+  assert.deepEqual(resolveRoute(new URL(`${origin}/blog/meu-artigo`), ''), { type: 'blogArticle', slug: 'meu-artigo' });
+  const browser = browserFor(`${origin}${base}/?${REDIRECT_QUERY_KEY}=${encodeURIComponent(`${base}/blog/meu-artigo?q=crm`)}`, { blocked: true });
+  restoreRedirect(browser, base);
+  assert.deepEqual(resolveRoute(browser.location, base), { type: 'blogArticle', slug: 'meu-artigo' });
+  assert.equal(browser.location.search, '?q=crm');
+});
 function browserFor(href, { blocked = false, legacy = null } = {}) {
   let location = new URL(href);
   const entries = new Map(legacy ? [[REDIRECT_STORAGE_KEY, legacy]] : []);

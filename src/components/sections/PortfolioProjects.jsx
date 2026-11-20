@@ -16,6 +16,7 @@ import SectionTitle from '../ui/SectionTitle';
 import { getRootPortfolioProjects } from '../../data/portfolioProjects';
 import { getLocalizedString } from '../../utils/i18nHelper';
 import { visualColors } from '../../theme/tokens';
+import { glassSurface, glassInk, glassPageGlow } from '../../theme/glass';
 import { getProjectUrl as getProjectPath, isPlainLeftClick, navigateToUrl } from '../../utils/routes';
 
 function openInternalProject(event, projectId) {
@@ -111,9 +112,8 @@ function PortfolioProjectCard({ project, index, lang }) {
           display: 'flex',
           flexDirection: 'column',
           overflow: 'hidden',
-          bgcolor: 'rgba(255,255,255,0.86)',
           border: `1px solid ${alpha(project.accent, isExternal ? 0.34 : 0.22)}`,
-          boxShadow: '0 12px 30px rgba(15,37,55,0.06)',
+          ...glassSurface('card', project.accent),
           position: 'relative',
           '&::before': {
             content: '""',
@@ -147,7 +147,7 @@ function PortfolioProjectCard({ project, index, lang }) {
               size="small"
               sx={{
                 bgcolor: alpha(project.accent, 0.1),
-                color: project.accent,
+                color: glassInk(project.accent),
                 border: `1px solid ${alpha(project.accent, 0.24)}`,
                 fontSize: '0.58rem',
                 fontWeight: 850,
@@ -214,7 +214,7 @@ function PortfolioProjectCard({ project, index, lang }) {
               minHeight: 34,
               justifyContent: 'center',
               borderColor: alpha(project.accent, 0.34),
-              color: project.accent,
+              color: glassInk(project.accent),
               fontSize: '0.72rem',
               '&:hover': {
                 borderColor: project.accent,
@@ -238,10 +238,9 @@ function PortfolioProjectsBoard({ projects, lang }) {
         minHeight: { xs: 'auto', lg: 560 },
         borderRadius: '30px',
         border: `1px solid ${alpha(visualColors.salesforceLegacy, 0.18)}`,
-        bgcolor: 'rgba(224,236,245,0.62)',
+        ...glassSurface('panel'),
         overflow: 'hidden',
         p: { xs: 1.2, sm: 1.5, lg: 3.2 },
-        boxShadow: `inset 0 0 0 1px ${alpha(visualColors.surfaceWhite, 0.48)}`,
         '&::before': {
           content: '""',
           display: { xs: 'none', lg: 'block' },
@@ -312,7 +311,7 @@ export default function PortfolioProjects() {
         display: 'flex',
         alignItems: 'center',
         py: { xs: 6, md: 'var(--section-block-padding)' },
-        background: 'linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)',
+        background: `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)`,
         position: 'relative',
         overflow: 'hidden',
       }}

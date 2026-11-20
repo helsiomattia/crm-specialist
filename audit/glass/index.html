@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>HM.crm · Revisão visual glassmorphism</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;color:#14273d;font:16px/1.6 system-ui,sans-serif;background:radial-gradient(ellipse at 90% 5%,#c6e5f5,transparent 48%),linear-gradient(150deg,#f4f8fc,#e2eaf6);min-height:100vh}main{max-width:1504px;margin:auto;padding:40px 32px 64px}a{color:#0d4da5;text-underline-offset:4px}.topline{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px}.brand{font-weight:900;letter-spacing:-.05em;font-size:23px;color:#102c49}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:#42627e;font-weight:750;margin:32px 0 8px}h1{font-size:clamp(32px,4.3vw,58px);letter-spacing:-.05em;line-height:1.1;margin:0 0 16px}h1 span{color:#0c708a}.lead{max-width:780px;color:#425770;margin:0 0 24px}.checks{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}.checks span{font-size:12px;font-weight:650;border:1px solid #fff;background:#ffffff9e;border-radius:999px;padding:6px 12px}.toolbar{display:flex;align-items:end;gap:16px;flex-wrap:wrap;padding:18px;background:linear-gradient(135deg,#ffffffdb,#f2f8fc99);border:1px solid white;border-radius:20px;box-shadow:0 12px 36px #173f6a0d;margin-bottom:18px}label{font-size:12px;font-weight:700;display:block;color:#415975}select,button{font:inherit;font-size:14px;border:1px solid #9bb5cf;border-radius:10px;padding:10px 12px;color:#143858;background:#f7fbff;min-height:42px}select{display:block;margin-top:4px;max-width:100%}button{cursor:pointer}button[aria-pressed=true]{background:#1456a0;color:white;border-color:#1456a0}.modes{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}:focus-visible{outline:3px solid #0d4da5;outline-offset:3px}.comparison{margin:0 auto;width:100%;max-width:1440px}.frame{position:relative;aspect-ratio:1440 / 1000;overflow:hidden;border-radius:18px;border:1px solid #fff;box-shadow:0 18px 65px #143b6026;background:#e9eff7;--split:50%}.frame img{position:absolute;inset:0;width:100%;height:100%;display:block}.frame .after{clip-path:inset(0 0 0 var(--split))}.divider{position:absolute;top:0;bottom:0;left:var(--split);width:2px;background:white;box-shadow:0 0 0 1px #254d7459;pointer-events:none}.divider:after{content:'↔';display:grid;place-items:center;position:absolute;top:47%;left:-19px;width:40px;height:40px;border-radius:50%;background:#fff;color:#154e83;box-shadow:0 4px 16px #143b6033;font-size:19px;font-weight:bold}.tag{position:absolute;bottom:14px;padding:5px 12px;border-radius:8px;font-size:11px;font-weight:750;background:#103657e8;color:#fff;box-shadow:0 3px 12px #143b6026;pointer-events:none}.tag.before{left:14px}.tag.after-label{right:14px;background:#0c657be8}.slider-box{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;margin:14px 4px;color:#425770;font-size:12px}.slider-box label{grid-column:1/-1;text-align:center}input[type=range]{width:100%;accent-color:#1456a0;cursor:ew-resize;min-height:28px;margin:0}figcaption{font-size:12px;text-align:center;color:#4e627b}details{margin-top:28px;background:#ffffff91;border:1px solid white;border-radius:16px;padding:16px 20px;color:#425770;font-size:14px}summary{font-weight:750;cursor:pointer;color:#143858}details p{max-width:960px}footer{margin-top:24px;font-size:12px;color:#4e627b}.evidence{display:flex;gap:18px;flex-wrap:wrap}noscript{display:block;padding:18px;background:white;border-radius:12px}@media(max-width:640px){main{padding:22px 14px 36px}.toolbar{gap:12px}.toolbar>label{flex:1;min-width:140px}.modes{width:100%;margin:0}.modes button{flex:1}.frame{border-radius:12px}.checks{gap:6px}.checks span{font-size:11px;padding:5px 9px}.slider-box{gap:12px}.tag{bottom:8px;padding:4px 8px}}@media print{body{background:white}main{padding:0}.toolbar,.slider-box,details{display:none}.frame{box-shadow:none}footer{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><span class="brand">HM.crm</span><a href="../../docs/GLASS_VISUAL_REVIEW.html">Relatório da revisão ↗</a></div>
+  <p class="eyebrow">Revisão visual · 20 novembro 2026</p>
+  <h1>A mesma experiência.<br><span>Uma nova superfície.</span></h1>
+  <p class="lead">Vidro claro, reflexos suaves e profundidade em azul e ciano. Compare a atualização com a versão anterior, mantendo textos, estrutura e dimensões.</p>
+  <div class="checks" aria-label="Resultados da validação"><span>30 cenários comparados</span><span>Textos preservados</span><span>Geometria preservada · tolerância 1 px</span><span>79 verificações de navegação</span></div>
+  <div class="toolbar">
+    <label for="route">Página ou seção<select id="route"><option value="home">Início</option><option value="about">Sobre mim</option><option value="experience">Experiência</option><option value="credentials">Credenciais</option><option value="expertise">Expertise</option><option value="projects">Projetos</option><option value="contact">Contato</option><option value="about-project">Sobre o projeto</option><option value="projects-lwc">Coleção LWC</option><option value="projects-crm-customer-360">CRM Customer 360</option></select></label>
+    <label for="width">Tamanho da captura<select id="width"><option value="1440">Desktop · 1440 px</option><option value="768">Tablet · 768 px</option><option value="390">Celular · 390 px</option></select></label>
+    <div class="modes" role="group" aria-label="Modo de comparação"><button type="button" data-value="100" aria-pressed="false">Antes</button><button type="button" data-value="50" aria-pressed="true">Comparar</button><button type="button" data-value="0" aria-pressed="false">Depois</button></div>
+  </div>
+  <noscript>Ative o JavaScript para trocar as páginas e ajustar a comparação. A captura inicial continua disponível abaixo.</noscript>
+  <figure class="comparison">
+    <div class="frame">
+      <img id="before-image" src="before/1440-home.png" alt="Início antes da revisão visual, em 1440 pixels">
+      <img id="after-image" class="after" src="after/1440-home.png" alt="Início com glassmorphism, em 1440 pixels">
+      <div class="divider" aria-hidden="true"></div><span class="tag before" aria-hidden="true">ANTES</span><span class="tag after-label" aria-hidden="true">DEPOIS</span>
+    </div>
+    <div class="slider-box"><label for="split">Arraste para comparar ou use as setas do teclado</label><span>Depois</span><input id="split" type="range" min="0" max="100" value="50" aria-label="Divisão do comparativo" aria-valuetext="50% antes, 50% depois"><span>Antes</span></div>
+    <figcaption id="caption" aria-live="polite">Início · 1440 × 1000 px · comparação em 50%</figcaption>
+  </figure>
+  <details><summary>O que foi verificado</summary><p>Capturas em 1440, 768 e 390 pixels, com a mesma altura de 1000 pixels. Comparação do texto principal, seções e medidas de painéis, cards, títulos e botões. Também foram verificados rotas, histórico, 16 demonstrações, diálogo por teclado, troca de idiomas e preferências de contraste e transparência.</p><p>As imagens usam recursos locais e movimento reduzido para manter a comparação consistente. São capturas estáticas em Edge/Chromium. A validação de contraste cobre cinco amostras de cores; não representa certificação completa de acessibilidade ou testes em Safari/Firefox.</p><div class="evidence"><a href="comparison.json">Comparações</a><a href="integrity.json">Integridade do conteúdo</a><a href="browser-results.json">Navegação e demos</a><a href="accessibility.json">Preferências e contraste</a></div></details>
+  <footer>Revisão local do projeto. <a href="../../docs/index.html">Abrir documentação</a> · <a href="../../docs/GLASS_VISUAL_REVIEW.md">Relatório em Markdown</a></footer>
+</main>
+<script>
+  const route = document.querySelector('#route'), width = document.querySelector('#width'), split = document.querySelector('#split');
+  const frame = document.querySelector('.frame'), figure = document.querySelector('.comparison');
+  function updateSplit() {
+    const value = Number(split.value);
+    frame.style.setProperty('--split', `${value}%`);
+    split.setAttribute('aria-valuetext', `${value}% antes, ${100 - value}% depois`);
+    document.querySelector('.divider').hidden = value === 0 || value === 100;
+    document.querySelector('.tag.before').hidden = value === 0;
+    document.querySelector('.after-label').hidden = value === 100;
+    document.querySelectorAll('[data-value]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.value) === value)));
+    document.querySelector('#caption').textContent = `${route.selectedOptions[0].text} · ${width.value} × 1000 px · ${value === 0 ? 'depois' : value === 100 ? 'antes' : `comparação em ${value}%`}`;
+  }
+  function updateScreen() {
+    const file = `${width.value}-${route.value}.png`, title = route.selectedOptions[0].text;
+    document.querySelector('#before-image').src = `before/${file}`;
+    document.querySelector('#after-image').src = `after/${file}`;
+    document.querySelector('#before-image').alt = `${title} antes da revisão visual, em ${width.value} pixels`;
+    document.querySelector('#after-image').alt = `${title} com glassmorphism, em ${width.value} pixels`;
+    frame.style.aspectRatio = `${width.value} / 1000`;
+    figure.style.maxWidth = `${width.value}px`;
+    updateSplit();
+  }
+  route.addEventListener('change', updateScreen); width.addEventListener('change', updateScreen); split.addEventListener('input', updateSplit);
+  document.querySelectorAll('[data-value]').forEach(button => button.addEventListener('click', () => { split.value = button.dataset.value; updateSplit(); }));
+</script>
+</body>
+</html>

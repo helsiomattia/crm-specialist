@@ -10,6 +10,7 @@ import gsap from 'gsap';
 import { useTranslation } from 'react-i18next';
 import { profile } from '../../data/profile';
 import { visualColors, visualGradients } from '../../theme/tokens';
+import { glassSurface } from '../../theme/glass';
 import { getLocalizedString, getLocalizedStringArray } from '../../utils/i18nHelper';
 import { scrollToSection } from '../../utils/scrollToSection';
 import OperationalSignal from '../ui/OperationalSignal';
@@ -353,10 +354,7 @@ function HeroCockpit({ lang }) {
         maxWidth: 390,
         borderRadius: '28px',
         border: '1px solid rgba(6,24,39,0.14)',
-        bgcolor: 'rgba(255,255,255,0.68)',
-        boxShadow: '0 28px 90px rgba(6,24,39,0.12)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
+        ...glassSurface('panel'),
         overflow: 'hidden',
       }}
     >
@@ -364,7 +362,8 @@ function HeroCockpit({ lang }) {
         sx={{
           px: 2.2,
           py: 1.6,
-          background: `linear-gradient(135deg, ${visualColors.commandNavy} 0%, ${visualColors.salesforceCore} 100%)`,
+          background: 'linear-gradient(120deg, rgba(10,40,66,0.96), rgba(13,77,165,0.88))',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.24), inset 0 -1px 0 rgba(255,255,255,0.1)',
           color: '#EAF3F9',
         }}
       >

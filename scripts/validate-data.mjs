@@ -5,6 +5,7 @@ import { portfolioProjects } from '../src/data/portfolioProjects.js';
 import { PROJECT_EMBED_LOADERS } from '../src/data/projectEmbeds.js';
 import { portfolioErrors, localeErrors, flattenKeys } from './lib/data-validation.mjs';
 import { listFiles } from './lib/files.mjs';
+import { readBlogContent } from './lib/blog-content.mjs';
 
 assert.equal(portfolioProjects.length, 18, 'Unexpected catalog size; review intentional changes');
 assert.equal(Object.keys(PROJECT_EMBED_LOADERS).length, 16);
@@ -17,6 +18,8 @@ for (const file of await listFiles('src')) {
   for (const match of (await readFile(file, 'utf8')).matchAll(/\bt\(\s*['"]([^'"]+)['"]/g)) requiredKeys.add(match[1]);
 }
 assert.deepEqual(localeErrors(resources, [...requiredKeys]), []);
+const blogPosts = await readBlogContent(process.cwd());
+console.log(`Blog passed: ${blogPosts.filter(post => post.status === 'published').length} published, ${blogPosts.filter(post => post.status === 'draft').length} drafts.`);
 
 // Execute the real Vite loaders, rather than searching for a function name in source text.
 const server = await createServer({ logLevel: 'error', optimizeDeps: { noDiscovery: true, include: [] }, server: { middlewareMode: true, watch: null } });

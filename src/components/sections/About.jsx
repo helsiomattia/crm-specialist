@@ -14,6 +14,7 @@ import AnimatedBox from '../ui/AnimatedBox';
 import SectionTitle from '../ui/SectionTitle';
 import { profile } from '../../data/profile';
 import { visualColors, visualGradients } from '../../theme/tokens';
+import { glassSurface, glassPageGlow } from '../../theme/glass';
 import { getLocalizedString, getLocalizedStringArray } from '../../utils/i18nHelper';
 import { renderHighlightedText } from '../../utils/renderHighlightedText';
 import mepic1 from '../../../images/optimized/mepic-1.webp';
@@ -332,7 +333,7 @@ export default function About() {
         alignItems: 'center',
         py: { xs: 6, md: 'var(--section-block-padding)' },
         background:
-          'linear-gradient(180deg, var(--site-bg-end) 0%, var(--site-bg-mid) 48%, var(--site-bg-start) 100%)',
+          `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-end) 0%, var(--site-bg-mid) 48%, var(--site-bg-start) 100%)`,
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -373,14 +374,8 @@ export default function About() {
                 height: '100%',
                 p: { xs: 2.25, sm: 2.75, md: 3 },
                 borderRadius: 'var(--card-radius)',
-                bgcolor: 'rgba(224,236,245,0.9)',
                 border: '1px solid rgba(8,76,143,0.2)',
-                boxShadow: '0 16px 44px rgba(15,37,55,0.08)',
-                backdropFilter: 'blur(6px)',
-                WebkitBackdropFilter: 'blur(6px)',
-                '@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)))': {
-                  bgcolor: 'rgba(224,236,245,0.98)',
-                },
+                ...glassSurface('panel'),
                 position: 'relative',
                 overflow: 'hidden',
                 '&::before': {
@@ -493,9 +488,8 @@ export default function About() {
                   py: { xs: 2.35, sm: 3, md: 3.25 },
                   mb: 'var(--card-gap)',
                   borderRadius: 'var(--card-radius)',
-                  bgcolor: 'rgba(224,236,245,0.78)',
                   border: '1px solid rgba(11,33,51,0.14)',
-                  boxShadow: '0 14px 38px rgba(15,37,55,0.06)',
+                  ...glassSurface('panel'),
                 }}
               >
                 {getLocalizedStringArray(profile.about, lang).map((paragraph, i) => (

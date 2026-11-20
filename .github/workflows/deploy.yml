@@ -60,6 +60,9 @@ jobs:
       - name: Audit dependencies
         run: npm audit --audit-level=low
 
+      - name: Test blog publishing and reading with isolated content
+        run: npm run test:blog
+
       - name: Upload GitHub Pages artifact
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3

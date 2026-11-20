@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { blogContentPlugin } from './scripts/lib/blog-content.mjs';
 
 export default defineConfig(({ command }) => ({
-  plugins: [react()],
+  plugins: [react(), blogContentPlugin()],
   base: command === 'build' ? '/crm-specialist/' : '/',
   server: {
     host: '127.0.0.1',

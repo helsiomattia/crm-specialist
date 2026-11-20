@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-20T14:57:33.297Z",
+  "checks": [
+    "Build isolado contém os artigos publicados e exclui título e corpo do rascunho",
+    "Sitemap inclui automaticamente os artigos publicados e exclui rascunhos",
+    "1440px: lista, ordenação, busca sem acentos, filtro, estado vazio, refresh, leitura por teclado, histórico, Markdown seguro, links, metadados, idiomas e rascunho inacessível",
+    "390px: lista, ordenação, busca sem acentos, filtro, estado vazio, refresh, leitura por teclado, histórico, Markdown seguro, links, metadados, idiomas e rascunho inacessível"
+  ],
+  "errors": [],
+  "status": "passed"
+}

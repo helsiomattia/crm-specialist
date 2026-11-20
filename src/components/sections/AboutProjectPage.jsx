@@ -25,7 +25,8 @@ import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';
 import WebRoundedIcon from '@mui/icons-material/WebRounded';
 import { useTranslation } from 'react-i18next';
 import { profile } from '../../data/profile';
-import { visualColors, visualGradients, visualShadows } from '../../theme/tokens';
+import { visualColors, visualGradients } from '../../theme/tokens';
+import { glassSurface, glassPageGlow } from '../../theme/glass';
 
 import { getHomeUrl as getHomePath } from '../../utils/routes';
 const siteUrl = 'https://helsiomattia.github.io/crm-specialist/';
@@ -121,9 +122,8 @@ function TerminalCard({ terminalTitle }) {
         overflow: 'hidden',
         borderRadius: { xs: '22px', md: '30px' },
         border: '1px solid rgba(13,77,165,0.18)',
-        bgcolor: 'rgba(6,24,39,0.94)',
+        ...glassSurface('dark'),
         color: '#EAF3F9',
-        boxShadow: visualShadows.panel,
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8, p: 1.5, borderBottom: '1px solid rgba(234,243,249,0.12)' }}>
@@ -179,9 +179,8 @@ function InfoCard({ title, description, icon: Icon, color }) {
         p: { xs: 2.2, md: 2.6 },
         position: 'relative',
         overflow: 'hidden',
-        bgcolor: 'rgba(255,255,255,0.78)',
         border: `1px solid ${alpha(color, 0.2)}`,
-        boxShadow: `0 18px 50px ${alpha(color, 0.08)}`,
+        ...glassSurface('card', color),
         '&::before': {
           content: '""',
           position: 'absolute',
@@ -218,7 +217,7 @@ export default function AboutProjectPage() {
         minHeight: '100dvh',
         pt: 'calc(var(--header-height) + 28px)',
         pb: { xs: 6, md: 9 },
-        background: 'linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 48%, var(--site-bg-end) 100%)',
+        background: `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 48%, var(--site-bg-end) 100%)`,
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -289,9 +288,8 @@ export default function AboutProjectPage() {
               sx={{
                 p: 2.4,
                 borderRadius: '22px',
-                bgcolor: 'rgba(255,255,255,0.72)',
                 border: '1px solid rgba(13,77,165,0.13)',
-                boxShadow: '0 16px 42px rgba(15,37,55,0.07)',
+                ...glassSurface('panel'),
               }}
             >
               <Icon sx={{ color: 'primary.main', mb: 1.4 }} />
@@ -326,7 +324,7 @@ export default function AboutProjectPage() {
         </Box>
 
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '0.9fr 1.1fr' }, gap: { xs: 3, md: 4 }, mb: { xs: 5, md: 8 }, alignItems: 'stretch' }}>
-          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', bgcolor: 'rgba(255,255,255,0.78)', border: '1px solid rgba(13,77,165,0.14)' }}>
+          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', border: '1px solid rgba(13,77,165,0.14)', ...glassSurface('panel') }}>
             <Typography variant="overline" sx={{ color: 'primary.main' }}>
               {t('aboutProject.sections.overline')}
             </Typography>
@@ -352,7 +350,7 @@ export default function AboutProjectPage() {
             </Box>
           </Paper>
 
-          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', bgcolor: 'rgba(6,24,39,0.95)', color: '#EAF3F9', border: '1px solid rgba(234,243,249,0.1)', position: 'relative', overflow: 'hidden' }}>
+          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', ...glassSurface('dark'), color: '#EAF3F9', border: '1px solid rgba(234,243,249,0.1)', position: 'relative', overflow: 'hidden' }}>
             <Box sx={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at top right, rgba(30,172,184,0.22), transparent 38%)', pointerEvents: 'none' }} />
             <Box sx={{ position: 'relative', zIndex: 1 }}>
               <Typography variant="overline" sx={{ color: visualColors.flowCyan }}>
@@ -382,7 +380,7 @@ export default function AboutProjectPage() {
         </Box>
 
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1.05fr 0.95fr' }, gap: { xs: 3, md: 4 }, mb: { xs: 5, md: 8 } }}>
-          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', bgcolor: 'rgba(255,255,255,0.8)', border: '1px solid rgba(13,77,165,0.14)' }}>
+          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', border: '1px solid rgba(13,77,165,0.14)', ...glassSurface('panel') }}>
             <Typography variant="overline" sx={{ color: 'primary.main' }}>
               {t('aboutProject.stack.overline')}
             </Typography>
@@ -400,7 +398,7 @@ export default function AboutProjectPage() {
             </Typography>
           </Paper>
 
-          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', bgcolor: 'rgba(255,255,255,0.8)', border: `1px solid ${alpha(visualColors.signalAmber, 0.18)}`, boxShadow: `0 18px 48px ${alpha(visualColors.signalAmber, 0.08)}` }}>
+          <Paper elevation={0} sx={{ p: { xs: 2.4, md: 3.2 }, borderRadius: '28px', border: `1px solid ${alpha(visualColors.signalAmber, 0.18)}`, ...glassSurface('panel', visualColors.signalAmber) }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.2, mb: 1 }}>
               <Box sx={{ width: 42, height: 42, borderRadius: '14px', display: 'grid', placeItems: 'center', bgcolor: alpha(visualColors.signalAmber, 0.12), color: visualColors.signalAmber }}>
                 <VerifiedRoundedIcon />

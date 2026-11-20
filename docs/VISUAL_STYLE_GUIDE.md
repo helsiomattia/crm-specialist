@@ -21,6 +21,17 @@ Este documento registra o sistema visual final do projeto `crm-specialist`. A id
 - `Surface White` `#FFFFFF`: leitura, respiro e cards principais.
 - `Signal Amber` `#B7791F`: certificacoes, marcos e automacao.
 
+## Superfícies De Vidro — Atualização De 20/11/2026
+
+A revisão visual autorizada mantém estrutura, textos, tipografia e espaçamento. A identidade clara em azul/ciano agora usa vidro translúcido com reflexos graduais, bordas iluminadas e sombras suaves. Consulte o [relatório de validação](GLASS_VISUAL_REVIEW.md) e o [comparativo interativo](../audit/glass/index.html).
+
+- `src/theme/glass.js` centraliza os materiais `floating`, `panel`, `card` e `dark`, sem alterar geometria.
+- Navegação e diálogo usam blur de 22 px; painéis usam 16 px. Em telas até 599 px, passam a 12 px e 8 px.
+- Cards internos usam reflexos e transparência sem blur adicional.
+- Transparência reduzida, maior contraste e ausência de suporte ao filtro têm superfícies sólidas de fallback.
+- O fundo global usa `#F2F7FC`, `#E7EFF9` e `#DCE9F6`. Esses valores ficam nas variáveis `--site-bg-*` de `src/App.jsx`.
+- As sombras do material ficam no helper; os tokens de sombra existentes continuam disponíveis para estados e outros componentes.
+
 ## Tipografia
 
 - `Inter` e a voz principal: titulos, narrativa, navegacao, botoes e cards.

@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-20T14:58:51.746Z",
+  "checks": [
+    "BLOG: links e layout aprovados",
+    "ARCHITECTURE: links e layout aprovados",
+    "CODE_STYLE: links e layout aprovados",
+    "TESTING: links e layout aprovados",
+    "Busca inclui o Blog; impressão preserva o guia"
+  ],
+  "errors": [],
+  "status": "passed"
+}

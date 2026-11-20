@@ -2,6 +2,10 @@
 
 > Auditoria de 20/11/2026 · Projeto HM.crm · Base: commit `cc01bc8`.
 
+## Blog — 20/11/2026
+
+Artigos são mantidos em `content/blog/<slug>/metadata.json` e `article.md`. Use `npm run blog:new -- nome-do-artigo` para criar um rascunho. O catálogo e os loaders são gerados pelo plugin em `scripts/lib/blog-content.mjs`, sem cadastro manual de componentes. Consulte o [guia do Blog](BLOG.md) para edição, publicação e testes.
+
 ## Atualização corretiva — 20/11/2026
 
 Rotas ficam em `src/utils/routes.js`, loaders em `src/data/projectEmbeds.js` e a fronteira do iframe em `src/utils/embedBridge.js`. Manter seus testes de comportamento em `tests/`.

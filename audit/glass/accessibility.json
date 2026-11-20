@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-20T14:32:21.772Z",
+  "checks": [
+    "1440px: diálogo abre por Enter, cabe na tela e devolve foco após Escape",
+    "1440px: blur responsivo na navegação; cards internos sem blur adicional",
+    "1440px: transparência reduzida usa superfície sólida e remove blur",
+    "1440px: preferência por mais contraste remove transparência",
+    "1440px: seleção dos três idiomas funciona e não cria overflow horizontal",
+    "390px: diálogo abre por Enter, cabe na tela e devolve foco após Escape",
+    "390px: blur responsivo na navegação; cards internos sem blur adicional",
+    "390px: transparência reduzida usa superfície sólida e remove blur",
+    "390px: preferência por mais contraste remove transparência",
+    "390px: seleção dos três idiomas funciona e não cria overflow horizontal",
+    "Cinco amostras dos textos base e extremos do botão principal têm contraste de pelo menos 4,5:1"
+  ],
+  "measurements": [
+    {
+      "width": 1440,
+      "normal": {
+        "backdropFilter": "blur(22px) saturate(1.5)",
+        "backgroundColor": "rgba(246, 251, 255, 0.76)",
+        "backgroundImage": "linear-gradient(135deg, rgba(255, 255, 255, 0.76) 0%, rgba(255, 255, 255, 0.18) 48%, rgba(13, 77, 165, 0.035) 100%)"
+      },
+      "reduced": {
+        "backdropFilter": "none",
+        "backgroundColor": "rgb(242, 247, 252)",
+        "backgroundImage": "none"
+      },
+      "dialog": {
+        "backdropFilter": "blur(22px) saturate(1.5)",
+        "backgroundColor": "rgba(246, 251, 255, 0.76)",
+        "width": 900,
+        "viewport": 1440
+      }
+    },
+    {
+      "width": 390,
+      "normal": {
+        "backdropFilter": "blur(12px) saturate(1.35)",
+        "backgroundColor": "rgba(246, 251, 255, 0.76)",
+        "backgroundImage": "linear-gradient(135deg, rgba(255, 255, 255, 0.76) 0%, rgba(255, 255, 255, 0.18) 48%, rgba(13, 77, 165, 0.035) 100%)"
+      },
+      "reduced": {
+        "backdropFilter": "none",
+        "backgroundColor": "rgb(242, 247, 252)",
+        "backgroundImage": "none"
+      },
+      "dialog": {
+        "backdropFilter": "blur(12px) saturate(1.35)",
+        "backgroundColor": "rgba(246, 251, 255, 0.76)",
+        "width": 326,
+        "viewport": 390
+      }
+    }
+  ],
+  "errors": [],
+  "contrastSamples": [
+    {
+      "name": "Texto principal",
+      "foreground": "#141D2E",
+      "background": "#DCE9F6",
+      "ratio": 13.68
+    },
+    {
+      "name": "Texto secundário",
+      "foreground": "#3F4E62",
+      "background": "#DCE9F6",
+      "ratio": 6.87
+    },
+    {
+      "name": "Texto azul",
+      "foreground": "#0D4DA5",
+      "background": "#DCE9F6",
+      "ratio": 6.49
+    },
+    {
+      "name": "CTA branco / início",
+      "foreground": "#FFFFFF",
+      "background": "#1255A5",
+      "ratio": 7.32
+    },
+    {
+      "name": "CTA branco / fim",
+      "foreground": "#FFFFFF",
+      "background": "#087F91",
+      "ratio": 4.71
+    }
+  ],
+  "status": "passed"
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   Box,
+  Button,
   Card,
   CardContent,
   Container,
@@ -17,12 +18,16 @@ import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from '../ui/SectionTitle';
 import AnimatedBox from '../ui/AnimatedBox';
 import { profile } from '../../data/profile';
 import { visualColors, visualGradients } from '../../theme/tokens';
-import { getLocalizedString } from '../../utils/i18nHelper';
+import { glassSurface, glassPageGlow } from '../../theme/glass';
+import { getLocalizedString, normalizeLanguage } from '../../utils/i18nHelper';
+import resumeBrUrl from '../../../cv/HelsioMattiaSalesforceAdminAnalistaBR.pdf?url';
+import resumeEnUrl from '../../../cv/HelsioMattiaSalesforceAdminAnalystEN.pdf?url';
 
 function ContactAmbient() {
   const pulsePoints = [
@@ -116,9 +121,6 @@ function ContactCard({ contact, index, t }) {
   const isExternal = contact.href && !contact.href.startsWith('mailto') && !contact.href.startsWith('tel');
   const isClickable = Boolean(contact.href);
   const isFeatured = index < 2;
-  const cardBackground = isFeatured
-    ? `linear-gradient(135deg, ${alpha(contact.color, 0.12)} 0%, rgba(224,236,245,0.94) 58%)`
-    : 'rgba(224,236,245,0.9)';
 
   const openContact = () => {
     if (!contact.href) return;
@@ -162,17 +164,9 @@ function ContactCard({ contact, index, t }) {
           overflow: 'hidden',
           cursor: isClickable ? 'pointer' : 'default',
           position: 'relative',
-          background: cardBackground,
           border: `1px solid ${isFeatured ? alpha(contact.color, 0.34) : 'rgba(15,37,55,0.12)'}`,
           borderRadius: 'var(--card-radius)',
-          boxShadow: isFeatured
-            ? `0 4px 16px ${alpha(contact.color, 0.14)}`
-            : '0 8px 22px rgba(15,37,55,0.05)',
-          backdropFilter: 'blur(5px)',
-          WebkitBackdropFilter: 'blur(5px)',
-          '@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)))': {
-            bgcolor: 'var(--site-surface)',
-          },
+          ...glassSurface('panel', contact.color),
           textDecoration: 'none',
           transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
           '&::before': {
@@ -343,6 +337,7 @@ function ContactCard({ contact, index, t }) {
 export default function Contact() {
   const { i18n, t } = useTranslation();
   const lang = i18n.resolvedLanguage || 'pt';
+  const useBrazilianResume = normalizeLanguage(lang) === 'pt';
   const contacts = [
     {
       icon: <EmailOutlinedIcon sx={{ fontSize: '1.5rem' }} />,
@@ -404,7 +399,7 @@ export default function Contact() {
         display: 'flex',
         alignItems: 'center',
         py: { xs: 6, md: 'var(--section-block-padding)' },
-        background: 'linear-gradient(180deg, var(--site-bg-mid) 0%, var(--site-bg-end) 100%)',
+        background: `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-mid) 0%, var(--site-bg-end) 100%)`,
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -427,8 +422,8 @@ export default function Contact() {
               mb: { xs: 2.5, md: 1.8 },
               p: { xs: 2.35, md: 2.25 },
               borderRadius: 'var(--card-radius)',
-              background: 'linear-gradient(135deg, rgba(11,92,171,0.1) 0%, rgba(21,157,179,0.1) 100%)',
               border: '1px solid rgba(11,92,171,0.22)',
+              ...glassSurface('panel'),
             }}
           >
             <Typography
@@ -469,6 +464,20 @@ export default function Contact() {
               <ContactCard contact={contact} index={index} t={t} />
             </Box>
           ))}
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+          <Button
+            component="a"
+            href={useBrazilianResume ? resumeBrUrl : resumeEnUrl}
+            download={useBrazilianResume ? 'HelsioMattiaSalesforceAdminAnalistaBR.pdf' : 'HelsioMattiaSalesforceAdminAnalystEN.pdf'}
+            hrefLang={useBrazilianResume ? 'pt-BR' : 'en'}
+            type="application/pdf"
+            variant="contained"
+            startIcon={<FileDownloadOutlinedIcon />}
+            sx={{ width: { xs: '100%', sm: 'auto' }, minHeight: 48, px: { xs: 2.5, sm: 3.5 }, textTransform: 'uppercase' }}
+          >
+            {t('contact.downloadResume')}
+          </Button>
         </Box>
       </Container>
     </Box>

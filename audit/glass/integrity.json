@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-20T14:35:03.003Z",
+  "status": "passed",
+  "unchangedMarkup": [
+    "src/App.jsx",
+    "src/components/LanguageSwitcher.jsx",
+    "src/components/layout/Footer.jsx",
+    "src/components/layout/Navbar.jsx",
+    "src/components/layout/SectionNavigation.jsx",
+    "src/components/sections/About.jsx",
+    "src/components/sections/AboutProjectPage.jsx",
+    "src/components/sections/Contact.jsx",
+    "src/components/sections/Experience.jsx",
+    "src/components/sections/Hero.jsx",
+    "src/components/sections/PortfolioProjects.jsx",
+    "src/components/sections/ProjectDetailPage.jsx",
+    "src/components/sections/Projects.jsx",
+    "src/components/sections/Skills.jsx",
+    "src/components/ui/AnimatedBox.jsx",
+    "src/components/ui/OperationalSignal.jsx",
+    "src/components/ui/SectionTitle.jsx",
+    "src/main.jsx",
+    "src/utils/renderHighlightedText.jsx"
+  ],
+  "protectedFileCount": 72,
+  "method": "Babel AST comparison of JSX, excluding only sx/style. SHA-256 for data, locales, routing/embed utilities, demo HTML, images and public files."
+}

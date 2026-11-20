@@ -7,6 +7,7 @@
     "node": ">=22.22.2 <23"
   },
   "scripts": {
+    "blog:new": "node scripts/create-blog-post.mjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -16,6 +17,7 @@
     "test:smoke": "node scripts/smoke-test.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node scripts/browser-test.mjs",
+    "test:blog": "node scripts/blog-browser-test.mjs",
     "check": "npm run validate:data && npm run lint && npm run format:check && npm run test:smoke && npm test"
   },
   "dependencies": {
@@ -28,7 +30,8 @@
     "i18next-browser-languagedetector": "^8.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^17.0.8"
+    "react-i18next": "^17.0.8",
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
     "@babel/parser": "7.29.2",

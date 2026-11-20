@@ -15,6 +15,8 @@ const documents = [
 ];
 const supplements = [
   { file: 'STABILIZATION_REPORT', title: 'Estabilização', subtitle: 'Correções e evidências', category: 'Operação', description: 'Resultado da correção de rotas, sandbox, testes, pipeline e dependências, com comparação visual e limites explícitos.' },
+  { file: 'GLASS_VISUAL_REVIEW', title: 'Revisão visual', subtitle: 'Glassmorphism e validação', category: 'Experiência', description: 'Material visual, preservação de conteúdo e geometria, comparação em três larguras e validação local.' },
+  { file: 'BLOG', title: 'Blog', subtitle: 'Artigos e publicação', category: 'Operação', description: 'Como criar artigos em Markdown, preencher os metadados, revisar rascunhos e publicar pelo fluxo existente.' },
 ];
 const findings = [
   ['A-01', 'P1', 'Redirecionamento consumido antes da seção', 'Corrigido: parser único, bootstrap e histórico testados.', 'ARCHITECTURE'],

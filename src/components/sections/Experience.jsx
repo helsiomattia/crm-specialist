@@ -13,6 +13,7 @@ import SectionTitle from '../ui/SectionTitle';
 import AnimatedBox from '../ui/AnimatedBox';
 import { experiences } from '../../data/experience';
 import { visualColors } from '../../theme/tokens';
+import { glassSurface, glassPageGlow } from '../../theme/glass';
 import { getLocalizedString } from '../../utils/i18nHelper';
 import { renderHighlightedText } from '../../utils/renderHighlightedText';
 
@@ -196,9 +197,8 @@ function ExperienceCard({ exp, lang }) {
         flexDirection: 'column',
         position: 'relative',
         overflow: 'hidden',
-        bgcolor: 'rgba(255,255,255,0.86)',
         border: `1px solid ${exp.current ? alpha(exp.color, 0.32) : 'rgba(15,37,55,0.12)'}`,
-        boxShadow: exp.current ? `0 14px 34px ${alpha(exp.color, 0.1)}` : '0 12px 30px rgba(15,37,55,0.06)',
+        ...glassSurface('card', exp.color),
         '&:hover .experience-gradient': { opacity: 0.9 },
         '&:hover': {
           transform: 'translateY(-2px)',
@@ -326,10 +326,9 @@ function ExperienceBoard({ items, lang }) {
         minHeight: { xs: 'auto', lg: 650 },
         borderRadius: '30px',
         border: `1px solid ${alpha(visualColors.salesforceLegacy, 0.18)}`,
-        bgcolor: 'rgba(224,236,245,0.62)',
+        ...glassSurface('panel'),
         overflow: 'hidden',
         p: { xs: 1.2, sm: 1.5, lg: 3.2 },
-        boxShadow: `inset 0 0 0 1px ${alpha(visualColors.surfaceWhite, 0.48)}`,
         '&::before': {
           content: '""',
           display: { xs: 'none', lg: 'block' },
@@ -416,7 +415,7 @@ export default function Experience() {
         display: 'flex',
         alignItems: 'center',
         py: { xs: 6, md: 'var(--section-block-padding)' },
-        background: 'linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)',
+        background: `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-start) 0%, var(--site-bg-mid) 100%)`,
         position: 'relative',
         overflow: 'hidden',
       }}

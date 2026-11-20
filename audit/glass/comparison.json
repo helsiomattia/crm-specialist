@@ -1,0 +1,307 @@
+{
+  "date": "2026-11-20T14:31:05.703Z",
+  "baselineCommit": "f842abd7a15233765d179247be997251bf7e8fec",
+  "status": "passed",
+  "screens": [
+    {
+      "route": "",
+      "file": "1440-home.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "about",
+      "file": "1440-about.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "experience",
+      "file": "1440-experience.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "credentials",
+      "file": "1440-credentials.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "expertise",
+      "file": "1440-expertise.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects",
+      "file": "1440-projects.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "contact",
+      "file": "1440-contact.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "about-project",
+      "file": "1440-about-project.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 22,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects/lwc",
+      "file": "1440-projects-lwc.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 5,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects/crm-customer-360",
+      "file": "1440-projects-crm-customer-360.png",
+      "width": 1440,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 3,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "",
+      "file": "768-home.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "about",
+      "file": "768-about.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "experience",
+      "file": "768-experience.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "credentials",
+      "file": "768-credentials.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "expertise",
+      "file": "768-expertise.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects",
+      "file": "768-projects.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "contact",
+      "file": "768-contact.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "about-project",
+      "file": "768-about-project.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 22,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects/lwc",
+      "file": "768-projects-lwc.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 5,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects/crm-customer-360",
+      "file": "768-projects-crm-customer-360.png",
+      "width": 768,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 3,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "",
+      "file": "390-home.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "about",
+      "file": "390-about.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "experience",
+      "file": "390-experience.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "credentials",
+      "file": "390-credentials.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "expertise",
+      "file": "390-expertise.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects",
+      "file": "390-projects.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "contact",
+      "file": "390-contact.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 47,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "about-project",
+      "file": "390-about-project.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 22,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects/lwc",
+      "file": "390-projects-lwc.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 5,
+      "geometryDifferencesOver1px": []
+    },
+    {
+      "route": "projects/crm-customer-360",
+      "file": "390-projects-crm-customer-360.png",
+      "width": 390,
+      "textUnchanged": true,
+      "sectionsUnchanged": true,
+      "overflow": false,
+      "elements": 3,
+      "geometryDifferencesOver1px": []
+    }
+  ]
+}

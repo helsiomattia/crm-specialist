@@ -7,7 +7,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
 import { scrollToSection } from '../../utils/scrollToSection';
 import { visualColors } from '../../theme/tokens';
-import { getSectionFromLocation, getSectionUrl, getAboutProjectUrl, navigateToUrl } from '../../utils/routes';
+import { glassSurface } from '../../theme/glass';
+import { getSectionFromLocation, getSectionUrl, getAboutProjectUrl, getBlogUrl, navigateToUrl } from '../../utils/routes';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,6 +71,7 @@ export default function SectionNavigation() {
   const menuItems = useMemo(() => [
     ...sections,
     { id: 'about-project', label: t('nav.aboutProject'), number: '07', type: 'page' },
+    { id: 'blog', label: t('nav.blog'), number: '', type: 'page' },
   ], [sections, t]);
   const activeIndex = Math.max(0, sections.findIndex((section) => section.id === activeSection));
   const active = sections[activeIndex] || sections[0];
@@ -90,9 +92,9 @@ export default function SectionNavigation() {
     scrollToSection(id, { duration: CLICK_SCROLL_DURATION });
   };
 
-  const navigateToAboutProject = () => {
+  const navigateToPage = (id) => {
     setExpanded(false);
-    navigateToUrl(getAboutProjectUrl());
+    navigateToUrl(id === 'blog' ? getBlogUrl() : getAboutProjectUrl());
   };
 
   useEffect(() => {
@@ -310,7 +312,7 @@ export default function SectionNavigation() {
     height: { xs: 32, lg: 34 },
     border: '1px solid rgba(11,92,171,0.2)',
     borderRadius: '999px',
-    bgcolor: alpha(visualColors.consoleMist, 0.74),
+    ...glassSurface('floating'),
     color: 'primary.dark',
     display: { xs: 'none', sm: 'inline-flex' },
     alignItems: 'center',
@@ -371,11 +373,8 @@ export default function SectionNavigation() {
             py: { xs: 0.8, lg: 1.45 },
             border: '1px solid rgba(11,92,171,0.2)',
             borderRadius: { xs: '999px', lg: '16px' },
-            bgcolor: alpha(visualColors.consoleMist, active.id === 'home' ? 0.58 : 0.78),
+            ...glassSurface('floating'),
             color: 'text.primary',
-            boxShadow: '0 10px 28px rgba(15,37,55,0.075)',
-            backdropFilter: 'blur(6px)',
-            WebkitBackdropFilter: 'blur(6px)',
             cursor: 'pointer',
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', sm: 'auto auto 1fr', lg: '1fr' },
@@ -444,10 +443,7 @@ export default function SectionNavigation() {
             p: 0.75,
             borderRadius: '16px',
             border: '1px solid rgba(11,92,171,0.18)',
-            bgcolor: alpha(visualColors.consoleMist, 0.94),
-            boxShadow: '0 16px 36px rgba(15,37,55,0.12)',
-            backdropFilter: 'blur(8px)',
-            WebkitBackdropFilter: 'blur(8px)',
+            ...glassSurface('floating'),
             opacity: expanded ? 1 : 0,
             pointerEvents: expanded ? 'auto' : 'none',
             transition: 'opacity 0.2s ease, transform 0.2s ease',
@@ -462,7 +458,7 @@ export default function SectionNavigation() {
                 key={section.id}
                 component="button"
                 type="button"
-                onClick={() => (isPageLink ? navigateToAboutProject() : navigateTo(section.id))}
+                onClick={() => (isPageLink ? navigateToPage(section.id) : navigateTo(section.id))}
                 aria-current={isCurrent ? 'page' : undefined}
                 sx={{
                   width: '100%',

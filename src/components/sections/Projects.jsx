@@ -16,6 +16,7 @@ import AnimatedBox from '../ui/AnimatedBox';
 import SectionTitle from '../ui/SectionTitle';
 import { projects } from '../../data/projects';
 import { visualColors } from '../../theme/tokens';
+import { glassSurface, glassPageGlow } from '../../theme/glass';
 import { getLocalizedString, getLocalizedStringArray } from '../../utils/i18nHelper';
 
 function CredentialsAmbient() {
@@ -115,9 +116,7 @@ function ProjectCard({ project, index, lang, t }) {
           position: 'relative',
           overflow: 'hidden',
           cursor: 'default',
-          bgcolor: 'rgba(255,255,255,0.84)',
-          borderColor: project.featured ? alpha(visualColors.salesforceLegacy, 0.22) : 'rgba(15,37,55,0.11)',
-          boxShadow: '0 10px 24px rgba(15,37,55,0.055)',
+          ...glassSurface('card'),
           '&:hover .project-gradient': { opacity: 0.9 },
           '&:hover': {
             borderColor: alpha(visualColors.salesforceLegacy, 0.3),
@@ -269,10 +268,9 @@ function CredentialsBoard({ credentials, lang, t }) {
         minHeight: { xs: 'auto', lg: 500 },
         borderRadius: '30px',
         border: `1px solid ${alpha(visualColors.salesforceLegacy, 0.18)}`,
-        bgcolor: 'rgba(224,236,245,0.6)',
+        ...glassSurface('panel'),
         overflow: 'hidden',
         p: { xs: 1.1, sm: 1.35, lg: 2.4 },
-        boxShadow: `inset 0 0 0 1px ${alpha(visualColors.surfaceWhite, 0.5)}`,
         '&::before': {
           content: '""',
           display: { xs: 'none', lg: 'block' },
@@ -351,7 +349,7 @@ export default function Projects() {
         display: 'flex',
         alignItems: 'center',
         py: { xs: 5, md: 'clamp(28px, 4vh, 52px)' },
-        background: 'linear-gradient(180deg, var(--site-bg-mid) 0%, var(--site-bg-start) 100%)',
+        background: `${glassPageGlow}, linear-gradient(180deg, var(--site-bg-mid) 0%, var(--site-bg-start) 100%)`,
         position: 'relative',
         overflow: 'hidden',
       }}

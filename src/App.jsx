@@ -16,6 +16,8 @@ const PortfolioProjects = lazy(() => import('./components/sections/PortfolioProj
 const AboutProjectPage = lazy(() => import('./components/sections/AboutProjectPage'));
 const Contact = lazy(() => import('./components/sections/Contact'));
 const ProjectDetailPage = lazy(() => import('./components/sections/ProjectDetailPage'));
+const BlogPage = lazy(() => import('./components/blog/BlogPage'));
+const BlogArticlePage = lazy(() => import('./components/blog/BlogArticlePage'));
 const globalStyles = `
   :root {
     --header-height: 0px;
@@ -66,9 +68,11 @@ const globalStyles = `
     --ring: 215 85% 35%;
     --success: 150 60% 40%;
     --warning: 40 90% 50%;
-    --site-bg-start: hsl(var(--background));
-    --site-bg-mid: hsl(220 20% 92%);
-    --site-bg-end: hsl(220 20% 88%);
+    --site-bg-start: #F2F7FC;
+    --site-bg-mid: #E7EFF9;
+    --site-bg-end: #DCE9F6;
+    --glass-panel-filter: blur(16px) saturate(135%);
+    --glass-floating-filter: blur(22px) saturate(150%);
     --site-surface: hsl(var(--card));
     --site-surface-strong: hsl(220 25% 97%);
     --site-surface-muted: hsl(var(--muted));
@@ -184,10 +188,10 @@ const globalStyles = `
     body { overflow-x: clip; }
   }
 
-  @-moz-document url-prefix() {
-    * {
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
+  @media (max-width: 599px) {
+    :root {
+      --glass-panel-filter: blur(8px) saturate(125%);
+      --glass-floating-filter: blur(12px) saturate(135%);
     }
   }
 
@@ -276,8 +280,12 @@ export default function App() {
       <CssBaseline />
       <GlobalStyles styles={globalStyles} />
       <Box sx={{ overflowX: 'hidden', '@supports (overflow-x: clip)': { overflowX: 'clip' } }}>
-        <Navbar />
-        {appRoute.type === 'project' ? (
+        <Navbar activePage={appRoute.type === 'blog' || appRoute.type === 'blogArticle' ? 'blog' : undefined} />
+        {appRoute.type === 'blog' || appRoute.type === 'blogArticle' ? (
+          <Suspense fallback={<LoadingFallback />}>
+            {appRoute.type === 'blogArticle' ? <BlogArticlePage slug={appRoute.slug} /> : <BlogPage />}
+          </Suspense>
+        ) : appRoute.type === 'project' ? (
           <Suspense fallback={<LoadingFallback />}>
             <ProjectDetailPage projectId={appRoute.projectId} />
           </Suspense>

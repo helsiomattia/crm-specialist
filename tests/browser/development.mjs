@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createServer } from 'vite';
 import { verifyRoutes } from './routes.mjs';
+import { verifyBlogNavigation } from './blog.mjs';
 
 export async function verifyDevelopment(browser, results, errors) {
   const server = await createServer({ logLevel: 'warn', optimizeDeps: { entries: ['index.html'], force: true }, server: { host: '127.0.0.1', port: 0, strictPort: false, watch: null } });
@@ -15,6 +16,7 @@ export async function verifyDevelopment(browser, results, errors) {
     await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
     context.on('page', page => page.on('pageerror', error => errors.push(`${page.url()}: ${error.stack}`)));
     await verifyRoutes(context, origin, results, '/');
+    await verifyBlogNavigation(context, origin, results, '/');
     results.push('Desenvolvimento com React StrictMode: rotas e histórico com ambos os storages bloqueados');
     const page = await context.newPage();
     await page.goto(origin);

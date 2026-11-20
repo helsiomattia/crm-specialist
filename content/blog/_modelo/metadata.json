@@ -1,0 +1,10 @@
+{
+  "title": "Título do seu artigo",
+  "excerpt": "Escreva um resumo curto que explique o que o leitor vai encontrar neste artigo.",
+  "date": "2026-11-20",
+  "category": "Salesforce",
+  "tags": ["CRM"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "status": "draft"
+}

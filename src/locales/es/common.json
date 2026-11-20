@@ -3,6 +3,7 @@
     "label": "Seleccionar idioma"
   },
   "nav": {
+    "blog": "Blog",
     "home": "Inicio",
     "about": "Sobre mí",
     "experience": "Experiencia",
@@ -65,6 +66,7 @@
     "backToProjects": "Volver a proyectos"
   },
   "contact": {
+    "downloadResume": "Descargar mi currículum",
     "overline": "06. contacto",
     "title": "Hablemos",
     "subtitle": "Un canal directo para conversar sobre Salesforce, arquitectura de soluciones, integraciones y evolución operacional.",
@@ -165,6 +167,31 @@
       "title": "Un portafolio diseñado como sistema de posicionamiento.",
       "description": "La versión actual une narrativa profesional, lenguaje visual propio, boards compactos, contenido ATS, internacionalización, SEO y publicación estática para reforzar el posicionamiento de Helsio Mattia en Salesforce CRM, automatización y arquitectura de soluciones."
     }
+  },
+  "blog": {
+    "eyebrow": "HM.crm / Blog",
+    "title": "Ideas que se llevan a la práctica.",
+    "description": "Artículos y reflexiones sobre Salesforce, arquitectura de soluciones y tecnología aplicada al negocio.",
+    "backToPortfolio": "Volver al portafolio",
+    "backToBlog": "Todos los artículos",
+    "emptyTitle": "Los próximos artículos están en camino.",
+    "emptyDescription": "Este espacio reunirá aprendizajes, experiencias e ideas para conectar tecnología y resultados. Mientras tanto, conoce los proyectos del portafolio.",
+    "exploreProjects": "Conocer proyectos",
+    "search": "Buscar artículos",
+    "categories": "Filtrar por tema",
+    "allCategories": "Todos los temas",
+    "results": "{{count}} artículos encontrados",
+    "results_one": "{{count}} artículo encontrado",
+    "results_other": "{{count}} artículos encontrados",
+    "readingTime": "{{count}} min de lectura",
+    "noResults": "No se encontraron artículos.",
+    "noResultsDescription": "Prueba otro término o elige un tema diferente.",
+    "clearFilters": "Limpiar filtros",
+    "notFound": "Artículo no encontrado",
+    "notFoundDescription": "Este artículo aún no está disponible o su dirección ha cambiado. Explora las publicaciones disponibles en el Blog.",
+    "loading": "Cargando artículo…",
+    "loadError": "No se pudo cargar este artículo.",
+    "retry": "Intentar de nuevo"
   },
   "footer": {
     "copyrightSuffix": "CRM Salesforce y Arquitectura de Soluciones"

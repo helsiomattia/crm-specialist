@@ -2,6 +2,10 @@
 
 > Auditoria de 20/11/2026 · Projeto HM.crm · Base: commit `cc01bc8`.
 
+## Blog — 20/11/2026
+
+As rotas `/blog` e `/blog/:slug` usam páginas React carregadas sob demanda e o mesmo parser/404 do portfólio. O módulo virtual `virtual:blog`, gerado em `scripts/lib/blog-content.mjs`, contém somente metadados e loaders de artigos publicados; Markdown é renderizado com `react-markdown` e HTML desativado. O build acrescenta as URLs publicadas ao sitemap. Edição, contrato e limitações de SEO estão no [guia do Blog](BLOG.md).
+
 ## Atualização corretiva — 20/11/2026
 
 O parsing e a construção das URLs agora ficam em `src/utils/routes.js`. `restoreRedirect` executa em `main.jsx` antes da montagem React; o 404 transporta caminho, query e hash por `__hm_route`, sem depender de storage. A chave legada é migrada/limpa com tratamento de erros. App e navegação compartilham o parser puro, incluindo alias skills, histórico e cliques modificados.

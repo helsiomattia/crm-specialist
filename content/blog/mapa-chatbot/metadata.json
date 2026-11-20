@@ -1,0 +1,56 @@
+{
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente.",
+  "id": "HM-011",
+  "slug": "mapa-chatbot",
+  "category": "ideias",
+  "type": "prototype",
+  "title": {
+    "pt": "Como um mapa interativo pode revelar a complexidade de um chatbot.",
+    "en": "How an interactive map can reveal a chatbot’s complexity.",
+    "es": "Cómo un mapa interactivo puede revelar la complejidad de un chatbot."
+  },
+  "excerpt": {
+    "pt": "Uma proposta para explorar estados, transições e dependências de conversas, comparar versões e revisar mudanças sem confundir o mapa com a operação real.",
+    "en": "A proposal for exploring conversation states, transitions and dependencies, comparing versions and reviewing changes without mistaking the map for live operations.",
+    "es": "Una propuesta para explorar estados, transiciones y dependencias de conversaciones, comparar versiones y revisar cambios sin confundir el mapa con la operación real."
+  },
+  "tags": [
+    "prototipos",
+    "atendimento",
+    "integracoes",
+    "arquitetura"
+  ],
+  "featured": false,
+  "series": "laboratorio-ideias",
+  "seriesOrder": 2,
+  "relatedArticles": [
+    "atendimento-omnichannel",
+    "necessidade-ao-prototipo",
+    "plataforma-conhecimento"
+  ],
+  "sources": [
+    {
+      "title": "OMG — Business Process Model and Notation 2.0.2",
+      "url": "https://www.omg.org/spec/BPMN/2.0.2",
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "title": "W3C — Web Content Accessibility Guidelines 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": "Proposta"
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-20",
+  "checkedLinks": 167,
+  "checkedPages": [
+    "docs/BLOG.html",
+    "docs/BLOG_IMPLEMENTATION_REPORT.html",
+    "docs/index.html"
+  ],
+  "interactions": [
+    "search",
+    "keyboard Ctrl+K and Escape",
+    "theme toggle",
+    "print layout",
+    "1440px and390px"
+  ],
+  "status": "passed",
+  "errors": []
+}

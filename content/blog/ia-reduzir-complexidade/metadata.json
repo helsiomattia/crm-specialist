@@ -1,0 +1,40 @@
+{
+  "id": "HM-015",
+  "slug": "ia-reduzir-complexidade",
+  "category": "inovacao",
+  "type": "architecture",
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "A IA deve reduzir a complexidade da operação, não criar outra camada.",
+    "en": "AI should reduce operational complexity, not add another layer.",
+    "es": "La IA debe reducir la complejidad de la operación, no añadir otra capa."
+  },
+  "excerpt": {
+    "pt": "Como avaliar trabalho eliminado, regras duplicadas, esforço de revisão e recuperação de falhas em soluções empresariais com IA.",
+    "en": "How to assess eliminated work, duplicated rules, review effort and failure recovery in enterprise AI solutions.",
+    "es": "Cómo evaluar el trabajo eliminado, las reglas duplicadas, el esfuerzo de revisión y la recuperación de fallos en soluciones empresariales con IA."
+  },
+  "tags": ["ia", "arquitetura", "automacao", "processos"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": ["pt"],
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "featured": false,
+  "series": "ia-responsavel",
+  "seriesOrder": 2,
+  "relatedArticles": ["automatizar-processo-ruim", "empresa-pronta-ia", "custo-alem-licenca"],
+  "sources": [
+    {
+      "title": "Google SRE — Eliminating Toil",
+      "url": "https://sre.google/sre-book/eliminating-toil/",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null,
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente. A aplicação do conceito de toil à avaliação de IA é análise editorial própria."
+}

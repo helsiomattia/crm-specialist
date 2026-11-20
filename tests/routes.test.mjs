@@ -22,7 +22,11 @@ test('development root and production base are independent', () => {
 test('blog index and article URLs survive production and development routing', () => {
   assert.deepEqual(route('blog?q=crm'), { type: 'blog' });
   assert.deepEqual(route('blog/meu-artigo?from=blog'), { type: 'blogArticle', slug: 'meu-artigo' });
-  assert.deepEqual(route('blog/artigo/extra'), { type: 'home', sectionId: 'home' });
+  assert.deepEqual(route('blog/artigo/extra'), { type: 'blog', collection: 'missing', slug: '' });
+  assert.deepEqual(route('blog/categoria/salesforce'), { type: 'blog', collection: 'categoria', slug: 'salesforce' });
+  assert.deepEqual(route('blog/tag/crm'), { type: 'blog', collection: 'tag', slug: 'crm' });
+  assert.deepEqual(route('blog/serie/ia-responsavel'), { type: 'blog', collection: 'serie', slug: 'ia-responsavel' });
+  assert.deepEqual(route('blog/idioma/en/meu-artigo'), { type: 'blogArticle', slug: 'meu-artigo', language: 'en' });
   assert.deepEqual(resolveRoute(new URL(`${origin}/blog/meu-artigo`), ''), { type: 'blogArticle', slug: 'meu-artigo' });
   const browser = browserFor(`${origin}${base}/?${REDIRECT_QUERY_KEY}=${encodeURIComponent(`${base}/blog/meu-artigo?q=crm`)}`, { blocked: true });
   restoreRedirect(browser, base);

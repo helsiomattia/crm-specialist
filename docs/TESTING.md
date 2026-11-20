@@ -1,5 +1,9 @@
 # Testing — Verificações e plano de qualidade
 
+## Biblioteca editorial profissional — 20/11/2026
+
+A nova entrega passou em 38 testes unitários e 93 verificações da suíte completa do site. O teste editorial valida publicação isolada, exclusão de conteúdo em revisão, HTML sem JavaScript, canonical/schema/hreflang, busca, filtros, TOC, séries, traduções e Markdown seguro; também abre os 18 textos reais e confere larguras de 320, 390, 768 e 1440 px. Os resultados anteriores abaixo são históricos. Consulte o [relatório completo](BLOG_IMPLEMENTATION_REPORT.md), [resultado editorial](../audit/editorial-blog/validation/blog-browser-results.json) e [regressão do site](../audit/editorial-blog/regression/browser-results.json).
+
 > Auditoria de 20/11/2026 · Projeto HM.crm · Base: commit `cc01bc8`.
 
 ## Validação do Blog — 20/11/2026

@@ -1,0 +1,40 @@
+{
+  "id": "HM-013",
+  "slug": "empresa-pronta-ia",
+  "category": "inovacao",
+  "type": "decision",
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Antes de implementar IA, descubra se sua empresa está pronta.",
+    "en": "Before implementing AI, find out whether your company is ready.",
+    "es": "Antes de implementar IA, descubre si tu empresa está preparada."
+  },
+  "excerpt": {
+    "pt": "Um roteiro para avaliar conhecimento, permissões, processos e responsabilidade antes de transformar uma demonstração de IA em operação.",
+    "en": "A practical approach to assessing knowledge, permissions, processes and ownership before moving an AI demonstration into operation.",
+    "es": "Un enfoque práctico para evaluar conocimiento, permisos, procesos y responsabilidades antes de llevar una demostración de IA a la operación."
+  },
+  "tags": ["ia", "governanca", "conhecimento", "processos"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": ["pt"],
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "featured": true,
+  "series": "ia-responsavel",
+  "seriesOrder": 1,
+  "relatedArticles": ["plataforma-conhecimento", "ia-reduzir-complexidade", "custo-alem-licenca"],
+  "sources": [
+    {
+      "title": "NIST — AI RMF Core (AI RMF 1.0, 2023)",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null,
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+}

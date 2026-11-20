@@ -1,5 +1,9 @@
 # Security — Segurança e fronteiras de confiança
 
+## Extensão editorial — 20/11/2026
+
+Markdown usa `react-markdown`, HTML desativado e transformação segura de URLs, tanto no React quanto na geração estática. Rascunhos, conteúdos confidenciais e artigos `ready` são excluídos dos arquivos públicos, busca e sitemap; o build editorial é bloqueado. O estado publicado exige aprovação identificada e revisões factual/de confidencialidade. A checagem automática não substitui a análise humana do conteúdo. Evidências e limites: [relatório do Blog](BLOG_IMPLEMENTATION_REPORT.md).
+
 > Auditoria de 20/11/2026 · Projeto HM.crm · Base: commit `cc01bc8`.
 
 ## Atualização corretiva — 20/11/2026

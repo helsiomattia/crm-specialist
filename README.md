@@ -206,6 +206,16 @@ Os servidores de desenvolvimento e preview escutam somente em `127.0.0.1`. Acess
 
 ## Manutenção do conteúdo
 
+### Blog profissional
+
+O Blog inclui seis categorias, nove séries, 18 artigos completos em português e 60 pautas estruturadas. Os textos iniciais estão em revisão final do autor, sem data fictícia de publicação. Use `npm run blog:preview` e abra `/blog` para revisar a biblioteca preenchida localmente. O modo normal e o build público incluem somente artigos aprovados.
+
+Crie textos com `npm run blog:new -- meu-artigo`. Após revisão factual, de confidencialidade e do autor, use `npm run blog:publish -- meu-artigo --reviewed-by "Nome do revisor"` para liberar no catálogo local. Nenhum desses comandos faz push ou deploy. O build gera HTML completo das rotas públicas do Blog, além dos metadados e sitemap.
+
+Consulte o [guia editorial](docs/BLOG.md), sua [versão HTML interativa](docs/BLOG.html) e o [relatório de implementação e testes](docs/BLOG_IMPLEMENTATION_REPORT.md). A taxonomia e o backlog ficam em `content/editorial/`; artigos e metadados ficam em `content/blog/`.
+
+### Portfólio existente
+
 O projeto foi organizado para que as principais informações do portfólio sejam atualizadas sem necessidade de alterar muitos componentes.
 
 | Arquivo | Responsabilidade |

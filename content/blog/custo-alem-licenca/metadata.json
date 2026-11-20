@@ -1,0 +1,40 @@
+{
+  "id": "HM-017",
+  "slug": "custo-alem-licenca",
+  "category": "administracao",
+  "type": "decision",
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Por que o custo de uma solução vai muito além do preço da licença.",
+    "en": "Why a solution costs much more than its licence price.",
+    "es": "Por qué el coste de una solución va mucho más allá del precio de la licencia."
+  },
+  "excerpt": {
+    "pt": "Uma análise de TCO que inclui implantação, operação, evolução e saída, com um exemplo sintético e atenção às incertezas da comparação.",
+    "en": "A TCO analysis covering implementation, operations, evolution and exit, with a synthetic example and attention to uncertainty.",
+    "es": "Un análisis de TCO que incluye implementación, operación, evolución y salida, con un ejemplo sintético y atención a la incertidumbre."
+  },
+  "tags": ["custos", "gestao", "estrategia", "arquitetura"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": ["pt"],
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "featured": false,
+  "series": "decisoes-arquitetura",
+  "seriesOrder": 3,
+  "relatedArticles": ["estrategia-arquitetura", "agentforce-amazon-connect", "priorizar-projetos"],
+  "sources": [
+    {
+      "title": "AWS Well-Architected — COST05-BP03: Analyze the total cost of ownership of each component",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/cost05-bp03.html",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null,
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente. Valores sintéticos e contas conferidas; não são preços de fornecedores nem projeções de retorno."
+}

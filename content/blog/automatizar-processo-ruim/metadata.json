@@ -1,0 +1,50 @@
+{
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente.",
+  "id": "HM-007",
+  "slug": "automatizar-processo-ruim",
+  "category": "processos",
+  "type": "strategy",
+  "title": {
+    "pt": "Automatizar um processo ruim não resolve o problema.",
+    "en": "Automating a flawed process does not solve the problem.",
+    "es": "Automatizar un proceso deficiente no resuelve el problema."
+  },
+  "excerpt": {
+    "pt": "Como distinguir causas operacionais de sintomas, simplificar decisões e escolher uma automação que reduza esforço sem multiplicar problemas.",
+    "en": "How to distinguish operational causes from symptoms, simplify decisions and choose automation that reduces effort without multiplying problems.",
+    "es": "Cómo distinguir causas operativas de síntomas, simplificar decisiones y elegir una automatización que reduzca esfuerzo sin multiplicar problemas."
+  },
+  "tags": [
+    "processos",
+    "automacao",
+    "qualidade"
+  ],
+  "featured": true,
+  "series": "processos-empresariais",
+  "seriesOrder": 1,
+  "relatedArticles": [
+    "flow-apex-lwc",
+    "indicadores-atendimento",
+    "documentar-processos"
+  ],
+  "sources": [
+    {
+      "title": "OMG — Business Process Model and Notation 2.0.2",
+      "url": "https://www.omg.org/spec/BPMN/2.0.2",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null
+}

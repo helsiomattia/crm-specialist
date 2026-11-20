@@ -31,9 +31,16 @@ export function resolveRoute(location, basePath = BASE_PATH) {
   }
   if (parts.length === 1 && parts[0] === ABOUT_PROJECT_ROUTE) return { type: 'aboutProject' };
   if (parts.length === 1 && parts[0] === 'blog') return { type: 'blog' };
+  if (parts.length === 3 && parts[0] === 'blog' && ['categoria', 'tag', 'serie'].includes(parts[1]) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(parts[2])) {
+    return { type: 'blog', collection: parts[1], slug: parts[2] };
+  }
+  if (parts.length === 4 && parts[0] === 'blog' && parts[1] === 'idioma' && ['pt', 'en', 'es'].includes(parts[2]) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(parts[3])) {
+    return { type: 'blogArticle', slug: parts[3], language: parts[2] };
+  }
   if (parts.length === 2 && parts[0] === 'blog' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(parts[1])) {
     return { type: 'blogArticle', slug: parts[1] };
   }
+  if (parts[0] === 'blog') return { type: 'blog', collection: 'missing', slug: '' };
   if (parts.length > 1) return home;
   return { type: 'home', sectionId: sectionId(hash) || sectionId(parts[0]) || 'home' };
 }
@@ -99,6 +106,15 @@ export function getBlogUrl(search = '') {
 
 export function getBlogArticleUrl(slug) {
   return `${BASE_PATH}/blog/${encodeURIComponent(slug)}`;
+}
+
+export function getBlogCollectionUrl(collection, slug) {
+  return `${BASE_PATH}/blog/${collection}/${encodeURIComponent(slug)}`;
+}
+
+export function getBlogTranslationUrl(post, language) {
+  return language === post.language || !post.languages.includes(language) ? getBlogArticleUrl(post.slug)
+    : `${BASE_PATH}/blog/idioma/${language}/${encodeURIComponent(post.slug)}`;
 }
 
 export function isPlainLeftClick(event) {

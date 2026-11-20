@@ -1,0 +1,50 @@
+{
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente.",
+  "id": "HM-009",
+  "slug": "documentar-processos",
+  "category": "processos",
+  "type": "guide",
+  "title": {
+    "pt": "Como documentar processos sem transformar conhecimento em burocracia.",
+    "en": "How to document processes without turning knowledge into bureaucracy.",
+    "es": "Cómo documentar procesos sin convertir el conocimiento en burocracia."
+  },
+  "excerpt": {
+    "pt": "Um método para separar mapa, procedimento e justificativa, testar instruções com tarefas reais e manter o conhecimento junto da evolução do trabalho.",
+    "en": "A method for separating process maps, procedures and rationale, testing instructions against realistic tasks and keeping knowledge aligned with changes in work.",
+    "es": "Un método para separar mapas, procedimientos y fundamentos, probar instrucciones con tareas realistas y mantener el conocimiento al día con el trabajo."
+  },
+  "tags": [
+    "processos",
+    "conhecimento",
+    "governanca"
+  ],
+  "featured": false,
+  "series": "processos-empresariais",
+  "seriesOrder": 2,
+  "relatedArticles": [
+    "plataforma-conhecimento",
+    "automatizar-processo-ruim",
+    "lideranca-tecnica"
+  ],
+  "sources": [
+    {
+      "title": "Google Technical Writing — Audience",
+      "url": "https://developers.google.com/tech-writing/one/audience",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null
+}

@@ -1,0 +1,56 @@
+{
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente.",
+  "id": "HM-012",
+  "slug": "necessidade-ao-prototipo",
+  "category": "ideias",
+  "type": "decision",
+  "title": {
+    "pt": "Da necessidade operacional ao protótipo: meu método para desenhar soluções.",
+    "en": "From operational need to prototype: my approach to designing solutions.",
+    "es": "De la necesidad operativa al prototipo: mi método para diseñar soluciones."
+  },
+  "excerpt": {
+    "pt": "Um método proposto para formular hipóteses, escolher a fidelidade necessária, testar tarefas e distinguir aprendizado de prontidão para produção.",
+    "en": "A proposed method for forming hypotheses, choosing the right level of fidelity, testing tasks and distinguishing learning from production readiness.",
+    "es": "Un método propuesto para formular hipótesis, elegir la fidelidad necesaria, probar tareas y distinguir el aprendizaje de la preparación para producción."
+  },
+  "tags": [
+    "prototipos",
+    "produtos",
+    "processos",
+    "priorizacao"
+  ],
+  "featured": false,
+  "series": "necessidade-solucao",
+  "seriesOrder": 2,
+  "relatedArticles": [
+    "priorizar-projetos",
+    "plataforma-conhecimento",
+    "mapa-chatbot"
+  ],
+  "sources": [
+    {
+      "title": "GOV.UK Service Manual — How the alpha phase works",
+      "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works",
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "title": "GOV.UK Service Manual — Making prototypes",
+      "url": "https://www.gov.uk/service-manual/design/making-prototypes",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": "Proposta"
+}

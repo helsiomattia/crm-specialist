@@ -8,6 +8,9 @@
   },
   "scripts": {
     "blog:new": "node scripts/create-blog-post.mjs",
+    "blog:preview": "vite --mode editorial",
+    "blog:publish": "node scripts/publish-blog-post.mjs",
+    "blog:validate": "node scripts/validate-editorial.mjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -31,7 +34,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^17.0.8",
-    "react-markdown": "^10.1.0"
+    "react-markdown": "^10.1.0",
+    "remark-parse": "11.0.0",
+    "unified": "11.0.5"
   },
   "devDependencies": {
     "@babel/parser": "7.29.2",

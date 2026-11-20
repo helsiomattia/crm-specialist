@@ -1,0 +1,50 @@
+{
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente.",
+  "id": "HM-008",
+  "slug": "indicadores-atendimento",
+  "category": "processos",
+  "type": "guide",
+  "title": {
+    "pt": "O que seus indicadores de atendimento realmente estão medindo?",
+    "en": "What are your customer service metrics actually measuring?",
+    "es": "¿Qué están midiendo realmente tus indicadores de atención?"
+  },
+  "excerpt": {
+    "pt": "Uma análise de eventos, relógios, populações e incentivos para transformar métricas de atendimento em decisões operacionais defensáveis.",
+    "en": "An examination of events, timing rules, populations and incentives to turn service metrics into defensible operational decisions.",
+    "es": "Un análisis de eventos, reglas de tiempo, poblaciones e incentivos para convertir las métricas de atención en decisiones operativas fundamentadas."
+  },
+  "tags": [
+    "indicadores",
+    "atendimento",
+    "dados"
+  ],
+  "featured": false,
+  "series": "administracao-dados",
+  "seriesOrder": 1,
+  "relatedArticles": [
+    "atendimento-omnichannel",
+    "dados-decisoes",
+    "automatizar-processo-ruim"
+  ],
+  "sources": [
+    {
+      "title": "Google SRE — Service Level Objectives",
+      "url": "https://sre.google/sre-book/service-level-objectives/",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null
+}

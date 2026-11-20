@@ -4,6 +4,12 @@
 
 ## Atualização corretiva — 20/11/2026
 
+### Extensão editorial — Blog profissional
+
+O Blog passou a ter seis categorias, nove séries, busca no corpo, filtros por categoria/tag, leitura com índice e páginas estáticas geradas no build. A entrega editorial inclui 18 textos completos em português, em revisão final do autor, e 60 pautas distintas. Os textos não foram publicados automaticamente. Requisitos, arquitetura, evidências e limites estão no [relatório do Blog](BLOG_IMPLEMENTATION_REPORT.md); o fluxo de manutenção está no [guia editorial](BLOG.md). Home, dados profissionais, tema e demos foram preservados.
+
+### Estabilização anterior
+
 As correções de A-01 (rotas), A-02 (isolamento), A-03 (testes), A-04 (CI) e A-11 (dependências) foram implementadas e verificadas localmente. O escopo continua sendo o mesmo portfólio, com 18 registros, 16 demos e três idiomas. Consulte o [relatório de estabilização](STABILIZATION_REPORT.md) para resultados, versões, comparação visual e limites. Nenhum push ou deploy foi executado.
 
 > A partir da próxima seção, preserva-se o snapshot histórico do commit cc01bc8. As atualizações acima prevalecem para o comportamento atual; achados históricos não são automaticamente pendências atuais.

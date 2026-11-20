@@ -1,0 +1,51 @@
+{
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente.",
+  "id": "HM-010",
+  "slug": "plataforma-conhecimento",
+  "category": "ideias",
+  "type": "concept",
+  "title": {
+    "pt": "Uma plataforma de gestão do conhecimento para conectar pessoas, processos e sistemas.",
+    "en": "A knowledge management platform to connect people, processes and systems.",
+    "es": "Una plataforma de gestión del conocimiento para conectar personas, procesos y sistemas."
+  },
+  "excerpt": {
+    "pt": "Um conceito de produto que conecta regras, procedimentos, sistemas e responsáveis para tornar a origem do conhecimento e o impacto das mudanças mais claros.",
+    "en": "A product concept connecting rules, procedures, systems and responsibilities to clarify the origins of knowledge and the impact of change.",
+    "es": "Un concepto de producto que conecta reglas, procedimientos, sistemas y responsables para aclarar el origen del conocimiento y el impacto de los cambios."
+  },
+  "tags": [
+    "conhecimento",
+    "prototipos",
+    "governanca",
+    "arquitetura"
+  ],
+  "featured": true,
+  "series": "laboratorio-ideias",
+  "seriesOrder": 1,
+  "relatedArticles": [
+    "documentar-processos",
+    "empresa-pronta-ia",
+    "necessidade-ao-prototipo"
+  ],
+  "sources": [
+    {
+      "title": "W3C — An Overview of the PROV Family of Documents",
+      "url": "https://www.w3.org/TR/prov-overview/",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": "Conceito"
+}

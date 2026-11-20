@@ -1,0 +1,55 @@
+{
+  "id": "HM-003",
+  "slug": "flow-apex-lwc",
+  "category": "salesforce",
+  "type": "decision",
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Flow, Apex ou LWC? Como decidir sem criar complexidade desnecessária.",
+    "en": "Flow, Apex or LWC? How to choose without adding unnecessary complexity.",
+    "es": "¿Flow, Apex o LWC? Cómo decidir sin crear complejidad innecesaria."
+  },
+  "excerpt": {
+    "pt": "Separe experiência, decisão de negócio e execução para escolher ferramentas Salesforce com critérios de manutenção, segurança e capacidade da equipe.",
+    "en": "Separate user experience, business decisions and execution to choose Salesforce tools based on maintenance, security and team capabilities.",
+    "es": "Separe la experiencia, las decisiones de negocio y la ejecución para elegir herramientas Salesforce según mantenimiento, seguridad y capacidades del equipo."
+  },
+  "tags": ["salesforce", "automacao", "arquitetura", "seguranca"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": ["pt"],
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "featured": false,
+  "series": "arquitetura-salesforce",
+  "seriesOrder": 2,
+  "relatedArticles": ["salesforce-arquitetura-operacional", "necessidade-ao-prototipo", "automatizar-processo-ruim"],
+  "sources": [
+    {
+      "title": "Salesforce Developers — Get Started with Lightning Web Components",
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide",
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "title": "Salesforce Architects — Record-Triggered Automation",
+      "url": "https://architect.salesforce.com/docs/architect/decision-guides/guide/record-triggered.html",
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "title": "Salesforce Developers — Execution Governors and Limits",
+      "url": "https://developer.salesforce.com/docs/platform/apex-dev/references/apex-dev/apex-gov-limits.html",
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "title": "Salesforce Developers — Secure Apex Classes",
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide/apex-security.html",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null,
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+}

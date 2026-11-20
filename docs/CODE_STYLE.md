@@ -4,7 +4,7 @@
 
 ## Blog — 20/11/2026
 
-Artigos são mantidos em `content/blog/<slug>/metadata.json` e `article.md`. Use `npm run blog:new -- nome-do-artigo` para criar um rascunho. O catálogo e os loaders são gerados pelo plugin em `scripts/lib/blog-content.mjs`, sem cadastro manual de componentes. Consulte o [guia do Blog](BLOG.md) para edição, publicação e testes.
+Artigos são mantidos em `content/blog/<slug>/metadata.json` e `article.md`; taxonomia e backlog ficam em `content/editorial`. Use `npm run blog:new -- nome-do-artigo` para criar um rascunho e `npm run blog:preview` para revisão local. O plugin gera catálogo e loaders; renderização Markdown e SEO são compartilhados entre React e HTML estático. Não misture conteúdo dos artigos com JSX. Consulte o [guia do Blog](BLOG.md) para revisão, aprovação, publicação e testes.
 
 ## Atualização corretiva — 20/11/2026
 

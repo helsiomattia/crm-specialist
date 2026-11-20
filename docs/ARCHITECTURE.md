@@ -4,7 +4,7 @@
 
 ## Blog — 20/11/2026
 
-As rotas `/blog` e `/blog/:slug` usam páginas React carregadas sob demanda e o mesmo parser/404 do portfólio. O módulo virtual `virtual:blog`, gerado em `scripts/lib/blog-content.mjs`, contém somente metadados e loaders de artigos publicados; Markdown é renderizado com `react-markdown` e HTML desativado. O build acrescenta as URLs publicadas ao sitemap. Edição, contrato e limitações de SEO estão no [guia do Blog](BLOG.md).
+Biblioteca, categorias, tags, séries, artigos e traduções usam o parser/404 existente. O módulo `virtual:blog` contém metadados, texto para busca e loaders somente dos artigos públicos; o modo editorial local inclui revisões e é bloqueado no build. `blog-prerender.mjs` gera HTML completo para as rotas públicas, com o mesmo renderizador Markdown seguro da aplicação, metadados e sitemap. A Home permanece na SPA atual. Contrato, URLs, seleção de idiomas e limites estão no [guia do Blog](BLOG.md) e no [relatório da implementação](BLOG_IMPLEMENTATION_REPORT.md).
 
 ## Atualização corretiva — 20/11/2026
 

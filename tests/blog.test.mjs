@@ -4,30 +4,53 @@ import { mkdtemp, mkdir, writeFile, readFile, cp, rm } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import os from 'node:os';
-import { blogMetadataErrors, filterBlogPosts, formatBlogDate } from '../src/utils/blog.js';
-import { readBlogContent, blogContentPlugin } from '../scripts/lib/blog-content.mjs';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { blogMetadataErrors, filterBlogPosts, formatBlogDate, isPublicPost } from '../src/utils/blog.js';
+import { MarkdownContent, markdownOutline } from '../src/utils/blog-markdown.js';
+import { readBlogContent, blogContentPlugin, validateEditorial } from '../scripts/lib/blog-content.mjs';
+import { blogFixture } from './helpers/blog-fixture.mjs';
+import { publishBlogPost } from '../scripts/publish-blog-post.mjs';
 
-const metadata = { title: 'Arquitetura de integração', excerpt: 'Conectando sistemas com segurança', date: '2026-11-20', category: 'Arquitetura', tags: ['Salesforce', 'API'], author: 'Autor de teste', language: 'pt', status: 'published' };
+const metadata = blogFixture('meu-artigo');
+async function fixtureRoot() {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'hm-blog-unit-'));
+  await mkdir(path.join(root, 'content/editorial'), { recursive: true });
+  await cp('content/editorial/taxonomy.json', path.join(root, 'content/editorial/taxonomy.json'));
+  return root;
+}
+async function save(root, metadata, body = '## Contexto\n\nUm corpo de artigo com referências e exemplos.') {
+  const folder = path.join(root, 'content/blog', metadata.slug);
+  await mkdir(folder, { recursive: true });
+  await writeFile(path.join(folder, 'metadata.json'), JSON.stringify(metadata));
+  await writeFile(path.join(folder, 'article.md'), body);
+}
+async function cleanup(root) {
+  if (!path.resolve(root).startsWith(`${path.resolve(os.tmpdir())}${path.sep}`) || !path.basename(root).startsWith('hm-blog-')) throw new Error('Unexpected temporary directory');
+  await rm(root, { recursive: true, force: true });
+}
 
-test('blog metadata rejects impossible dates, traversal, missing fields and invalid publishing states', () => {
+test('editorial metadata rejects malformed dates, slugs, languages and incomplete approval', () => {
   assert.deepEqual(blogMetadataErrors(metadata, 'meu-artigo'), []);
-  for (const date of ['2026-02-30', '2026-13-02', '20/11/2026']) assert(blogMetadataErrors({ ...metadata, date }, 'post').length);
+  for (const publishedAt of ['2026-02-30', '2026-13-02', '20/11/2026']) assert(blogMetadataErrors({ ...metadata, publishedAt }, metadata.slug).length);
   for (const slug of ['../post', 'UPPER', 'a--b', '-a', 'a/child']) assert(blogMetadataErrors(metadata, slug).length);
-  for (const change of [{ title: '' }, { status: 'publishd' }, { tags: 'CRM' }, { language: 'xx' }, { date: null }]) assert(blogMetadataErrors({ ...metadata, ...change }, 'post').length);
-  assert(blogMetadataErrors(null, 'post').length);
+  for (const change of [{ title: '' }, { status: 'publishd' }, { tags: 'CRM' }, { language: 'xx' }, { publishedAt: null }, { approvedBy: null }, { reviewedAt: null }, { confidentialityStatus: 'review' }, { factualStatus: 'review' }, { languages: ['en'] }, { updatedAt: '2026-11-19' }, { sources: [{ ...metadata.sources[0], url: 'https://' }] }, { sources: [...metadata.sources, ...metadata.sources] }]) assert(blogMetadataErrors({ ...metadata, ...change }, metadata.slug).length);
+  assert(blogMetadataErrors(null, metadata.slug).length);
+  assert(!isPublicPost({ ...metadata, status: 'ready' }));
+  assert(!isPublicPost({ ...metadata, editorialStatus: 'confidentiality-review' }));
 });
 
-test('blog search combines category and accent-insensitive terms without matching unrelated posts', () => {
-  const posts = [metadata, { ...metadata, title: 'Service Cloud', excerpt: 'Atendimento ao cliente', category: 'Operações', tags: ['Service'] }];
-  assert.equal(filterBlogPosts(posts, 'INTEGRACAO API', 'Arquitetura').length, 1);
-  assert.equal(filterBlogPosts(posts, 'integracao', 'Operações').length, 0);
+test('search combines translated metadata, full body, category and tag without accents', () => {
+  const posts = [{ ...metadata, searchText: 'Observabilidade e reconciliação' }, blogFixture('segundo', { category: 'processos', tags: ['indicadores'] })];
+  assert.equal(filterBlogPosts(posts, 'RECONCILIACAO integration', 'salesforce', 'crm').length, 1);
+  assert.equal(filterBlogPosts(posts, 'reconciliacao', 'processos').length, 0);
   assert.equal(filterBlogPosts(posts, '  ').length, 2);
   assert.equal(filterBlogPosts(posts, 'zzzzz').length, 0);
   assert.match(formatBlogDate('2026-11-20', 'pt'), /20.*novembro.*2026/);
 });
 
-test('article creation generates a draft and refuses overwrite and invalid paths', async () => {
-  const root = await mkdtemp(path.join(os.tmpdir(), 'hm-blog-cli-'));
+test('new article is an unpublished draft and creation refuses overwrite or traversal', async () => {
+  const root = await fixtureRoot();
   try {
     await mkdir(path.join(root, 'scripts'), { recursive: true });
     await mkdir(path.join(root, 'src/utils'), { recursive: true });
@@ -40,38 +63,77 @@ test('article creation generates a draft and refuses overwrite and invalid paths
     const article = path.join(root, 'content/blog/artigo-novo/article.md');
     const saved = await readFile(article, 'utf8');
     assert(saved.includes('## O contexto'));
-    assert.equal(JSON.parse(await readFile(path.join(root, 'content/blog/artigo-novo/metadata.json'))).status, 'draft');
+    const created = JSON.parse(await readFile(path.join(root, 'content/blog/artigo-novo/metadata.json')));
+    assert.equal(created.status, 'draft'); assert.equal(created.publishedAt, null);
+    assert.deepEqual(blogMetadataErrors(created, 'artigo-novo'), []);
     assert.equal(run('artigo-novo').status, 1);
     assert.equal(await readFile(article, 'utf8'), saved);
     assert.equal(run('../fora').status, 1);
-  } finally {
-    if (!path.resolve(root).startsWith(`${path.resolve(os.tmpdir())}${path.sep}`) || !path.basename(root).startsWith('hm-blog-cli-')) throw new Error('Unexpected temporary directory');
-    await rm(root, { recursive: true, force: true });
-  }
+  } finally { await cleanup(root); }
 });
 
-test('content discovery sorts articles, ignores templates and excludes drafts from the built manifest', async () => {
-  const root = await mkdtemp(path.join(os.tmpdir(), 'hm-blog-unit-'));
+test('production manifest excludes draft and ready metadata, bodies and search text', async () => {
+  const root = await fixtureRoot();
   try {
-    for (const [slug, status, date] of [['antigo', 'published', '2026-10-01'], ['novo', 'published', '2026-11-20'], ['privado', 'draft', '2026-11-21']]) {
-      const folder = path.join(root, 'content/blog', slug);
-      await mkdir(folder, { recursive: true });
-      await writeFile(path.join(folder, 'metadata.json'), JSON.stringify({ ...metadata, status, date }));
-      await writeFile(path.join(folder, 'article.md'), '# Texto\n\nConteúdo do artigo.');
-    }
-    await mkdir(path.join(root, 'content/blog/_modelo'));
-    const posts = await readBlogContent(root);
-    assert.deepEqual(posts.map(post => post.slug), ['privado', 'novo', 'antigo']);
-    const plugin = blogContentPlugin();
-    plugin.configResolved({ root });
+    await save(root, blogFixture('publico', { internalNotes: 'UNLISTED_PRIVATE_NOTE' }));
+    await save(root, blogFixture('privado', { status: 'draft', editorialStatus: 'draft', publishedAt: null, approvedBy: null }), 'PRIVATE_BODY');
+    await save(root, blogFixture('revisao', { status: 'ready', editorialStatus: 'public-validated', publishedAt: null, approvedBy: null }), 'REVIEW_BODY');
+    const plugin = blogContentPlugin(); plugin.configResolved({ root, command: 'build', mode: 'production' });
     const manifest = await plugin.load(plugin.resolveId('virtual:blog'));
-    assert.match(manifest, /novo/);
-    assert.match(manifest, /antigo/);
-    assert.doesNotMatch(manifest, /privado|_modelo/);
-    await writeFile(path.join(root, 'content/blog/novo/article.md'), '');
+    assert.match(manifest, /publico/); assert.doesNotMatch(manifest, /privado|revisao|PRIVATE_BODY|REVIEW_BODY|UNLISTED_PRIVATE_NOTE/);
+    assert.throws(() => plugin.configResolved({ root, command: 'build', mode: 'editorial' }), /bloqueado/);
+    plugin.configResolved({ root, command: 'serve', mode: 'editorial' });
+    assert.match(await plugin.load(plugin.resolveId('virtual:blog')), /PRIVATE_BODY/);
+  } finally { await cleanup(root); }
+});
+
+test('publication requires review, records the named approval and uses the actual Sao Paulo date', async () => {
+  const root = await fixtureRoot();
+  try {
+    const ready = blogFixture('revisado', { status: 'ready', editorialStatus: 'public-validated', publishedAt: null, approvedBy: null });
+    await save(root, ready);
+    await assert.rejects(publishBlogPost(root, ready.slug, ''), /revisor/);
+    await publishBlogPost(root, ready.slug, 'Revisor identificado', new Date('2026-11-21T01:30:00Z'));
+    const published = (await readBlogContent(root))[0];
+    assert(isPublicPost(published)); assert.equal(published.publishedAt, '2026-11-20'); assert.equal(published.approvedBy, 'Revisor identificado');
+    await assert.rejects(publishBlogPost(root, ready.slug, 'Outro revisor'), /ready/);
+    await save(root, { ...ready, status: 'draft', editorialStatus: 'confidentiality-review', confidentialityStatus: 'review' });
+    await assert.rejects(publishBlogPost(root, ready.slug, 'Revisor'), /ready/);
+    assert.equal((await readBlogContent(root))[0].publishedAt, null);
+  } finally { await cleanup(root); }
+});
+
+test('catalog rejects duplicate identifiers, unknown taxonomy, missing relations and translations', async () => {
+  const root = await fixtureRoot();
+  try {
+    await save(root, metadata);
+    for (const change of [{ id: metadata.id }, { category: 'unknown' }, { tags: ['unknown'] }, { relatedArticles: ['missing'] }, { languages: ['pt', 'en'] }, { publishedAt: '2099-01-01' }]) {
+      await save(root, blogFixture('segundo', change));
+      await assert.rejects(readBlogContent(root));
+    }
+    await save(root, blogFixture('segundo'), '## Referência\n\n[Inexistente](/blog/nao-existe)');
+    await assert.rejects(readBlogContent(root), /link interno inexistente/);
+    await save(root, blogFixture('segundo'), '');
     await assert.rejects(readBlogContent(root), /article.md está vazio/);
-  } finally {
-    if (!path.resolve(root).startsWith(`${path.resolve(os.tmpdir())}${path.sep}`) || !path.basename(root).startsWith('hm-blog-unit-')) throw new Error('Unexpected temporary directory');
-    await rm(root, { recursive: true, force: true });
-  }
+  } finally { await cleanup(root); }
+});
+
+test('Markdown blocks executable HTML and unsafe URLs; heading anchors are stable and unique', () => {
+  const markdown = '## Contexto\n\n<script>alert(1)</script>\n\n[Inseguro](javascript:alert%281%29)\n\n[Local](/blog)\n\n## Contexto\n\n```\n## Não é título\n```\n\n[Privado](/blog/privado)';
+  const outline = markdownOutline(markdown);
+  assert.deepEqual(outline.headings.map(item => item.id), ['blog-contexto', 'blog-contexto-2']);
+  const html = renderToStaticMarkup(React.createElement(MarkdownContent, { content: markdown, base: '/crm-specialist', availableSlugs: [] }));
+  assert.doesNotMatch(html, /<script|href="javascript:|href="[^\"]*privado/);
+  assert.match(html, /href="\/crm-specialist\/blog"/);
+  assert.match(html, /id="blog-contexto-2"/);
+});
+
+test('initial editorial library retains its eighteen full originals and allows new articles and ideas', async () => {
+  const posts = await readBlogContent(process.cwd());
+  const report = await validateEditorial(process.cwd(), posts);
+  assert(report.articles >= 18); assert(report.backlog >= 60); assert.equal(report.categories.length, 6);
+  for (const category of report.categories) { assert(category.articles >= 3); assert(category.ideas >= 10); }
+  const initial = posts.filter(post => /^HM-0(?:0[1-9]|1[0-8])$/.test(post.id));
+  assert.equal(initial.length, 18);
+  for (const post of initial) { assert(post.wordCounts.pt >= 900 && post.wordCounts.pt <= 1600); assert.equal(post.language, 'pt'); assert(post.sources.length); }
 });

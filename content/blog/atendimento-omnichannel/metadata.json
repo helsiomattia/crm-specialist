@@ -1,0 +1,45 @@
+{
+  "id": "HM-002",
+  "slug": "atendimento-omnichannel",
+  "category": "salesforce",
+  "type": "technical",
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "O que existe por trás de um atendimento omnichannel bem estruturado.",
+    "en": "What goes into a well-designed omnichannel service operation.",
+    "es": "Qué hay detrás de una atención omnicanal bien estructurada."
+  },
+  "excerpt": {
+    "pt": "Identidade, sessões, filas, capacidade e transferências: as decisões que preservam contexto e responsabilidade ao longo do atendimento.",
+    "en": "Identity, sessions, queues, capacity and transfers: the decisions that preserve context and ownership throughout customer service.",
+    "es": "Identidad, sesiones, colas, capacidad y transferencias: las decisiones que preservan el contexto y la responsabilidad durante la atención."
+  },
+  "tags": ["atendimento", "omnichannel", "salesforce", "indicadores"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": ["pt"],
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "featured": false,
+  "series": "service-operacoes",
+  "seriesOrder": 1,
+  "relatedArticles": ["indicadores-atendimento", "salesforce-arquitetura-operacional", "automatizar-processo-ruim"],
+  "sources": [
+    {
+      "title": "Salesforce Developers — MessagingSession",
+      "url": "https://developer.salesforce.com/docs/platform/object-reference/references/standard-objects/object-messagingsession.html",
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "title": "Salesforce Developers — AgentWork",
+      "url": "https://developer.salesforce.com/docs/platform/object-reference/references/standard-objects/object-agentwork.html",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null,
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+}

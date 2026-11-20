@@ -17,6 +17,7 @@ const supplements = [
   { file: 'STABILIZATION_REPORT', title: 'Estabilização', subtitle: 'Correções e evidências', category: 'Operação', description: 'Resultado da correção de rotas, sandbox, testes, pipeline e dependências, com comparação visual e limites explícitos.' },
   { file: 'GLASS_VISUAL_REVIEW', title: 'Revisão visual', subtitle: 'Glassmorphism e validação', category: 'Experiência', description: 'Material visual, preservação de conteúdo e geometria, comparação em três larguras e validação local.' },
   { file: 'BLOG', title: 'Blog', subtitle: 'Artigos e publicação', category: 'Operação', description: 'Como criar artigos em Markdown, preencher os metadados, revisar rascunhos e publicar pelo fluxo existente.' },
+  { file: 'BLOG_IMPLEMENTATION_REPORT', title: 'Blog profissional', subtitle: 'Entrega e validação', category: 'Engenharia', description: 'Seis categorias, 18 artigos, 60 pautas, geração estática, revisão editorial e resultados verificados.' },
 ];
 const findings = [
   ['A-01', 'P1', 'Redirecionamento consumido antes da seção', 'Corrigido: parser único, bootstrap e histórico testados.', 'ARCHITECTURE'],
@@ -145,6 +146,7 @@ for (const [index, doc] of [...documents, ...supplements].entries()) {
   await writeFile(path.join(root, `${doc.file}.html`), shell(doc.title, doc.file, content, toc));
   searchIndex.push(...rendered.sections.filter(s => s.text.trim()).map(s => ({ doc: doc.title, title: s.title, url: `${doc.file}.html#${s.id}`, text: clean(s.text).replace(/\s+/g, ' ').trim() })));
 }
-await writeFile(path.join(root, 'index.html'), shell('Visão geral', 'index', indexContent));
+const supplementLinks = `<section class="library" aria-labelledby="supplements-title"><div class="section-intro"><div><p class="eyebrow">Evoluções documentadas</p><h2 id="supplements-title">Guias e relatórios complementares.</h2></div></div><div class="doc-grid">${supplements.map(doc => `<a class="doc-card" href="${doc.file}.html"><span class="doc-category">${doc.category}</span><h3>${doc.title}</h3><p>${doc.description}</p><span class="card-footer">${doc.subtitle}<span class="format-label">HTML + MD</span></span></a>`).join('')}</div></section>`;
+await writeFile(path.join(root, 'index.html'), shell('Visão geral', 'index', indexContent + supplementLinks));
 await writeFile(path.join(root, 'assets/search-index.js'), `window.AUDIT_SEARCH_INDEX = ${JSON.stringify(searchIndex).replace(/</g, '\\u003c')};\n`);
 console.log(`Gerados ${documents.length} documentos e ${supplements.length} relatório HTML, índice e ${searchIndex.length} seções pesquisáveis.`);

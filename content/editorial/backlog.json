@@ -1,0 +1,1862 @@
+[
+  {
+    "id": "IDEA-001",
+    "title": "Como medir o tempo de espera real em canais digitais.",
+    "slug": "tempo-espera-canais-digitais",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "atendimento",
+      "indicadores"
+    ],
+    "objective": "Definir uma medição de espera que represente a experiência antes da resposta humana.",
+    "audience": "Administradores Salesforce e analistas de operações digitais.",
+    "problem": "Datas de criação, atribuição e resposta são usadas como equivalentes, produzindo intervalos incompatíveis.",
+    "angle": "Reconstruir o relógio a partir de eventos e distinguir espera de transferência, atendimento e pausa assíncrona.",
+    "outline": [
+      "Desenhar uma conversa sintética com bot, fila e agente.",
+      "Definir início e fim de cada intervalo.",
+      "Tratar transferências, retomadas e eventos ausentes.",
+      "Conferir a medição com uma linha do tempo manual.",
+      "Explicar limites de comparação entre canais."
+    ],
+    "keywords": [
+      "tempo de espera",
+      "canais digitais",
+      "primeira resposta",
+      "eventos de atendimento"
+    ],
+    "priority": "P1",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-002",
+    "title": "MessagingSession, AgentWork e eventos: entendendo a jornada de atendimento.",
+    "slug": "messagingsession-agentwork-eventos",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "omnichannel",
+      "dados"
+    ],
+    "objective": "Explicar como relacionar registros de sessão e trabalho sem confundir seus ciclos de vida.",
+    "audience": "Analistas Salesforce que investigam atendimento e constroem relatórios operacionais.",
+    "problem": "Contagens e tempos divergem quando sessões, atribuições e necessidades do cliente são tratados como a mesma entidade.",
+    "angle": "Usar uma jornada hipotética com transferência para comparar o que cada registro permite afirmar.",
+    "outline": [
+      "Apresentar a pergunta operacional de cada entidade.",
+      "Verificar os relacionamentos na documentação vigente.",
+      "Montar uma sequência com reatribuição.",
+      "Identificar cardinalidades e risco de duplicação.",
+      "Descrever perguntas que os registros disponíveis não respondem."
+    ],
+    "keywords": [
+      "MessagingSession",
+      "AgentWork",
+      "jornada de atendimento",
+      "modelo de dados"
+    ],
+    "priority": "P1",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-003",
+    "title": "Como organizar filas e regras de roteamento.",
+    "slug": "filas-regras-roteamento",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "atendimento",
+      "processos"
+    ],
+    "objective": "Construir critérios para segmentar demanda e distribuir responsabilidade sem proliferar filas.",
+    "audience": "Administradores Salesforce, supervisores e responsáveis por desenho operacional.",
+    "problem": "Filas refletem exceções históricas e dificultam identificar quem deve receber cada solicitação.",
+    "angle": "Partir de competências, responsabilidade e continuidade do serviço antes de configurar destinos.",
+    "outline": [
+      "Inventariar motivos de contato e capacidades necessárias.",
+      "Separar prioridade de especialização.",
+      "Definir critérios de entrada e saída das filas.",
+      "Tratar ausência de elegíveis e reencaminhamento.",
+      "Testar o desenho com solicitações ambíguas."
+    ],
+    "keywords": [
+      "filas Salesforce",
+      "roteamento",
+      "competências",
+      "responsabilidade operacional"
+    ],
+    "priority": "P1",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-004",
+    "title": "Gestão de capacidade e disponibilidade no Omni-Channel.",
+    "slug": "capacidade-disponibilidade-omnichannel",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "omnichannel",
+      "gestao"
+    ],
+    "objective": "Ajudar a interpretar disponibilidade e capacidade em um desenho de distribuição de trabalho.",
+    "audience": "Supervisores de atendimento e administradores responsáveis pelo Omni-Channel.",
+    "problem": "Presença online é interpretada como capacidade livre, mesmo quando o trabalho possui esforço e duração diferentes.",
+    "angle": "Confrontar sinal técnico de disponibilidade com condições reais de execução usando cenários sintéticos.",
+    "outline": [
+      "Diferenciar presença, elegibilidade e capacidade.",
+      "Conferir o modelo suportado na configuração analisada.",
+      "Simular demandas simultâneas de complexidade distinta.",
+      "Investigar indisponibilidade e trabalho retido.",
+      "Definir observação e ajustes após mudança."
+    ],
+    "keywords": [
+      "Omni-Channel",
+      "capacidade",
+      "presença",
+      "distribuição de trabalho"
+    ],
+    "priority": "P1",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-005",
+    "title": "Arquitetura de dados: quando utilizar objetos padrão ou customizados.",
+    "slug": "objetos-padrao-customizados",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "arquitetura",
+      "dados"
+    ],
+    "objective": "Comparar alternativas de modelagem pelo significado do domínio e pelo custo de sustentação.",
+    "audience": "Administradores avançados, analistas de negócio e arquitetos Salesforce.",
+    "problem": "O desejo de reaproveitar recursos ou evitar limitações produz modelos que distorcem entidades do negócio.",
+    "angle": "Avaliar aderência semântica, ciclo de vida, segurança e integrações antes de comparar quantidade de campos.",
+    "outline": [
+      "Descrever a entidade sem citar a plataforma.",
+      "Mapear capacidades dos objetos candidatos.",
+      "Examinar relações, volume e regras de acesso.",
+      "Comparar extensão do padrão com objeto próprio.",
+      "Registrar a decisão e seus gatilhos de revisão."
+    ],
+    "keywords": [
+      "objetos padrão",
+      "objetos customizados",
+      "modelagem Salesforce",
+      "trade-offs"
+    ],
+    "priority": "P1",
+    "series": "arquitetura-salesforce",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-006",
+    "title": "Como evitar automações Salesforce difíceis de manter.",
+    "slug": "automacoes-salesforce-manutencao",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "automacao",
+      "governanca"
+    ],
+    "objective": "Definir práticas de manutenção para automações que evoluem em conjunto.",
+    "audience": "Equipes de administração e desenvolvimento Salesforce.",
+    "problem": "Regras duplicadas e acionamentos dispersos tornam alterações pequenas imprevisíveis.",
+    "angle": "Analisar o conjunto de automações por responsabilidade e dependência, sem reduzir qualidade à escolha de ferramenta.",
+    "outline": [
+      "Mapear pontos de entrada e regras compartilhadas.",
+      "Identificar duplicação e acoplamento.",
+      "Definir limites e nomes orientados ao propósito.",
+      "Planejar observação de falhas e testes de regressão.",
+      "Criar um registro de mudança utilizável."
+    ],
+    "keywords": [
+      "manutenção Salesforce",
+      "automação",
+      "dependências",
+      "governança de metadados"
+    ],
+    "priority": "P1",
+    "series": "arquitetura-salesforce",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-007",
+    "title": "O que considerar antes de criar um novo Flow.",
+    "slug": "antes-criar-novo-flow",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "automacao",
+      "priorizacao"
+    ],
+    "objective": "Oferecer uma revisão de entrada para decidir se um novo Flow é necessário e como delimitá-lo.",
+    "audience": "Administradores Salesforce e analistas que recebem solicitações de automação.",
+    "problem": "Demandas são implementadas diretamente sem investigar regras existentes, exceções e critérios de sucesso.",
+    "angle": "Transformar o pedido de configuração em perguntas verificáveis antes de abrir o Flow Builder.",
+    "outline": [
+      "Reformular o pedido como resultado esperado.",
+      "Pesquisar automações já responsáveis pelo processo.",
+      "Definir dados, contexto e condições de execução.",
+      "Especificar falhas e necessidade de intervenção.",
+      "Acordar critérios de teste e responsabilidade de manutenção."
+    ],
+    "keywords": [
+      "Salesforce Flow",
+      "requisitos",
+      "exceções",
+      "critérios de aceite"
+    ],
+    "priority": "P1",
+    "series": "necessidade-solucao",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-008",
+    "title": "Governança de acessos em organizações corporativas.",
+    "slug": "governanca-acessos-salesforce",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "seguranca",
+      "governanca"
+    ],
+    "objective": "Organizar o ciclo de concessão, revisão e revogação de acessos com justificativas rastreáveis.",
+    "audience": "Administradores Salesforce e responsáveis por segurança e governança de aplicações.",
+    "problem": "Permissões acumuladas dificultam explicar por que uma pessoa possui determinado acesso.",
+    "angle": "Seguir a jornada do acesso do pedido ao desligamento, distinguindo recursos da plataforma de decisões organizacionais.",
+    "outline": [
+      "Definir atividades e dados necessários por função.",
+      "Distinguir acesso a objetos, campos e registros.",
+      "Comparar mecanismos disponíveis na documentação atual.",
+      "Registrar exceções, responsáveis e validade.",
+      "Testar revogação e revisão com cenários fictícios."
+    ],
+    "keywords": [
+      "governança de acessos",
+      "Permission Sets",
+      "segurança Salesforce",
+      "revisão de permissões"
+    ],
+    "priority": "P1",
+    "series": "arquitetura-salesforce",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-009",
+    "title": "Como transformar indicadores de atendimento em dashboards úteis.",
+    "slug": "dashboards-atendimento-uteis",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "indicadores",
+      "atendimento"
+    ],
+    "objective": "Projetar um dashboard que conduza da identificação do problema à investigação e à ação.",
+    "audience": "Analistas de relatórios Salesforce e gestores de atendimento.",
+    "problem": "Painéis acumulam gráficos sem indicar decisões, definições ou caminhos para aprofundamento.",
+    "angle": "Desenhar o painel por tarefa de gestão e acompanhar uma situação do agregado ao registro explicativo.",
+    "outline": [
+      "Selecionar as decisões de cada público.",
+      "Definir métricas e cobertura dos dados.",
+      "Organizar panorama, exceções e detalhamento.",
+      "Exibir atualização, limites e filtros ativos.",
+      "Testar a leitura com uma decisão operacional simulada."
+    ],
+    "keywords": [
+      "dashboards Salesforce",
+      "gestão de atendimento",
+      "visualização de dados",
+      "decisão operacional"
+    ],
+    "priority": "P2",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-010",
+    "title": "Da administração Salesforce à arquitetura de soluções.",
+    "slug": "administracao-salesforce-arquitetura",
+    "category": "salesforce",
+    "tags": [
+      "salesforce",
+      "carreira",
+      "arquitetura"
+    ],
+    "objective": "Mapear capacidades a desenvolver para ampliar a atuação da configuração à análise de soluções.",
+    "audience": "Administradores Salesforce que buscam evolução técnica e maior participação em decisões.",
+    "problem": "A progressão é confundida com acumular certificações ou abandonar a compreensão operacional.",
+    "angle": "Relacionar competências a decisões concretas, sem prometer cargo, remuneração ou um percurso único.",
+    "outline": [
+      "Distinguir domínio da ferramenta de responsabilidade arquitetural.",
+      "Identificar lacunas em dados, integração e segurança.",
+      "Praticar análise de alternativas em cenários fictícios.",
+      "Documentar decisões e comunicar limitações.",
+      "Construir um plano de aprendizagem com evidências observáveis."
+    ],
+    "keywords": [
+      "carreira Salesforce",
+      "arquitetura de soluções",
+      "competências",
+      "desenvolvimento profissional"
+    ],
+    "priority": "P2",
+    "series": "carreira-lideranca",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-011",
+    "title": "Como traduzir necessidades de negócio em requisitos claros.",
+    "slug": "necessidades-negocio-requisitos",
+    "category": "gestao",
+    "tags": [
+      "gestao",
+      "produtos",
+      "processos"
+    ],
+    "objective": "Converter um pedido de solução em requisitos que possam ser discutidos, implementados e verificados.",
+    "audience": "Analistas de negócio, product owners e líderes técnicos.",
+    "problem": "Pedidos descrevem telas e ferramentas enquanto regras, exceções e resultados esperados permanecem implícitos.",
+    "angle": "Acompanhar a transformação de um pedido vago em comportamento observável, preservando dúvidas em aberto.",
+    "outline": [
+      "Identificar pessoa, tarefa e dificuldade.",
+      "Separar necessidade de solução sugerida.",
+      "Definir regras e exemplos de exceção.",
+      "Escrever critérios de aceite verificáveis.",
+      "Revisar entendimento com negócio e tecnologia."
+    ],
+    "keywords": [
+      "requisitos de negócio",
+      "critérios de aceite",
+      "análise de negócio",
+      "descoberta"
+    ],
+    "priority": "P1",
+    "series": "necessidade-solucao",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-012",
+    "title": "Indicadores que ajudam gestores a decidir.",
+    "slug": "indicadores-decisoes-gestores",
+    "category": "gestao",
+    "tags": [
+      "gestao",
+      "indicadores",
+      "dados"
+    ],
+    "objective": "Selecionar indicadores pela decisão e pela possibilidade de intervenção do gestor.",
+    "audience": "Gestores de equipes técnicas e operacionais.",
+    "problem": "Relatórios extensos consomem tempo sem deixar claro o que merece ação ou investigação.",
+    "angle": "Criar uma matriz entre decisão, sinal, contexto e autoridade, em vez de uma lista universal de KPIs.",
+    "outline": [
+      "Listar decisões recorrentes e seu horizonte.",
+      "Relacionar sinais observáveis a cada decisão.",
+      "Definir limites e necessidade de contexto.",
+      "Combinar resultado com indicadores de efeito lateral.",
+      "Planejar revisão das ações tomadas."
+    ],
+    "keywords": [
+      "KPIs de gestão",
+      "decisão gerencial",
+      "indicadores acionáveis",
+      "contexto"
+    ],
+    "priority": "P1",
+    "series": "administracao-dados",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-013",
+    "title": "Entregar funcionalidades versus entregar resultados.",
+    "slug": "funcionalidades-resultados",
+    "category": "gestao",
+    "tags": [
+      "produtos",
+      "gestao",
+      "estrategia"
+    ],
+    "objective": "Distinguir conclusão técnica de mudança útil no trabalho ou na experiência do cliente.",
+    "audience": "Product owners, patrocinadores e equipes de entrega.",
+    "problem": "O encerramento de tarefas é apresentado como evidência suficiente de valor.",
+    "angle": "Seguir uma funcionalidade hipotética após a entrega e identificar adoção, efeito observado e incerteza causal.",
+    "outline": [
+      "Definir o problema antes da solução.",
+      "Descrever o comportamento que deveria mudar.",
+      "Estabelecer evidência de uso e de resultado.",
+      "Investigar efeitos que dependem de processo e pessoas.",
+      "Decidir ajustes quando a entrega não muda o resultado."
+    ],
+    "keywords": [
+      "outputs e outcomes",
+      "valor de negócio",
+      "adoção",
+      "avaliação de resultados"
+    ],
+    "priority": "P1",
+    "series": "necessidade-solucao",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-014",
+    "title": "Gestão de conhecimento como ferramenta de liderança.",
+    "slug": "conhecimento-ferramenta-lideranca",
+    "category": "gestao",
+    "tags": [
+      "conhecimento",
+      "lideranca",
+      "carreira"
+    ],
+    "objective": "Mostrar como distribuir contexto e capacidade de decisão sem centralizar todas as respostas no líder.",
+    "audience": "Líderes técnicos, especialistas e responsáveis por formação de equipes.",
+    "problem": "O conhecimento concentrado cria dependência, interrupções e dificuldade para desenvolver autonomia.",
+    "angle": "Avaliar a liderança pelo que a equipe consegue compreender e decidir quando o especialista não está disponível.",
+    "outline": [
+      "Identificar perguntas e decisões recorrentes.",
+      "Separar orientação, procedimento e raciocínio.",
+      "Criar oportunidades de explicação e revisão conjunta.",
+      "Distribuir responsabilidade pela atualização.",
+      "Observar autonomia sem confundir consulta com incapacidade."
+    ],
+    "keywords": [
+      "liderança técnica",
+      "gestão do conhecimento",
+      "autonomia",
+      "aprendizagem de equipe"
+    ],
+    "priority": "P2",
+    "series": "carreira-lideranca",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-015",
+    "title": "Roadmap técnico e roadmap estratégico: qual é a diferença?",
+    "slug": "roadmap-tecnico-estrategico",
+    "category": "gestao",
+    "tags": [
+      "estrategia",
+      "arquitetura",
+      "priorizacao"
+    ],
+    "objective": "Conectar a evolução técnica às capacidades e aos resultados que a organização pretende desenvolver.",
+    "audience": "Líderes de engenharia, product managers e gestores de tecnologia.",
+    "problem": "Planos técnicos e estratégicos evoluem separadamente, gerando compromissos incompatíveis.",
+    "angle": "Usar rastreabilidade entre objetivos, capacidades, dependências e entregas sem transformar roadmap em promessa fixa.",
+    "outline": [
+      "Distinguir objetivo estratégico de item de implementação.",
+      "Mapear capacidades necessárias ao objetivo.",
+      "Explicitar dependências e trabalho habilitador.",
+      "Definir horizontes e graus de confiança.",
+      "Revisar prioridades quando premissas mudarem."
+    ],
+    "keywords": [
+      "roadmap técnico",
+      "roadmap estratégico",
+      "capacidades",
+      "planejamento"
+    ],
+    "priority": "P1",
+    "series": "decisoes-arquitetura",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-016",
+    "title": "Gestão de mudanças em ambientes corporativos.",
+    "slug": "gestao-mudancas-corporativas",
+    "category": "gestao",
+    "tags": [
+      "gestao",
+      "processos",
+      "governanca"
+    ],
+    "objective": "Planejar a transição para uma mudança de sistema considerando comportamento, suporte e continuidade.",
+    "audience": "Gestores de projetos, líderes de operação e responsáveis por adoção.",
+    "problem": "Uma entrega funcional chega à operação sem acordos sobre treinamento, exceções e acompanhamento.",
+    "angle": "Examinar o período entre disponibilização técnica e uso sustentável pela equipe.",
+    "outline": [
+      "Identificar pessoas e rotinas afetadas.",
+      "Definir prontidão e responsabilidades da transição.",
+      "Preparar comunicação orientada às tarefas.",
+      "Ensaiar suporte e tratamento de falhas.",
+      "Acompanhar adoção e decidir correções após a mudança."
+    ],
+    "keywords": [
+      "gestão de mudanças",
+      "adoção de sistemas",
+      "transição operacional",
+      "stakeholders"
+    ],
+    "priority": "P1",
+    "series": "necessidade-solucao",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-017",
+    "title": "Como avaliar riscos e dependências de projetos.",
+    "slug": "riscos-dependencias-projetos",
+    "category": "gestao",
+    "tags": [
+      "gestao",
+      "priorizacao",
+      "arquitetura"
+    ],
+    "objective": "Tornar riscos e dependências explícitos antes que se transformem em bloqueios de entrega.",
+    "audience": "Gerentes de projeto, líderes técnicos e responsáveis por portfólio.",
+    "problem": "Cronogramas refletem esforço interno, mas omitem decisões externas, integrações e incertezas relevantes.",
+    "angle": "Distinguir risco, problema existente, premissa e dependência para escolher respostas diferentes.",
+    "outline": [
+      "Construir um mapa de decisões e entregas dependentes.",
+      "Testar premissas com evidências disponíveis.",
+      "Avaliar consequência e possibilidade de detecção.",
+      "Definir mitigação, responsável e gatilho.",
+      "Revisar riscos conforme o projeto aprende."
+    ],
+    "keywords": [
+      "riscos de projetos",
+      "dependências",
+      "premissas",
+      "mitigação"
+    ],
+    "priority": "P1",
+    "series": "decisoes-arquitetura",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-018",
+    "title": "Desenvolvimento profissional e evolução para especialista.",
+    "slug": "evolucao-profissional-especialista",
+    "category": "gestao",
+    "tags": [
+      "carreira",
+      "conhecimento",
+      "lideranca"
+    ],
+    "objective": "Estruturar um plano de evolução que conecte estudo, prática e capacidade de explicar decisões.",
+    "audience": "Profissionais de tecnologia que desejam aprofundamento técnico e maior autonomia.",
+    "problem": "Metas de desenvolvimento se resumem a cursos concluídos sem evidência de aplicação.",
+    "angle": "Usar problemas progressivamente mais complexos como unidade de aprendizagem, sem prometer promoção.",
+    "outline": [
+      "Definir o domínio e o nível de responsabilidade desejado.",
+      "Mapear competências e lacunas com exemplos.",
+      "Escolher exercícios e projetos autorizados.",
+      "Buscar revisão de raciocínio e comunicação.",
+      "Ajustar o plano com evidências de aprendizagem."
+    ],
+    "keywords": [
+      "especialista técnico",
+      "PDI",
+      "aprendizagem aplicada",
+      "carreira em Y"
+    ],
+    "priority": "P2",
+    "series": "carreira-lideranca",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-019",
+    "title": "Como aproximar áreas de negócio e tecnologia.",
+    "slug": "aproximar-negocio-tecnologia",
+    "category": "gestao",
+    "tags": [
+      "gestao",
+      "processos",
+      "estrategia"
+    ],
+    "objective": "Criar acordos de colaboração que reduzam traduções sucessivas e expectativas incompatíveis.",
+    "audience": "Analistas, lideranças técnicas e gestores de áreas demandantes.",
+    "problem": "Negócio apresenta soluções prontas e tecnologia responde em limitações técnicas sem discutir o resultado.",
+    "angle": "Estabelecer objetos compartilhados de conversa: jornada, exemplos, regras, alternativas e critérios de decisão.",
+    "outline": [
+      "Identificar onde a tradução perde contexto.",
+      "Adotar exemplos concretos de trabalho.",
+      "Expor restrições com consequências de negócio.",
+      "Comparar alternativas em conjunto.",
+      "Registrar decisões e dúvidas para a próxima revisão."
+    ],
+    "keywords": [
+      "alinhamento negócio tecnologia",
+      "colaboração",
+      "stakeholders",
+      "decisões compartilhadas"
+    ],
+    "priority": "P1",
+    "series": "necessidade-solucao",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-020",
+    "title": "Governança leve: controle sem burocracia excessiva.",
+    "slug": "governanca-leve",
+    "category": "gestao",
+    "tags": [
+      "governanca",
+      "gestao",
+      "qualidade"
+    ],
+    "objective": "Dimensionar controles de decisão e mudança conforme risco e reversibilidade.",
+    "audience": "Líderes técnicos, gestores de equipes e responsáveis por governança.",
+    "problem": "A mesma exigência de aprovação é aplicada a mudanças muito diferentes, sem melhorar a rastreabilidade.",
+    "angle": "Comparar controles proporcionais ao impacto, preservando responsabilidade sem multiplicar cerimônias.",
+    "outline": [
+      "Identificar decisões que precisam de controle.",
+      "Classificar impacto e reversibilidade.",
+      "Definir evidência mínima por classe de mudança.",
+      "Distribuir autoridade e tratar exceções.",
+      "Revisar controles que não previnem nem detectam problemas."
+    ],
+    "keywords": [
+      "governança leve",
+      "controles proporcionais",
+      "responsabilidade",
+      "gestão de mudanças"
+    ],
+    "priority": "P2",
+    "series": "carreira-lideranca",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-021",
+    "title": "Como identificar gargalos operacionais.",
+    "slug": "identificar-gargalos-operacionais",
+    "category": "processos",
+    "tags": [
+      "processos",
+      "indicadores",
+      "gestao"
+    ],
+    "objective": "Localizar restrições que limitam o resultado do fluxo, distinguindo espera de execução.",
+    "audience": "Analistas de processos, supervisores e gestores de operações.",
+    "problem": "A etapa mais visível recebe investimento enquanto a restrição que determina o prazo continua em outro ponto.",
+    "angle": "Acompanhar itens de trabalho de ponta a ponta e comparar demanda, espera, capacidade e retrabalho.",
+    "outline": [
+      "Definir início, fim e unidade do processo.",
+      "Observar trabalho e espera por etapa.",
+      "Localizar acúmulos e suas condições de ocorrência.",
+      "Distinguir restrição persistente de pico transitório.",
+      "Testar uma intervenção e verificar deslocamento do gargalo."
+    ],
+    "keywords": [
+      "gargalos",
+      "tempo de ciclo",
+      "capacidade operacional",
+      "fluxo de trabalho"
+    ],
+    "priority": "P1",
+    "series": "processos-empresariais",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-022",
+    "title": "Indicadores de eficiência versus indicadores de qualidade.",
+    "slug": "eficiencia-qualidade-indicadores",
+    "category": "processos",
+    "tags": [
+      "indicadores",
+      "qualidade",
+      "processos"
+    ],
+    "objective": "Combinar medidas de esforço e de adequação do resultado em uma avaliação operacional.",
+    "audience": "Gestores de qualidade e responsáveis por metas de atendimento.",
+    "problem": "Ganhos aparentes de velocidade ocultam erros, recontatos ou esforço transferido para outras equipes.",
+    "angle": "Construir pares de indicadores que tornem efeitos laterais visíveis sem criar um ranking simplista.",
+    "outline": [
+      "Definir resultado correto e esforço necessário.",
+      "Selecionar uma medida de eficiência.",
+      "Relacionar uma medida de qualidade ao mesmo universo.",
+      "Analisar cenários em que os indicadores divergem.",
+      "Acordar investigação antes de atribuir desempenho individual."
+    ],
+    "keywords": [
+      "eficiência operacional",
+      "qualidade",
+      "recontato",
+      "metas"
+    ],
+    "priority": "P1",
+    "series": "administracao-dados",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-023",
+    "title": "A importância de definir corretamente o início e o fim de um SLA.",
+    "slug": "inicio-fim-sla",
+    "category": "processos",
+    "tags": [
+      "processos",
+      "atendimento",
+      "indicadores"
+    ],
+    "objective": "Formalizar regras de contagem que tornem o compromisso de atendimento compreensível e verificável.",
+    "audience": "Responsáveis por operações, contratos de serviço e configuração de SLA.",
+    "problem": "Equipes consideram relógios diferentes para avaliar o mesmo compromisso.",
+    "angle": "Tratar o SLA como um acordo sobre eventos e exceções antes de tratá-lo como configuração de cronômetro.",
+    "outline": [
+      "Identificar o compromisso e seu público.",
+      "Selecionar eventos de início e conclusão.",
+      "Definir calendário, pausas e retomadas.",
+      "Tratar transferência, reabertura e dependência externa.",
+      "Conferir exemplos de fronteira com todas as partes."
+    ],
+    "keywords": [
+      "SLA",
+      "calendário de atendimento",
+      "marcos de serviço",
+      "regras de contagem"
+    ],
+    "priority": "P1",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-024",
+    "title": "Como estruturar uma operação de atendimento.",
+    "slug": "estruturar-operacao-atendimento",
+    "category": "processos",
+    "tags": [
+      "atendimento",
+      "processos",
+      "experiencia-cliente"
+    ],
+    "objective": "Desenhar responsabilidades e mecanismos de coordenação para uma operação com diferentes níveis de apoio.",
+    "audience": "Gestores que estão formando ou revisando uma operação de atendimento.",
+    "problem": "Canais e níveis de suporte são criados sem critérios de encaminhamento e sem continuidade de contexto.",
+    "angle": "Partir das necessidades atendidas para definir papéis, capacidade, escalonamento e retorno ao cliente.",
+    "outline": [
+      "Classificar demandas e necessidades de resolução.",
+      "Definir papéis e limites de atuação.",
+      "Desenhar passagem entre front office e backoffice.",
+      "Estabelecer critérios de escalonamento e retorno.",
+      "Planejar conhecimento, supervisão e validação inicial."
+    ],
+    "keywords": [
+      "operação de atendimento",
+      "níveis de suporte",
+      "front office",
+      "backoffice"
+    ],
+    "priority": "P1",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-025",
+    "title": "Quando um processo precisa de padronização antes de automação.",
+    "slug": "padronizacao-antes-automacao",
+    "category": "processos",
+    "tags": [
+      "processos",
+      "automacao",
+      "governanca"
+    ],
+    "objective": "Reconhecer situações em que a variação do trabalho exige decisões comuns antes da implementação técnica.",
+    "audience": "Analistas de processos e equipes que avaliam solicitações de automação.",
+    "problem": "Regras diferentes para casos equivalentes são incorporadas ao sistema sem explicação nem responsável.",
+    "angle": "Distinguir diversidade legítima de improviso e propor um núcleo comum com variantes explícitas.",
+    "outline": [
+      "Inventariar diferenças entre execuções do processo.",
+      "Identificar variações exigidas pelo contexto.",
+      "Expor decisões sem critério compartilhado.",
+      "Acordar padrão, exceções e autoridade.",
+      "Selecionar um recorte estável para automação."
+    ],
+    "keywords": [
+      "padronização",
+      "automação de processos",
+      "variantes",
+      "regras de negócio"
+    ],
+    "priority": "P1",
+    "series": "processos-empresariais",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-026",
+    "title": "A diferença entre produtividade e efetividade.",
+    "slug": "produtividade-efetividade",
+    "category": "processos",
+    "tags": [
+      "processos",
+      "indicadores",
+      "estrategia"
+    ],
+    "objective": "Avaliar se maior produção contribui para o resultado que justifica o trabalho.",
+    "audience": "Gestores de operações e equipes responsáveis por melhoria contínua.",
+    "problem": "Mais tarefas concluídas são interpretadas como sucesso mesmo quando a necessidade permanece sem solução.",
+    "angle": "Comparar volume entregue, recurso consumido e problema efetivamente resolvido em um mesmo cenário.",
+    "outline": [
+      "Definir a unidade de produção.",
+      "Explicitar o resultado que essa produção deveria gerar.",
+      "Identificar atividades que aumentam volume sem valor.",
+      "Analisar esforço deslocado e retrabalho.",
+      "Revisar metas para conectar produção e finalidade."
+    ],
+    "keywords": [
+      "produtividade",
+      "efetividade",
+      "resultado operacional",
+      "retrabalho"
+    ],
+    "priority": "P2",
+    "series": "administracao-dados",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-027",
+    "title": "Como desenhar processos considerando exceções.",
+    "slug": "processos-considerando-excecoes",
+    "category": "processos",
+    "tags": [
+      "processos",
+      "qualidade",
+      "governanca"
+    ],
+    "objective": "Incluir falhas e situações incomuns no desenho sem tornar o caminho normal desnecessariamente complexo.",
+    "audience": "Analistas de negócio, process owners e responsáveis por automação.",
+    "problem": "Exceções são tratadas por improviso depois da implantação e geram rotinas paralelas.",
+    "angle": "Organizar exceções por consequência e decisão necessária, em vez de tentar enumerar todas as combinações.",
+    "outline": [
+      "Identificar falhas previsíveis e condições de fronteira.",
+      "Definir como reconhecer cada classe de exceção.",
+      "Atribuir autoridade e limite de atuação.",
+      "Desenhar retomada, cancelamento e compensação.",
+      "Validar cenários com dados sintéticos."
+    ],
+    "keywords": [
+      "gestão de exceções",
+      "desenho de processos",
+      "retomada",
+      "validação operacional"
+    ],
+    "priority": "P1",
+    "series": "processos-empresariais",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-028",
+    "title": "Jornada do cliente e dependências internas.",
+    "slug": "jornada-cliente-dependencias",
+    "category": "processos",
+    "tags": [
+      "experiencia-cliente",
+      "processos",
+      "atendimento"
+    ],
+    "objective": "Relacionar momentos da experiência do cliente ao trabalho interno necessário para sustentá-los.",
+    "audience": "Analistas de CX, gestores de atendimento e responsáveis por processos transversais.",
+    "problem": "A jornada externa é mapeada sem mostrar decisões e transferências que determinam a experiência.",
+    "angle": "Conectar promessa ao cliente, atividade de bastidor e responsabilidade pela continuidade.",
+    "outline": [
+      "Selecionar um objetivo do cliente e sua jornada.",
+      "Identificar momentos de espera ou incerteza.",
+      "Relacionar atividades internas e sistemas dependentes.",
+      "Explicitar quem acompanha as transferências.",
+      "Priorizar melhorias pelo efeito na experiência completa."
+    ],
+    "keywords": [
+      "jornada do cliente",
+      "dependências internas",
+      "service blueprint",
+      "continuidade"
+    ],
+    "priority": "P2",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-029",
+    "title": "Como evoluir um processo sem interromper a operação.",
+    "slug": "evoluir-processo-sem-interromper",
+    "category": "processos",
+    "tags": [
+      "processos",
+      "gestao",
+      "qualidade"
+    ],
+    "objective": "Planejar uma transição gradual com critérios de entrada, observação e retorno.",
+    "audience": "Gestores operacionais e equipes responsáveis por implantação de melhorias.",
+    "problem": "O novo desenho considera o estado futuro, mas ignora itens em andamento e coexistência de regras.",
+    "angle": "Tratar a transição como um processo próprio com responsabilidades e critérios de segurança.",
+    "outline": [
+      "Mapear itens em andamento e dependências da mudança.",
+      "Definir recorte inicial e condições de entrada.",
+      "Preparar convivência de versões e comunicação.",
+      "Estabelecer sinais de falha e critérios de retorno.",
+      "Encerrar o modelo antigo após verificação explícita."
+    ],
+    "keywords": [
+      "transição operacional",
+      "mudança gradual",
+      "continuidade",
+      "plano de retorno"
+    ],
+    "priority": "P1",
+    "series": "processos-empresariais",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-030",
+    "title": "O papel da rastreabilidade na melhoria contínua.",
+    "slug": "rastreabilidade-melhoria-continua",
+    "category": "processos",
+    "tags": [
+      "processos",
+      "dados",
+      "qualidade"
+    ],
+    "objective": "Definir evidências suficientes para reconstruir o trabalho e avaliar intervenções.",
+    "audience": "Analistas de qualidade, processos e dados operacionais.",
+    "problem": "Problemas recorrentes são discutidos por memória e opinião porque decisões e mudanças não deixam contexto.",
+    "angle": "Escolher registros pelo que será necessário explicar, equilibrando utilidade, privacidade e custo.",
+    "outline": [
+      "Listar perguntas de investigação recorrentes.",
+      "Definir eventos e justificativas necessários.",
+      "Vincular execução à versão da regra aplicada.",
+      "Controlar acesso, retenção e qualidade dos registros.",
+      "Usar a evidência para revisar uma hipótese de melhoria."
+    ],
+    "keywords": [
+      "rastreabilidade",
+      "melhoria contínua",
+      "evidências",
+      "versionamento de processos"
+    ],
+    "priority": "P2",
+    "series": "processos-empresariais",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-031",
+    "title": "Como idealizar um painel operacional para gestores.",
+    "slug": "idealizar-painel-operacional",
+    "category": "ideias",
+    "tags": [
+      "prototipos",
+      "gestao",
+      "indicadores"
+    ],
+    "objective": "Propor um painel que ajude a reconhecer situações e escolher intervenções operacionais.",
+    "audience": "Gestores de operação, analistas de produto e designers de ferramentas internas.",
+    "problem": "Painéis são concebidos pela disponibilidade de dados, sem esclarecer a decisão que devem apoiar.",
+    "angle": "Partir de uma tarefa de supervisão e desenhar estados de informação suficiente, ausente e desatualizada.",
+    "outline": [
+      "Escolher uma decisão operacional recorrente.",
+      "Definir sinais e contexto necessários.",
+      "Esboçar panorama e detalhamento.",
+      "Incluir estados de falha e ausência de ação.",
+      "Planejar teste com cenário sintético e critérios de compreensão."
+    ],
+    "keywords": [
+      "painel operacional",
+      "supervisão",
+      "protótipo",
+      "decisão gerencial"
+    ],
+    "priority": "P1",
+    "series": "laboratorio-ideias",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-032",
+    "title": "Arquitetura de uma visão Customer 360.",
+    "slug": "arquitetura-visao-customer-360",
+    "category": "ideias",
+    "tags": [
+      "crm",
+      "arquitetura",
+      "dados"
+    ],
+    "objective": "Desenhar conceitualmente uma visão integrada do cliente com origem e limites dos dados explícitos.",
+    "audience": "Arquitetos, analistas de CRM e responsáveis por experiência do cliente.",
+    "problem": "A ideia de visão única é tratada como reunir campos, ignorando identidade, autorização e atualização.",
+    "angle": "Apresentar uma proposta de leitura contextual com fontes responsáveis, sem prometer uma verdade universal do cliente.",
+    "outline": [
+      "Definir decisões que a visão deve apoiar.",
+      "Mapear entidades e critérios de identidade.",
+      "Separar dados oficiais de sinais derivados.",
+      "Definir atualização e acesso por finalidade.",
+      "Prototipar inconsistências e informação indisponível."
+    ],
+    "keywords": [
+      "Customer 360",
+      "identidade do cliente",
+      "arquitetura de dados",
+      "origem da informação"
+    ],
+    "priority": "P1",
+    "series": "laboratorio-ideias",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-033",
+    "title": "Um laboratório de protótipos para validar ideias antes do desenvolvimento.",
+    "slug": "laboratorio-prototipos-validar-ideias",
+    "category": "ideias",
+    "tags": [
+      "prototipos",
+      "produtos",
+      "priorizacao"
+    ],
+    "objective": "Propor um ambiente de experimentação com critérios para iniciar, avaliar e encerrar hipóteses.",
+    "audience": "Líderes de produto e tecnologia que recebem muitas propostas de ferramentas.",
+    "problem": "Demonstrações se acumulam sem aprendizagem registrada e passam a ser confundidas com projetos aprovados.",
+    "angle": "Tratar cada protótipo como um experimento com pergunta, escopo e decisão de saída.",
+    "outline": [
+      "Definir hipóteses elegíveis para o laboratório.",
+      "Escolher fidelidade e dados fictícios.",
+      "Estabelecer roteiro de observação.",
+      "Registrar evidências e limites do teste.",
+      "Decidir descarte, nova investigação ou proposta de implementação."
+    ],
+    "keywords": [
+      "laboratório de protótipos",
+      "experimentação",
+      "validação de ideias",
+      "descoberta de produto"
+    ],
+    "priority": "P1",
+    "series": "laboratorio-ideias",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-034",
+    "title": "Como centralizar regras de negócio dispersas.",
+    "slug": "centralizar-regras-negocio",
+    "category": "ideias",
+    "tags": [
+      "conhecimento",
+      "governanca",
+      "arquitetura"
+    ],
+    "objective": "Desenhar um catálogo que torne regras e responsáveis localizáveis sem criar outra fonte conflitante.",
+    "audience": "Analistas de negócio, arquitetos e responsáveis por governança de processos.",
+    "problem": "A mesma regra aparece em documentos, sistemas e conversas com versões diferentes.",
+    "angle": "Centralizar referências e significado antes de propor centralização da execução técnica.",
+    "outline": [
+      "Inventariar fontes e duplicações conhecidas.",
+      "Definir identidade, validade e responsável da regra.",
+      "Relacionar regra a processos e implementações.",
+      "Criar fluxo de revisão de divergências.",
+      "Testar busca e análise de impacto com um catálogo sintético."
+    ],
+    "keywords": [
+      "catálogo de regras",
+      "regras de negócio",
+      "governança",
+      "fonte oficial"
+    ],
+    "priority": "P1",
+    "series": "laboratorio-ideias",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-035",
+    "title": "Um mapa de dependências entre automações e sistemas.",
+    "slug": "mapa-dependencias-automacoes-sistemas",
+    "category": "ideias",
+    "tags": [
+      "arquitetura",
+      "automacao",
+      "integracoes"
+    ],
+    "objective": "Propor uma representação navegável que ajude a investigar impactos de mudança entre automações.",
+    "audience": "Arquitetos, administradores e equipes de sustentação.",
+    "problem": "Dependências implícitas fazem uma mudança local produzir efeitos em outros fluxos.",
+    "angle": "Distinguir vínculo confirmado de hipótese e representar cobertura conhecida do mapa.",
+    "outline": [
+      "Escolher uma pergunta de impacto para orientar o recorte.",
+      "Definir nós, relações e fonte da evidência.",
+      "Representar versões e dependências não confirmadas.",
+      "Explorar impacto de indisponibilidade e alteração de contrato.",
+      "Avaliar custo de atualização e risco de falsa completude."
+    ],
+    "keywords": [
+      "mapa de dependências",
+      "automação",
+      "análise de impacto",
+      "arquitetura de sistemas"
+    ],
+    "priority": "P1",
+    "series": "laboratorio-ideias",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-036",
+    "title": "Como criar ferramentas para gestão de competências.",
+    "slug": "ferramentas-gestao-competencias",
+    "category": "ideias",
+    "tags": [
+      "prototipos",
+      "carreira",
+      "gestao"
+    ],
+    "objective": "Propor uma ferramenta que conecte competências, evidências de prática e oportunidades de desenvolvimento.",
+    "audience": "Líderes técnicos e responsáveis por desenvolvimento de equipes.",
+    "problem": "Matrizes de competências viram notas descontextualizadas e não orientam próximos passos.",
+    "angle": "Trabalhar com evidência e plano de aprendizagem, evitando transformar autoavaliação em ranking automático.",
+    "outline": [
+      "Definir competências e contextos de aplicação.",
+      "Escolher evidências observáveis de prática.",
+      "Diferenciar autoavaliação e revisão conjunta.",
+      "Relacionar lacunas a experiências de aprendizagem.",
+      "Projetar acesso e uso responsável dos dados individuais."
+    ],
+    "keywords": [
+      "gestão de competências",
+      "SkillShine",
+      "PDI",
+      "evidências de aprendizagem"
+    ],
+    "priority": "P2",
+    "series": "carreira-lideranca",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-037",
+    "title": "A importância dos protótipos interativos nas decisões de produto.",
+    "slug": "prototipos-interativos-decisoes-produto",
+    "category": "ideias",
+    "tags": [
+      "prototipos",
+      "produtos",
+      "qualidade"
+    ],
+    "objective": "Explicar quais incertezas exigem interação para serem investigadas e quais podem ser avaliadas de forma mais simples.",
+    "audience": "Product owners, designers e líderes de desenvolvimento.",
+    "problem": "A fidelidade do protótipo é escolhida por preferência visual e não pela pergunta de pesquisa.",
+    "angle": "Comparar o que um desenho, uma navegação simulada e um protótipo funcional permitem concluir.",
+    "outline": [
+      "Definir a decisão de produto em aberto.",
+      "Comparar alcance e custo de diferentes fidelidades.",
+      "Selecionar estados e transições relevantes.",
+      "Observar comportamento sem ensinar o caminho.",
+      "Registrar conclusões que o teste não autoriza."
+    ],
+    "keywords": [
+      "protótipos interativos",
+      "fidelidade",
+      "decisão de produto",
+      "teste de usabilidade"
+    ],
+    "priority": "P2",
+    "series": "necessidade-solucao",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-038",
+    "title": "Como projetar um painel de inteligência comercial.",
+    "slug": "painel-inteligencia-comercial",
+    "category": "ideias",
+    "tags": [
+      "prototipos",
+      "crm",
+      "indicadores"
+    ],
+    "objective": "Propor um painel comercial que conecte sinais do funil a investigação e ação.",
+    "audience": "Gestores comerciais, analistas de CRM e equipes de Revenue Operations.",
+    "problem": "Volume de oportunidades e previsão agregada não explicam onde atuar nem a confiabilidade da informação.",
+    "angle": "Explorar qualidade do pipeline, evidência da próxima ação e incerteza de previsão com dados sintéticos.",
+    "outline": [
+      "Selecionar decisões de revisão comercial.",
+      "Definir sinais de risco e cobertura dos dados.",
+      "Distinguir fato registrado de inferência.",
+      "Projetar investigação da carteira ao detalhe.",
+      "Testar interpretações equivocadas e incentivos gerados."
+    ],
+    "keywords": [
+      "inteligência comercial",
+      "pipeline",
+      "Revenue Intelligence",
+      "previsão de vendas"
+    ],
+    "priority": "P2",
+    "series": "laboratorio-ideias",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-039",
+    "title": "Ferramentas para documentação navegável de processos.",
+    "slug": "documentacao-navegavel-processos",
+    "category": "ideias",
+    "tags": [
+      "conhecimento",
+      "processos",
+      "prototipos"
+    ],
+    "objective": "Propor uma navegação que conecte o mapa geral às instruções necessárias para cada tarefa.",
+    "audience": "Analistas de processos, equipes de conhecimento e designers de ferramentas internas.",
+    "problem": "Documentos lineares dificultam localizar a orientação específica sem perder o contexto do processo.",
+    "angle": "Projetar caminhos por tarefa, papel e exceção mantendo uma fonte única para cada regra.",
+    "outline": [
+      "Definir perguntas de entrada dos leitores.",
+      "Separar mapa, procedimento e justificativa.",
+      "Criar links estáveis entre as camadas.",
+      "Oferecer busca e navegação por teclado.",
+      "Validar localização de instruções e manutenção dos vínculos."
+    ],
+    "keywords": [
+      "documentação navegável",
+      "base de conhecimento",
+      "mapa de processos",
+      "navegação por tarefa"
+    ],
+    "priority": "P2",
+    "series": "laboratorio-ideias",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-040",
+    "title": "Ideias de automação com foco em produtividade empresarial.",
+    "slug": "ideias-automacao-produtividade",
+    "category": "ideias",
+    "tags": [
+      "automacao",
+      "produtos",
+      "processos"
+    ],
+    "objective": "Construir um inventário de oportunidades com recorte, hipótese de valor e condição de validação.",
+    "audience": "Analistas de melhoria contínua e equipes de tecnologia próximas à operação.",
+    "problem": "Listas de automações possíveis não distinguem economia real de esforço transferido ou novos riscos.",
+    "angle": "Comparar oportunidades pelo trabalho evitado, estabilidade da regra e custo de sustentação.",
+    "outline": [
+      "Identificar tarefas repetitivas e sua finalidade.",
+      "Eliminar atividades sem contribuição necessária.",
+      "Definir hipótese de benefício e efeitos laterais.",
+      "Selecionar recortes pequenos e reversíveis.",
+      "Planejar verificação antes de ampliar a automação."
+    ],
+    "keywords": [
+      "produtividade empresarial",
+      "oportunidades de automação",
+      "trabalho repetitivo",
+      "valor operacional"
+    ],
+    "priority": "P2",
+    "series": "necessidade-solucao",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-041",
+    "title": "Bots tradicionais versus agentes de IA.",
+    "slug": "bots-tradicionais-agentes-ia",
+    "category": "inovacao",
+    "tags": [
+      "ia",
+      "agentes",
+      "automacao"
+    ],
+    "objective": "Comparar formas de automação conversacional pelo problema, autonomia e necessidade de controle.",
+    "audience": "Gestores de atendimento e equipes que avaliam soluções conversacionais.",
+    "problem": "A decisão é tomada pelo rótulo do produto sem explicitar comportamento esperado e fronteiras de atuação.",
+    "angle": "Comparar alternativas em uma mesma tarefa hipotética, incluindo caminhos em que a IA não é necessária.",
+    "outline": [
+      "Definir tarefa e resultado permitido.",
+      "Descrever fluxo determinístico e comportamento orientado por modelo.",
+      "Comparar previsibilidade, flexibilidade e avaliação.",
+      "Analisar falha, transferência e acesso a ações.",
+      "Definir critérios para uma experiência delimitada."
+    ],
+    "keywords": [
+      "bots",
+      "agentes de IA",
+      "automação conversacional",
+      "autonomia"
+    ],
+    "priority": "P1",
+    "series": "ia-responsavel",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-042",
+    "title": "O papel dos dados na qualidade dos agentes inteligentes.",
+    "slug": "dados-qualidade-agentes",
+    "category": "inovacao",
+    "tags": [
+      "ia",
+      "dados",
+      "qualidade"
+    ],
+    "objective": "Identificar como origem, atualização e acesso aos dados devem entrar na avaliação de um agente.",
+    "audience": "Arquitetos de dados e equipes que desenvolvem agentes empresariais.",
+    "problem": "Falhas de resposta são atribuídas apenas ao modelo enquanto o contexto recuperado é insuficiente ou incompatível.",
+    "angle": "Rastrear uma resposta da pergunta à fonte para separar problemas de dados, recuperação e geração.",
+    "outline": [
+      "Definir informação necessária à tarefa.",
+      "Mapear origem, validade e restrições de acesso.",
+      "Construir exemplos de ausência e conflito.",
+      "Avaliar recuperação e resposta separadamente.",
+      "Planejar monitoramento de mudanças nas fontes."
+    ],
+    "keywords": [
+      "qualidade de dados",
+      "agentes inteligentes",
+      "contexto",
+      "avaliação de respostas"
+    ],
+    "priority": "P1",
+    "series": "ia-responsavel",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-043",
+    "title": "Por que conhecimento corporativo organizado melhora aplicações de IA.",
+    "slug": "conhecimento-organizado-aplicacoes-ia",
+    "category": "inovacao",
+    "tags": [
+      "ia",
+      "conhecimento",
+      "governanca"
+    ],
+    "objective": "Explicar quais condições do conhecimento precisam ser verificadas antes de conectá-lo a uma aplicação de IA.",
+    "audience": "Responsáveis por bases de conhecimento e equipes de soluções com recuperação de informação.",
+    "problem": "Documentos conflitantes, antigos e sem autoria são tratados como contexto equivalente.",
+    "angle": "Investigar organização e governança como hipóteses de melhoria, sem prometer que uma base organizada elimina erros.",
+    "outline": [
+      "Definir uma pergunta que depende de conhecimento interno.",
+      "Classificar estado, autoridade e validade das fontes.",
+      "Tratar duplicação e conflito de orientação.",
+      "Comparar respostas com conjuntos de conteúdo controlados.",
+      "Explicitar limitações que persistem após a organização."
+    ],
+    "keywords": [
+      "conhecimento corporativo",
+      "RAG",
+      "governança de conteúdo",
+      "qualidade de respostas"
+    ],
+    "priority": "P1",
+    "series": "ia-responsavel",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-044",
+    "title": "Human-in-the-loop: onde a supervisão continua necessária.",
+    "slug": "human-in-the-loop-supervisao",
+    "category": "inovacao",
+    "tags": [
+      "ia",
+      "governanca",
+      "seguranca"
+    ],
+    "objective": "Definir pontos de supervisão humana que tenham autoridade, contexto e capacidade de intervenção.",
+    "audience": "Gestores de risco, operações e equipes de arquitetura de agentes.",
+    "problem": "A aprovação humana é adicionada como etapa formal sem condições reais de avaliar a ação proposta.",
+    "angle": "Distinguir supervisão efetiva de confirmação automática e calibrar a intervenção pela consequência.",
+    "outline": [
+      "Classificar ações por impacto e reversibilidade.",
+      "Definir o que o revisor precisa conhecer.",
+      "Projetar rejeição, correção e escalonamento.",
+      "Testar pressão de volume e ambiguidade.",
+      "Medir qualidade da supervisão e revisar limites de autonomia."
+    ],
+    "keywords": [
+      "human-in-the-loop",
+      "supervisão humana",
+      "autonomia de agentes",
+      "controle de risco"
+    ],
+    "priority": "P1",
+    "series": "ia-responsavel",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-045",
+    "title": "Como medir o valor de uma automação com inteligência artificial.",
+    "slug": "medir-valor-automacao-ia",
+    "category": "inovacao",
+    "tags": [
+      "ia",
+      "indicadores",
+      "custos"
+    ],
+    "objective": "Estruturar uma avaliação que compare benefício operacional, qualidade e custo total da automação.",
+    "audience": "Patrocinadores de iniciativas de IA e gestores responsáveis por seus resultados.",
+    "problem": "Uso e volume de respostas são apresentados como retorno sem contabilizar revisão, falhas e sustentação.",
+    "angle": "Construir uma comparação antes/depois com hipóteses explícitas e atenção à atribuição do resultado.",
+    "outline": [
+      "Definir resultado e alternativa de comparação.",
+      "Estabelecer baseline com população comparável.",
+      "Medir qualidade, tempo e intervenção humana.",
+      "Incluir custos de avaliação e operação.",
+      "Revisar continuidade conforme evidência e efeitos laterais."
+    ],
+    "keywords": [
+      "valor de IA",
+      "ROI",
+      "custo operacional",
+      "avaliação de automação"
+    ],
+    "priority": "P1",
+    "series": "administracao-dados",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-046",
+    "title": "IA para identificar oportunidades comerciais.",
+    "slug": "ia-oportunidades-comerciais",
+    "category": "inovacao",
+    "tags": [
+      "ia",
+      "crm",
+      "dados"
+    ],
+    "objective": "Investigar uma proposta de apoio à identificação de oportunidades sem transformar inferências em fatos comerciais.",
+    "audience": "Equipes comerciais, analistas de CRM e responsáveis por soluções de IA.",
+    "problem": "Sinais incompletos são usados para recomendar ações sem evidência, explicação ou revisão do contexto.",
+    "angle": "Tratar a saída como hipótese comercial verificável, com fontes e critérios de acompanhamento.",
+    "outline": [
+      "Definir a decisão e os sinais autorizados.",
+      "Separar fatos registrados de hipóteses.",
+      "Projetar explicação e revisão pelo responsável.",
+      "Testar casos sem oportunidade e dados insuficientes.",
+      "Medir utilidade e efeitos indesejados na abordagem."
+    ],
+    "keywords": [
+      "IA comercial",
+      "oportunidades de vendas",
+      "CRM",
+      "recomendações"
+    ],
+    "priority": "P2",
+    "series": "ia-responsavel",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-047",
+    "title": "Como avaliar a adoção de um agente de atendimento.",
+    "slug": "avaliar-adocao-agente-atendimento",
+    "category": "inovacao",
+    "tags": [
+      "agentes",
+      "atendimento",
+      "qualidade"
+    ],
+    "objective": "Definir evidências de prontidão e continuidade para um agente em uma tarefa de atendimento delimitada.",
+    "audience": "Gestores de atendimento e equipes que conduzem pilotos de agentes.",
+    "problem": "Uma demonstração com perguntas previstas é interpretada como evidência suficiente para ampliar o uso.",
+    "angle": "Avaliar a jornada completa, inclusive recusa, transferência e recuperação de falhas.",
+    "outline": [
+      "Selecionar uma tarefa e suas fronteiras.",
+      "Construir conjunto de avaliação com exceções.",
+      "Verificar acesso a dados e ações.",
+      "Testar transferência com preservação de contexto.",
+      "Definir critérios de expansão, suspensão e revisão."
+    ],
+    "keywords": [
+      "agente de atendimento",
+      "piloto de IA",
+      "critérios de adoção",
+      "avaliação"
+    ],
+    "priority": "P1",
+    "series": "service-operacoes",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-048",
+    "title": "Como evitar dependência excessiva de plataformas de IA.",
+    "slug": "dependencia-plataformas-ia",
+    "category": "inovacao",
+    "tags": [
+      "ia",
+      "arquitetura",
+      "custos"
+    ],
+    "objective": "Avaliar escolhas que preservem capacidade de mudança sem introduzir abstrações desnecessárias.",
+    "audience": "Arquitetos e gestores responsáveis por decisões de plataforma.",
+    "problem": "A adoção inicial ignora exportação de conhecimento, contratos de ação e esforço de substituição.",
+    "angle": "Comparar custos de portabilidade e benefícios de recursos específicos por camada da solução.",
+    "outline": [
+      "Identificar dados, regras e contratos sob dependência.",
+      "Verificar possibilidades reais de exportação e substituição.",
+      "Separar lógica de negócio de adaptação ao fornecedor.",
+      "Ensaiar uma troca em recorte limitado.",
+      "Registrar custos e condições para revisar a escolha."
+    ],
+    "keywords": [
+      "dependência de fornecedor",
+      "portabilidade de IA",
+      "arquitetura de agentes",
+      "custo de saída"
+    ],
+    "priority": "P2",
+    "series": "decisoes-arquitetura",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-049",
+    "title": "Onde a automação determinística ainda é melhor do que IA.",
+    "slug": "automacao-deterministica-ou-ia",
+    "category": "inovacao",
+    "tags": [
+      "automacao",
+      "ia",
+      "arquitetura"
+    ],
+    "objective": "Estabelecer critérios para resolver tarefas com regras explícitas, modelos ou uma combinação dos dois.",
+    "audience": "Administradores, desenvolvedores e arquitetos de automação.",
+    "problem": "IA é proposta para decisões que já possuem entradas estruturadas e regras completas.",
+    "angle": "Comparar variabilidade da tarefa, necessidade de explicação e custo de erro antes da escolha tecnológica.",
+    "outline": [
+      "Definir a regra e suas entradas disponíveis.",
+      "Identificar onde existe interpretação real.",
+      "Comparar caminhos determinísticos e probabilísticos.",
+      "Delimitar uma combinação com validação de ações.",
+      "Testar exceções e explicabilidade do resultado."
+    ],
+    "keywords": [
+      "automação determinística",
+      "IA generativa",
+      "regras de negócio",
+      "decisão arquitetural"
+    ],
+    "priority": "P1",
+    "series": "decisoes-arquitetura",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-050",
+    "title": "O futuro da administração Salesforce com inteligência artificial.",
+    "slug": "futuro-administracao-salesforce-ia",
+    "category": "inovacao",
+    "tags": [
+      "salesforce",
+      "ia",
+      "carreira"
+    ],
+    "objective": "Discutir capacidades de administração que merecem atenção diante de novas ferramentas de IA.",
+    "audience": "Administradores Salesforce e responsáveis pelo desenvolvimento dessas equipes.",
+    "problem": "Previsões sobre substituição de funções confundem demonstrações atuais com mudanças já comprovadas no trabalho.",
+    "angle": "Separar capacidades documentadas, cenários possíveis e competências úteis, sem anunciar um futuro inevitável.",
+    "outline": [
+      "Inventariar tarefas de administração por responsabilidade.",
+      "Verificar recursos disponíveis em documentação atual.",
+      "Distinguir assistência de delegação de decisão.",
+      "Analisar governança, avaliação e conhecimento de negócio.",
+      "Propor experimentos de aprendizagem com limites claros."
+    ],
+    "keywords": [
+      "Salesforce e IA",
+      "administração Salesforce",
+      "evolução profissional",
+      "competências"
+    ],
+    "priority": "P3",
+    "series": "carreira-lideranca",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-051",
+    "title": "Como indicadores conectam estratégia e execução.",
+    "slug": "indicadores-estrategia-execucao",
+    "category": "administracao",
+    "tags": [
+      "estrategia",
+      "indicadores",
+      "gestao"
+    ],
+    "objective": "Construir uma cadeia verificável entre objetivo empresarial, capacidade operacional e evidência de resultado.",
+    "audience": "Gestores de negócio e responsáveis por planejamento estratégico.",
+    "problem": "Metas de áreas são acompanhadas sem demonstrar como contribuem para a direção da organização.",
+    "angle": "Explorar relações de contribuição e hipóteses causais, evitando tratar um painel como prova de causalidade.",
+    "outline": [
+      "Escolher um objetivo estratégico delimitado.",
+      "Identificar capacidades e comportamentos necessários.",
+      "Selecionar medidas de resultado e de execução.",
+      "Explicitar hipóteses que conectam as medidas.",
+      "Revisar decisões quando a relação esperada não aparece."
+    ],
+    "keywords": [
+      "estratégia e execução",
+      "indicadores estratégicos",
+      "Balanced Scorecard",
+      "hipóteses de contribuição"
+    ],
+    "priority": "P1",
+    "series": "administracao-dados",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-052",
+    "title": "O papel da governança na transformação digital.",
+    "slug": "governanca-transformacao-digital",
+    "category": "administracao",
+    "tags": [
+      "governanca",
+      "estrategia",
+      "gestao"
+    ],
+    "objective": "Definir responsabilidades e critérios de decisão para iniciativas digitais que atravessam áreas.",
+    "audience": "Gestores empresariais e responsáveis por governança de tecnologia.",
+    "problem": "Projetos avançam isoladamente e acumulam decisões incompatíveis sobre dados, processos e plataformas.",
+    "angle": "Examinar governança como coordenação de escolhas e resultados, incluindo o custo de decidir tarde.",
+    "outline": [
+      "Identificar decisões transversais recorrentes.",
+      "Definir autoridade, participação e evidência.",
+      "Relacionar investimento a capacidades empresariais.",
+      "Tratar exceções e conflitos entre prioridades.",
+      "Avaliar se os controles ajudam a corrigir o rumo."
+    ],
+    "keywords": [
+      "governança digital",
+      "transformação digital",
+      "coordenação",
+      "decisões empresariais"
+    ],
+    "priority": "P1",
+    "series": "decisoes-arquitetura",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-053",
+    "title": "O CRM como instrumento de gestão empresarial.",
+    "slug": "crm-gestao-empresarial",
+    "category": "administracao",
+    "tags": [
+      "crm",
+      "gestao",
+      "estrategia"
+    ],
+    "objective": "Analisar como o CRM pode sustentar decisões e coordenação além do registro de interações.",
+    "audience": "Gestores comerciais, de atendimento e de operações.",
+    "problem": "O CRM é avaliado pelo preenchimento de campos, sem conexão clara com decisões de gestão.",
+    "angle": "Relacionar informação registrada, responsabilidade e uso gerencial para distinguir controle de utilidade.",
+    "outline": [
+      "Definir decisões que dependem do relacionamento com clientes.",
+      "Mapear informação necessária e sua origem.",
+      "Distribuir responsabilidade pela qualidade e atualização.",
+      "Conectar vendas, atendimento e acompanhamento.",
+      "Avaliar adoção pelo uso da informação em decisões."
+    ],
+    "keywords": [
+      "CRM empresarial",
+      "gestão de relacionamento",
+      "adoção",
+      "coordenação comercial"
+    ],
+    "priority": "P1",
+    "series": "arquitetura-salesforce",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-054",
+    "title": "Como a experiência do cliente influencia os resultados.",
+    "slug": "experiencia-cliente-resultados",
+    "category": "administracao",
+    "tags": [
+      "experiencia-cliente",
+      "indicadores",
+      "estrategia"
+    ],
+    "objective": "Investigar caminhos pelos quais a experiência pode contribuir para resultados empresariais sem simplificar causalidade.",
+    "audience": "Gestores de CX, Customer Success e planejamento.",
+    "problem": "Indicadores de satisfação são apresentados como explicação direta de receita ou retenção.",
+    "angle": "Combinar sinais de experiência, comportamento e contexto para formular hipóteses verificáveis.",
+    "outline": [
+      "Selecionar um momento relevante da jornada.",
+      "Identificar efeitos esperados no comportamento.",
+      "Combinar satisfação com evidências operacionais.",
+      "Considerar fatores alternativos e diferenças de público.",
+      "Planejar uma intervenção e seu acompanhamento."
+    ],
+    "keywords": [
+      "experiência do cliente",
+      "retenção",
+      "NPS e CSAT",
+      "resultados empresariais"
+    ],
+    "priority": "P2",
+    "series": "administracao-dados",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-055",
+    "title": "O que considerar ao avaliar investimentos em tecnologia.",
+    "slug": "avaliar-investimentos-tecnologia",
+    "category": "administracao",
+    "tags": [
+      "custos",
+      "estrategia",
+      "priorizacao"
+    ],
+    "objective": "Estruturar uma análise de investimento que inclua alternativas, capacidade de execução e incerteza.",
+    "audience": "Gestores que patrocinam ou comparam iniciativas tecnológicas.",
+    "problem": "A decisão se concentra em preço e promessa de benefício sem considerar adoção, manutenção e custo de mudança.",
+    "angle": "Comparar cenários e premissas com clareza, incluindo a opção de adiar ou reduzir o escopo.",
+    "outline": [
+      "Definir necessidade e resultado esperado.",
+      "Comparar alternativas de processo e tecnologia.",
+      "Estimar custos e dependências com intervalos.",
+      "Explicitar hipóteses de benefício e condições de execução.",
+      "Definir marcos de revisão do investimento."
+    ],
+    "keywords": [
+      "investimento em tecnologia",
+      "TCO",
+      "ROI",
+      "análise de alternativas"
+    ],
+    "priority": "P1",
+    "series": "decisoes-arquitetura",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-056",
+    "title": "Como alinhar marketing, vendas e atendimento.",
+    "slug": "alinhar-marketing-vendas-atendimento",
+    "category": "administracao",
+    "tags": [
+      "crm",
+      "processos",
+      "experiencia-cliente"
+    ],
+    "objective": "Definir acordos de continuidade do relacionamento entre aquisição, venda e atendimento.",
+    "audience": "Gestores de marketing, vendas, atendimento e Revenue Operations.",
+    "problem": "Cada área otimiza suas metas e transfere informação incompleta para a etapa seguinte.",
+    "angle": "Analisar passagens de responsabilidade e promessas ao cliente em vez de apenas integrar ferramentas.",
+    "outline": [
+      "Mapear compromissos feitos em cada etapa.",
+      "Definir significado compartilhado dos principais estados.",
+      "Acordar informação e responsabilidade nas transferências.",
+      "Tratar retorno de aprendizado do atendimento.",
+      "Escolher indicadores que revelem falhas entre áreas."
+    ],
+    "keywords": [
+      "alinhamento comercial",
+      "Revenue Operations",
+      "marketing vendas atendimento",
+      "continuidade do cliente"
+    ],
+    "priority": "P1",
+    "series": "processos-empresariais",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-057",
+    "title": "Conhecimento organizacional como vantagem competitiva.",
+    "slug": "conhecimento-organizacional-vantagem",
+    "category": "administracao",
+    "tags": [
+      "conhecimento",
+      "estrategia",
+      "gestao"
+    ],
+    "objective": "Examinar como a organização preserva e utiliza conhecimento para responder melhor a problemas recorrentes.",
+    "audience": "Gestores empresariais e responsáveis por desenvolvimento organizacional.",
+    "problem": "Experiência é acumulada por pessoas, mas não se converte em capacidade compartilhada e revisável.",
+    "angle": "Investigar os mecanismos que levam da experiência individual à melhoria de decisões, sem presumir vantagem automática.",
+    "outline": [
+      "Identificar conhecimentos relevantes à estratégia.",
+      "Distinguir registro, compartilhamento e aplicação.",
+      "Examinar como aprendizados entram nas rotinas.",
+      "Definir responsabilidade por revisão e descarte.",
+      "Avaliar sinais de uso e limites de atribuição de resultado."
+    ],
+    "keywords": [
+      "conhecimento organizacional",
+      "aprendizagem empresarial",
+      "SECI",
+      "capacidade organizacional"
+    ],
+    "priority": "P2",
+    "series": "carreira-lideranca",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-058",
+    "title": "A importância da qualidade dos dados na administração.",
+    "slug": "qualidade-dados-administracao",
+    "category": "administracao",
+    "tags": [
+      "dados",
+      "qualidade",
+      "gestao"
+    ],
+    "objective": "Conectar problemas de qualidade de dados às decisões gerenciais que eles podem comprometer.",
+    "audience": "Gestores de áreas e responsáveis por dados empresariais.",
+    "problem": "Qualidade é tratada como limpeza técnica isolada, sem priorização pelo uso da informação.",
+    "angle": "Partir de uma decisão concreta para avaliar completude, consistência, atualização e responsabilidade.",
+    "outline": [
+      "Escolher uma decisão e seus dados essenciais.",
+      "Identificar falhas com consequência gerencial.",
+      "Definir critérios de qualidade proporcionais ao uso.",
+      "Distribuir responsabilidade por origem e correção.",
+      "Acompanhar prevenção de recorrência e cobertura da medição."
+    ],
+    "keywords": [
+      "qualidade de dados",
+      "administração",
+      "responsabilidade de dados",
+      "decisão gerencial"
+    ],
+    "priority": "P1",
+    "series": "administracao-dados",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-059",
+    "title": "Por que processos e arquitetura precisam evoluir juntos.",
+    "slug": "processos-arquitetura-evolucao",
+    "category": "administracao",
+    "tags": [
+      "processos",
+      "arquitetura",
+      "estrategia"
+    ],
+    "objective": "Explicar como mudanças no trabalho alteram exigências sobre sistemas e como limites técnicos afetam o processo.",
+    "audience": "Gestores de transformação, arquitetos e responsáveis por processos.",
+    "problem": "O processo é redesenhado sem suas dependências tecnológicas ou a arquitetura muda sem considerar a operação.",
+    "angle": "Acompanhar uma mudança hipotética de serviço por decisões de processo, dados, integração e responsabilidade.",
+    "outline": [
+      "Descrever a capacidade empresarial que precisa mudar.",
+      "Mapear responsabilidades do processo e dos sistemas.",
+      "Identificar pressupostos incompatíveis.",
+      "Comparar sequências possíveis de transição.",
+      "Estabelecer revisão conjunta após a mudança."
+    ],
+    "keywords": [
+      "arquitetura empresarial",
+      "evolução de processos",
+      "transformação",
+      "dependências"
+    ],
+    "priority": "P1",
+    "series": "decisoes-arquitetura",
+    "status": "idea"
+  },
+  {
+    "id": "IDEA-060",
+    "title": "Como mensurar resultados de iniciativas digitais.",
+    "slug": "mensurar-resultados-iniciativas-digitais",
+    "category": "administracao",
+    "tags": [
+      "indicadores",
+      "estrategia",
+      "custos"
+    ],
+    "objective": "Criar um plano de avaliação que diferencie adoção, resultado observado e contribuição da iniciativa.",
+    "audience": "Patrocinadores, gestores de portfólio e responsáveis por transformação digital.",
+    "problem": "O sucesso é declarado na entrega ou na alta de um indicador sem baseline e sem investigação de outras causas.",
+    "angle": "Planejar a mensuração antes da implementação e acompanhar efeitos de curto e longo prazo.",
+    "outline": [
+      "Definir o resultado e as hipóteses de contribuição.",
+      "Registrar baseline, população e limitações.",
+      "Acompanhar adoção e mudanças no trabalho.",
+      "Examinar custos, efeitos laterais e explicações alternativas.",
+      "Decidir continuidade, ajuste ou encerramento com evidência."
+    ],
+    "keywords": [
+      "resultados digitais",
+      "mensuração de valor",
+      "baseline",
+      "avaliação de iniciativas"
+    ],
+    "priority": "P1",
+    "series": "administracao-dados",
+    "status": "idea"
+  }
+]

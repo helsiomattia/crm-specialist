@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-20T16:12:28.938Z",
+  "checks": [
+    "Build e sitemap excluem títulos, corpo e busca de rascunhos/confidenciais e artigos ainda em revisão",
+    "Sem JavaScript: biblioteca, categoria, tag, série, artigo e tradução retornam HTML 200 completo, canonical e schema; hreflang somente para traduções existentes",
+    "1440px: busca no corpo/sem acentos, filtros e refresh, leitura por teclado, TOC, link compartilhável, série, tags, idiomas/fallback, Markdown seguro, metadados e estados inválidos",
+    "390px: busca no corpo/sem acentos, filtros e refresh, leitura por teclado, TOC, link compartilhável, série, tags, idiomas/fallback, Markdown seguro, metadados e estados inválidos",
+    "1440px: conteúdo real, prévia identificada/noindex, paginação 12+6, leitura responsiva e todos os 18 artigos carregados",
+    "768px: conteúdo real, prévia identificada/noindex, paginação 12+6, leitura responsiva",
+    "390px: conteúdo real, prévia identificada/noindex, paginação 12+6, leitura responsiva",
+    "320px: conteúdo real, prévia identificada/noindex, paginação 12+6, leitura responsiva"
+  ],
+  "errors": [],
+  "status": "passed"
+}

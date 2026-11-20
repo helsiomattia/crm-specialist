@@ -1,0 +1,45 @@
+{
+  "id": "HM-014",
+  "slug": "agentforce-amazon-connect",
+  "category": "inovacao",
+  "type": "comparison",
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Agentforce ou Amazon Connect? A decisão vai além da tecnologia.",
+    "en": "Agentforce or Amazon Connect? The decision goes beyond technology.",
+    "es": "¿Agentforce o Amazon Connect? La decisión va más allá de la tecnología."
+  },
+  "excerpt": {
+    "pt": "Como comparar responsabilidades, jornadas, integrações e capacidade operacional sem tratar plataformas diferentes como opções equivalentes.",
+    "en": "How to compare responsibilities, journeys, integrations and operational capability without assuming different platforms are equivalent options.",
+    "es": "Cómo comparar responsabilidades, recorridos, integraciones y capacidad operativa sin asumir que plataformas distintas son opciones equivalentes."
+  },
+  "tags": ["ia", "agentes", "atendimento", "arquitetura"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": ["pt"],
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "featured": false,
+  "series": "decisoes-arquitetura",
+  "seriesOrder": 2,
+  "relatedArticles": ["atendimento-omnichannel", "empresa-pronta-ia", "custo-alem-licenca"],
+  "sources": [
+    {
+      "title": "AWS — What is Connect Customer?",
+      "url": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html",
+      "checkedAt": "2026-11-20"
+    },
+    {
+      "title": "Salesforce Trailhead — Discover Agentforce",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/agentforce-agents-quick-look/discover-agentforce-agents",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null,
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente. Nomenclatura Amazon Connect Customer conferida na documentação oficial; sem alegações de preços ou equivalência entre ofertas."
+}

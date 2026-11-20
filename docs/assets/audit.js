@@ -86,6 +86,7 @@
     searchButton.hidden = false;
     searchButton.addEventListener('click', openSearch);
     document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && dialog.open) { event.preventDefault(); dialog.close(); searchButton.focus(); return; }
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); openSearch(); }
     });
     input.addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(search, 100); });

@@ -4,6 +4,12 @@
 
 ## Atualização corretiva — 20/11/2026
 
+### Conteúdo editorial versionado
+
+O Blog usa `content/blog/<slug>/metadata.json` e Markdown, além de `content/editorial/taxonomy.json` e `backlog.json`. São seis categorias, nove séries, 18 artigos completos em revisão final e 60 pautas. Não foi adicionado banco. O contrato valida identidades, taxonomia, relações, ordem de série, idiomas, fontes, datas e autorização editorial; somente artigos aprovados entram no build público. Consulte o [guia do Blog](BLOG.md) para os campos e transições de estado.
+
+### Catálogo de demonstrações
+
 Os 18 registros e os 16 HTMLs foram preservados. O mapa de loaders passou para [projectEmbeds.js](../src/data/projectEmbeds.js); cada embed precisa de um loader com o mesmo ID. Não adicionar `embedHtml` ao catálogo. `npm run validate:data` executa os loaders e confere IDs, parentId, ciclos, variantes, URLs HTTPS, campos localizados e chaves nos três idiomas.
 
 O fallback 404 agora usa a URL, sem gravar caminhos em sessionStorage. O bootstrap tolera armazenamento bloqueado e limpa a chave legada quando possível. A preferência de idioma continua com o detector i18next. Não foi criado banco nem backend. Veja o [relatório de estabilização](STABILIZATION_REPORT.md).

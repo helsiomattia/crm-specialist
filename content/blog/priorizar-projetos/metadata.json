@@ -1,0 +1,40 @@
+{
+  "id": "HM-005",
+  "slug": "priorizar-projetos",
+  "category": "gestao",
+  "type": "guide",
+  "status": "ready",
+  "editorialStatus": "public-validated",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Como priorizar projetos quando tudo parece urgente.",
+    "en": "How to prioritize projects when everything feels urgent.",
+    "es": "Cómo priorizar proyectos cuando todo parece urgente."
+  },
+  "excerpt": {
+    "pt": "Um método de decisão que distingue urgência, valor, risco, dependências e capacidade, sem transformar pontuações em falsa precisão.",
+    "en": "A decision method that distinguishes urgency, value, risk, dependencies and capacity without turning scores into false precision.",
+    "es": "Un método de decisión que distingue urgencia, valor, riesgo, dependencias y capacidad, sin convertir las puntuaciones en falsa precisión."
+  },
+  "tags": ["priorizacao", "gestao", "estrategia", "produtos"],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": ["pt"],
+  "publishedAt": null,
+  "updatedAt": null,
+  "reviewedAt": "2026-11-20",
+  "featured": false,
+  "series": "decisoes-arquitetura",
+  "seriesOrder": 1,
+  "relatedArticles": ["tecnologia-valor-negocio", "necessidade-ao-prototipo", "custo-alem-licenca"],
+  "sources": [
+    {
+      "title": "Ken Schwaber e Jeff Sutherland — The Scrum Guide (2020)",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "maturity": null,
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+}

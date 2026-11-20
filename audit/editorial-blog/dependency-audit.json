@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-20",
+  "command": "npm audit --json --offline=false --fetch-retries=1 --fetch-timeout=30000",
+  "execution": "Executed with Node 22.22.2 and the npm CLI available at C:/Program Files/sf/client/node_modules/npm/bin/npm-cli.js",
+  "exitCode": 0,
+  "auditReportVersion": 2,
+  "vulnerabilities": {},
+  "metadata": {
+    "vulnerabilities": {"info":0,"low":0,"moderate":0,"high":0,"critical":0,"total":0},
+    "dependencies": {"prod":174,"dev":95,"optional":52,"peer":1,"peerOptional":0,"total":269}
+  }
+}

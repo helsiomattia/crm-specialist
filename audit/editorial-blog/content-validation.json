@@ -1,0 +1,149 @@
+{
+  "date": "2026-11-20",
+  "articles": 18,
+  "published": 0,
+  "ready": 18,
+  "backlog": 60,
+  "categories": [
+    {
+      "slug": "salesforce",
+      "articles": 3,
+      "ideas": 10
+    },
+    {
+      "slug": "gestao",
+      "articles": 3,
+      "ideas": 10
+    },
+    {
+      "slug": "processos",
+      "articles": 3,
+      "ideas": 10
+    },
+    {
+      "slug": "ideias",
+      "articles": 3,
+      "ideas": 10
+    },
+    {
+      "slug": "inovacao",
+      "articles": 3,
+      "ideas": 10
+    },
+    {
+      "slug": "administracao",
+      "articles": 3,
+      "ideas": 10
+    }
+  ],
+  "words": [
+    {
+      "slug": "salesforce-arquitetura-operacional",
+      "title": "Salesforce não é apenas um CRM: é parte da arquitetura operacional de uma empresa.",
+      "words": 1099,
+      "status": "ready"
+    },
+    {
+      "slug": "atendimento-omnichannel",
+      "title": "O que existe por trás de um atendimento omnichannel bem estruturado.",
+      "words": 1082,
+      "status": "ready"
+    },
+    {
+      "slug": "flow-apex-lwc",
+      "title": "Flow, Apex ou LWC? Como decidir sem criar complexidade desnecessária.",
+      "words": 1024,
+      "status": "ready"
+    },
+    {
+      "slug": "tecnologia-valor-negocio",
+      "title": "Tecnologia não entrega valor sozinha: a importância de entender o negócio.",
+      "words": 1032,
+      "status": "ready"
+    },
+    {
+      "slug": "priorizar-projetos",
+      "title": "Como priorizar projetos quando tudo parece urgente.",
+      "words": 1059,
+      "status": "ready"
+    },
+    {
+      "slug": "lideranca-tecnica",
+      "title": "Liderança técnica não começa com um cargo de liderança.",
+      "words": 1039,
+      "status": "ready"
+    },
+    {
+      "slug": "automatizar-processo-ruim",
+      "title": "Automatizar um processo ruim não resolve o problema.",
+      "words": 1103,
+      "status": "ready"
+    },
+    {
+      "slug": "indicadores-atendimento",
+      "title": "O que seus indicadores de atendimento realmente estão medindo?",
+      "words": 1100,
+      "status": "ready"
+    },
+    {
+      "slug": "documentar-processos",
+      "title": "Como documentar processos sem transformar conhecimento em burocracia.",
+      "words": 1094,
+      "status": "ready"
+    },
+    {
+      "slug": "plataforma-conhecimento",
+      "title": "Uma plataforma de gestão do conhecimento para conectar pessoas, processos e sistemas.",
+      "words": 1076,
+      "status": "ready"
+    },
+    {
+      "slug": "mapa-chatbot",
+      "title": "Como um mapa interativo pode revelar a complexidade de um chatbot.",
+      "words": 1065,
+      "status": "ready"
+    },
+    {
+      "slug": "necessidade-ao-prototipo",
+      "title": "Da necessidade operacional ao protótipo: meu método para desenhar soluções.",
+      "words": 1073,
+      "status": "ready"
+    },
+    {
+      "slug": "empresa-pronta-ia",
+      "title": "Antes de implementar IA, descubra se sua empresa está pronta.",
+      "words": 1098,
+      "status": "ready"
+    },
+    {
+      "slug": "agentforce-amazon-connect",
+      "title": "Agentforce ou Amazon Connect? A decisão vai além da tecnologia.",
+      "words": 1096,
+      "status": "ready"
+    },
+    {
+      "slug": "ia-reduzir-complexidade",
+      "title": "A IA deve reduzir a complexidade da operação, não criar outra camada.",
+      "words": 1112,
+      "status": "ready"
+    },
+    {
+      "slug": "estrategia-arquitetura",
+      "title": "A estratégia empresarial precisa conversar com a arquitetura tecnológica.",
+      "words": 1115,
+      "status": "ready"
+    },
+    {
+      "slug": "custo-alem-licenca",
+      "title": "Por que o custo de uma solução vai muito além do preço da licença.",
+      "words": 1129,
+      "status": "ready"
+    },
+    {
+      "slug": "dados-decisoes",
+      "title": "Dados não geram decisões: pessoas, processos e contexto geram.",
+      "words": 1084,
+      "status": "ready"
+    }
+  ]
+}

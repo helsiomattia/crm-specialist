@@ -283,7 +283,7 @@ export default function App() {
         <Navbar activePage={appRoute.type === 'blog' || appRoute.type === 'blogArticle' ? 'blog' : undefined} />
         {appRoute.type === 'blog' || appRoute.type === 'blogArticle' ? (
           <Suspense fallback={<LoadingFallback />}>
-            {appRoute.type === 'blogArticle' ? <BlogArticlePage slug={appRoute.slug} /> : <BlogPage />}
+            {appRoute.type === 'blogArticle' ? <BlogArticlePage slug={appRoute.slug} language={appRoute.language} /> : <BlogPage collection={appRoute.collection} slug={appRoute.slug} />}
           </Suspense>
         ) : appRoute.type === 'project' ? (
           <Suspense fallback={<LoadingFallback />}>

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Typography, alpha } from '@mui/material';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
@@ -16,6 +16,7 @@ const DESKTOP_QUERY = '(min-width: 1024px)';
 const REDUCE_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 const CLICK_SCROLL_DURATION = 0.38;
 const STEP_SCROLL_DURATION = 0.45;
+const MENU_CLOSE_DELAY = 300;
 
 function getHeaderHeight() {
   const header = document.querySelector('header');
@@ -54,8 +55,39 @@ export default function SectionNavigation() {
   const [activeSection, setActiveSection] = useState('home');
   const [expanded, setExpanded] = useState(false);
   const railRef = useRef(null);
+  const menuRef = useRef(null);
+  const triggerRef = useRef(null);
+  const closeTimerRef = useRef(null);
   const labelRef = useRef(null);
   const stateRef = useRef({ isAnimating: false, lastWheelAt: 0, lastWheelDirection: 0 });
+
+  const cancelMenuClose = useCallback(() => {
+    window.clearTimeout(closeTimerRef.current);
+    closeTimerRef.current = null;
+  }, []);
+
+  const closeMenu = useCallback((returnFocus = false) => {
+    cancelMenuClose();
+    if (returnFocus) triggerRef.current?.focus({ preventScroll: true });
+    setExpanded(false);
+  }, [cancelMenuClose]);
+
+  const handlePointerEnter = (event) => {
+    if (event.pointerType === 'touch') return;
+    cancelMenuClose();
+    setExpanded(true);
+  };
+
+  const handlePointerLeave = (event) => {
+    if (event.pointerType === 'touch') return;
+    cancelMenuClose();
+    closeTimerRef.current = window.setTimeout(() => {
+      closeTimerRef.current = null;
+      if (!railRef.current?.contains(document.activeElement)) setExpanded(false);
+    }, MENU_CLOSE_DELAY);
+  };
+
+  useEffect(() => cancelMenuClose, [cancelMenuClose]);
 
   const sections = useMemo(() => [
     { id: 'home', label: t('nav.home'), number: '00' },
@@ -87,13 +119,13 @@ export default function SectionNavigation() {
 
   const navigateTo = (id, mode = 'pushState') => {
     if (!sectionIds.includes(id)) return;
-    setExpanded(false);
+    closeMenu(Boolean(menuRef.current?.contains(document.activeElement)));
     setRouteState(id, mode);
     scrollToSection(id, { duration: CLICK_SCROLL_DURATION });
   };
 
   const navigateToPage = (id) => {
-    setExpanded(false);
+    closeMenu(Boolean(menuRef.current?.contains(document.activeElement)));
     navigateToUrl(id === 'blog' ? getBlogUrl() : getAboutProjectUrl());
   };
 
@@ -296,15 +328,24 @@ export default function SectionNavigation() {
     if (!expanded) return undefined;
 
     const handlePointerDown = (event) => {
-      if (!railRef.current?.contains(event.target)) setExpanded(false);
+      if (!railRef.current?.contains(event.target)) closeMenu();
+    };
+    const handleEscape = (event) => {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      closeMenu(Boolean(railRef.current?.contains(document.activeElement)));
     };
 
     document.addEventListener('pointerdown', handlePointerDown);
-    return () => document.removeEventListener('pointerdown', handlePointerDown);
-  }, [expanded]);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [expanded, closeMenu]);
 
   const handleBlur = (event) => {
-    if (!event.currentTarget.contains(event.relatedTarget)) setExpanded(false);
+    if (!event.currentTarget.contains(event.relatedTarget)) closeMenu();
   };
 
   const controlButtonSx = {
@@ -329,9 +370,13 @@ export default function SectionNavigation() {
       ref={railRef}
       component="nav"
       aria-label={t('nav.sectionNavigation')}
-      onMouseEnter={() => setExpanded(true)}
-      onMouseLeave={() => setExpanded(false)}
-      onFocusCapture={() => setExpanded(true)}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
+      onFocusCapture={(event) => {
+        cancelMenuClose();
+        // Pointer focus must not open and immediately toggle closed on the first tap.
+        if (event.target.matches(':focus-visible')) setExpanded(true);
+      }}
       onBlurCapture={handleBlur}
       sx={{
         position: 'fixed',
@@ -361,10 +406,16 @@ export default function SectionNavigation() {
 
       <Box sx={{ position: 'relative', pointerEvents: 'auto', order: { xs: 0, lg: 1 } }}>
         <Box
+          ref={triggerRef}
           component="button"
           type="button"
-          onClick={() => setExpanded((value) => !value)}
+          onClick={() => {
+            cancelMenuClose();
+            setExpanded((value) => !value);
+          }}
           aria-expanded={expanded}
+          aria-controls="section-navigation-menu"
+          aria-label={expanded ? t('nav.closeMenu') : t('nav.openMenu')}
           aria-current="page"
           sx={{
             minWidth: { xs: 42, sm: 188, lg: 118 },
@@ -433,6 +484,9 @@ export default function SectionNavigation() {
         </Box>
 
         <Box
+          ref={menuRef}
+          id="section-navigation-menu"
+          aria-hidden={!expanded}
           sx={{
             position: 'absolute',
             top: { xs: 'calc(100% + 8px)', lg: '50%' },
@@ -445,8 +499,18 @@ export default function SectionNavigation() {
             border: '1px solid rgba(11,92,171,0.18)',
             ...glassSurface('floating'),
             opacity: expanded ? 1 : 0,
+            visibility: expanded ? 'visible' : 'hidden',
             pointerEvents: expanded ? 'auto' : 'none',
             transition: 'opacity 0.2s ease, transform 0.2s ease',
+            // Transparent bridge across the visual gap, including the trigger's hover offset.
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: { xs: -12, lg: 0 },
+              right: { xs: 0, lg: -14 },
+              width: { xs: '100%', lg: 14 },
+              height: { xs: 12, lg: '100%' },
+            },
           }}
         >
           {menuItems.map((section) => {
@@ -458,6 +522,7 @@ export default function SectionNavigation() {
                 key={section.id}
                 component="button"
                 type="button"
+                tabIndex={expanded ? 0 : -1}
                 onClick={() => (isPageLink ? navigateToPage(section.id) : navigateTo(section.id))}
                 aria-current={isCurrent ? 'page' : undefined}
                 sx={{

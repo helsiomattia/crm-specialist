@@ -4,6 +4,7 @@ import { verifyRoutes } from '../tests/browser/routes.mjs';
 import { verifyEmbeds, verifyEmbedFailure } from '../tests/browser/embeds.mjs';
 import { verifyDevelopment } from '../tests/browser/development.mjs';
 import { verifyBlogNavigation } from '../tests/browser/blog.mjs';
+import { verifySectionMenu, verifySectionMenuTouch } from '../tests/browser/section-menu.mjs';
 
 const { chromium } = await import(process.env.HM_PLAYWRIGHT_MODULE || 'playwright');
 const server = await startTestServer();
@@ -18,6 +19,7 @@ try {
     if (!process.argv.includes('--embeds')) {
       await verifyRoutes(context, server.origin, report.checks);
       await verifyBlogNavigation(context, server.origin, report.checks);
+      await verifySectionMenu(context, server.origin, report.checks);
       console.log(`Rotas verificadas em ${width}px.`);
     }
     if (!process.argv.includes('--routes')) await verifyEmbeds(context, server.origin, report.checks);
@@ -25,6 +27,7 @@ try {
     await context.close();
   }
   const blocked = await browser.newContext({ locale: 'pt-BR', reducedMotion: 'reduce' });
+  if (!process.argv.includes('--embeds')) await verifySectionMenuTouch(browser, server.origin, report.checks);
   blocked.on('page', page => page.on('pageerror', error => report.errors.push(`${page.url()}: ${error.stack}`)));
   await blocked.addInitScript(() => { Object.defineProperty(window, 'sessionStorage', { get() { throw new DOMException('Blocked', 'SecurityError'); } }); });
   await blocked.route('**/*', route => new URL(route.request().url()).origin === server.origin ? route.continue() : route.abort());

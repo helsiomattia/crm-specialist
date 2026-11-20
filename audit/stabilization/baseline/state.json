@@ -1,0 +1,560 @@
+{
+  "commit": "cc01bc849c775c6cd68d499c7f49ebdfdee06ba5",
+  "date": "2026-11-20",
+  "initialGitStatus": "?? docs/AGENTS.html\n?? docs/AGENTS.md\n?? docs/ARCHITECTURE.html\n?? docs/ARCHITECTURE.md\n?? docs/CODE_STYLE.html\n?? docs/CODE_STYLE.md\n?? docs/DATABASE.html\n?? docs/DATABASE.md\n?? docs/DESIGN_STYLE.html\n?? docs/DESIGN_STYLE.md\n?? docs/PRD.html\n?? docs/PRD.md\n?? docs/SECURITY.html\n?? docs/SECURITY.md\n?? docs/TESTING.html\n?? docs/TESTING.md\n?? docs/assets/\n?? docs/audit-dependencies.json\n?? docs/audit-documentation.json\n?? docs/build-docs.mjs\n?? docs/index.html\n?? scripts/lib/\n",
+  "files": {
+    ".github/workflows/deploy.yml": "f7c93512c5bfbf5e982adaf7966f92d9a0242af0d4eeafe200f880757f9204cf",
+    ".gitignore": "c2e8c5eaa80ba483101c567e1f33e8008cd7bb2c774cfe3b429a3fcacaf528ca",
+    "LICENSE": "04f83a28b8f28391a95e1a4832ae6057b455ba885a3a357ad2c2871f894ea96e",
+    "README.md": "39807111ff474b68ad296f8c9fc411008806d48c24f1179858c1c6b244f99e24",
+    "ROADMAPVISUAL.md": "e6f074703dabedef86e77fe856b87f5ff07232e721c38d5362db97dfa6114bd5",
+    "audit/AUDIT_REPORT.md": "1456ad99028ac04011919aa936b72c642af6285dde1f1b4789689cbc2296ef28",
+    "audit/FullAudit.txt": "0acc8e7c5affd597f0115250307f1787f4df90e091e76490db1feb9b8fb9e5ee",
+    "audit/SECTION_NAVIGATION_AUDIT.md": "5719b02c0106906739e4cf564852f9edc48d73c46fe6fd43c2da402603a1fead",
+    "docs/VISUAL_STYLE_GUIDE.md": "be70a35f2487c5715f85de50d25e9ceeb5ce7e0dc327c446ebc07e43074a70f3",
+    "docs/prompts/Audit.txt": "eb9cdd34fd59a1ee7bb81392301e58824b2462640976fae942efec786c64ab76",
+    "docs/prompts/CardSobre.txt": "80cbb4ec30d573622a19e6c3592c192202a6ecd24e367aac0ba8b7f88f8183ad",
+    "docs/prompts/NewInicio.txt": "550eefdd2ae7296c54a7c4800dd98eef68f75fe7ba26db2863a9713ac06651ca",
+    "docs/prompts/NewVisu.txt": "745873b0c8ced02d2996fe5b7d2241f4b22948d35ee212710c3346ec9d4e5b7d",
+    "docs/prompts/ajustabranch.txt": "d9ac9d2966ba21adf81a8bc03bf555c54a0a26826287e321ac760cd843db855a",
+    "docs/prompts/ajusteViewProjeto.txt": "0fdb9ddb6462a0331ab24855ba2c48f396dae9a0071249ef2a794fc68fe586bf",
+    "docs/prompts/ajustesite.txt": "8738436df3776b021600cbef6bb598e68858bb36dcfacb61cb86f62dc4f5f16a",
+    "docs/prompts/bugvisual.txt": "b3af9ab16c147de05cb4f2692b7f9e2b3de77b955b9420501f0cb3a90454f824",
+    "docs/prompts/espacamento.txt": "261e185ee199fe8dae22a6378e4fa84c00c234498c79df8efb14da9c34054fb0",
+    "docs/prompts/padraovisual.txt": "8ed72d36d650ddabb788b03790d4b68026bac967ed4ab0a308d3f127cfaf0819",
+    "docs/prompts/paleta.txt": "f1d7778360e52d6a7d872b5365bf068af9273fbe788d886859c36b19c8d65de3",
+    "docs/prompts/perf.txt": "9191d706999298274dfb3e300293c0f9281fbf6c7b64fcb22740ae669817fe4f",
+    "docs/prompts/performance.txt": "0d0e48f2e3973da1fd13eb2a104bf563fc46b222f8f47b530abe39c34a329cc2",
+    "docs/prompts/performancenew.txt": "d2e4d2bf648b2fc3e6efffae889fffd4945fdf63871f6f0a1ccac136febf7aa0",
+    "docs/prompts/quemsoueu.txt": "93a289888b9128fee93c588c36c81ce4517dcff53a2243b51f950ca2118e766f",
+    "docs/prompts/refatmenu.txt": "f8ae306124812f03e5268bfdffd7d0314c4aea52dd198ce20b381bfe40ffff69",
+    "docs/prompts/sobremim.txt": "be80b484363fea78b27307a43bfa821b4a737383b3bda857cb0e4327e15e8bcb",
+    "docs/prompts/traducao.txt": "0e50715ffd0344b84db6c279c78758698c1fec4c693db12ee13cc017a9123d94",
+    "docs/prompts/uiux.txt": "a73312df4f52e44cc1e80f8486676c4c14812aa90d43ee829a99c3faedf93ddd",
+    "images/mepic (1).jpeg": "7ec03d686deca82f77ad58a77498f94f25839ed653c5e23f819451d3ec63b20d",
+    "images/mepic (10).jpeg": "88d865bc7443876beed6ef870c92bd1e0bcd3cc27272102de052e90b25370f19",
+    "images/mepic (11).jpeg": "ffc9720e9f7d2b9970a0a06e0a6f5a6bf3dc9584af2359848314c963276b7872",
+    "images/mepic (2).jpeg": "f0ed737204aaed2b649971c9ad8070256a50535e35160ea0b4a814e1dd0438fe",
+    "images/mepic (3).jpeg": "9fc658c2f98f2b0be82ee45a4d920014c9e35306076f6302cc36ca29d695a549",
+    "images/mepic (4).jpeg": "c2ec9631332c73724d452826cffe82d0e579d79d00f7e28d9d979c2a3f38d839",
+    "images/mepic (5).jpeg": "fd92f03772ccb97ec6d8b52a1e40b5c30ad21779fe1c61c51cb7932c27ab1f93",
+    "images/mepic (6).jpeg": "01ca363e14bb5514d23484e39e56ea9f7df8ffeae36a426f8491c57f0cb05428",
+    "images/mepic (7).jpeg": "79f01cfe53ff065449d0a3396d48a9759ff9fc4650a32c0dbd84e13972da8c13",
+    "images/mepic (8).jpeg": "7c07a5de9324dbc119b04113ad0c9e5bbecaaf11f3583e16264b32d4e7c60fa4",
+    "images/mepic (9).jpeg": "18c47e679dfbaa47ecd44d48140b39a6f1844c4cabf04b78ee1fa9728f203287",
+    "images/optimized/mepic-1.avif": "56c246eaa0aaf3900bf32a8f8c887ad3208836ffa503aaeb31ea8d7f70bd6183",
+    "images/optimized/mepic-1.webp": "ffbbddf32fc2abefa946dce42b3fa32597bb82c12536d211cf37632ef3029d52",
+    "images/optimized/mepic-10.avif": "d7e17fa9bef3d2727f13e268eda4ad302a1a3427f378b3f0d0123ff39c319379",
+    "images/optimized/mepic-10.webp": "e55b5904c96a3d9cf21a6c7976a6ec188dc33e6af4046ceedf87c4c40fd0c7ba",
+    "images/optimized/mepic-11.avif": "87a2922530aa8ca9d44477b681952b5be6a9e55f9a57d7d13963dd67242fcc47",
+    "images/optimized/mepic-11.webp": "64d1ac8b2eebb74037cd4d1df012551b79290992001e0a89baa11833cc9c26be",
+    "images/optimized/mepic-2.avif": "746d27b7479b2443b80665996190287d7f55c0b04b56161d5b2bd56d0d45ce8a",
+    "images/optimized/mepic-2.webp": "21698d517ced27b2e9e0b5ca7faff4a509488af1b4a4b17f34e5236e88732b8f",
+    "images/optimized/mepic-3.avif": "0fc2eada89088a30cd5d44d355afdd595affd075e43acee9345046a02eb680d1",
+    "images/optimized/mepic-3.webp": "1f18a9e003432b214214a4d5313974a02ec2639874bb464585e104efe87f49cb",
+    "images/optimized/mepic-4.avif": "c45883f752cd5431aff3d428978682e31356e964971124576f0a9df3937cd79d",
+    "images/optimized/mepic-4.webp": "0603191cef1399e895cfb2407f697df296a4749991ec57135284f68a5e6fd6ca",
+    "images/optimized/mepic-5.avif": "0be0b3a8def45644281dc2cdbf9dcc77e0d29c875e43a2346448a84f675e8d08",
+    "images/optimized/mepic-5.webp": "98539624da2295979619387f3ce013d7f1d4d47e9102828ebb43bfd62cbeb032",
+    "images/optimized/mepic-6.avif": "95dbf9e180b6afdeb624744ca11483c9349d9d2de4b3a53fca23baf52b82e37d",
+    "images/optimized/mepic-6.webp": "d3aee75720b8597db8127b11600efac627ad6bd7fa2e229565f9fcf6cc4ea2db",
+    "images/optimized/mepic-7.avif": "4dc9e55fd955de5d5b86c9cc1ab2177a0479ae04fe04ffa65727463072b15f03",
+    "images/optimized/mepic-7.webp": "cdec725314ccbbaf72459040deeda03d46264f0e984f4b224f7c13799c2a5637",
+    "images/optimized/mepic-8.avif": "29b36d9d8bb5a5f7d768ed839cc5e140aac7a33ad3d4af7b70566614b0c0b687",
+    "images/optimized/mepic-8.webp": "28ae48744c3bf92198062eb6ca1be58533ad6d7b8192473db92db00afb7a1a12",
+    "images/optimized/mepic-9.avif": "40eb81157d72ecd3973ef09d98f13b8c8d0a65420056b04ad244f3f48fdc174e",
+    "images/optimized/mepic-9.webp": "5ce3181bd3c9589bc7d6854128e25510dca2e2c58830b7759e07aecc78dd4eca",
+    "index.html": "0aca6fc12f2c15ed77d0bf7ea67b398790d98a4b2fc0a05eb5e7be693aab1747",
+    "newtext.md": "942d7147f7e7e868176b1ac9015454a540923f6c279f964c90c611b9e62cbe40",
+    "package-lock.json": "9895c6ab9daf97a8e0659796eb4b373f61c33a1b86df618990aa90d312dc14f6",
+    "package.json": "be08681be04611f10bd73ba627a418db5d688e088a762cd33ec7e786946eb092",
+    "projects/Customer_Journey_360_Generic.html": "8d8cb5f376fb92d97f8cf19b98e072e4c9b5dfb3c8fc233c8ffe6f493f6caa30",
+    "projects/GUIA_NOVOS_PROJETOS_EMBED.md": "ded19b0519147f8dd99d4803fb8f993f40872b8bb7b8935de26530911b243ba7",
+    "projects/Intelligence360_Generic.html": "d1bbb9d069c3bbcd4eb5dab758f20a4c268ed8d7f68c6663cd1a8427e85d2f3f",
+    "projects/NewProjs.txt": "1023ffd4cb89e87924ebd85b6eca8f21ff1eb01943e19b23c0a0412b79fec717",
+    "projects/README_EMBED.txt": "d4eccef62f1c7d5a065168cb3571c18e01f4a26813c8d0e02e47dd1b23982114",
+    "projects/Revenue_Churn_Intelligence_Generic.html": "357f6eba1e8dd9beeb1e2c7663f6cafa74337dafd91dc0f395fe60da945dae13",
+    "projects/SHA256SUMS.txt": "9c2b9e692223c010410c4f63f3464d36dc1990759a79f283306d33da91c890c3",
+    "projects/Salesforce_Architecture_Control_Center_Generic.html": "61141464eacecf181a1460de2ea33140b0b2412ed37278c38f6e2ba0f87d6e55",
+    "projects/Service360_Generic_Embed_V2.html": "af4faa195c0d1b08de819147cf67460f70e470b1e5637edfe1187330c31cf347",
+    "projects/customer360_generico_interativo_v4.html": "05b734636293df7d1ee00cab28f82e9b5470f4d22a5dcbeac8275f345de803be",
+    "projects/lwc/customer-data-quality-center-preview.html": "6718c89aa32e2dfb459fe972c08c74286a1beddf5af941416731260e971ac960",
+    "projects/lwc/customer-relationship-graph-preview.html": "4357e25c28caeb12d8dc4960076b8148737a2ac051f7f01be470e0b2bf71cb83",
+    "projects/lwc/deal-governance-center-preview.html": "7ca12a81058797e43bc967d7c328e71b9c36f94cecba7e109894392a451eb2ed",
+    "projects/lwc/enterprise-integration-reliability-hub-preview.html": "ecb9a3c6c165e3e1bb5d92dcb84cb3a9c10d2f1c9dd077031f8cb75bfbfe9483",
+    "projects/lwc/intelligent-workload-routing-studio-preview.html": "5c7a1725b4218fb1152d4d4124e5df723608dc8c44095e72496c9b708f04168a",
+    "projects/lwc/lead-account-routing-studio-preview.html": "efe1e93e4522c68fa55d27fcf21cce6b0566dbe8e0edeff131a8d130e4a49d59",
+    "projects/lwc/omni-transfer-intelligence-preview.html": "41fbe020815cb37e733f086f1b72b2ec1a07e0db1dc20e27c534d1263504afb1",
+    "projects/lwc/pipeline-risk-inspector-preview.html": "6c1d041a03cfc04c99b953f14f2181b761044def690733a7b3cf66256bda1bc8",
+    "projects/lwc/sla-escalation-control-tower-preview.html": "57ad62ed93e96d5fb113991fc153b5324fdfe48ce1b6fa36eef0e5784b45e6be",
+    "projects/lwc/unified-interaction-timeline-preview.html": "da2a2f3e182da20e3569a379f9aac448986eeb2bec3f4d5d012fd8663228e3be",
+    "prompts/CardSobre.txt": "4a099eff4555d7e9f198ab2da7f74bb72843ecf2cdceda2431307f67a2f5f040",
+    "prompts/Menu.txt": "42590d0e0b3f38027cd9ad819bbb143e645541e627dd819439bde70396b7fc42",
+    "prompts/NewInicio.txt": "8333e381d986d0e03fea4c69e56a5f1aac0d7ea399c98c9785fc12396da06058",
+    "prompts/NewVisu.txt": "7ca15805f6dcfa9cbbc3a028cff6d8825b84b34d49a96a8ff17df9eea36f2416",
+    "prompts/ajustabranch.txt": "d9ac9d2966ba21adf81a8bc03bf555c54a0a26826287e321ac760cd843db855a",
+    "prompts/ajusteViewProjeto.txt": "0fdb9ddb6462a0331ab24855ba2c48f396dae9a0071249ef2a794fc68fe586bf",
+    "prompts/ajustesite.txt": "8738436df3776b021600cbef6bb598e68858bb36dcfacb61cb86f62dc4f5f16a",
+    "prompts/bugvisual.txt": "545afe32ed2ba2ef1d582e5e7b4b3f36bf154ade7721d944373686e79c3a939f",
+    "prompts/espacamento.txt": "728547f32b36e8234ed7a185b75934e0d32589d4a0f92fa5a232c4ef38d4ccb8",
+    "prompts/padraovisual.txt": "aa9a66e9771f4c3c832331282e232cbc4e881ca4e6d56d6adee80273e0c36e85",
+    "prompts/paleta.txt": "6fb2ce7cc3b6a8aca3a0b7962b3e25c355ef1cdbb94d80b8b9a7117eb1cfbdc1",
+    "prompts/perf.txt": "9191d706999298274dfb3e300293c0f9281fbf6c7b64fcb22740ae669817fe4f",
+    "prompts/performance.txt": "0d0e48f2e3973da1fd13eb2a104bf563fc46b222f8f47b530abe39c34a329cc2",
+    "prompts/quemsoueu.txt": "cafd5e159ea2a832a2cfb9ad34d48c8fb6c81c9eddeef01bc47996cd7c4244d6",
+    "prompts/refatmenu.txt": "59a4c60a658a8839f713598b863a012e747c430f0fbaa0cc51c5f4ec8b6afa61",
+    "prompts/sobremim.txt": "be80b484363fea78b27307a43bfa821b4a737383b3bda857cb0e4327e15e8bcb",
+    "prompts/traducao.txt": "0e50715ffd0344b84db6c279c78758698c1fec4c693db12ee13cc017a9123d94",
+    "prompts/uiux.txt": "2af73c1a46e462d3575901324c80deb0db4848dddcab85808c53e2a9e3a6f53d",
+    "public/404.html": "bd0a499799e40592324788137a82a31dc8e95678f4e32a13adbfecf2696ab5c9",
+    "public/favicon.svg": "70433f6363298b4d5700f8f3c7e25807f5b099107dd12eae3fd78e670907905c",
+    "public/og-image.svg": "26d5edf7e4caceff1e188a6864b28245db6414f0338687f721904a6e5c0a7828",
+    "public/robots.txt": "9b509023c7e0549a89009b28eb3f2ae459cc81cb703ad9c61d04172eed6bbe60",
+    "public/sitemap.xml": "a7665b21c5f0838e48e6ba9abbb3debdc6c1036142cf9f2a6b0007b3214abe6c",
+    "scripts/format-check.mjs": "d6e70c9d8bcb6935147f5e732db3fcb129c9ebd206a887eb7e2c5b62e8e94652",
+    "scripts/lint-basic.mjs": "21d54def6794471921c63d3f86a558f970e93b67f406449e46e69c6d73f4ad5a",
+    "scripts/optimize-images.mjs": "2e24c0cbec9e255bcf671d88d51da99380bf4c732a8ae2d0ebd2fce43bbe33d5",
+    "scripts/smoke-test.mjs": "bcbbe88897f24b120da41239502e28696a93753d92d830cf5399b01abe0322fd",
+    "src/App.jsx": "8f28eb6e4bb98d60f3c3f4c7bc74fa64ae255c20a216d3b329990cefe33f44d4",
+    "src/components/LanguageSwitcher.jsx": "e292df368e82e5a0becb126fd902a130db1c9bcfac23ea7ec52c61128c83f810",
+    "src/components/layout/Footer.jsx": "a200bc7d4dc8cb08b8fd37042a78abf0bdd8c217355b6ac4585d0c3a89aba611",
+    "src/components/layout/Navbar.jsx": "a519e7840f4e2a914d2c2d368095204bd38a11ba61a78c0aaf32b2db44890e6f",
+    "src/components/layout/SectionNavigation.jsx": "1727372ec61c502620b260531d0785f2e7efe3f0d86a1315d743b4aec38731a0",
+    "src/components/sections/About.jsx": "f1d9961d8b3bfa4147618223fe2f39bc1cee81250ad0b50fef1c3f98781574e6",
+    "src/components/sections/AboutProjectPage.jsx": "b7a79c23754bc0f48ae83bae3ff72ffa29fcfea47e7be58c8f03a2a906687433",
+    "src/components/sections/Contact.jsx": "0dc33f14aabb027f27f9ac79011a15286d45c56bacec003653318e48ccac3757",
+    "src/components/sections/Experience.jsx": "a10d3e77930cd54097e7ff981dbc7598b854ff7ea5bddc224cc401b4716c8b50",
+    "src/components/sections/Hero.jsx": "c6300d121e354d1a4dca0877d5403632ba7db11d21cfade2bba07fb33f48b4bd",
+    "src/components/sections/PortfolioProjects.jsx": "e116fd191033c2fa8886371a4fd5e29a9ec795a7dbabb86ef8c485b4c72d90ec",
+    "src/components/sections/ProjectDetailPage.jsx": "415deb5ce7405993bdf85f2578d5f57588a0da34de1417e4f064f7bcd7b42195",
+    "src/components/sections/Projects.jsx": "46ea5bf02a86d28585c934cfcd948fa575aab6605f25ada0c92e692bcbfde6bf",
+    "src/components/sections/Skills.jsx": "efaaca368dfb34e3b77d595051b73bbce01d2255bd2980c25787876d783930f1",
+    "src/components/ui/AnimatedBox.jsx": "ace4ad29be65f447cc0e8cace8f17d0033dd82bd161418dd79bc6317aac33977",
+    "src/components/ui/OperationalSignal.jsx": "5b36a0d030bcf2856a7abf2394202edfc059a176d909ddd8cc97df64e0093d24",
+    "src/components/ui/SectionTitle.jsx": "8c6d526ec42f26b9b8f4da5a29efe2dc57f088d2d039ea3fbec24f4e00af20da",
+    "src/data/experience.js": "d2c9f6e67c17ca0a5018a85899adf49a951cc956a812298ca8d0d61030dcbd23",
+    "src/data/portfolioProjects.js": "bef39659d68544d0cd4983c751b3d15f07d9f70bab1db70d672df5ff66aa45bf",
+    "src/data/profile.js": "9d38321e5bc70902b69694720db99ea18756eb8dd095f82f94a3ccd5f7d4d2a4",
+    "src/data/projects.js": "8bcf3798f6028c8a097a7e53b216d0a62b11146171b76c79813c9cee8fbf80a1",
+    "src/data/skills.js": "e7686720899f7dac1d65a49023f1858287ee225de9271eb08edc164492b09156",
+    "src/i18n.js": "b4d2d7a3c3c167f1f126bfbf7f1cec43b3218fcf7ffb494660f716f6c8ff272a",
+    "src/locales/en/common.json": "8349c56666e0dbf850cc40d62e2cf3f856f7b08391a762c08a6def1f859e0677",
+    "src/locales/es/common.json": "fc972e055cea39d18234b50f215d9c9b1cbb7b9de5b86039944b56df2454eef2",
+    "src/locales/pt/common.json": "7d2b03aa04ca833b2fd18a8a65b0e9802d5c188ce84afc64d83c1c011d717f8b",
+    "src/main.jsx": "2d6c1526d0f5e0f93c58f7cfbff4dafd4ded6643d3bc2f3bb23d4074278858d2",
+    "src/theme/theme.js": "133a55bffafd5587ef34079cbdc3774d602a95479e2b5e5c1f5b83cdbda519e7",
+    "src/theme/tokens.js": "20260265191fcb8bee6503286b405c0d1f2ea6775c5f698602ef710afe4abd35",
+    "src/utils/i18nHelper.js": "f76a9e0dcdf6ad293768a7ecfb2aa838c64ab4404f76b78e8e852447cec88e47",
+    "src/utils/renderHighlightedText.jsx": "bc745bf6ec622fa72da887c79a8ccd24a5dd5ef41bcbf8f57bd522645f3f2b42",
+    "src/utils/routes.js": "4b89ffd37358ff2d67fb459d62b6fe6db26dde87ca8cfc051459c2262da84c6b",
+    "src/utils/scrollToSection.js": "e0e5ff15b9e885d387ea2c3c890f616a58a04ad59804449a2976cee84e7f349f",
+    "vite.config.js": "99f9f5d175141f447700c4ae807129516d6d517a6fd6060c377cde3d6e659a35"
+  },
+  "screens": [
+    {
+      "route": "",
+      "width": 1440,
+      "file": "1440-home.png",
+      "frame": null
+    },
+    {
+      "route": "about-project",
+      "width": 1440,
+      "file": "1440-about-project.png",
+      "frame": null
+    },
+    {
+      "route": "projects/lwc",
+      "width": 1440,
+      "file": "1440-projects-lwc.png",
+      "frame": {
+        "bodyHeight": 1253,
+        "documentHeight": 1253,
+        "width": 832,
+        "text": "ARCHITECTURE / APEX · PORTFOLIO PREVIEW\nEnterprise Integrati"
+      }
+    },
+    {
+      "route": "projects/crm-customer-360",
+      "width": 1440,
+      "file": "1440-projects-crm-customer-360.png",
+      "frame": {
+        "bodyHeight": 1670,
+        "documentHeight": 1670,
+        "width": 1170,
+        "text": "360\nCustomer 360\n⌕\n☆\n＋\n⚙\n🔔\nUS\n▦\nAccount • Visão 360 do clie"
+      }
+    },
+    {
+      "route": "projects/service-cloud-console",
+      "width": 1440,
+      "file": "1440-projects-service-cloud-console.png",
+      "frame": {
+        "bodyHeight": 1521,
+        "documentHeight": 1521,
+        "width": 1170,
+        "text": "SERVICE 360\nSupervisor Console\n● AO VIVO\n↻\n⚙\n🔔\nSU\nS\nSERVICE"
+      }
+    },
+    {
+      "route": "projects/customer-journey-360",
+      "width": 1440,
+      "file": "1440-projects-customer-journey-360.png",
+      "frame": {
+        "bodyHeight": 1258,
+        "documentHeight": 1258,
+        "width": 1170,
+        "text": "⠿\n360\nCustomer Journey 360\nUS\nCUSTOMER JOURNEY INTELLIGENCE\n"
+      }
+    },
+    {
+      "route": "projects/intelligence-360",
+      "width": 1440,
+      "file": "1440-projects-intelligence-360.png",
+      "frame": {
+        "bodyHeight": 1433,
+        "documentHeight": 1433,
+        "width": 1170,
+        "text": "360\nIntelligence 360\n⌕\nDEMO\n↻\n⚙\n◉\nUS\nCUSTOMER INTELLIGENCE &"
+      }
+    },
+    {
+      "route": "projects/revenue-churn-intelligence",
+      "width": 1440,
+      "file": "1440-projects-revenue-churn-intelligence.png",
+      "frame": {
+        "bodyHeight": 1237,
+        "documentHeight": 1237,
+        "width": 1170,
+        "text": "⠿\n360\nRevenue & Churn Intelligence\nUS\nREVENUE PROTECTION & G"
+      }
+    },
+    {
+      "route": "projects/salesforce-architecture-control-center",
+      "width": 1440,
+      "file": "1440-projects-salesforce-architecture-control-center.png",
+      "frame": {
+        "bodyHeight": 1762,
+        "documentHeight": 1762,
+        "width": 1170,
+        "text": "360\nArchitecture Control Center\n⌕\nDEMO\nARQ\nSALESFORCE PLATFO"
+      }
+    },
+    {
+      "route": "projects/lwc-enterprise-integration-reliability-hub",
+      "width": 1440,
+      "file": "1440-projects-lwc-enterprise-integration-reliability-hub.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "ARCHITECTURE / APEX · PORTFOLIO PREVIEW\nEnterprise Integrati"
+      }
+    },
+    {
+      "route": "projects/lwc-deal-governance-center",
+      "width": 1440,
+      "file": "1440-projects-lwc-deal-governance-center.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "SALES CLOUD · PORTFOLIO PREVIEW\nDeal Governance Center\n\nComm"
+      }
+    },
+    {
+      "route": "projects/lwc-customer-relationship-graph",
+      "width": 1440,
+      "file": "1440-projects-lwc-customer-relationship-graph.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "CUSTOMER 360 · PORTFOLIO PREVIEW\nCustomer Relationship Graph"
+      }
+    },
+    {
+      "route": "projects/lwc-customer-data-quality-center",
+      "width": 1440,
+      "file": "1440-projects-lwc-customer-data-quality-center.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "CUSTOMER 360 · PORTFOLIO PREVIEW\nCustomer Data Quality Cente"
+      }
+    },
+    {
+      "route": "projects/lwc-lead-account-routing-studio",
+      "width": 1440,
+      "file": "1440-projects-lwc-lead-account-routing-studio.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "SALES CLOUD · PORTFOLIO PREVIEW\nLead & Account Routing Studi"
+      }
+    },
+    {
+      "route": "projects/lwc-intelligent-workload-routing-studio",
+      "width": 1440,
+      "file": "1440-projects-lwc-intelligent-workload-routing-studio.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "SERVICE CLOUD · PORTFOLIO PREVIEW\nIntelligent Workload & Rou"
+      }
+    },
+    {
+      "route": "projects/lwc-omni-transfer-intelligence",
+      "width": 1440,
+      "file": "1440-projects-lwc-omni-transfer-intelligence.png",
+      "frame": {
+        "bodyHeight": 1117,
+        "documentHeight": 1117,
+        "width": 1170,
+        "text": "SERVICE OPERATIONS INTELLIGENCE\nOmni Transfer Intelligence\n\n"
+      }
+    },
+    {
+      "route": "projects/lwc-pipeline-risk-inspector",
+      "width": 1440,
+      "file": "1440-projects-lwc-pipeline-risk-inspector.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "SALES CLOUD · PORTFOLIO PREVIEW\nPipeline Risk Inspector\n\nExp"
+      }
+    },
+    {
+      "route": "projects/lwc-sla-escalation-control-tower",
+      "width": 1440,
+      "file": "1440-projects-lwc-sla-escalation-control-tower.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "SERVICE CLOUD · PORTFOLIO PREVIEW\nSLA & Escalation Control T"
+      }
+    },
+    {
+      "route": "projects/lwc-unified-interaction-timeline",
+      "width": 1440,
+      "file": "1440-projects-lwc-unified-interaction-timeline.png",
+      "frame": {
+        "bodyHeight": 790,
+        "documentHeight": 790,
+        "width": 1170,
+        "text": "CUSTOMER 360 · PORTFOLIO PREVIEW\nUnified Interaction Timelin"
+      }
+    },
+    {
+      "route": "",
+      "width": 390,
+      "file": "390-home.png",
+      "frame": null
+    },
+    {
+      "route": "about-project",
+      "width": 390,
+      "file": "390-about-project.png",
+      "frame": null
+    },
+    {
+      "route": "projects/lwc",
+      "width": 390,
+      "file": "390-projects-lwc.png",
+      "frame": {
+        "bodyHeight": 1483,
+        "documentHeight": 1483,
+        "width": 330,
+        "text": "ARCHITECTURE / APEX · PORTFOLIO PREVIEW\nEnterprise Integrati"
+      }
+    },
+    {
+      "route": "projects/crm-customer-360",
+      "width": 390,
+      "file": "390-projects-crm-customer-360.png",
+      "frame": {
+        "bodyHeight": 4068,
+        "documentHeight": 4068,
+        "width": 348,
+        "text": "360\nCustomer 360\nUS\n▦\nAccount • Visão 360 do cliente\nEmpresa"
+      }
+    },
+    {
+      "route": "projects/service-cloud-console",
+      "width": 390,
+      "file": "390-projects-service-cloud-console.png",
+      "frame": {
+        "bodyHeight": 4361,
+        "documentHeight": 4361,
+        "width": 348,
+        "text": "SERVICE 360\nSupervisor Console\n● AO VIVO\n↻\n⚙\n🔔\nSU\nS\nSERVICE"
+      }
+    },
+    {
+      "route": "projects/customer-journey-360",
+      "width": 390,
+      "file": "390-projects-customer-journey-360.png",
+      "frame": {
+        "bodyHeight": 3085,
+        "documentHeight": 3085,
+        "width": 348,
+        "text": "⠿\n360\nUS\nCUSTOMER JOURNEY INTELLIGENCE\nCliente Alpha S.A.\n\nU"
+      }
+    },
+    {
+      "route": "projects/intelligence-360",
+      "width": 390,
+      "file": "390-projects-intelligence-360.png",
+      "frame": {
+        "bodyHeight": 2856,
+        "documentHeight": 2856,
+        "width": 348,
+        "text": "360\nDEMO\n↻\n⚙\n◉\nUS\nCUSTOMER INTELLIGENCE & ACTION CENTER\nTran"
+      }
+    },
+    {
+      "route": "projects/revenue-churn-intelligence",
+      "width": 390,
+      "file": "390-projects-revenue-churn-intelligence.png",
+      "frame": {
+        "bodyHeight": 3072,
+        "documentHeight": 3072,
+        "width": 348,
+        "text": "⠿\n360\nUS\nREVENUE PROTECTION & GROWTH\nRevenue & Churn Intelli"
+      }
+    },
+    {
+      "route": "projects/salesforce-architecture-control-center",
+      "width": 390,
+      "file": "390-projects-salesforce-architecture-control-center.png",
+      "frame": {
+        "bodyHeight": 3383,
+        "documentHeight": 3383,
+        "width": 348,
+        "text": "360\nDEMO\nARQ\nSALESFORCE PLATFORM ENGINEERING\nSalesforce Arch"
+      }
+    },
+    {
+      "route": "projects/lwc-enterprise-integration-reliability-hub",
+      "width": 390,
+      "file": "390-projects-lwc-enterprise-integration-reliability-hub.png",
+      "frame": {
+        "bodyHeight": 1483,
+        "documentHeight": 1483,
+        "width": 348,
+        "text": "ARCHITECTURE / APEX · PORTFOLIO PREVIEW\nEnterprise Integrati"
+      }
+    },
+    {
+      "route": "projects/lwc-deal-governance-center",
+      "width": 390,
+      "file": "390-projects-lwc-deal-governance-center.png",
+      "frame": {
+        "bodyHeight": 1526,
+        "documentHeight": 1526,
+        "width": 348,
+        "text": "SALES CLOUD · PORTFOLIO PREVIEW\nDeal Governance Center\n\nComm"
+      }
+    },
+    {
+      "route": "projects/lwc-customer-relationship-graph",
+      "width": 390,
+      "file": "390-projects-lwc-customer-relationship-graph.png",
+      "frame": {
+        "bodyHeight": 1543,
+        "documentHeight": 1543,
+        "width": 348,
+        "text": "CUSTOMER 360 · PORTFOLIO PREVIEW\nCustomer Relationship Graph"
+      }
+    },
+    {
+      "route": "projects/lwc-customer-data-quality-center",
+      "width": 390,
+      "file": "390-projects-lwc-customer-data-quality-center.png",
+      "frame": {
+        "bodyHeight": 1507,
+        "documentHeight": 1507,
+        "width": 348,
+        "text": "CUSTOMER 360 · PORTFOLIO PREVIEW\nCustomer Data Quality Cente"
+      }
+    },
+    {
+      "route": "projects/lwc-lead-account-routing-studio",
+      "width": 390,
+      "file": "390-projects-lwc-lead-account-routing-studio.png",
+      "frame": {
+        "bodyHeight": 1487,
+        "documentHeight": 1487,
+        "width": 348,
+        "text": "SALES CLOUD · PORTFOLIO PREVIEW\nLead & Account Routing Studi"
+      }
+    },
+    {
+      "route": "projects/lwc-intelligent-workload-routing-studio",
+      "width": 390,
+      "file": "390-projects-lwc-intelligent-workload-routing-studio.png",
+      "frame": {
+        "bodyHeight": 1494,
+        "documentHeight": 1494,
+        "width": 348,
+        "text": "SERVICE CLOUD · PORTFOLIO PREVIEW\nIntelligent Workload & Rou"
+      }
+    },
+    {
+      "route": "projects/lwc-omni-transfer-intelligence",
+      "width": 390,
+      "file": "390-projects-lwc-omni-transfer-intelligence.png",
+      "frame": {
+        "bodyHeight": 2307,
+        "documentHeight": 2307,
+        "width": 348,
+        "text": "SERVICE OPERATIONS INTELLIGENCE\nOmni Transfer Intelligence\n\n"
+      }
+    },
+    {
+      "route": "projects/lwc-pipeline-risk-inspector",
+      "width": 390,
+      "file": "390-projects-lwc-pipeline-risk-inspector.png",
+      "frame": {
+        "bodyHeight": 1490,
+        "documentHeight": 1490,
+        "width": 348,
+        "text": "SALES CLOUD · PORTFOLIO PREVIEW\nPipeline Risk Inspector\n\nExp"
+      }
+    },
+    {
+      "route": "projects/lwc-sla-escalation-control-tower",
+      "width": 390,
+      "file": "390-projects-lwc-sla-escalation-control-tower.png",
+      "frame": {
+        "bodyHeight": 1597,
+        "documentHeight": 1597,
+        "width": 348,
+        "text": "SERVICE CLOUD · PORTFOLIO PREVIEW\nSLA & Escalation Control T"
+      }
+    },
+    {
+      "route": "projects/lwc-unified-interaction-timeline",
+      "width": 390,
+      "file": "390-projects-lwc-unified-interaction-timeline.png",
+      "frame": {
+        "bodyHeight": 1510,
+        "documentHeight": 1510,
+        "width": 348,
+        "text": "CUSTOMER 360 · PORTFOLIO PREVIEW\nUnified Interaction Timelin"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "direct-expertise",
+      "url": "http://127.0.0.1:59557/crm-specialist/",
+      "top": 3607.71875
+    }
+  ]
+}

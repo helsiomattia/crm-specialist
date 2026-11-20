@@ -27,12 +27,8 @@ import { useTranslation } from 'react-i18next';
 import { profile } from '../../data/profile';
 import { visualColors, visualGradients, visualShadows } from '../../theme/tokens';
 
-const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
+import { getHomeUrl as getHomePath } from '../../utils/routes';
 const siteUrl = 'https://helsiomattia.github.io/crm-specialist/';
-
-function getHomePath() {
-  return `${BASE_PATH || ''}/${window.location.search}`;
-}
 
 const metrics = [
   { value: 'HM.crm', labelKey: 'aboutProject.metrics.react', icon: CodeRoundedIcon },

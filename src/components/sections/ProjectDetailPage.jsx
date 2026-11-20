@@ -14,31 +14,11 @@ import { useTranslation } from 'react-i18next';
 import { getLocalizedString } from '../../utils/i18nHelper';
 import { getPortfolioProjectById, getPortfolioProjectsByParent } from '../../data/portfolioProjects';
 import { visualColors } from '../../theme/tokens';
+import { getHomeProjectsUrl as getHomeProjectsPath } from '../../utils/routes';
 
-const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
 const DEFAULT_IFRAME_HEIGHT = 640;
-const PROJECT_EMBED_LOADERS = {
-  'crm-customer-360': () => import('../../../projects/customer360_generico_interativo_v4.html?raw'),
-  'service-cloud-console': () => import('../../../projects/Service360_Generic_Embed_V2.html?raw'),
-  'customer-journey-360': () => import('../../../projects/Customer_Journey_360_Generic.html?raw'),
-  'intelligence-360': () => import('../../../projects/Intelligence360_Generic.html?raw'),
-  'revenue-churn-intelligence': () => import('../../../projects/Revenue_Churn_Intelligence_Generic.html?raw'),
-  'salesforce-architecture-control-center': () => import('../../../projects/Salesforce_Architecture_Control_Center_Generic.html?raw'),
-  'lwc-enterprise-integration-reliability-hub': () => import('../../../projects/lwc/enterprise-integration-reliability-hub-preview.html?raw'),
-  'lwc-deal-governance-center': () => import('../../../projects/lwc/deal-governance-center-preview.html?raw'),
-  'lwc-customer-relationship-graph': () => import('../../../projects/lwc/customer-relationship-graph-preview.html?raw'),
-  'lwc-customer-data-quality-center': () => import('../../../projects/lwc/customer-data-quality-center-preview.html?raw'),
-  'lwc-lead-account-routing-studio': () => import('../../../projects/lwc/lead-account-routing-studio-preview.html?raw'),
-  'lwc-intelligent-workload-routing-studio': () => import('../../../projects/lwc/intelligent-workload-routing-studio-preview.html?raw'),
-  'lwc-omni-transfer-intelligence': () => import('../../../projects/lwc/omni-transfer-intelligence-preview.html?raw'),
-  'lwc-pipeline-risk-inspector': () => import('../../../projects/lwc/pipeline-risk-inspector-preview.html?raw'),
-  'lwc-sla-escalation-control-tower': () => import('../../../projects/lwc/sla-escalation-control-tower-preview.html?raw'),
-  'lwc-unified-interaction-timeline': () => import('../../../projects/lwc/unified-interaction-timeline-preview.html?raw'),
-};
-
-function getHomeProjectsPath() {
-  return `${BASE_PATH || ''}/projects${window.location.search}`;
-}
+import { loadPortfolioProjectEmbed } from '../../data/projectEmbeds';
+import { buildEmbedDocument, createEmbedToken, readEmbedMessage, EMBED_CHANNEL, MAX_SCROLL_DELTA } from '../../utils/embedBridge';
 
 function LwcDemoMenu({ demos, activeDemo, lang, onSelect }) {
   return (
@@ -112,7 +92,7 @@ function LwcDemoMenu({ demos, activeDemo, lang, onSelect }) {
   );
 }
 
-function EmbeddedProjectPreview({ project, lang, t, embedHtml, iframeHeight, iframeRef, isLoadingEmbed }) {
+function EmbeddedProjectPreview({ project, lang, t, embedHtml, embedToken, iframeHeight, iframeRef, isLoadingEmbed }) {
   return (
     <Paper
       className="embedded-html-view"
@@ -151,10 +131,11 @@ function EmbeddedProjectPreview({ project, lang, t, embedHtml, iframeHeight, ifr
       {embedHtml ? (
         <Box
           component="iframe"
+          key={embedToken}
           ref={iframeRef}
           title={`${getLocalizedString(project.title, lang)} preview`}
           srcDoc={embedHtml}
-          sandbox="allow-scripts allow-same-origin"
+          sandbox="allow-scripts"
           scrolling="no"
           sx={{
             display: 'block',
@@ -191,6 +172,7 @@ export default function ProjectDetailPage({ projectId }) {
   const iframeRef = useRef(null);
   const [iframeHeight, setIframeHeight] = useState(DEFAULT_IFRAME_HEIGHT);
   const [embedHtml, setEmbedHtml] = useState('');
+  const [embedToken, setEmbedToken] = useState('');
   const [isLoadingEmbed, setIsLoadingEmbed] = useState(false);
 
   useEffect(() => {
@@ -200,19 +182,15 @@ export default function ProjectDetailPage({ projectId }) {
       return undefined;
     }
 
-    const loadEmbed = PROJECT_EMBED_LOADERS[previewProject.id];
-    if (!loadEmbed) {
-      setEmbedHtml('');
-      return undefined;
-    }
-
+    const token = createEmbedToken();
+    setEmbedToken(token);
     let cancelled = false;
     setIsLoadingEmbed(true);
     setEmbedHtml('');
 
-    loadEmbed()
-      .then((module) => {
-        if (!cancelled) setEmbedHtml(module.default || '');
+    loadPortfolioProjectEmbed(previewProject.id)
+      .then((html) => {
+        if (!cancelled) setEmbedHtml(buildEmbedDocument(html, token, window.location.origin));
       })
       .catch(() => {
         if (!cancelled) setEmbedHtml('');
@@ -228,92 +206,56 @@ export default function ProjectDetailPage({ projectId }) {
 
   useEffect(() => {
     const iframe = iframeRef.current;
-
-    if (!iframe || !embedHtml) return undefined;
+    if (!iframe || !embedHtml || !embedToken) return undefined;
 
     let animationFrameId = 0;
-    let resizeObserver;
-    let observedFrameWindow;
-    let observedFrameDocument;
-
-    const getFrameDocument = () => {
-      try {
-        return iframe.contentDocument || iframe.contentWindow?.document || null;
-      } catch {
-        return null;
+    let nextHeight = null;
+    let scrollDelta = 0;
+    const failLoad = () => {
+      setEmbedHtml('');
+      setIsLoadingEmbed(false);
+    };
+    const readyTimeout = window.setTimeout(failLoad, 10000);
+    const flush = () => {
+      animationFrameId = 0;
+      if (nextHeight !== null) {
+        const height = nextHeight;
+        setIframeHeight(current => Math.abs(current - height) > 1 ? height : current);
+        nextHeight = null;
       }
+      if (scrollDelta) window.scrollBy({ top: scrollDelta, behavior: 'auto' });
+      scrollDelta = 0;
     };
-
-    const syncIframeHeight = () => {
-      window.cancelAnimationFrame(animationFrameId);
-      animationFrameId = window.requestAnimationFrame(() => {
-        const frameDocument = getFrameDocument();
-        const { body, documentElement } = frameDocument || {};
-
-        if (!body || !documentElement) return;
-
-        const nextHeight = Math.ceil(
-          Math.max(
-            body.scrollHeight,
-            body.offsetHeight,
-            body.getBoundingClientRect().height,
-            documentElement.offsetHeight,
-          ),
-        );
-        const safeHeight = Math.max(nextHeight, 1);
-
-        setIframeHeight((currentHeight) => (
-          Math.abs(currentHeight - safeHeight) > 1 ? safeHeight : currentHeight
-        ));
-      });
-    };
-
-    const handleFrameWheel = (event) => {
-      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-
-      event.preventDefault();
-      window.scrollBy({ top: event.deltaY, behavior: 'auto' });
-    };
-
-    const setupHeightObserver = () => {
-      const frameDocument = getFrameDocument();
-      const { body, documentElement, defaultView } = frameDocument || {};
-
-      if (!body || !documentElement) return;
-
-      resizeObserver?.disconnect();
-      observedFrameWindow?.removeEventListener('resize', syncIframeHeight);
-      observedFrameDocument?.removeEventListener('wheel', handleFrameWheel);
-
-      const ResizeObserverConstructor = defaultView?.ResizeObserver || window.ResizeObserver;
-      if (!ResizeObserverConstructor) {
-        syncIframeHeight();
+    const onMessage = (event) => {
+      const message = readEmbedMessage(event, iframe.contentWindow, embedToken);
+      if (!message) return;
+      if (message.type === 'height') {
+        window.clearTimeout(readyTimeout);
+        nextHeight = message.height;
       } else {
-        resizeObserver = new ResizeObserverConstructor(syncIframeHeight);
-        resizeObserver.observe(body);
+        scrollDelta = Math.max(-MAX_SCROLL_DELTA, Math.min(MAX_SCROLL_DELTA, scrollDelta + message.deltaY));
       }
-
-      observedFrameWindow = defaultView;
-      observedFrameDocument = frameDocument;
-      observedFrameWindow?.addEventListener('resize', syncIframeHeight);
-      observedFrameDocument.addEventListener('wheel', handleFrameWheel, { passive: false });
-      syncIframeHeight();
+      if (!animationFrameId) animationFrameId = window.requestAnimationFrame(flush);
     };
-
+    const requestMeasure = () => {
+      // Opaque frames require '*'; this message contains only a per-frame token and a measure request.
+      iframe.contentWindow?.postMessage({ channel: EMBED_CHANNEL, token: embedToken, type: 'measure' }, '*');
+    };
     setIframeHeight(DEFAULT_IFRAME_HEIGHT);
-    iframe.addEventListener('load', setupHeightObserver);
-    window.addEventListener('resize', syncIframeHeight);
-    setupHeightObserver();
-
+    window.addEventListener('message', onMessage);
+    window.addEventListener('resize', requestMeasure);
+    iframe.addEventListener('load', requestMeasure);
+    iframe.addEventListener('error', failLoad);
+    requestMeasure();
     return () => {
+      window.clearTimeout(readyTimeout);
       window.cancelAnimationFrame(animationFrameId);
-      iframe.removeEventListener('load', setupHeightObserver);
-      window.removeEventListener('resize', syncIframeHeight);
-      observedFrameWindow?.removeEventListener('resize', syncIframeHeight);
-      observedFrameDocument?.removeEventListener('wheel', handleFrameWheel);
-      resizeObserver?.disconnect();
+      window.removeEventListener('message', onMessage);
+      window.removeEventListener('resize', requestMeasure);
+      iframe.removeEventListener('load', requestMeasure);
+      iframe.removeEventListener('error', failLoad);
     };
-  }, [embedHtml]);
+  }, [embedHtml, embedToken]);
 
   if (!project) {
     return (
@@ -434,6 +376,7 @@ export default function ProjectDetailPage({ projectId }) {
                     lang={lang}
                     t={t}
                     embedHtml={embedHtml}
+                    embedToken={embedToken}
                     iframeHeight={iframeHeight}
                     iframeRef={iframeRef}
                     isLoadingEmbed={isLoadingEmbed}
@@ -454,6 +397,7 @@ export default function ProjectDetailPage({ projectId }) {
             lang={lang}
             t={t}
             embedHtml={embedHtml}
+            embedToken={embedToken}
             iframeHeight={iframeHeight}
             iframeRef={iframeRef}
             isLoadingEmbed={isLoadingEmbed}

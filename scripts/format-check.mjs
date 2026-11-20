@@ -1,10 +1,11 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { whitespaceErrors } from './lib/quality.mjs';
 
 const root = process.cwd();
-const ignored = new Set(['.git', 'node_modules', 'dist']);
+const ignored = new Set(['.git', '.npm', 'node_modules', 'dist', 'test-results', 'playwright-report']);
 const ignoredFiles = new Set(['projects/NewProjs.txt']);
-const checkedExtensions = new Set(['.js', '.jsx', '.json', '.md', '.html', '.css', '.yml', '.xml', '.txt']);
+const checkedExtensions = new Set(['.js', '.jsx', '.mjs', '.json', '.md', '.html', '.css', '.yml', '.xml', '.txt']);
 const errors = [];
 
 async function walk(directory) {
@@ -23,13 +24,7 @@ async function walk(directory) {
     if (ignoredFiles.has(relativePath)) continue;
 
     const content = await readFile(fullPath, 'utf8');
-    const lines = content.split('\n');
-
-    lines.forEach((line, index) => {
-      if (/[ \t]$/.test(line.replace(/\r$/, ''))) {
-        errors.push(`${relativePath}:${index + 1}: trailing whitespace`);
-      }
-    });
+    errors.push(...whitespaceErrors(content, relativePath));
   }
 }
 

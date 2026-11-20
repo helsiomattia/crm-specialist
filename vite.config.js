@@ -5,10 +5,11 @@ export default defineConfig(({ command }) => ({
   plugins: [react()],
   base: command === 'build' ? '/crm-specialist/' : '/',
   server: {
-    host: '0.0.0.0',
+    host: '127.0.0.1',
     port: 5173,
     strictPort: true,
   },
+  preview: { host: '127.0.0.1' },
   build: {
     rollupOptions: {
       output: {

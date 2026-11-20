@@ -1,23 +1,25 @@
 import { readFile } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import { resolveConfig } from 'vite';
+import { restoreRedirect, resolveRoute } from '../src/utils/routes.js';
 
-const checks = [
-  ['vite.config.js', "base: '/crm-specialist/'"],
-  ['index.html', 'https://helsiomattia.github.io/crm-specialist/'],
-  ['public/404.html', 'crm-specialist-redirect'],
-  ['src/utils/routes.js', 'getAppRouteFromLocation'],
-  ['src/data/portfolioProjects.js', 'loadPortfolioProjectEmbed'],
-];
-
-for (const [file, expected] of checks) {
-  const content = await readFile(file, 'utf8');
-  if (!content.includes(expected)) {
-    console.error(`${file}: missing expected content: ${expected}`);
-    process.exit(1);
-  }
+const production = await resolveConfig({ logLevel: 'error' }, 'build');
+const development = await resolveConfig({ logLevel: 'error' }, 'serve');
+assert.equal(production.base, '/crm-specialist/');
+assert.equal(development.base, '/');
+const script = (await readFile('public/404.html', 'utf8')).match(/<script>([\s\S]*?)<\/script>/)[1];
+for (const [path, expected] of [['expertise', 'home'], ['projects', 'home'], ['contact', 'home'], ['skills', 'home'], ['about-project', 'aboutProject'], ['projects/lwc', 'project']]) {
+  let location = new URL(`https://portfolio.example/crm-specialist/${path}?campaign=a%26b#anchor`);
+  const original = location.href;
+  const mock = {
+    get location() { return { pathname: location.pathname, search: location.search, hash: location.hash, href: location.href, replace(value) { location = new URL(value, location.origin); } }; },
+    get sessionStorage() { throw new Error('Storage blocked'); },
+    history: { replaceState(_, __, value) { location = new URL(value, location.origin); } },
+  };
+  vm.runInNewContext(script, { window: mock });
+  restoreRedirect(mock, '/crm-specialist');
+  assert.equal(location.href, original);
+  assert.equal(resolveRoute(location, '/crm-specialist').type, expected);
 }
-
-for (const file of ['src/locales/pt/common.json', 'src/locales/en/common.json', 'src/locales/es/common.json']) {
-  JSON.parse(await readFile(file, 'utf8'));
-}
-
-console.log('Smoke tests passed.');
+console.log('Smoke passed: real Vite configuration and 404 → bootstrap roundtrip with storage blocked.');

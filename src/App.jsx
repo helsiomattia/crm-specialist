@@ -6,6 +6,7 @@ import Navbar from './components/layout/Navbar';
 import SectionNavigation from './components/layout/SectionNavigation';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
+import { getAppRouteFromLocation } from './utils/routes';
 
 const About = lazy(() => import('./components/sections/About'));
 const Experience = lazy(() => import('./components/sections/Experience'));
@@ -15,45 +16,6 @@ const PortfolioProjects = lazy(() => import('./components/sections/PortfolioProj
 const AboutProjectPage = lazy(() => import('./components/sections/AboutProjectPage'));
 const Contact = lazy(() => import('./components/sections/Contact'));
 const ProjectDetailPage = lazy(() => import('./components/sections/ProjectDetailPage'));
-const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
-const ABOUT_PROJECT_ROUTE = 'about-project';
-
-function stripBasePath(pathname) {
-  if (!BASE_PATH) return pathname;
-  if (pathname === BASE_PATH) return '/';
-  if (pathname.startsWith(`${BASE_PATH}/`)) return pathname.slice(BASE_PATH.length) || '/';
-  return pathname;
-}
-
-function getAppRoute() {
-  const redirectedPath = window.sessionStorage.getItem('crm-specialist-redirect');
-
-  if (redirectedPath) {
-    window.sessionStorage.removeItem('crm-specialist-redirect');
-
-    if (redirectedPath.startsWith('projects/')) {
-      return { type: 'project', projectId: redirectedPath.split('/')[1] || null };
-    }
-
-    if (redirectedPath === ABOUT_PROJECT_ROUTE) {
-      return { type: 'aboutProject' };
-    }
-  }
-
-  const pathname = stripBasePath(window.location.pathname);
-  const [, route, projectId] = pathname.split('/');
-
-  if (route === 'projects' && projectId) {
-    return { type: 'project', projectId };
-  }
-
-  if (route === ABOUT_PROJECT_ROUTE) {
-    return { type: 'aboutProject' };
-  }
-
-  return { type: 'home' };
-}
-
 const globalStyles = `
   :root {
     --header-height: 0px;
@@ -280,14 +242,18 @@ function LoadingFallback() {
 }
 
 export default function App() {
-  const [appRoute, setAppRoute] = useState(() => getAppRoute());
+  const [appRoute, setAppRoute] = useState(() => getAppRouteFromLocation());
   const [loadHomeSections, setLoadHomeSections] = useState(false);
 
   useEffect(() => {
-    const handleRouteChange = () => setAppRoute(getAppRoute());
+    const handleRouteChange = () => setAppRoute(getAppRouteFromLocation());
 
     window.addEventListener('popstate', handleRouteChange);
-    return () => window.removeEventListener('popstate', handleRouteChange);
+    window.addEventListener('hashchange', handleRouteChange);
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+      window.removeEventListener('hashchange', handleRouteChange);
+    };
   }, []);
 
   useEffect(() => {

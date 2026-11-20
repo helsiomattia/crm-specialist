@@ -7,12 +7,7 @@ import LanguageSwitcher from '../LanguageSwitcher';
 import { profile } from '../../data/profile';
 import { visualColors, visualGradients } from '../../theme/tokens';
 import { scrollToSection } from '../../utils/scrollToSection';
-
-const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-function getHomePath() {
-  return `${BASE_PATH || ''}/${window.location.search}`;
-}
+import { getHomeUrl as getHomePath, isPlainLeftClick, navigateToUrl } from '../../utils/routes';
 
 export default function Navbar() {
   return (
@@ -46,8 +41,9 @@ export default function Navbar() {
         component="a"
         href={getHomePath()}
         onClick={(event) => {
+          if (!isPlainLeftClick(event)) return;
           event.preventDefault();
-          window.history.pushState(null, '', getHomePath());
+          navigateToUrl(getHomePath());
           scrollToSection('home', { duration: 0.38 });
         }}
         aria-label="Ir para o início"

@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-20",
+  "scope": "Portal local da auditoria em docs; não é E2E da aplicação publicada",
+  "browser": "Microsoft Edge headless via Playwright",
+  "transport": "file://",
+  "pages": 10,
+  "sourceMarkdown": 9,
+  "checks": [
+    "index.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "PRD.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "DESIGN_STYLE.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "ARCHITECTURE.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "DATABASE.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "SECURITY.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "CODE_STYLE.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "TESTING.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "AGENTS.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "STABILIZATION_REPORT.html: heading, idioma, links e larguras 360/768/1440 aprovados",
+    "Filtros: Todos=11, P1=5, P2=6",
+    "Tema: alternância e persistência após reload",
+    "Busca: atalho, resultados, estado vazio e abertura de seção",
+    "Índice e copiar código com fallback",
+    "Indicador de leitura",
+    "Impressão: botão, mídia e geração PDF",
+    "Menu mobile: abrir e fechar por Escape",
+    "Conteúdo e navegação sem JavaScript",
+    "Comparador visual: 38 telas, seleção e divisão interativas",
+    "Zero erros JavaScript e zero requisições externas no portal"
+  ],
+  "errors": [],
+  "externalRequests": []
+}

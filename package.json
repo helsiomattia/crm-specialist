@@ -3,10 +3,20 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.22.2 <23"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:data": "node scripts/validate-data.mjs",
+    "lint": "node scripts/lint-basic.mjs",
+    "format:check": "node scripts/format-check.mjs",
+    "test:smoke": "node scripts/smoke-test.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/browser-test.mjs",
+    "check": "npm run validate:data && npm run lint && npm run format:check && npm run test:smoke && npm test"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -21,7 +31,9 @@
     "react-i18next": "^17.0.8"
   },
   "devDependencies": {
+    "@babel/parser": "7.29.2",
     "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.2.0"
+    "playwright": "1.65.1",
+    "vite": "6.4.6"
   }
 }

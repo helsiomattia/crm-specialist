@@ -9,13 +9,8 @@
     <script>
       (function () {
         var basePath = '/crm-specialist';
-        var path = window.location.pathname.replace(basePath, '').replace(/^\/+|\/+$/g, '');
-
-        if (path) {
-          window.sessionStorage.setItem('crm-specialist-redirect', path);
-        }
-
-        window.location.replace(basePath + '/' + window.location.search);
+        var original = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace(basePath + '/?__hm_route=' + encodeURIComponent(original));
       })();
     </script>
   </body>

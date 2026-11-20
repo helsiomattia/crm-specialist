@@ -1,9 +1,10 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { javascriptErrors } from './lib/quality.mjs';
 
 const root = process.cwd();
-const ignored = new Set(['.git', 'node_modules', 'dist']);
-const checkedExtensions = new Set(['.js', '.jsx', '.html']);
+const ignored = new Set(['.git', '.npm', 'node_modules', 'dist', 'test-results', 'playwright-report']);
+const checkedExtensions = new Set(['.js', '.jsx', '.mjs', '.html']);
 const errors = [];
 
 async function walk(directory) {
@@ -21,12 +22,15 @@ async function walk(directory) {
     const content = await readFile(fullPath, 'utf8');
     const relativePath = path.relative(root, fullPath);
 
-    if (content.includes('personal-page')) {
-      errors.push(`${relativePath}: contains obsolete personal-page reference`);
-    }
-
-    if (/target=["']_blank["']/.test(content) && !/rel=["'][^"']*noopener[^"']*noreferrer[^"']*["']/.test(content)) {
-      errors.push(`${relativePath}: target="_blank" without noopener noreferrer`);
+    if (path.extname(entry.name) !== '.html') {
+      errors.push(...javascriptErrors(content, relativePath));
+    } else {
+      for (const script of content.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
+        if (!/type=["']application\//i.test(script[1])) errors.push(...javascriptErrors(script[2], relativePath));
+      }
+      for (const link of content.matchAll(/<a\b(?:[^>"']|"[^"]*"|'[^']*')*>/gi)) {
+        if (/target=["']_blank["']/.test(link[0]) && !/rel=["'][^"']*noopener[^"']*noreferrer[^"']*["']/.test(link[0])) errors.push(`${relativePath}: external link without noopener noreferrer`);
+      }
     }
   }
 }
@@ -38,4 +42,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Basic lint passed.');
+console.log('Lint passed: JavaScript/JSX syntax, inline scripts and external link protections.');

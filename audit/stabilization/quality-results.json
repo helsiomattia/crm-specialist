@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-20T13:27:16.003Z",
+  "installation": {
+    "command": "npm ci --no-audit --no-fund --cache .npm --fetch-timeout=15000 --fetch-retries=0",
+    "exitCode": 0,
+    "packages": 141,
+    "node": "22.22.2",
+    "npm": "11.14.1"
+  },
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "data",
+        "chunk_id": "7035e7",
+        "wall_time_seconds": 27.844961,
+        "exit_code": 0,
+        "original_token_count": 25,
+        "output": "Data passed: 18 projects, 16 executed loaders, 103 keys per locale, 74 static translation calls.\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "lint",
+        "chunk_id": "4d0335",
+        "wall_time_seconds": 27.8274539,
+        "exit_code": 0,
+        "original_token_count": 21,
+        "output": "Lint passed: JavaScript/JSX syntax, inline scripts and external link protections.\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "format",
+        "chunk_id": "6d9472",
+        "wall_time_seconds": 27.7658492,
+        "exit_code": 0,
+        "original_token_count": 6,
+        "output": "Format check passed.\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "unit",
+        "chunk_id": "1e158d",
+        "wall_time_seconds": 27.8278621,
+        "exit_code": 0,
+        "original_token_count": 1168,
+        "output": "TAP version 13\n# Subtest: current catalog has all 18 entries and 16 embeds\nok 1 - current catalog has all 18 entries and 16 embeds\n  ---\n  duration_ms: 3.1453\n  type: 'test'\n  ...\n# Subtest: duplicate IDs, invalid parents, cycles and missing loaders are detected\nok 2 - duplicate IDs, invalid parents, cycles and missing loaders are detected\n  ---\n  duration_ms: 1.1973\n  type: 'test'\n  ...\n# Subtest: localized content and external URL schemes are required\nok 3 - localized content and external URL schemes are required\n  ---\n  duration_ms: 0.4554\n  type: 'test'\n  ...\n# Subtest: missing and extra translation keys are reported\nok 4 - missing and extra translation keys are reported\n  ---\n  duration_ms: 0.5911\n  type: 'test'\n  ...\n# Subtest: loaders propagate failure, reject empty data and missing IDs\nok 5 - loaders propagate failure, reject empty data and missing IDs\n  ---\n  duration_ms: 1.8145\n  type: 'test'\n  ...\n# Subtest: only the selected opaque frame and current token are accepted\nok 6 - only the selected opaque frame and current token are accepted\n  ---\n  duration_ms: 2.658\n  type: 'test'\n  ...\n# Subtest: invalid messages and arbitrary commands are ignored\nok 7 - invalid messages and arbitrary commands are ignored\n  ---\n  duration_ms: 0.4289\n  type: 'test'\n  ...\n# Subtest: scroll is finite and bounded\nok 8 - scroll is finite and bounded\n  ---\n  duration_ms: 0.3113\n  type: 'test'\n  ...\n# Subtest: bridge keeps original HTML and does not inject configuration as markup\nok 9 - bridge keeps original HTML and does not inject configuration as markup\n  ---\n  duration_ms: 1.8372\n  type: 'test'\n  ...\n# Subtest: frame tokens are independent per document\nok 10 - frame tokens are independent per document\n  ---\n  duration_ms: 4.3518\n  type: 'test'\n  ...\n# Subtest: syntax and JSX errors are detected\nok 11 - syntax and JSX errors are detected\n  ---\n  duration_ms: 10.0576\n  type: 'test'\n  ...\n# Subtest: one safe link does not hide another unsafe link\nok 12 - one safe link does not hide another unsafe link\n  ---\n  duration_ms: 1.0744\n  type: 'test'\n  ...\n# Subtest: conditional external links preserve their protections\nok 13 - conditional external links preserve their protections\n  ---\n  duration_ms: 1.3282\n  type: 'test'\n  ...\n# Subtest: Markdown hard breaks are valid; accidental whitespace is not\nok 14 - Markdown hard breaks are valid; accidental whitespace is not\n  ---\n  duration_ms: 0.3801\n  type: 'test'\n  ...\n# Subtest: section route: /\nok 15 - section route: /\n  ---\n  duration_ms: 4.0534\n  type: 'test'\n  ...\n# Subtest: section route: expertise\nok 16 - section route: expertise\n  ---\n  duration_ms: 0.3103\n  type: 'test'\n  ...\n# Subtest: section route: projects\nok 17 - section route: projects\n  ---\n  duration_ms: 0.2425\n  type: 'test'\n  ...\n# Subtest: section route: contact\nok 18 - section route: contact\n  ---\n  duration_ms: 0.2014\n  type: 'test'\n  ...\n# Subtest: section route: skills\nok 19 - section route: skills\n  ---\n  duration_ms: 0.3177\n  type: 'test'\n  ...\n# Subtest: section route: \\#skills\nok 20 - section route: \\#skills\n  ---\n  duration_ms: 0.2932\n  type: 'test'\n  ...\n# Subtest: section route: unknown\nok 21 - section route: unknown\n  ---\n  duration_ms: 0.2005\n  type: 'test'\n  ...\n# Subtest: section route: projects/id/extra\nok 22 - section route: projects/id/extra\n  ---\n  duration_ms: 0.1738\n  type: 'test'\n  ...\n# Subtest: section route: %E0%A4\nok 23 - section route: %E0%A4\n  ---\n  duration_ms: 0.7206\n  type: 'test'\n  ...\n# Subtest: project and about-project are not home sections\nok 24 - project and about-project are not home sections\n  ---\n  duration_ms: 0.8489\n  type: 'test'\n  ...\n# Subtest: development root and production base are independent\nok 25 - development root and production base are independent\n  ---\n  duration_ms: 0.3938\n  type: 'test'\n  ...\n# Subtest: 404 transport preserves section, query, hash with storage blocked\nok 26 - 404 transport preserves section, query, hash with storage blocked\n  ---\n  duration_ms: 0.8231\n  type: 'test'\n  ...\n# Subtest: repeated route resolution does not consume legacy storage\nok 27 - repeated route resolution does not consume legacy storage\n  ---\n  duration_ms: 0.6164\n  type: 'test'\n  ...\n# Subtest: 404 transport rejects outside origins, paths and backslashes\nok 28 - 404 transport rejects outside origins, paths and backslashes\n  ---\n  duration_ms: 0.5801\n  type: 'test'\n  ...\n# Subtest: modified and middle clicks keep native new-tab behavior\nok 29 - modified and middle clicks keep native new-tab behavior\n  ---\n  duration_ms: 0.241\n  type: 'test'\n  ...\n1..29\n# tests 29\n# suites 0\n# pass 29\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 250.4233\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "smoke",
+        "chunk_id": "a12b68",
+        "wall_time_seconds": 0.945394,
+        "exit_code": 0,
+        "original_token_count": 23,
+        "output": "Smoke passed: real Vite configuration and 404 → bootstrap roundtrip with storage blocked.\n"
+      }
+    }
+  ]
+}

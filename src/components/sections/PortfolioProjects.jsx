@@ -16,17 +16,12 @@ import SectionTitle from '../ui/SectionTitle';
 import { getRootPortfolioProjects } from '../../data/portfolioProjects';
 import { getLocalizedString } from '../../utils/i18nHelper';
 import { visualColors } from '../../theme/tokens';
-
-const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-function getProjectPath(projectId) {
-  return `${BASE_PATH || ''}/projects/${projectId}`;
-}
+import { getProjectUrl as getProjectPath, isPlainLeftClick, navigateToUrl } from '../../utils/routes';
 
 function openInternalProject(event, projectId) {
+  if (!isPlainLeftClick(event)) return;
   event.preventDefault();
-  window.history.pushState(null, '', getProjectPath(projectId));
-  window.dispatchEvent(new Event('popstate'));
+  navigateToUrl(getProjectPath(projectId));
   window.scrollTo({ top: 0, behavior: 'auto' });
 }
 

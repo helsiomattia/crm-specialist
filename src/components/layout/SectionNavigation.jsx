@@ -7,48 +7,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
 import { scrollToSection } from '../../utils/scrollToSection';
 import { visualColors } from '../../theme/tokens';
+import { getSectionFromLocation, getSectionUrl, getAboutProjectUrl, navigateToUrl } from '../../utils/routes';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const DESKTOP_QUERY = '(min-width: 1024px)';
 const REDUCE_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
-const HASH_ALIASES = { skills: 'expertise' };
-const PATH_ALIASES = { skills: 'expertise', '': 'home' };
-const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
 const CLICK_SCROLL_DURATION = 0.38;
 const STEP_SCROLL_DURATION = 0.45;
-
-function stripBasePath(pathname) {
-  if (!BASE_PATH) return pathname;
-  if (pathname === BASE_PATH) return '/';
-  if (pathname.startsWith(`${BASE_PATH}/`)) return pathname.slice(BASE_PATH.length) || '/';
-  return pathname;
-}
-
-function getSectionUrl(id) {
-  const path = id === 'home' ? `${BASE_PATH || ''}/` : `${BASE_PATH || ''}/${id}`;
-  return `${path}${window.location.search}`;
-}
-
-function getAboutProjectUrl() {
-  return `${BASE_PATH || ''}/about-project${window.location.search}`;
-}
-
-function getSectionFromLocation() {
-  const redirectedPath = window.sessionStorage.getItem('crm-specialist-redirect');
-  if (redirectedPath) {
-    window.sessionStorage.removeItem('crm-specialist-redirect');
-    const redirectedId = redirectedPath.split('/').filter(Boolean).pop() || 'home';
-    return PATH_ALIASES[redirectedId] || redirectedId;
-  }
-
-  const hashId = window.location.hash.replace('#', '');
-  if (hashId) return HASH_ALIASES[hashId] || hashId;
-
-  const pathname = stripBasePath(window.location.pathname);
-  const pathId = pathname.split('/').filter(Boolean).pop() || 'home';
-  return PATH_ALIASES[pathId] || pathId;
-}
 
 function getHeaderHeight() {
   const header = document.querySelector('header');
@@ -114,9 +80,7 @@ export default function SectionNavigation() {
     if (!sectionIds.includes(id)) return;
     setActiveSection(id);
 
-    const nextUrl = getSectionUrl(id);
-    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-    if (currentUrl !== nextUrl) window.history[mode](null, '', nextUrl);
+    navigateToUrl(getSectionUrl(id), { replace: mode === 'replaceState', notify: false });
   };
 
   const navigateTo = (id, mode = 'pushState') => {
@@ -128,8 +92,7 @@ export default function SectionNavigation() {
 
   const navigateToAboutProject = () => {
     setExpanded(false);
-    window.history.pushState(null, '', getAboutProjectUrl());
-    window.dispatchEvent(new Event('popstate'));
+    navigateToUrl(getAboutProjectUrl());
   };
 
   useEffect(() => {
@@ -151,6 +114,14 @@ export default function SectionNavigation() {
     let triggers = [];
     let retryTimer;
     let attempts = 0;
+    let syncingRoute = true;
+    let initialSectionId = getSectionFromLocation();
+
+    const syncSection = (id) => {
+      syncingRoute = true;
+      setActiveSection(id);
+      scrollToSection(id, { onComplete: () => { syncingRoute = false; } });
+    };
 
     const cleanupTriggers = () => {
       triggers.forEach((trigger) => trigger.kill());
@@ -173,10 +144,10 @@ export default function SectionNavigation() {
           start: 'top center',
           end: 'bottom center',
           onEnter: () => {
-            if (!isProgrammaticScroll()) setRouteState(id);
+            if (!syncingRoute && !isProgrammaticScroll()) setRouteState(id);
           },
           onEnterBack: () => {
-            if (!isProgrammaticScroll()) setRouteState(id);
+            if (!syncingRoute && !isProgrammaticScroll()) setRouteState(id);
           },
         }));
       });
@@ -187,25 +158,27 @@ export default function SectionNavigation() {
         return;
       }
 
-      const initialSectionId = getSectionFromLocation();
       if (sectionIds.includes(initialSectionId)) {
-        setActiveSection(initialSectionId);
-        window.setTimeout(() => scrollToSection(initialSectionId), 0);
+        syncSection(initialSectionId);
+      } else {
+        syncingRoute = false;
       }
     };
 
     const handlePopState = () => {
       const id = getSectionFromLocation();
       if (!sectionIds.includes(id)) return;
-      setActiveSection(id);
-      scrollToSection(id);
+      initialSectionId = id;
+      syncSection(id);
     };
 
     setupTriggers();
     window.addEventListener('popstate', handlePopState);
+    window.addEventListener('hashchange', handlePopState);
 
     return () => {
       window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('hashchange', handlePopState);
       window.clearTimeout(retryTimer);
       cleanupTriggers();
     };

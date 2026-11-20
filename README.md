@@ -5,7 +5,7 @@
 Portfólio pessoal de **Helsio Mattia**, Salesforce CRM Specialist com foco em **Sales Cloud**, **Service Cloud**, **automação de processos**, **CRM**, **adoção de usuários** e **eficiência operacional**.
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite)](https://vitejs.dev)
+[![Vite](https://img.shields.io/badge/Vite-6.4-646CFF?style=flat-square&logo=vite)](https://vite.dev)
 [![Material UI](https://img.shields.io/badge/Material_UI-5-007FFF?style=flat-square&logo=mui)](https://mui.com)
 [![i18next](https://img.shields.io/badge/i18next-26-26A69A?style=flat-square)](https://www.i18next.com/)
 [![GSAP](https://img.shields.io/badge/GSAP-3-88CE02?style=flat-square&logo=greensock)](https://gsap.com/)
@@ -79,7 +79,7 @@ O portfólio foi criado para funcionar como uma vitrine profissional online, reu
 | Tecnologia | Uso no projeto |
 |---|---|
 | React 18 | Construção da interface e componentes. |
-| Vite 5 | Servidor de desenvolvimento e build de produção. |
+| Vite 6.4 | Servidor de desenvolvimento e build de produção. |
 | Material UI 5 | Componentes visuais, tema, grid, cards, botões e responsividade. |
 | Emotion | Estilização usada pelo Material UI. |
 | i18next | Internacionalização da aplicação. |
@@ -146,13 +146,13 @@ O portfólio foi criado para funcionar como uma vitrine profissional online, reu
 
 ### Pré-requisitos
 
-- Node.js 18 ou superior
+- Node.js 22.22.2 (linha 22 LTS; versão validada e fixada em `.nvmrc`, também usada pelo GitHub Actions)
 - npm
 
 ### Instalação
 
 ```bash
-npm install
+npm ci
 ```
 
 ### Ambiente de desenvolvimento
@@ -164,7 +164,7 @@ npm run dev
 Depois acesse:
 
 ```text
-http://localhost:5173
+http://127.0.0.1:5173
 ```
 
 ### Build de produção
@@ -190,6 +190,17 @@ npm run preview
 | `npm run dev` | Inicia o servidor local do Vite. |
 | `npm run build` | Gera a versão de produção. |
 | `npm run preview` | Executa um preview local do build gerado. |
+| `npm run validate:data` | Valida os 18 registros, 16 loaders reais e chaves PT/EN/ES. |
+| `npm run lint` | Analisa sintaxe JS/JSX e proteção de links externos. |
+| `npm run format:check` | Confere whitespace, preservando quebras intencionais de Markdown. |
+| `npm run test:smoke` | Executa a configuração Vite e o fluxo 404 → bootstrap. |
+| `npm test` | Testes de rotas, protocolo dos embeds, dados e verificadores. |
+| `npm run check` | Executa dados, lint, formato, smoke e testes unitários. |
+| `npm run test:browser` | Testa o build em desktop/mobile e o desenvolvimento com StrictMode. Requer build prévio e Chromium. |
+
+Para validar a aplicação, execute `npm run check`, `npm run build`, `npx playwright install chromium` e `npm run test:browser`. No Linux do CI, a instalação do navegador usa `--with-deps`. Para usar um navegador Chromium já instalado, defina `HM_BROWSER_PATH` com o caminho do executável. Resultados ficam em `test-results/browser-results.json`.
+
+Os servidores de desenvolvimento e preview escutam somente em `127.0.0.1`. Acesso pela rede local exige uma opção `--host` deliberada. Consulte [o relatório de estabilização](docs/STABILIZATION_REPORT.md) e [a auditoria interativa](docs/index.html).
 
 ---
 
@@ -238,7 +249,7 @@ Para adicionar um link externo, crie um item com `kind: 'external'`:
 }
 ```
 
-Para adicionar uma demo interna em HTML, use `kind: 'embed'` e informe o conteúdo em `embedHtml`. O projeto ficará acessível em uma rota como:
+Para adicionar uma demo interna, crie o HTML em `projects/`, cadastre `kind: 'embed'` no catálogo e adicione seu ID ao mapa `PROJECT_EMBED_LOADERS` em `src/data/projectEmbeds.js`, usando import dinâmico com `?raw`. O catálogo não armazena `embedHtml`. Execute `npm run validate:data` e revise as contagens esperadas caso o escopo do catálogo mude intencionalmente. O projeto ficará acessível em uma rota como:
 
 ```text
 /projects/meu-projeto
@@ -279,21 +290,27 @@ O projeto está configurado para ser publicado no GitHub Pages no caminho:
 Essa configuração está em `vite.config.js`:
 
 ```js
-export default defineConfig({
-  base: '/crm-specialist/',
-});
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/crm-specialist/' : '/',
+}));
 ```
 
 Se o nome do repositório mudar, o valor de `base` também deve ser atualizado. O mesmo caminho aparece em `public/404.html`, que trata o redirecionamento de rotas internas quando a página é aberta diretamente pelo GitHub Pages.
 
-Fluxo comum de publicação:
+O fallback 404 transporta a URL completa pelo parâmetro `__hm_route`. O bootstrap restaura a URL antes da montagem React; a navegação funciona mesmo com armazenamento bloqueado. Os embeds usam sandbox de origem opaca e comunicação limitada a altura/rolagem; veja [Architecture](docs/ARCHITECTURE.md) e [Security](docs/SECURITY.md).
+
+Validação local antes de publicar:
 
 ```bash
-npm install
+npm ci
+npm run check
 npm run build
+npx playwright install chromium
+npm run test:browser
+npm audit --audit-level=low
 ```
 
-Depois, publique o conteúdo da pasta `dist` conforme a estratégia escolhida para o GitHub Pages, como GitHub Actions ou branch dedicada de deploy.
+O workflow executa essas verificações em pull requests, pushes para `main` e disparos manuais. Os testes de navegador ocorrem após o build para validar o artefato final. Qualquer falha bloqueia a publicação; PRs nunca publicam. O job de deploy depende do job de validação e só publica em `main`. Nenhum push ou deploy foi executado durante a estabilização local.
 
 ---
 

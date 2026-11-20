@@ -1,4 +1,4 @@
-import { visualColors, visualGradients } from '../theme/tokens';
+import { visualColors, visualGradients } from '../theme/tokens.js';
 
 export const portfolioProjects = [
   {

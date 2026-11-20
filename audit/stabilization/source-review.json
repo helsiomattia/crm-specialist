@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-20T13:36:19.499Z",
+  "protectedFileCount": 65,
+  "changedProtectedFiles": [],
+  "runtimeVersions": [
+    {
+      "name": "@emotion/react",
+      "before": "11.14.0",
+      "after": "11.14.0"
+    },
+    {
+      "name": "@emotion/styled",
+      "before": "11.14.1",
+      "after": "11.14.1"
+    },
+    {
+      "name": "@mui/icons-material",
+      "before": "5.18.0",
+      "after": "5.18.0"
+    },
+    {
+      "name": "@mui/material",
+      "before": "5.18.0",
+      "after": "5.18.0"
+    },
+    {
+      "name": "gsap",
+      "before": "3.15.0",
+      "after": "3.15.0"
+    },
+    {
+      "name": "i18next",
+      "before": "26.3.5",
+      "after": "26.3.5"
+    },
+    {
+      "name": "i18next-browser-languagedetector",
+      "before": "8.2.1",
+      "after": "8.2.1"
+    },
+    {
+      "name": "react",
+      "before": "18.3.1",
+      "after": "18.3.1"
+    },
+    {
+      "name": "react-dom",
+      "before": "18.3.1",
+      "after": "18.3.1"
+    },
+    {
+      "name": "react-i18next",
+      "before": "17.0.8",
+      "after": "17.0.8"
+    }
+  ],
+  "secretSignatureMatches": [],
+  "httpStringsForReview": [
+    "http://www.w3.org/2000/svg",
+    "http://www.sitemaps.org/schemas/sitemap/0.9",
+    "http://www.w3.org/1999/xhtml",
+    "http://www.w3.org/1999/xlink",
+    "http://www.w3.org/XML/1998/namespace",
+    "http://www.w3.org/1998/Math/MathML"
+  ],
+  "publishedFiles": [
+    "404.html",
+    "assets\\About-DiJqpSOP.js",
+    "assets\\AboutProjectPage-1_rxcs35.js",
+    "assets\\AnimatedBox-BFUruzTq.js",
+    "assets\\animation-CnbjQALA.js",
+    "assets\\Contact-BDcnrCHd.js",
+    "assets\\customer-data-quality-center-preview-CZeC8nJ4.js",
+    "assets\\customer-relationship-graph-preview-C157pUaZ.js",
+    "assets\\customer360_generico_interativo_v4-Dn8eyRyO.js",
+    "assets\\Customer_Journey_360_Generic-CEhTIHfB.js",
+    "assets\\deal-governance-center-preview-CZCz06Es.js",
+    "assets\\emotion-D6GAY4_q.js",
+    "assets\\enterprise-integration-reliability-hub-preview-9c6IFokc.js",
+    "assets\\Experience-h6TbUt0-.js",
+    "assets\\i18n-BI_UbdEx.js",
+    "assets\\index-CFfi83Tm.js",
+    "assets\\Intelligence360_Generic-8G1tNbvB.js",
+    "assets\\intelligent-workload-routing-studio-preview-2fSCZwta.js",
+    "assets\\lead-account-routing-studio-preview-liBwycte.js",
+    "assets\\mepic-1-B3wMCSBh.webp",
+    "assets\\mepic-10-DN9OhsGu.webp",
+    "assets\\mepic-11-DI8bJQR1.webp",
+    "assets\\mepic-2-DNsS60DO.webp",
+    "assets\\mepic-3-Bzo03zVJ.webp",
+    "assets\\mepic-4-DIMR9xPW.webp",
+    "assets\\mepic-5-Dzdn9UHk.webp",
+    "assets\\mepic-6-DjQs04ch.webp",
+    "assets\\mepic-7-CsgqVEzp.webp",
+    "assets\\mepic-8-BTDviYbo.webp",
+    "assets\\mepic-9-BnUIKxXn.webp",
+    "assets\\mui-Cw4kfc_H.js",
+    "assets\\omni-transfer-intelligence-preview-3ARqLh10.js",
+    "assets\\pipeline-risk-inspector-preview-CVBuMX9_.js",
+    "assets\\portfolioProjects-C57-QlI9.js",
+    "assets\\PortfolioProjects-CvMXV3dK.js",
+    "assets\\ProjectDetailPage-B2u1SNsU.js",
+    "assets\\Projects-Dnxs0FYS.js",
+    "assets\\react-DMO-vjEc.js",
+    "assets\\renderHighlightedText-DYGJZbI8.js",
+    "assets\\Revenue_Churn_Intelligence_Generic-ClEtC0dI.js",
+    "assets\\Salesforce_Architecture_Control_Center_Generic-DUL6HaAQ.js",
+    "assets\\SectionTitle-BMQNuEMv.js",
+    "assets\\Service360_Generic_Embed_V2-DL6K3c2-.js",
+    "assets\\Skills-Dn_OhjoG.js",
+    "assets\\sla-escalation-control-tower-preview-BlYBeL-H.js",
+    "assets\\unified-interaction-timeline-preview-DKsJepQK.js",
+    "favicon.svg",
+    "index.html",
+    "og-image.svg",
+    "robots.txt",
+    "sitemap.xml"
+  ],
+  "unexpectedPublishedFiles": [],
+  "limitations": "Static signatures and review of current source/build only. No Git-history scan, production headers or remote account review; synthetic provenance cannot be proven from source alone."
+}

@@ -135,5 +135,8 @@ test('initial editorial library retains its eighteen full originals and allows n
   for (const category of report.categories) { assert(category.articles >= 3); assert(category.ideas >= 10); }
   const initial = posts.filter(post => /^HM-0(?:0[1-9]|1[0-8])$/.test(post.id));
   assert.equal(initial.length, 18);
-  for (const post of initial) { assert(post.wordCounts.pt >= 900 && post.wordCounts.pt <= 1600); assert.equal(post.language, 'pt'); assert(post.sources.length); }
+  for (const post of initial) {
+    assert(post.wordCounts.pt >= 900 && post.wordCounts.pt <= 1600); assert.equal(post.language, 'pt'); assert(post.sources.length);
+    assert(isPublicPost(post), `${post.slug}: o artigo inicial precisa aparecer no site normal, além da prévia editorial.`);
+  }
 });

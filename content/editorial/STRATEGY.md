@@ -12,7 +12,7 @@ Cada artigo tem uma categoria principal. Tags descrevem assuntos transversais; s
 
 ## Inventário e estados
 
-O lote inicial contém 18 artigos completos em português, organizados em três por categoria. Seus metadados incluem títulos e resumos PT/EN/ES; isso não equivale a uma tradução integral do corpo. Os artigos estão em `status: ready`, sem data de publicação, aguardando revisão final do autor. A revisão técnica e de confidencialidade registrada não substitui essa leitura final de posicionamento e autoria.
+O lote inicial contém 18 artigos completos em português, organizados em três por categoria. Seus metadados incluem títulos e resumos PT/EN/ES; isso não equivale a uma tradução integral do corpo. Após a correção de visibilidade solicitada em 20/11/2026, os artigos estão em `status: published` e entram no catálogo normal. A revisão técnica/editorial está atribuída ao Codex, sem afirmar que o autor realizou pessoalmente essa revisão. A liberação dos arquivos locais não implica deploy remoto.
 
 O arquivo `backlog.json` contém exatamente 60 oportunidades adicionais, dez por categoria, com os títulos solicitados no anexo. Cada item possui ID, slug, tags, objetivo, público, problema, ângulo, roteiro, palavras-chave, prioridade, estado e série. Todas as oportunidades permanecem em `status: idea`. Elas não devem aparecer como artigos publicados, receber data fictícia ou ser contadas como textos concluídos.
 

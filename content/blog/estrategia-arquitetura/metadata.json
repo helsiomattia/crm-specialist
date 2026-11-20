@@ -3,8 +3,8 @@
   "slug": "estrategia-arquitetura",
   "category": "administracao",
   "type": "strategy",
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
   "title": {
@@ -17,17 +17,28 @@
     "en": "How to translate objectives into capabilities, architecture decisions and an evolution plan that supports operations.",
     "es": "Cómo traducir objetivos en capacidades, decisiones de arquitectura y etapas de evolución que respondan a la operación."
   },
-  "tags": ["estrategia", "arquitetura", "governanca", "gestao"],
+  "tags": [
+    "estrategia",
+    "arquitetura",
+    "governanca",
+    "gestao"
+  ],
   "author": "Helsio Mattia",
   "language": "pt",
-  "languages": ["pt"],
-  "publishedAt": null,
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
   "featured": true,
   "series": "administracao-dados",
   "seriesOrder": 2,
-  "relatedArticles": ["salesforce-arquitetura-operacional", "dados-decisoes", "custo-alem-licenca"],
+  "relatedArticles": [
+    "salesforce-arquitetura-operacional",
+    "dados-decisoes",
+    "custo-alem-licenca"
+  ],
   "sources": [
     {
       "title": "The Open Group — Competency-to-Role Mapping, TOGAF Business Architecture Foundation",
@@ -36,5 +47,6 @@
     }
   ],
   "maturity": null,
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente. Não afirma certificação TOGAF nem implementação completa de um framework."
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor. Não afirma certificação TOGAF nem implementação completa de um framework.",
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

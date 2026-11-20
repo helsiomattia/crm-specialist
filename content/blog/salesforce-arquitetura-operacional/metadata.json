@@ -3,8 +3,8 @@
   "slug": "salesforce-arquitetura-operacional",
   "category": "salesforce",
   "type": "architecture",
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
   "title": {
@@ -17,17 +17,28 @@
     "en": "How to define Salesforce's role across processes, data and systems, with clear ownership and maintainable integration decisions.",
     "es": "Cómo definir el papel de Salesforce entre procesos, datos y sistemas, con responsabilidades claras y decisiones de integración sostenibles."
   },
-  "tags": ["salesforce", "arquitetura", "integracoes", "governanca"],
+  "tags": [
+    "salesforce",
+    "arquitetura",
+    "integracoes",
+    "governanca"
+  ],
   "author": "Helsio Mattia",
   "language": "pt",
-  "languages": ["pt"],
-  "publishedAt": null,
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
   "featured": true,
   "series": "arquitetura-salesforce",
   "seriesOrder": 1,
-  "relatedArticles": ["estrategia-arquitetura", "flow-apex-lwc", "tecnologia-valor-negocio"],
+  "relatedArticles": [
+    "estrategia-arquitetura",
+    "flow-apex-lwc",
+    "tecnologia-valor-negocio"
+  ],
   "sources": [
     {
       "title": "Salesforce Architects — Integration Patterns",
@@ -36,5 +47,6 @@
     }
   ],
   "maturity": null,
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor.",
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

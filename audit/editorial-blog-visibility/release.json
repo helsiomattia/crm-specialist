@@ -1,0 +1,169 @@
+{
+  "date": "2026-11-20",
+  "reason": "Correção solicitada: artigos completos não apareciam na navegação normal por permanecerem em ready.",
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "articles": [
+    {
+      "id": "HM-001",
+      "slug": "salesforce-arquitetura-operacional",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "56a66ab4305fbfc56f328bb7647f2fc7d33f57bbaec84e93097a05f65cf54e64"
+    },
+    {
+      "id": "HM-002",
+      "slug": "atendimento-omnichannel",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "a5235ae6a95e44b5cfc41b5b11447b68339f824aae4f45760c82600170a5dd2f"
+    },
+    {
+      "id": "HM-003",
+      "slug": "flow-apex-lwc",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "ef9403e40d0f93985178f7f0cf2e7e449868add796119f632908c468f237bb75"
+    },
+    {
+      "id": "HM-004",
+      "slug": "tecnologia-valor-negocio",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "0d48fea216082c23d49746fab9ebbb742e91aa76900743d06ac05f9c5ba4eed6"
+    },
+    {
+      "id": "HM-005",
+      "slug": "priorizar-projetos",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "285827d52f5be98cfff649a31f755ad3efa93788aeaa99408b893d048e185daa"
+    },
+    {
+      "id": "HM-006",
+      "slug": "lideranca-tecnica",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "09c546974b1b6285563481e2c03d63899bf98719db3d65af8d20c9af8c9c0cee"
+    },
+    {
+      "id": "HM-007",
+      "slug": "automatizar-processo-ruim",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "ba49c249538cb71cfad9b5dd2bfd52bec485850de3e13e9bd1d8782c9786850a"
+    },
+    {
+      "id": "HM-008",
+      "slug": "indicadores-atendimento",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "e63012ab81cbc62eb182c45ef9ffdd50a5834905da302f7df4a384abf8b6dfb5"
+    },
+    {
+      "id": "HM-009",
+      "slug": "documentar-processos",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "2fff87799c9ccd25ac74585a27d76122333c667c016caaf06026f0d5b7023192"
+    },
+    {
+      "id": "HM-010",
+      "slug": "plataforma-conhecimento",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "539b347e410653c2581a1a9539931e1ced0332e1cbae1267b3819515ca010556"
+    },
+    {
+      "id": "HM-011",
+      "slug": "mapa-chatbot",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "60947b1d8b216e7dce303eb763596c29b668bfe8702d195590724a59f91dc74c"
+    },
+    {
+      "id": "HM-012",
+      "slug": "necessidade-ao-prototipo",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "1fb81bf8453aae4ff8cd166a32007a7e791f3cb56d2c125194aa69690ec0f26b"
+    },
+    {
+      "id": "HM-013",
+      "slug": "empresa-pronta-ia",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "bfbb9427083a803f787b6905b30dc94b3a8de44e869fce72cf2e3a2f8f026d5d"
+    },
+    {
+      "id": "HM-014",
+      "slug": "agentforce-amazon-connect",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "64b4ceb6c606e6764c22fe988f7cef40c6bde5a468c3ee5bdd0c5992bc5a9810"
+    },
+    {
+      "id": "HM-015",
+      "slug": "ia-reduzir-complexidade",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "b4548c328b23e37949217f626de9b746b63cc4870f553e4b191d1cf6ca8cbe4d"
+    },
+    {
+      "id": "HM-016",
+      "slug": "estrategia-arquitetura",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "3a9b5baf5fac1532ecd858b4bd309f55dab77e5b271d9cbdc3b259f527944af7"
+    },
+    {
+      "id": "HM-017",
+      "slug": "custo-alem-licenca",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "10d74cac9f5762212d299febce908f9c1eabe5fdf04cad304f0d9b861f1b5791"
+    },
+    {
+      "id": "HM-018",
+      "slug": "dados-decisoes",
+      "from": "ready",
+      "to": "published",
+      "publishedAt": "2026-11-20",
+      "bodyUnchanged": true,
+      "sha256": "aca2b757e03a7215fffed3af1fc7a854ca5c58db7e261b7b66d2538871f27544"
+    }
+  ]
+}

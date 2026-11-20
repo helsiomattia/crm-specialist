@@ -1,5 +1,13 @@
 # Blog profissional HM.crm — Relatório de implementação
 
+## Correção de visibilidade — 20/11/2026
+
+O usuário identificou que o site normal exibia apenas a estrutura. A causa era o estado `ready` dos 18 artigos: os testes anteriores abriam conteúdo real em modo editorial, enquanto o build público continha zero artigos. O lote foi liberado para o catálogo normal com `status: published`, mantendo os textos e as regras que excluem futuros rascunhos. A revisão está atribuída ao Codex; não foi registrada uma revisão pessoal do autor que não ocorreu.
+
+O build local foi reconstruído. O teste `test:blog:public` verifica os 18 artigos reais tanto no desenvolvimento normal quanto no artefato de produção, incluindo sitemap, abertura pelos cards, paginação, categorias, refresh, conteúdo completo e metadados. As evidências desta correção ficam em [liberação do lote](../audit/editorial-blog-visibility/release.json) e [verificação do catálogo público](../audit/editorial-blog-visibility/blog-public-results.json). Nenhum push ou deploy foi executado; a versão hospedada depende da publicação deste novo build.
+
+As seções abaixo preservam o registro da entrega inicial, quando os textos ainda estavam em revisão. Esta atualização prevalece para a disponibilidade atual dos artigos.
+
 > Entrega local de 20/11/2026. Escopo: missão do Blog profissional enviada em anexo. Nenhum commit, push, deploy ou publicação externa foi executado.
 
 ## 1. Resultado executivo

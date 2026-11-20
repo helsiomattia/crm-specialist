@@ -4,14 +4,14 @@
   "languages": [
     "pt"
   ],
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
-  "publishedAt": null,
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente.",
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor.",
   "id": "HM-009",
   "slug": "documentar-processos",
   "category": "processos",
@@ -46,5 +46,6 @@
       "checkedAt": "2026-11-20"
     }
   ],
-  "maturity": null
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

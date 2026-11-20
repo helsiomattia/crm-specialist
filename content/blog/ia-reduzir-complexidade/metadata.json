@@ -3,8 +3,8 @@
   "slug": "ia-reduzir-complexidade",
   "category": "inovacao",
   "type": "architecture",
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
   "title": {
@@ -17,17 +17,28 @@
     "en": "How to assess eliminated work, duplicated rules, review effort and failure recovery in enterprise AI solutions.",
     "es": "Cómo evaluar el trabajo eliminado, las reglas duplicadas, el esfuerzo de revisión y la recuperación de fallos en soluciones empresariales con IA."
   },
-  "tags": ["ia", "arquitetura", "automacao", "processos"],
+  "tags": [
+    "ia",
+    "arquitetura",
+    "automacao",
+    "processos"
+  ],
   "author": "Helsio Mattia",
   "language": "pt",
-  "languages": ["pt"],
-  "publishedAt": null,
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
   "featured": false,
   "series": "ia-responsavel",
   "seriesOrder": 2,
-  "relatedArticles": ["automatizar-processo-ruim", "empresa-pronta-ia", "custo-alem-licenca"],
+  "relatedArticles": [
+    "automatizar-processo-ruim",
+    "empresa-pronta-ia",
+    "custo-alem-licenca"
+  ],
   "sources": [
     {
       "title": "Google SRE — Eliminating Toil",
@@ -36,5 +47,6 @@
     }
   ],
   "maturity": null,
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente. A aplicação do conceito de toil à avaliação de IA é análise editorial própria."
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor. A aplicação do conceito de toil à avaliação de IA é análise editorial própria.",
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

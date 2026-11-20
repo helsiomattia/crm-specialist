@@ -208,7 +208,7 @@ Os servidores de desenvolvimento e preview escutam somente em `127.0.0.1`. Acess
 
 ### Blog profissional
 
-O Blog inclui seis categorias, nove séries, 18 artigos completos em português e 60 pautas estruturadas. Os textos iniciais estão em revisão final do autor, sem data fictícia de publicação. Use `npm run blog:preview` e abra `/blog` para revisar a biblioteca preenchida localmente. O modo normal e o build público incluem somente artigos aprovados.
+O Blog inclui seis categorias, nove séries, 18 artigos completos em português e 60 pautas estruturadas. Os 18 artigos iniciais estão liberados no catálogo normal: use `npm run dev` e abra `/blog`, ou gere o build de produção. `npm run blog:preview` é reservado à revisão de futuros rascunhos. A liberação local não atualiza o GitHub Pages sem o deploy do novo build.
 
 Crie textos com `npm run blog:new -- meu-artigo`. Após revisão factual, de confidencialidade e do autor, use `npm run blog:publish -- meu-artigo --reviewed-by "Nome do revisor"` para liberar no catálogo local. Nenhum desses comandos faz push ou deploy. O build gera HTML completo das rotas públicas do Blog, além dos metadados e sitemap.
 

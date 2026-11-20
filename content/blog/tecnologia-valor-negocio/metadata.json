@@ -3,8 +3,8 @@
   "slug": "tecnologia-valor-negocio",
   "category": "gestao",
   "type": "strategy",
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
   "title": {
@@ -17,17 +17,28 @@
     "en": "From a feature request to a value hypothesis: how to connect technical delivery, adoption, decisions and observable outcomes.",
     "es": "De la solicitud de una funcionalidad a una hipótesis de valor: cómo conectar entregas técnicas, adopción, decisiones y resultados observables."
   },
-  "tags": ["gestao", "estrategia", "produtos", "processos"],
+  "tags": [
+    "gestao",
+    "estrategia",
+    "produtos",
+    "processos"
+  ],
   "author": "Helsio Mattia",
   "language": "pt",
-  "languages": ["pt"],
-  "publishedAt": null,
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
   "featured": true,
   "series": "necessidade-solucao",
   "seriesOrder": 1,
-  "relatedArticles": ["automatizar-processo-ruim", "priorizar-projetos", "custo-alem-licenca"],
+  "relatedArticles": [
+    "automatizar-processo-ruim",
+    "priorizar-projetos",
+    "custo-alem-licenca"
+  ],
   "sources": [
     {
       "title": "Manifesto Ágil — Principles behind the Agile Manifesto",
@@ -36,5 +47,6 @@
     }
   ],
   "maturity": null,
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor.",
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

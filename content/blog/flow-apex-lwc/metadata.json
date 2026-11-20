@@ -3,8 +3,8 @@
   "slug": "flow-apex-lwc",
   "category": "salesforce",
   "type": "decision",
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
   "title": {
@@ -17,17 +17,28 @@
     "en": "Separate user experience, business decisions and execution to choose Salesforce tools based on maintenance, security and team capabilities.",
     "es": "Separe la experiencia, las decisiones de negocio y la ejecución para elegir herramientas Salesforce según mantenimiento, seguridad y capacidades del equipo."
   },
-  "tags": ["salesforce", "automacao", "arquitetura", "seguranca"],
+  "tags": [
+    "salesforce",
+    "automacao",
+    "arquitetura",
+    "seguranca"
+  ],
   "author": "Helsio Mattia",
   "language": "pt",
-  "languages": ["pt"],
-  "publishedAt": null,
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
   "featured": false,
   "series": "arquitetura-salesforce",
   "seriesOrder": 2,
-  "relatedArticles": ["salesforce-arquitetura-operacional", "necessidade-ao-prototipo", "automatizar-processo-ruim"],
+  "relatedArticles": [
+    "salesforce-arquitetura-operacional",
+    "necessidade-ao-prototipo",
+    "automatizar-processo-ruim"
+  ],
   "sources": [
     {
       "title": "Salesforce Developers — Get Started with Lightning Web Components",
@@ -51,5 +62,6 @@
     }
   ],
   "maturity": null,
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor.",
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

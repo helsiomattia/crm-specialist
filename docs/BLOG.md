@@ -6,7 +6,11 @@
 
 A biblioteca reúne seis categorias, nove séries, 18 artigos completos em português e 60 pautas adicionais. Os artigos têm títulos e resumos em PT/EN/ES, referências verificadas, tags e relações entre assuntos. O corpo completo permanece em português; traduções de títulos não são apresentadas como traduções integrais.
 
-Os 18 textos estão em `ready`: revisão técnica e de confidencialidade concluída, revisão final do autor pendente. Não receberam datas fictícias nem foram liberados no catálogo público. O backlog é planejamento, não conteúdo publicado. Consulte o [relatório da implementação](BLOG_IMPLEMENTATION_REPORT.md), o [plano editorial](../content/editorial/STRATEGY.md) e o [inventário estruturado](../content/editorial/backlog.json).
+Os 18 textos iniciais estão em `published` e aparecem no desenvolvimento normal e no build público. A correção de 20/11/2026 liberou o lote com revisão técnica/editorial identificada; não alterou os corpos nem fez push ou deploy. O backlog é planejamento, não conteúdo publicado. Consulte o [relatório da implementação](BLOG_IMPLEMENTATION_REPORT.md), o [plano editorial](../content/editorial/STRATEGY.md) e o [inventário estruturado](../content/editorial/backlog.json).
+
+## Abrir o Blog com os artigos
+
+Execute `npm run dev` e abra `http://127.0.0.1:5173/blog`. Os 18 artigos também entram em `npm run build`; o build já foi atualizado localmente. Para ver a correção no GitHub Pages, é necessário enviar essas alterações e executar o deploy. Abrir `docs/BLOG.html` exibe este guia de manutenção, não a biblioteca de artigos.
 
 ## Abrir a prévia editorial
 
@@ -18,7 +22,7 @@ npm run blog:preview
 
 Abra `http://127.0.0.1:5173/blog`. Se a porta estiver ocupada, use `npm run blog:preview -- --port 5175` e abra a porta informada. Essa modalidade exibe os textos locais em revisão, com aviso e `noindex`. O servidor escuta em loopback. O build com `--mode editorial` é bloqueado para impedir a exportação acidental da prévia.
 
-`npm run dev` e `npm run build` usam somente artigos publicados e aprovados. Enquanto nenhum texto for liberado, mostram as seis categorias e os estados vazios da biblioteca. Isso permite revisar o conteúdo sem confundir revisão com publicação.
+`npm run dev` e `npm run build` usam somente artigos publicados e aprovados, incluindo os 18 textos iniciais. Futuros rascunhos continuam excluídos desses modos; apenas a prévia editorial os mostra.
 
 Se o npm não estiver disponível no PATH do Windows, o equivalente da prévia é `node node_modules/vite/bin/vite.js --mode editorial`. Para criação, use `node scripts/create-blog-post.mjs meu-artigo`.
 
@@ -165,6 +169,6 @@ npm run test:browser
 node docs/build-docs.mjs
 ```
 
-`blog:validate` verifica o inventário, IDs, slugs, categorias, tags, relações, séries, datas, idiomas e backlog. `test:blog` constrói conteúdo sintético isolado, testa HTML sem JavaScript, publicação, exclusão de conteúdo, segurança Markdown e fluxos de leitura; também abre os 18 artigos reais em uma prévia local. O teste completo do site cobre navegação, menu lateral e as 16 demonstrações existentes.
+`blog:validate` verifica o inventário, IDs, slugs, categorias, tags, relações, séries, datas, idiomas e backlog. `test:blog` constrói conteúdo sintético isolado, testa HTML sem JavaScript, publicação, exclusão de conteúdo, segurança Markdown e fluxos de leitura; também abre os 18 artigos reais em uma prévia local. Em seguida executa `test:blog:public`, que verifica os artigos reais no desenvolvimento normal e no build de produção, sem depender da prévia editorial. O teste completo do site cobre navegação, menu lateral e as 16 demonstrações existentes.
 
 No Windows testado, use `HM_BROWSER_PATH=C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe`. No CI, o workflow instala Chromium. Resultados reais desta entrega, limites de cobertura e capturas estão no [relatório](BLOG_IMPLEMENTATION_REPORT.md). A documentação HTML é regenerada a partir do Markdown; não editar somente o HTML.

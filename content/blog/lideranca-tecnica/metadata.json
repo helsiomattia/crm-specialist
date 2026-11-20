@@ -3,8 +3,8 @@
   "slug": "lideranca-tecnica",
   "category": "gestao",
   "type": "reflection",
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
   "title": {
@@ -17,17 +17,28 @@
     "en": "How to clarify decisions, share reasoning and develop team autonomy while respecting the boundaries of roles and responsibilities.",
     "es": "Cómo aclarar decisiones, compartir razonamiento y desarrollar la autonomía del equipo, respetando los límites de cada rol y responsabilidad."
   },
-  "tags": ["lideranca", "carreira", "conhecimento", "qualidade"],
+  "tags": [
+    "lideranca",
+    "carreira",
+    "conhecimento",
+    "qualidade"
+  ],
   "author": "Helsio Mattia",
   "language": "pt",
-  "languages": ["pt"],
-  "publishedAt": null,
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
   "featured": false,
   "series": "carreira-lideranca",
   "seriesOrder": 1,
-  "relatedArticles": ["documentar-processos", "plataforma-conhecimento", "tecnologia-valor-negocio"],
+  "relatedArticles": [
+    "documentar-processos",
+    "plataforma-conhecimento",
+    "tecnologia-valor-negocio"
+  ],
   "sources": [
     {
       "title": "Google SRE — Postmortem Culture: Learning from Failure",
@@ -36,5 +47,6 @@
     }
   ],
   "maturity": null,
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor.",
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

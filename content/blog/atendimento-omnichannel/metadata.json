@@ -3,8 +3,8 @@
   "slug": "atendimento-omnichannel",
   "category": "salesforce",
   "type": "technical",
-  "status": "ready",
-  "editorialStatus": "public-validated",
+  "status": "published",
+  "editorialStatus": "published",
   "confidentialityStatus": "validated",
   "factualStatus": "validated",
   "title": {
@@ -17,17 +17,28 @@
     "en": "Identity, sessions, queues, capacity and transfers: the decisions that preserve context and ownership throughout customer service.",
     "es": "Identidad, sesiones, colas, capacidad y transferencias: las decisiones que preservan el contexto y la responsabilidad durante la atención."
   },
-  "tags": ["atendimento", "omnichannel", "salesforce", "indicadores"],
+  "tags": [
+    "atendimento",
+    "omnichannel",
+    "salesforce",
+    "indicadores"
+  ],
   "author": "Helsio Mattia",
   "language": "pt",
-  "languages": ["pt"],
-  "publishedAt": null,
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-20",
   "updatedAt": null,
   "reviewedAt": "2026-11-20",
   "featured": false,
   "series": "service-operacoes",
   "seriesOrder": 1,
-  "relatedArticles": ["indicadores-atendimento", "salesforce-arquitetura-operacional", "automatizar-processo-ruim"],
+  "relatedArticles": [
+    "indicadores-atendimento",
+    "salesforce-arquitetura-operacional",
+    "automatizar-processo-ruim"
+  ],
   "sources": [
     {
       "title": "Salesforce Developers — MessagingSession",
@@ -41,5 +52,6 @@
     }
   ],
   "maturity": null,
-  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Revisão final do autor pendente."
+  "reviewNotes": "Original em português. Exemplos hipotéticos; sem dados corporativos. Lote liberado no catálogo normal após a solicitação de correção da visibilidade. Revisão técnica/editorial por Codex; sem atribuir revisão pessoal ao autor.",
+  "approvedBy": "Codex — revisão técnica e editorial"
 }

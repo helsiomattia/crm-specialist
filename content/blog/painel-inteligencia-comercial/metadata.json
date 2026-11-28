@@ -1,0 +1,50 @@
+{
+  "id": "HM-042",
+  "slug": "painel-inteligencia-comercial",
+  "category": "ideias",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Revenue & Churn Intelligence: investigar receita e risco de perda",
+    "en": "Revenue & Churn Intelligence: investigating revenue and retention risk",
+    "es": "Revenue & Churn Intelligence: investigar ingresos y riesgo de pérdida"
+  },
+  "excerpt": {
+    "pt": "Proposta de inteligência comercial com coortes, sinais explicáveis e avaliação humana das recomendações.",
+    "en": "A commercial intelligence proposal using cohorts, explainable signals and human review.",
+    "es": "Propuesta de inteligencia comercial con cohortes, señales explicables y revisión humana."
+  },
+  "tags": [
+    "prototipos",
+    "indicadores",
+    "estrategia"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "laboratorio-ideias",
+  "seriesOrder": 6,
+  "relatedArticles": [
+    "revops-passagem-bastao",
+    "dados-decisoes"
+  ],
+  "sources": [
+    {
+      "title": "GOV.UK — The Government Data Quality Framework",
+      "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": "Proposta",
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

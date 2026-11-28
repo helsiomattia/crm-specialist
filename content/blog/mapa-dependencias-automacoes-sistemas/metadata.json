@@ -1,0 +1,50 @@
+{
+  "id": "HM-043",
+  "slug": "mapa-dependencias-automacoes-sistemas",
+  "category": "ideias",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Architecture Control Center: mapear dependências e impacto de mudanças",
+    "en": "Architecture Control Center: mapping dependencies and change impact",
+    "es": "Architecture Control Center: mapear dependencias e impacto de cambios"
+  },
+  "excerpt": {
+    "pt": "Proposta de catálogo visual que relaciona componentes, automações, integrações e responsáveis.",
+    "en": "A visual catalog proposal linking components, automations, integrations and owners.",
+    "es": "Propuesta de catálogo visual que relaciona componentes, automatizaciones, integraciones y responsables."
+  },
+  "tags": [
+    "prototipos",
+    "arquitetura",
+    "governanca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "laboratorio-ideias",
+  "seriesOrder": 7,
+  "relatedArticles": [
+    "salesforce-arquitetura-operacional",
+    "devops-salesforce-entrega"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce Architects — Integration Patterns",
+      "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/integration-patterns.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": "Proposta",
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

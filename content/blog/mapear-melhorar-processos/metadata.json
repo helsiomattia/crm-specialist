@@ -1,0 +1,60 @@
+{
+  "id": "HM-034",
+  "slug": "mapear-melhorar-processos",
+  "category": "processos",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Mapear e melhorar processos: do AS IS ao TO BE com evidências",
+    "en": "Mapping and improving processes: from AS IS to TO BE with evidence",
+    "es": "Mapear y mejorar procesos: del AS IS al TO BE con evidencias"
+  },
+  "excerpt": {
+    "pt": "BPMN, PDCA, Lean e Six Sigma como instrumentos para entender fluxo, desperdício e variação.",
+    "en": "Use BPMN, PDCA, Lean and Six Sigma to examine flow, waste and variation.",
+    "es": "BPMN, PDCA, Lean y Six Sigma para comprender flujo, desperdicio y variación."
+  },
+  "tags": [
+    "processos",
+    "qualidade",
+    "indicadores"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "processos-empresariais",
+  "seriesOrder": 3,
+  "relatedArticles": [
+    "automatizar-processo-ruim",
+    "documentar-processos"
+  ],
+  "sources": [
+    {
+      "title": "OMG — BPMN 2.0.2",
+      "url": "https://www.omg.org/spec/BPMN/2.0.2",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "ASQ — PDCA Cycle",
+      "url": "https://asq.org/quality-resources/pdca-cycle",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "ASQ — Six Sigma",
+      "url": "https://asq.org/quality-resources/six-sigma",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "HM-054",
+  "slug": "balanced-scorecard-metas",
+  "category": "administracao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Balanced Scorecard: conectar estratégia, metas e aprendizado",
+    "en": "Balanced Scorecard: connecting strategy, targets and learning",
+    "es": "Balanced Scorecard: conectar estrategia, metas y aprendizaje"
+  },
+  "excerpt": {
+    "pt": "Como construir relações entre objetivos, indicadores e iniciativas sem transformar o BSC em uma coleção de gráficos.",
+    "en": "Connect objectives, indicators and initiatives without turning the BSC into a collection of charts.",
+    "es": "Conectar objetivos, indicadores e iniciativas sin convertir el BSC en una colección de gráficos."
+  },
+  "tags": [
+    "estrategia",
+    "indicadores",
+    "gestao"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "administracao-dados",
+  "seriesOrder": 6,
+  "relatedArticles": [
+    "indicadores-decisoes-gestores",
+    "estrategia-arquitetura"
+  ],
+  "sources": [
+    {
+      "title": "Balanced Scorecard Institute — Basics",
+      "url": "https://balancedscorecard.org/bsc-basics-overview/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

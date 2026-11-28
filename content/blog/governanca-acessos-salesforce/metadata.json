@@ -1,0 +1,55 @@
+{
+  "id": "HM-019",
+  "slug": "governanca-acessos-salesforce",
+  "category": "salesforce",
+  "type": "architecture",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Governança de acessos Salesforce: da licença ao registro",
+    "en": "Salesforce access governance: from licenses to records",
+    "es": "Gobierno de accesos Salesforce: de la licencia al registro"
+  },
+  "excerpt": {
+    "pt": "Como separar autenticação, permissões e compartilhamento, revisar privilégios e testar mudanças de função.",
+    "en": "Separate authentication, permissions and sharing to review privileges and test role changes.",
+    "es": "Cómo separar autenticación, permisos y acceso a registros para revisar privilegios y cambios de función."
+  },
+  "tags": [
+    "salesforce",
+    "seguranca",
+    "governanca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "arquitetura-salesforce",
+  "seriesOrder": 3,
+  "relatedArticles": [
+    "salesforce-arquitetura-operacional",
+    "flow-apex-lwc"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Control Who Sees What",
+      "url": "https://help.salesforce.com/s/articleView?id=security_data_access.htm&language=en_US",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "Salesforce — Secure Apex Classes",
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide/apex-security",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "HM-047",
+  "slug": "bots-tradicionais-agentes-ia",
+  "category": "inovacao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Bots determinísticos, agentes e experiências híbridas: escolher a autonomia",
+    "en": "Deterministic bots, agents and hybrid experiences: choosing autonomy",
+    "es": "Bots deterministas, agentes y experiencias híbridas: elegir la autonomía"
+  },
+  "excerpt": {
+    "pt": "Como combinar fluxos previsíveis, Agentforce, ações e supervisão humana conforme o risco da tarefa.",
+    "en": "Combine predictable flows, Agentforce, actions and human oversight according to task risk.",
+    "es": "Combinar flujos previsibles, Agentforce, acciones y supervisión humana según el riesgo."
+  },
+  "tags": [
+    "ia",
+    "agentes",
+    "governanca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "ia-responsavel",
+  "seriesOrder": 4,
+  "relatedArticles": [
+    "mapa-chatbot",
+    "agentforce-amazon-connect"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce Trailhead — Discover Agentforce",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/agentforce-agents-quick-look/discover-agentforce-agents",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "NIST — AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

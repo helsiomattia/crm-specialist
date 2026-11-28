@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-28T19:08:02.371Z",
+  "checks": [
+    "58 artigos reais presentes no sitemap de produção",
+    "build de produção, 1440px: biblioteca pública preenchida, paginação, abertura pelo card, histórico, categoria e refresh; 58 artigos lidos integralmente",
+    "build de produção, 390px: biblioteca pública preenchida, paginação, abertura pelo card, histórico, categoria e refresh",
+    "desenvolvimento normal, 1440px: biblioteca pública preenchida, paginação, abertura pelo card, histórico, categoria e refresh; 58 artigos lidos integralmente",
+    "desenvolvimento normal, 390px: biblioteca pública preenchida, paginação, abertura pelo card, histórico, categoria e refresh"
+  ],
+  "errors": [],
+  "status": "passed"
+}

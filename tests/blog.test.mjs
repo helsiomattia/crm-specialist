@@ -140,3 +140,25 @@ test('initial editorial library retains its eighteen full originals and allows n
     assert(isPublicPost(post), `${post.slug}: o artigo inicial precisa aparecer no site normal, além da prévia editorial.`);
   }
 });
+
+test('knowledge expansion maps every supplied line to complete public articles', async () => {
+  const root = process.cwd();
+  const coverage = JSON.parse(await readFile(path.join(root, 'content/editorial/coverage-2026-11-28.json'), 'utf8'));
+  const supplied = (await readFile(path.join(root, 'content/editorial', coverage.source), 'utf8')).split(/\r?\n/)
+    .filter(line => line.includes('\t') && !line.startsWith('Linha de conhecimento') && !line.startsWith('Ideia ou iniciativa'));
+  const posts = await readBlogContent(root);
+  const bySlug = new Map(posts.map(post => [post.slug, post]));
+  assert.equal(coverage.rows.length, supplied.length);
+  assert.equal(new Set(coverage.rows.map(row => row.id)).size, supplied.length);
+  assert(posts.filter(isPublicPost).length >= coverage.totalArticles);
+  for (const [index, row] of coverage.rows.entries()) {
+    assert.equal(`${row.topic}\t${row.requestedTopics}`, supplied[index]);
+    assert(row.after.scope && row.after.articles.length);
+    for (const slug of row.after.articles) {
+      const post = bySlug.get(slug);
+      assert(post && isPublicPost(post), `${row.id}: ${slug} precisa estar disponível`);
+      assert(post.wordCounts.pt >= 500 && post.sources.length, `${slug}: corpo e referências necessários`);
+      assert(!post.bodies.pt.includes('[['), `${slug}: referência não resolvida`);
+    }
+  }
+});

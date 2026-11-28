@@ -1,0 +1,50 @@
+{
+  "id": "HM-055",
+  "slug": "marketing-analytics-atribuicao",
+  "category": "administracao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Marketing analytics: medir engajamento, conversão e atribuição com contexto",
+    "en": "Marketing analytics: measuring engagement, conversion and attribution in context",
+    "es": "Marketing analytics: medir interacción, conversión y atribución con contexto"
+  },
+  "excerpt": {
+    "pt": "Como conectar eventos digitais ao CRM e evitar conclusões de retorno baseadas apenas em cliques.",
+    "en": "Connect digital events to CRM outcomes and avoid return claims based only on clicks.",
+    "es": "Conectar eventos digitales con resultados del CRM y evitar conclusiones basadas solo en clics."
+  },
+  "tags": [
+    "dados",
+    "indicadores",
+    "estrategia"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "administracao-dados",
+  "seriesOrder": 7,
+  "relatedArticles": [
+    "revops-passagem-bastao",
+    "dados-decisoes"
+  ],
+  "sources": [
+    {
+      "title": "Google Analytics — Select attribution settings",
+      "url": "https://support.google.com/analytics/answer/10597962?hl=en",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

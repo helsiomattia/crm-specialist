@@ -1,0 +1,50 @@
+{
+  "id": "HM-028",
+  "slug": "administracao-salesforce-arquitetura",
+  "category": "salesforce",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Carreiras Salesforce: competências, PDI e evolução além da certificação",
+    "en": "Salesforce careers: skills, development plans and growth beyond certification",
+    "es": "Carreras Salesforce: competencias, desarrollo y evolución más allá de la certificación"
+  },
+  "excerpt": {
+    "pt": "Como distinguir papéis de Administrator, Analyst, Consultant, Developer e Architect e construir evidências de competência.",
+    "en": "Distinguish Administrator, Analyst, Consultant, Developer and Architect roles and build evidence of competence.",
+    "es": "Cómo distinguir funciones de Administrator, Analyst, Consultant, Developer y Architect y construir evidencias de competencia."
+  },
+  "tags": [
+    "salesforce",
+    "carreira",
+    "lideranca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "carreira-lideranca",
+  "seriesOrder": 2,
+  "relatedArticles": [
+    "lideranca-tecnica",
+    "tecnologia-valor-negocio"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Career Paths",
+      "url": "https://trailhead.salesforce.com/career-path/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

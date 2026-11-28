@@ -1,0 +1,55 @@
+{
+  "id": "HM-053",
+  "slug": "governanca-ti-cobit-itil",
+  "category": "administracao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Governança de TI: conectar COBIT, ITIL e decisões do negócio",
+    "en": "IT governance: connecting COBIT, ITIL and business decisions",
+    "es": "Gobernanza de TI: conectar COBIT, ITIL y decisiones del negocio"
+  },
+  "excerpt": {
+    "pt": "Como usar referências de governança e gestão de serviços para definir responsabilidades, riscos e melhoria.",
+    "en": "Use governance and service management references to define ownership, risks and improvement.",
+    "es": "Usar referencias de gobernanza y gestión de servicios para definir responsabilidades, riesgos y mejora."
+  },
+  "tags": [
+    "governanca",
+    "estrategia",
+    "gestao"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "administracao-dados",
+  "seriesOrder": 5,
+  "relatedArticles": [
+    "governanca-leve",
+    "estrategia-arquitetura"
+  ],
+  "sources": [
+    {
+      "title": "ISACA — COBIT",
+      "url": "https://www.isaca.org/en/resources/cobit",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "PeopleCert — ITIL",
+      "url": "https://www.peoplecert.org/en/browse-certifications/it-governance-and-service-management/ITIL-1",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

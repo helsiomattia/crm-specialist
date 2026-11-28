@@ -1,0 +1,55 @@
+{
+  "id": "HM-036",
+  "slug": "processos-considerando-excecoes",
+  "category": "processos",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Processos que consideram exceções: controles, auditoria e runbooks",
+    "en": "Designing for exceptions: controls, auditability and runbooks",
+    "es": "Procesos que contemplan excepciones: controles, auditoría y runbooks"
+  },
+  "excerpt": {
+    "pt": "Um método para transformar falhas previsíveis em respostas operacionais claras e rastreáveis.",
+    "en": "Turn foreseeable failures into clear, traceable operational responses.",
+    "es": "Convertir fallas previsibles en respuestas operativas claras y trazables."
+  },
+  "tags": [
+    "processos",
+    "qualidade",
+    "governanca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "processos-empresariais",
+  "seriesOrder": 4,
+  "relatedArticles": [
+    "documentar-processos",
+    "automatizar-processo-ruim"
+  ],
+  "sources": [
+    {
+      "title": "Google SRE — Postmortem Culture",
+      "url": "https://sre.google/sre-book/postmortem-culture/",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "W3C — PROV Overview",
+      "url": "https://www.w3.org/TR/prov-overview/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

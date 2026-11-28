@@ -1,0 +1,50 @@
+{
+  "id": "HM-020",
+  "slug": "service-cloud-entitlements-sla",
+  "category": "salesforce",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Service Cloud: desenhando Cases, Entitlements e SLAs verificáveis",
+    "en": "Service Cloud: designing verifiable Cases, Entitlements and SLAs",
+    "es": "Service Cloud: diseñar Cases, Entitlements y SLA verificables"
+  },
+  "excerpt": {
+    "pt": "Uma abordagem para transformar compromissos de atendimento em marcos, filas e regras de escalonamento testáveis.",
+    "en": "Turn service commitments into milestones, queues and escalation rules that can be tested.",
+    "es": "Cómo transformar compromisos de atención en hitos, colas y reglas de escalamiento comprobables."
+  },
+  "tags": [
+    "salesforce",
+    "atendimento",
+    "indicadores"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "service-operacoes",
+  "seriesOrder": 2,
+  "relatedArticles": [
+    "indicadores-atendimento",
+    "atendimento-omnichannel"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Create an Entitlement Process",
+      "url": "https://help.salesforce.com/s/articleView?id=entitlements_process_create.htm&language=en_US&type=0",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

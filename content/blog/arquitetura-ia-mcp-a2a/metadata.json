@@ -1,0 +1,55 @@
+{
+  "id": "HM-048",
+  "slug": "arquitetura-ia-mcp-a2a",
+  "category": "inovacao",
+  "type": "architecture",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Arquitetura de IA: contexto, APIs, MCP e A2A com responsabilidades claras",
+    "en": "AI architecture: context, APIs, MCP and A2A with clear responsibilities",
+    "es": "Arquitectura de IA: contexto, APIs, MCP y A2A con responsabilidades claras"
+  },
+  "excerpt": {
+    "pt": "O papel de cada integração e os controles necessários para operar ferramentas e colaboração entre agentes.",
+    "en": "The role of each integration and the controls needed for tools and agent collaboration.",
+    "es": "El papel de cada integración y los controles necesarios para herramientas y colaboración entre agentes."
+  },
+  "tags": [
+    "ia",
+    "arquitetura",
+    "integracoes"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "ia-responsavel",
+  "seriesOrder": 5,
+  "relatedArticles": [
+    "apex-lwc-apis-contratos",
+    "bots-tradicionais-agentes-ia"
+  ],
+  "sources": [
+    {
+      "title": "Model Context Protocol — Introduction",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "A2A Protocol — What is A2A?",
+      "url": "https://a2a-protocol.org/latest/topics/what-is-a2a/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

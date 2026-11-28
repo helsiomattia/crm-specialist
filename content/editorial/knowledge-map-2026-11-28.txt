@@ -1,0 +1,86 @@
+01 — Salesforce & CRM
+Linha de conhecimento	Assuntos para desenvolver
+Administração Salesforce	Profiles, Roles, Permission Sets, Permission Set Groups, Sharing, usuários, licenças, SSO e governança de acessos
+Service Cloud	Cases, Entitlements, Milestones, SLAs, filas, escalonamento, supervisão e produtividade
+Omni-Channel	Roteamento inteligente, capacidade, presença, AgentWork, PendingServiceRouting e transferências
+Mensageria	WhatsApp, Messaging for In-App and Web, bots, sessões, eventos e transição bot–humano
+Automação	Flow Builder, Screen Flows, Record-Triggered Flows, Apex invocable, validações e tratamento de falhas
+Arquitetura	Modelagem de dados, objetos padrão/customizados, relacionamentos, limites, escalabilidade e dependências
+Desenvolvimento	Apex, SOQL, LWC, APIs REST, Named Credentials, testes e Salesforce CLI
+Sales Cloud	Leads, Opportunities, roteamento, gestão de pipeline, forecast, funil de vendas e automação comercial
+Dados e indicadores	Dashboards, relatórios, FCR, TMR, tempo de espera, primeira resposta e qualidade dos dados
+Plataforma e custos	Armazenamento, retenção, limpeza, consumo de licenças, uso de recursos e otimização
+Engenharia e DevOps	Git, ambientes, deploy, metadados, testes, troubleshooting, monitoramento e documentação
+Carreira Salesforce	Administrator, Business Analyst, Consultant, Developer, Architect e trilhas de competências
+
+02 — Gestão & Liderança
+Linha de conhecimento	Assuntos para desenvolver
+Gestão orientada a dados	KPIs, dashboards executivos, métricas de resultado e indicadores de processo
+Gestão de projetos	Roadmap, backlog, priorização, dependências, riscos e entregas
+Liderança técnica	Mentoria, revisão de soluções, alinhamento entre desenvolvedores e negócio
+Gestão de equipes	Organização de times, distribuição de trabalho, capacidade e produtividade
+Governança	Responsabilidades, políticas, controles, gestão de mudanças e rastreabilidade
+Gestão de stakeholders	Levantamento de necessidades, negociação de prioridades, comunicação e decisões
+Metodologias ágeis	Scrum, Kanban, requisitos, histórias de usuário, critérios de aceite e UAT
+Gestão de carreira	PDI, carreira em Y, competências, certificações, senioridade e formação de especialistas
+Gestão de investimentos	Custo total de propriedade, retorno esperado, riscos e sustentabilidade
+Cultura organizacional	Aprendizado, colaboração, compartilhamento de conhecimento e melhoria contínua
+
+03 — Processos & Operações
+Linha de conhecimento	Assuntos para desenvolver
+Gestão por processos	BPM, BPMN, mapeamento AS-IS/TO-BE, responsáveis, entradas e saídas
+Melhoria contínua	PDCA, Lean, Six Sigma, padronização e redução de retrabalho
+Atendimento ao cliente	N1–N4, Front Office, Middle Office, Backoffice, CX e Customer Service
+Indicadores operacionais	SLA, FCR, TMR, tempo de resposta, abandono, backlog e produtividade
+Roteamento operacional	Filas, distribuição de demanda, competências, prioridade e disponibilidade
+Qualidade de processos	Controle, auditoria, documentação, testes, exceções e prevenção de falhas
+Automação de processos	Critérios para automatizar, simplificação anterior à automação e análise de impacto
+Conhecimento operacional	Procedimentos, bases de conhecimento, guias, runbooks e transferência de conhecimento
+Processos comerciais	Qualificação, conversão, passagem de bastão, renovação, pós-venda e retenção
+Experiência do cliente	Jornada ponta a ponta, pontos de fricção, pesquisas de satisfação e melhoria de serviço
+
+04 — Ideias & Projetos
+Seus projetos e protótipos dão material para uma editoria de laboratório de soluções, que pode ser um dos grandes diferenciais do site.
+Ideia ou iniciativa explorada	Valor de negócio que ela demonstra
+Gestão de Negócio	Centralização de regras e conhecimento organizacional
+Painel de gestão operacional	Visibilidade de equipes, pessoas, filas e distribuição de trabalho
+Blueprint interativo de bots	Rastreabilidade visual das jornadas e dependências
+CRM Intelligence 360	Visão consolidada de clientes, relacionamentos e oportunidades
+Customer Journey 360	Conexão de interações e etapas da jornada do cliente
+Revenue & Churn Intelligence	Inteligência comercial, retenção e identificação de riscos
+Architecture Control Center	Visibilidade de componentes, arquitetura e impacto de mudanças
+Salesforce Skill Shine	Gestão do desenvolvimento profissional e competências por carreira
+Priorização inteligente de atendimento	Uso de contexto e regras para apoiar a distribuição da demanda
+Identificação de oportunidades comerciais	Transformação de sinais de comportamento em ações de negócio
+Central de conhecimento CRM	Redução de dependência de conhecimento individual
+CRM para serviços profissionais	Organização de leads, clientes, casos, tarefas e histórico
+
+Essas ideias podem ser publicadas como conceitos, protótipos ou demonstrações. O blog deve distinguir claramente projetos realmente implementados de propostas e simulações.
+05 — Inovação & IA
+Linha de conhecimento	Assuntos para desenvolver
+IA aplicada ao CRM	Classificação, recomendação, triagem, atendimento e suporte à decisão
+Agentes inteligentes	Agentforce, agentes autônomos, limites de autonomia e supervisão humana
+Bots empresariais	Bots determinísticos versus agentes generativos e experiências híbridas
+Arquitetura de IA	Contexto, ferramentas, APIs, MCP, A2A, observabilidade e confiabilidade
+Dados para IA	Data Cloud, identidade, unificação, RAG, retrievers e qualidade
+Prompt Engineering	Grounding, instruções, avaliação, consistência e segurança
+Comparação de plataformas	Salesforce Agentforce versus alternativas como Amazon Connect
+IA operacional	Priorização de solicitações, identificação de SLA e next best action
+IA no desenvolvimento	Geração assistida de código, diagnóstico e validação de metadados
+Economia da IA	TCO, licenciamento, créditos, custos ocultos, ROI e complexidade de sustentação
+Governança de IA	Privacidade, acesso, auditoria, human-in-the-loop e controle de erros
+
+06 — Administração & Estratégia Empresarial
+Linha de conhecimento	Assuntos para desenvolver
+Estratégia empresarial	Vantagem competitiva, alinhamento estratégico e geração de valor
+Governança de TI	COBIT, ITIL, riscos, controles, responsabilidades e investimentos
+Gestão de desempenho	Balanced Scorecard, metas, indicadores e interpretação de resultados
+Receita e crescimento	RevOps, gestão de funil, conversão, expansão, retenção e churn
+Marketing e analytics	Web Analytics, métricas de engajamento, atribuição, campanhas e conversão
+Finanças e tecnologia	ROI, TCO, modelos de contratação, licenças e custo de operação
+Gestão do conhecimento	Dado versus informação versus conhecimento, SECI e ativos intangíveis
+Inteligência competitiva	Tendências, oportunidades, ameaças e apoio à decisão
+Transformação digital	Modernização de sistemas, integração ERP/CRM e adoção de tecnologias
+Computação em nuvem	SaaS, PaaS, IaaS, arquitetura híbrida, escalabilidade e governança
+Experiência do cliente	Customer 360, NPS, CSAT, fidelização e relacionamento
+Administração de operações	Eficiência, qualidade, produtividade, capacidade e melhoria de serviços

@@ -1,0 +1,55 @@
+{
+  "id": "HM-027",
+  "slug": "devops-salesforce-entrega",
+  "category": "salesforce",
+  "type": "technical",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "DevOps Salesforce: do Git ao diagnóstico depois do deploy",
+    "en": "Salesforce DevOps: from Git to post-deployment diagnosis",
+    "es": "DevOps Salesforce: de Git al diagnóstico después del despliegue"
+  },
+  "excerpt": {
+    "pt": "Um fluxo de entrega com ambientes, metadados, testes, rastreabilidade e recuperação operacional.",
+    "en": "A delivery workflow covering environments, metadata, testing, traceability and operational recovery.",
+    "es": "Un flujo de entrega con entornos, metadatos, pruebas, trazabilidad y recuperación operativa."
+  },
+  "tags": [
+    "salesforce",
+    "qualidade",
+    "governanca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "arquitetura-salesforce",
+  "seriesOrder": 8,
+  "relatedArticles": [
+    "flow-apex-lwc",
+    "documentar-processos"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Org Development Model",
+      "url": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-build-mdapi.html",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "Google SRE — Postmortem Culture",
+      "url": "https://sre.google/sre-book/postmortem-culture/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

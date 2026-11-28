@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-28",
+  "scope": "Verificação HTTP complementar; respostas bloqueadas não equivalem a fonte inválida. Revisão conceitual usa documentação consultada separadamente.",
+  "results": [
+    {
+      "url": "https://a2a-protocol.org/latest/topics/what-is-a2a/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://agilemanifesto.org/principles.html",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://architect.salesforce.com/docs/architect/decision-guides/guide/record-triggered.html",
+      "status": 200,
+      "finalUrl": "https://architect.salesforce.com/docs/architect/decision-guides/guide/record-triggered.html"
+    },
+    {
+      "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/integration-patterns.html",
+      "status": 200,
+      "finalUrl": "https://architect.salesforce.com/docs/architect/fundamentals/guide/integration-patterns.html"
+    },
+    {
+      "url": "https://asq.org/quality-resources/pdca-cycle",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://asq.org/quality-resources/six-sigma",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://balancedscorecard.org/bsc-basics-overview/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/145/final",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/apex-dev/references/apex-dev/apex-gov-limits.html",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/apex-dev/references/apex-dev/apex-gov-limits.html"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/lwc/guide"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide/apex-security",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/lwc/guide/apex-security"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide/apex-security.html",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/lwc/guide/apex-security.html"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/named-credentials/guide/get-started.html",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/named-credentials/guide/get-started.html"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/object-reference/references/standard-objects/object-agentwork.html",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/object-reference/references/standard-objects/object-agentwork.html"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/object-reference/references/standard-objects/object-messagingsession.html",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/object-reference/references/standard-objects/object-messagingsession.html"
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-build-mdapi.html",
+      "status": 200,
+      "finalUrl": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-build-mdapi.html"
+    },
+    {
+      "url": "https://developers.google.com/tech-writing/one/audience",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/cost05-bp03.html",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://help.opengroup.org/hc/en-us/articles/32127334669842-Competency-to-Role-Mapping-TOGAF-Business-Architecture-Foundation",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5",
+      "status": 200,
+      "finalUrl": "https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5"
+    },
+    {
+      "url": "https://help.salesforce.com/s/articleView?id=entitlements_process_create.htm&language=en_US&type=0",
+      "status": 200,
+      "finalUrl": "https://help.salesforce.com/s/articleView?id=entitlements_process_create.htm&language=en_US&type=0"
+    },
+    {
+      "url": "https://help.salesforce.com/s/articleView?id=limits.htm&language=en_US&type=5",
+      "status": 200,
+      "finalUrl": "https://help.salesforce.com/s/articleView?id=limits.htm&language=en_US&type=5"
+    },
+    {
+      "url": "https://help.salesforce.com/s/articleView?id=omnichannel_psr_lifecycle.htm&language=en_US&type=0",
+      "status": 200,
+      "finalUrl": "https://help.salesforce.com/s/articleView?id=omnichannel_psr_lifecycle.htm&language=en_US&type=0"
+    },
+    {
+      "url": "https://help.salesforce.com/s/articleView?id=security_data_access.htm&language=en_US",
+      "status": 200,
+      "finalUrl": "https://help.salesforce.com/s/articleView?id=security_data_access.htm&language=en_US"
+    },
+    {
+      "url": "https://help.salesforce.com/s/articleView?id=sf.prompt_builder_ground_template.htm&language=en_US&type=5",
+      "status": 200,
+      "finalUrl": "https://help.salesforce.com/s/articleView?id=sf.prompt_builder_ground_template.htm&language=en_US&type=5"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://scip.world/ethics/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://sre.google/sre-book/eliminating-toil/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://sre.google/sre-book/postmortem-culture/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://sre.google/sre-book/service-level-objectives/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/10597962?hl=en",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://trailhead.salesforce.com/career-path/",
+      "status": 200,
+      "finalUrl": "https://trailhead.salesforce.com/career-path/"
+    },
+    {
+      "url": "https://trailhead.salesforce.com/content/learn/modules/agentforce-agents-quick-look/discover-agentforce-agents",
+      "status": 200,
+      "finalUrl": "https://trailhead.salesforce.com/content/learn/modules/agentforce-agents-quick-look/discover-agentforce-agents"
+    },
+    {
+      "url": "https://trailhead.salesforce.com/content/learn/modules/leads_opportunities_lightning_experience/work-your-opportunities",
+      "status": 200,
+      "finalUrl": "https://trailhead.salesforce.com/content/learn/modules/leads_opportunities_lightning_experience/work-your-opportunities"
+    },
+    {
+      "url": "https://www.finops.org/framework/capabilities/unit-economics/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.gov.uk/service-manual/design/making-prototypes",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.isaca.org/en/resources/cobit",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.omg.org/spec/BPMN/2.0.2",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.peoplecert.org/en/browse-certifications/it-governance-and-service-management/ITIL-1",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.uky.edu/~gmswan3/575/Nonaka_1994.pdf",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.w3.org/TR/prov-overview/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "error": "fetch failed"
+    }
+  ]
+}

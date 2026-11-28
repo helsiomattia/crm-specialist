@@ -1,0 +1,55 @@
+{
+  "id": "HM-058",
+  "slug": "nuvem-integracao-erp-crm",
+  "category": "administracao",
+  "type": "architecture",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Nuvem e integração ERP/CRM: modernizar com responsabilidades claras",
+    "en": "Cloud and ERP/CRM integration: modernizing with clear responsibilities",
+    "es": "Nube e integración ERP/CRM: modernizar con responsabilidades claras"
+  },
+  "excerpt": {
+    "pt": "SaaS, PaaS, IaaS e arquitetura híbrida conectados a dados, contratos, escalabilidade e operação.",
+    "en": "Connect SaaS, PaaS, IaaS and hybrid architecture to data, contracts, scalability and operations.",
+    "es": "Conectar SaaS, PaaS, IaaS y arquitectura híbrida con datos, contratos, escalabilidad y operación."
+  },
+  "tags": [
+    "arquitetura",
+    "integracoes",
+    "estrategia"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "decisoes-arquitetura",
+  "seriesOrder": 7,
+  "relatedArticles": [
+    "salesforce-arquitetura-operacional",
+    "custo-alem-licenca"
+  ],
+  "sources": [
+    {
+      "title": "NIST — The NIST Definition of Cloud Computing",
+      "url": "https://csrc.nist.gov/pubs/sp/800/145/final",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "Salesforce Architects — Integration Patterns",
+      "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/integration-patterns.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

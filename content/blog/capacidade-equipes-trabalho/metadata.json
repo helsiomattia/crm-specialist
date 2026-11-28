@@ -1,0 +1,50 @@
+{
+  "id": "HM-031",
+  "slug": "capacidade-equipes-trabalho",
+  "category": "gestao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Capacidade de equipes: planejar trabalho sem confundir ocupação e produtividade",
+    "en": "Team capacity: planning work beyond utilization",
+    "es": "Capacidad de equipos: planificar trabajo más allá de la ocupación"
+  },
+  "excerpt": {
+    "pt": "Demanda, disponibilidade, trabalho em andamento e aprendizado em um modelo prático de gestão de equipes.",
+    "en": "A practical view of demand, availability, work in progress and team learning.",
+    "es": "Un enfoque práctico de demanda, disponibilidad, trabajo en curso y aprendizaje del equipo."
+  },
+  "tags": [
+    "gestao",
+    "lideranca",
+    "processos"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "carreira-lideranca",
+  "seriesOrder": 3,
+  "relatedArticles": [
+    "lideranca-tecnica",
+    "roadmap-tecnico-estrategico"
+  ],
+  "sources": [
+    {
+      "title": "Google SRE — Postmortem Culture",
+      "url": "https://sre.google/sre-book/postmortem-culture/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

@@ -1,0 +1,1308 @@
+{
+  "date": "2026-11-28",
+  "source": "knowledge-map-2026-11-28.txt",
+  "originalArticles": 18,
+  "newArticles": 40,
+  "totalArticles": 58,
+  "knowledgeLines": 67,
+  "scope": "Cobertura editorial introdutória e aplicada das linhas solicitadas. Não equivale a um curso exaustivo nem a tutorial de configuração de cada recurso listado. Projetos novos são propostas, não implantações comprovadas.",
+  "rows": [
+    {
+      "id": "01-01",
+      "category": "salesforce",
+      "topic": "Administração Salesforce",
+      "requestedTopics": "Profiles, Roles, Permission Sets, Permission Set Groups, Sharing, usuários, licenças, SSO e governança de acessos",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "governanca-acessos-salesforce"
+        ],
+        "scope": "Camadas de acesso, identidade, licenças e revisão por tarefa."
+      }
+    },
+    {
+      "id": "01-02",
+      "category": "salesforce",
+      "topic": "Service Cloud",
+      "requestedTopics": "Cases, Entitlements, Milestones, SLAs, filas, escalonamento, supervisão e produtividade",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "atendimento-omnichannel",
+          "indicadores-atendimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "service-cloud-entitlements-sla",
+          "estruturar-operacao-atendimento"
+        ],
+        "scope": "Casos, entitlements, milestones, SLA e organização do atendimento."
+      }
+    },
+    {
+      "id": "01-03",
+      "category": "salesforce",
+      "topic": "Omni-Channel",
+      "requestedTopics": "Roteamento inteligente, capacidade, presença, AgentWork, PendingServiceRouting e transferências",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "atendimento-omnichannel"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "atendimento-omnichannel",
+          "messagingsession-agentwork-eventos",
+          "estruturar-operacao-atendimento",
+          "idealizar-painel-operacional"
+        ],
+        "scope": "Presença, capacidade, ciclos de roteamento e transferências."
+      }
+    },
+    {
+      "id": "01-04",
+      "category": "salesforce",
+      "topic": "Mensageria",
+      "requestedTopics": "WhatsApp, Messaging for In-App and Web, bots, sessões, eventos e transição bot–humano",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "atendimento-omnichannel"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "messagingsession-agentwork-eventos",
+          "bots-tradicionais-agentes-ia"
+        ],
+        "scope": "Sessões e eventos, canais de mensageria e passagem bot–humano; não é tutorial de configuração de cada canal."
+      }
+    },
+    {
+      "id": "01-05",
+      "category": "salesforce",
+      "topic": "Automação",
+      "requestedTopics": "Flow Builder, Screen Flows, Record-Triggered Flows, Apex invocable, validações e tratamento de falhas",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "flow-apex-lwc"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "flow-apex-lwc",
+          "automacoes-salesforce-manutencao"
+        ],
+        "scope": "Escolha entre Flow, Apex e LWC, tipos de Flow, validações e manutenção."
+      }
+    },
+    {
+      "id": "01-06",
+      "category": "salesforce",
+      "topic": "Arquitetura",
+      "requestedTopics": "Modelagem de dados, objetos padrão/customizados, relacionamentos, limites, escalabilidade e dependências",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "salesforce-arquitetura-operacional",
+          "flow-apex-lwc"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "salesforce-arquitetura-operacional",
+          "objetos-padrao-customizados"
+        ],
+        "scope": "Modelagem, relacionamentos, limites e dependências."
+      }
+    },
+    {
+      "id": "01-07",
+      "category": "salesforce",
+      "topic": "Desenvolvimento",
+      "requestedTopics": "Apex, SOQL, LWC, APIs REST, Named Credentials, testes e Salesforce CLI",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "flow-apex-lwc"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "apex-lwc-apis-contratos",
+          "devops-salesforce-entrega"
+        ],
+        "scope": "Contratos Apex/LWC/REST, SOQL, credenciais, testes e CLI; sem prometer um curso completo de programação."
+      }
+    },
+    {
+      "id": "01-08",
+      "category": "salesforce",
+      "topic": "Sales Cloud",
+      "requestedTopics": "Leads, Opportunities, roteamento, gestão de pipeline, forecast, funil de vendas e automação comercial",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "sales-cloud-pipeline-forecast",
+          "revops-passagem-bastao"
+        ],
+        "scope": "Leads, oportunidades, pipeline, forecast e passagem comercial."
+      }
+    },
+    {
+      "id": "01-09",
+      "category": "salesforce",
+      "topic": "Dados e indicadores",
+      "requestedTopics": "Dashboards, relatórios, FCR, TMR, tempo de espera, primeira resposta e qualidade dos dados",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "indicadores-atendimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "indicadores-atendimento",
+          "messagingsession-agentwork-eventos",
+          "indicadores-decisoes-gestores"
+        ],
+        "scope": "Definições de indicadores, eventos e qualidade da medição."
+      }
+    },
+    {
+      "id": "01-10",
+      "category": "salesforce",
+      "topic": "Plataforma e custos",
+      "requestedTopics": "Armazenamento, retenção, limpeza, consumo de licenças, uso de recursos e otimização",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "custo-alem-licenca"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "custo-alem-licenca",
+          "armazenamento-retencao-salesforce"
+        ],
+        "scope": "Armazenamento, retenção, licenças, recursos e custo de operação."
+      }
+    },
+    {
+      "id": "01-11",
+      "category": "salesforce",
+      "topic": "Engenharia e DevOps",
+      "requestedTopics": "Git, ambientes, deploy, metadados, testes, troubleshooting, monitoramento e documentação",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "devops-salesforce-entrega",
+          "processos-considerando-excecoes"
+        ],
+        "scope": "Versionamento, ambientes, metadados, entrega, diagnóstico e recuperação."
+      }
+    },
+    {
+      "id": "01-12",
+      "category": "salesforce",
+      "topic": "Carreira Salesforce",
+      "requestedTopics": "Administrator, Business Analyst, Consultant, Developer, Architect e trilhas de competências",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "administracao-salesforce-arquitetura",
+          "ferramentas-gestao-competencias"
+        ],
+        "scope": "Papéis de carreira, competências, evidências e desenvolvimento."
+      }
+    },
+    {
+      "id": "02-01",
+      "category": "gestao",
+      "topic": "Gestão orientada a dados",
+      "requestedTopics": "KPIs, dashboards executivos, métricas de resultado e indicadores de processo",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "dados-decisoes"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "indicadores-decisoes-gestores",
+          "dados-decisoes"
+        ],
+        "scope": "Contrato de indicadores, qualidade e decisões de gestão."
+      }
+    },
+    {
+      "id": "02-02",
+      "category": "gestao",
+      "topic": "Gestão de projetos",
+      "requestedTopics": "Roadmap, backlog, priorização, dependências, riscos e entregas",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "priorizar-projetos"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "priorizar-projetos",
+          "roadmap-tecnico-estrategico"
+        ],
+        "scope": "Roadmap, backlog, dependências, riscos e capacidade."
+      }
+    },
+    {
+      "id": "02-03",
+      "category": "gestao",
+      "topic": "Liderança técnica",
+      "requestedTopics": "Mentoria, revisão de soluções, alinhamento entre desenvolvedores e negócio",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "lideranca-tecnica"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "lideranca-tecnica",
+          "capacidade-equipes-trabalho"
+        ],
+        "scope": "Mentoria, revisão técnica, autonomia e alinhamento."
+      }
+    },
+    {
+      "id": "02-04",
+      "category": "gestao",
+      "topic": "Gestão de equipes",
+      "requestedTopics": "Organização de times, distribuição de trabalho, capacidade e produtividade",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "lideranca-tecnica"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "capacidade-equipes-trabalho"
+        ],
+        "scope": "Capacidade disponível, fluxo, distribuição e produtividade."
+      }
+    },
+    {
+      "id": "02-05",
+      "category": "gestao",
+      "topic": "Governança",
+      "requestedTopics": "Responsabilidades, políticas, controles, gestão de mudanças e rastreabilidade",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "governanca-leve",
+          "governanca-ti-cobit-itil"
+        ],
+        "scope": "Papéis, políticas, controles e mudanças proporcionais ao risco."
+      }
+    },
+    {
+      "id": "02-06",
+      "category": "gestao",
+      "topic": "Gestão de stakeholders",
+      "requestedTopics": "Levantamento de necessidades, negociação de prioridades, comunicação e decisões",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "tecnologia-valor-negocio",
+          "priorizar-projetos"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "tecnologia-valor-negocio",
+          "roadmap-tecnico-estrategico",
+          "governanca-leve"
+        ],
+        "scope": "Necessidades, negociação, comunicação e registro de decisões."
+      }
+    },
+    {
+      "id": "02-07",
+      "category": "gestao",
+      "topic": "Metodologias ágeis",
+      "requestedTopics": "Scrum, Kanban, requisitos, histórias de usuário, critérios de aceite e UAT",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "priorizar-projetos"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "requisitos-agile-uat"
+        ],
+        "scope": "Scrum, políticas de fluxo em Kanban, requisitos, critérios e UAT; visão introdutória."
+      }
+    },
+    {
+      "id": "02-08",
+      "category": "gestao",
+      "topic": "Gestão de carreira",
+      "requestedTopics": "PDI, carreira em Y, competências, certificações, senioridade e formação de especialistas",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "lideranca-tecnica"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "lideranca-tecnica",
+          "administracao-salesforce-arquitetura",
+          "ferramentas-gestao-competencias"
+        ],
+        "scope": "PDI, carreira em Y, certificações, senioridade e especialistas."
+      }
+    },
+    {
+      "id": "02-09",
+      "category": "gestao",
+      "topic": "Gestão de investimentos",
+      "requestedTopics": "Custo total de propriedade, retorno esperado, riscos e sustentabilidade",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "custo-alem-licenca"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "custo-alem-licenca",
+          "economia-ia-custo-resolucao"
+        ],
+        "scope": "TCO, retorno por cenários, risco e sustentação."
+      }
+    },
+    {
+      "id": "02-10",
+      "category": "gestao",
+      "topic": "Cultura organizacional",
+      "requestedTopics": "Aprendizado, colaboração, compartilhamento de conhecimento e melhoria contínua",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "lideranca-tecnica",
+          "plataforma-conhecimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "lideranca-tecnica",
+          "capacidade-equipes-trabalho",
+          "conhecimento-seci-ativos"
+        ],
+        "scope": "Aprendizado, colaboração e compartilhamento na rotina."
+      }
+    },
+    {
+      "id": "03-01",
+      "category": "processos",
+      "topic": "Gestão por processos",
+      "requestedTopics": "BPM, BPMN, mapeamento AS-IS/TO-BE, responsáveis, entradas e saídas",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "automatizar-processo-ruim",
+          "documentar-processos"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "mapear-melhorar-processos"
+        ],
+        "scope": "BPM/BPMN e mapeamento AS IS/TO BE com limites e responsáveis."
+      }
+    },
+    {
+      "id": "03-02",
+      "category": "processos",
+      "topic": "Melhoria contínua",
+      "requestedTopics": "PDCA, Lean, Six Sigma, padronização e redução de retrabalho",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "automatizar-processo-ruim"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "automatizar-processo-ruim",
+          "mapear-melhorar-processos"
+        ],
+        "scope": "PDCA, Lean e Six Sigma como abordagens distintas, sem equivalência indevida."
+      }
+    },
+    {
+      "id": "03-03",
+      "category": "processos",
+      "topic": "Atendimento ao cliente",
+      "requestedTopics": "N1–N4, Front Office, Middle Office, Backoffice, CX e Customer Service",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "atendimento-omnichannel"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "estruturar-operacao-atendimento",
+          "jornada-cliente-dependencias"
+        ],
+        "scope": "Níveis N1–N4 e front/middle/backoffice como convenções locais."
+      }
+    },
+    {
+      "id": "03-04",
+      "category": "processos",
+      "topic": "Indicadores operacionais",
+      "requestedTopics": "SLA, FCR, TMR, tempo de resposta, abandono, backlog e produtividade",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "indicadores-atendimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "indicadores-atendimento",
+          "service-cloud-entitlements-sla",
+          "indicadores-decisoes-gestores"
+        ],
+        "scope": "SLA, FCR, TMR, espera, abandono, backlog e produtividade."
+      }
+    },
+    {
+      "id": "03-05",
+      "category": "processos",
+      "topic": "Roteamento operacional",
+      "requestedTopics": "Filas, distribuição de demanda, competências, prioridade e disponibilidade",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "atendimento-omnichannel"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "atendimento-omnichannel",
+          "messagingsession-agentwork-eventos",
+          "estruturar-operacao-atendimento",
+          "idealizar-painel-operacional"
+        ],
+        "scope": "Filas, competências, prioridade e disponibilidade real."
+      }
+    },
+    {
+      "id": "03-06",
+      "category": "processos",
+      "topic": "Qualidade de processos",
+      "requestedTopics": "Controle, auditoria, documentação, testes, exceções e prevenção de falhas",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "documentar-processos"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "documentar-processos",
+          "processos-considerando-excecoes"
+        ],
+        "scope": "Exceções, prevenção, evidências, testes e auditoria."
+      }
+    },
+    {
+      "id": "03-07",
+      "category": "processos",
+      "topic": "Automação de processos",
+      "requestedTopics": "Critérios para automatizar, simplificação anterior à automação e análise de impacto",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "automatizar-processo-ruim"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "automatizar-processo-ruim",
+          "automacoes-salesforce-manutencao"
+        ],
+        "scope": "Simplificação e análise de impacto antes da automação."
+      }
+    },
+    {
+      "id": "03-08",
+      "category": "processos",
+      "topic": "Conhecimento operacional",
+      "requestedTopics": "Procedimentos, bases de conhecimento, guias, runbooks e transferência de conhecimento",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "documentar-processos",
+          "plataforma-conhecimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "documentar-processos",
+          "processos-considerando-excecoes",
+          "conhecimento-seci-ativos"
+        ],
+        "scope": "Procedimentos, runbooks e transferência de conhecimento."
+      }
+    },
+    {
+      "id": "03-09",
+      "category": "processos",
+      "topic": "Processos comerciais",
+      "requestedTopics": "Qualificação, conversão, passagem de bastão, renovação, pós-venda e retenção",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "sales-cloud-pipeline-forecast",
+          "revops-passagem-bastao"
+        ],
+        "scope": "Qualificação, conversão, handoff, renovação e retenção."
+      }
+    },
+    {
+      "id": "03-10",
+      "category": "processos",
+      "topic": "Experiência do cliente",
+      "requestedTopics": "Jornada ponta a ponta, pontos de fricção, pesquisas de satisfação e melhoria de serviço",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "atendimento-omnichannel"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "jornada-cliente-dependencias",
+          "customer-journey-360-laboratorio"
+        ],
+        "scope": "Jornada, fricção, NPS, CSAT e avaliação de melhorias."
+      }
+    },
+    {
+      "id": "04-01",
+      "category": "ideias",
+      "topic": "Gestão de Negócio",
+      "requestedTopics": "Centralização de regras e conhecimento organizacional",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "plataforma-conhecimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "plataforma-conhecimento",
+          "conhecimento-seci-ativos"
+        ],
+        "scope": "Conceito de centralização de regras e conhecimento; não afirma implantação."
+      }
+    },
+    {
+      "id": "04-02",
+      "category": "ideias",
+      "topic": "Painel de gestão operacional",
+      "requestedTopics": "Visibilidade de equipes, pessoas, filas e distribuição de trabalho",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "idealizar-painel-operacional"
+        ],
+        "scope": "Proposta de painel operacional, capacidade e distribuição."
+      }
+    },
+    {
+      "id": "04-03",
+      "category": "ideias",
+      "topic": "Blueprint interativo de bots",
+      "requestedTopics": "Rastreabilidade visual das jornadas e dependências",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "mapa-chatbot"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "mapa-chatbot"
+        ],
+        "scope": "Proposta já existente de mapa de bots e dependências."
+      }
+    },
+    {
+      "id": "04-04",
+      "category": "ideias",
+      "topic": "CRM Intelligence 360",
+      "requestedTopics": "Visão consolidada de clientes, relacionamentos e oportunidades",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "arquitetura-visao-customer-360"
+        ],
+        "scope": "Proposta CRM Intelligence 360 com identidade, contexto e sinais."
+      }
+    },
+    {
+      "id": "04-05",
+      "category": "ideias",
+      "topic": "Customer Journey 360",
+      "requestedTopics": "Conexão de interações e etapas da jornada do cliente",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "customer-journey-360-laboratorio"
+        ],
+        "scope": "Proposta de jornada conectada por eventos e compromissos."
+      }
+    },
+    {
+      "id": "04-06",
+      "category": "ideias",
+      "topic": "Revenue & Churn Intelligence",
+      "requestedTopics": "Inteligência comercial, retenção e identificação de riscos",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "painel-inteligencia-comercial"
+        ],
+        "scope": "Proposta Revenue & Churn Intelligence com coortes e limites de inferência."
+      }
+    },
+    {
+      "id": "04-07",
+      "category": "ideias",
+      "topic": "Architecture Control Center",
+      "requestedTopics": "Visibilidade de componentes, arquitetura e impacto de mudanças",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "mapa-dependencias-automacoes-sistemas"
+        ],
+        "scope": "Proposta de catálogo de arquitetura e análise de impacto."
+      }
+    },
+    {
+      "id": "04-08",
+      "category": "ideias",
+      "topic": "Salesforce Skill Shine",
+      "requestedTopics": "Gestão do desenvolvimento profissional e competências por carreira",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "ferramentas-gestao-competencias"
+        ],
+        "scope": "Proposta Salesforce Skill Shine com competências e evidências."
+      }
+    },
+    {
+      "id": "04-09",
+      "category": "ideias",
+      "topic": "Priorização inteligente de atendimento",
+      "requestedTopics": "Uso de contexto e regras para apoiar a distribuição da demanda",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "idealizar-painel-operacional",
+          "ia-triagem-priorizacao"
+        ],
+        "scope": "Prioridade explicável e triagem assistida; não afirma modelo implantado."
+      }
+    },
+    {
+      "id": "04-10",
+      "category": "ideias",
+      "topic": "Identificação de oportunidades comerciais",
+      "requestedTopics": "Transformação de sinais de comportamento em ações de negócio",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "arquitetura-visao-customer-360",
+          "painel-inteligencia-comercial"
+        ],
+        "scope": "Sinais comerciais como hipóteses sujeitas a revisão."
+      }
+    },
+    {
+      "id": "04-11",
+      "category": "ideias",
+      "topic": "Central de conhecimento CRM",
+      "requestedTopics": "Redução de dependência de conhecimento individual",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "plataforma-conhecimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "plataforma-conhecimento",
+          "conhecimento-seci-ativos"
+        ],
+        "scope": "Conhecimento CRM e redução de dependência individual."
+      }
+    },
+    {
+      "id": "04-12",
+      "category": "ideias",
+      "topic": "CRM para serviços profissionais",
+      "requestedTopics": "Organização de leads, clientes, casos, tarefas e histórico",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "crm-servicos-profissionais"
+        ],
+        "scope": "Proposta de CRM para serviços profissionais."
+      }
+    },
+    {
+      "id": "05-01",
+      "category": "inovacao",
+      "topic": "IA aplicada ao CRM",
+      "requestedTopics": "Classificação, recomendação, triagem, atendimento e suporte à decisão",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "ia-reduzir-complexidade"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "ia-triagem-priorizacao"
+        ],
+        "scope": "Classificação, triagem, recomendação e decisão no CRM."
+      }
+    },
+    {
+      "id": "05-02",
+      "category": "inovacao",
+      "topic": "Agentes inteligentes",
+      "requestedTopics": "Agentforce, agentes autônomos, limites de autonomia e supervisão humana",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "empresa-pronta-ia",
+          "agentforce-amazon-connect"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "bots-tradicionais-agentes-ia"
+        ],
+        "scope": "Agentforce, ações, níveis de autonomia e supervisão."
+      }
+    },
+    {
+      "id": "05-03",
+      "category": "inovacao",
+      "topic": "Bots empresariais",
+      "requestedTopics": "Bots determinísticos versus agentes generativos e experiências híbridas",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "mapa-chatbot",
+          "agentforce-amazon-connect"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "mapa-chatbot",
+          "bots-tradicionais-agentes-ia"
+        ],
+        "scope": "Determinismo, geração e desenho híbrido."
+      }
+    },
+    {
+      "id": "05-04",
+      "category": "inovacao",
+      "topic": "Arquitetura de IA",
+      "requestedTopics": "Contexto, ferramentas, APIs, MCP, A2A, observabilidade e confiabilidade",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "empresa-pronta-ia"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "arquitetura-ia-mcp-a2a"
+        ],
+        "scope": "Contexto, APIs, MCP, A2A, observabilidade e falhas."
+      }
+    },
+    {
+      "id": "05-05",
+      "category": "inovacao",
+      "topic": "Dados para IA",
+      "requestedTopics": "Data Cloud, identidade, unificação, RAG, retrievers e qualidade",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "empresa-pronta-ia"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "dados-qualidade-agentes"
+        ],
+        "scope": "Identidade, Data Cloud/Data 360, recuperação e qualidade."
+      }
+    },
+    {
+      "id": "05-06",
+      "category": "inovacao",
+      "topic": "Prompt Engineering",
+      "requestedTopics": "Grounding, instruções, avaliação, consistência e segurança",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "prompts-grounding-avaliacao"
+        ],
+        "scope": "Instruções, grounding, avaliação, consistência e segurança."
+      }
+    },
+    {
+      "id": "05-07",
+      "category": "inovacao",
+      "topic": "Comparação de plataformas",
+      "requestedTopics": "Salesforce Agentforce versus alternativas como Amazon Connect",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "agentforce-amazon-connect"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "agentforce-amazon-connect"
+        ],
+        "scope": "Comparação existente orientada a responsabilidades; sem preços ou equivalência de ofertas."
+      }
+    },
+    {
+      "id": "05-08",
+      "category": "inovacao",
+      "topic": "IA operacional",
+      "requestedTopics": "Priorização de solicitações, identificação de SLA e next best action",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "ia-reduzir-complexidade"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "idealizar-painel-operacional",
+          "ia-triagem-priorizacao"
+        ],
+        "scope": "Priorização, SLA calculado por regras e próxima ação."
+      }
+    },
+    {
+      "id": "05-09",
+      "category": "inovacao",
+      "topic": "IA no desenvolvimento",
+      "requestedTopics": "Geração assistida de código, diagnóstico e validação de metadados",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "ia-desenvolvimento-validacao"
+        ],
+        "scope": "Código assistido, diagnóstico, metadados, revisão e testes."
+      }
+    },
+    {
+      "id": "05-10",
+      "category": "inovacao",
+      "topic": "Economia da IA",
+      "requestedTopics": "TCO, licenciamento, créditos, custos ocultos, ROI e complexidade de sustentação",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "custo-alem-licenca"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "custo-alem-licenca",
+          "economia-ia-custo-resolucao"
+        ],
+        "scope": "TCO, créditos, licenças, custo por resultado e ROI conceitual."
+      }
+    },
+    {
+      "id": "05-11",
+      "category": "inovacao",
+      "topic": "Governança de IA",
+      "requestedTopics": "Privacidade, acesso, auditoria, human-in-the-loop e controle de erros",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "empresa-pronta-ia"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "empresa-pronta-ia",
+          "bots-tradicionais-agentes-ia",
+          "prompts-grounding-avaliacao"
+        ],
+        "scope": "Acesso, privacidade, auditoria, revisão humana e interrupção."
+      }
+    },
+    {
+      "id": "06-01",
+      "category": "administracao",
+      "topic": "Estratégia empresarial",
+      "requestedTopics": "Vantagem competitiva, alinhamento estratégico e geração de valor",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "tecnologia-valor-negocio",
+          "estrategia-arquitetura"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "tecnologia-valor-negocio",
+          "estrategia-arquitetura"
+        ],
+        "scope": "Valor, escolhas estratégicas e arquitetura."
+      }
+    },
+    {
+      "id": "06-02",
+      "category": "administracao",
+      "topic": "Governança de TI",
+      "requestedTopics": "COBIT, ITIL, riscos, controles, responsabilidades e investimentos",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "governanca-leve",
+          "governanca-ti-cobit-itil"
+        ],
+        "scope": "COBIT e ITIL em nível conceitual, com riscos e responsabilidades."
+      }
+    },
+    {
+      "id": "06-03",
+      "category": "administracao",
+      "topic": "Gestão de desempenho",
+      "requestedTopics": "Balanced Scorecard, metas, indicadores e interpretação de resultados",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "indicadores-decisoes-gestores",
+          "balanced-scorecard-metas"
+        ],
+        "scope": "BSC, hipóteses estratégicas, metas e interpretação."
+      }
+    },
+    {
+      "id": "06-04",
+      "category": "administracao",
+      "topic": "Receita e crescimento",
+      "requestedTopics": "RevOps, gestão de funil, conversão, expansão, retenção e churn",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "revops-passagem-bastao",
+          "painel-inteligencia-comercial"
+        ],
+        "scope": "RevOps, funil, expansão, renovação, retenção e churn."
+      }
+    },
+    {
+      "id": "06-05",
+      "category": "administracao",
+      "topic": "Marketing e analytics",
+      "requestedTopics": "Web Analytics, métricas de engajamento, atribuição, campanhas e conversão",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "marketing-analytics-atribuicao"
+        ],
+        "scope": "Eventos web, engajamento, campanhas, conversão e atribuição."
+      }
+    },
+    {
+      "id": "06-06",
+      "category": "administracao",
+      "topic": "Finanças e tecnologia",
+      "requestedTopics": "ROI, TCO, modelos de contratação, licenças e custo de operação",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "custo-alem-licenca"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "custo-alem-licenca",
+          "armazenamento-retencao-salesforce",
+          "economia-ia-custo-resolucao"
+        ],
+        "scope": "ROI/TCO conceituais, contratação, licenças e operação; sem aconselhamento financeiro individual."
+      }
+    },
+    {
+      "id": "06-07",
+      "category": "administracao",
+      "topic": "Gestão do conhecimento",
+      "requestedTopics": "Dado versus informação versus conhecimento, SECI e ativos intangíveis",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "plataforma-conhecimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "plataforma-conhecimento",
+          "conhecimento-seci-ativos"
+        ],
+        "scope": "Dado, informação, conhecimento, SECI e capacidade organizacional."
+      }
+    },
+    {
+      "id": "06-08",
+      "category": "administracao",
+      "topic": "Inteligência competitiva",
+      "requestedTopics": "Tendências, oportunidades, ameaças e apoio à decisão",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "inteligencia-competitiva-decisoes"
+        ],
+        "scope": "Fontes, ética, sinais, cenários e decisões competitivas."
+      }
+    },
+    {
+      "id": "06-09",
+      "category": "administracao",
+      "topic": "Transformação digital",
+      "requestedTopics": "Modernização de sistemas, integração ERP/CRM e adoção de tecnologias",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "salesforce-arquitetura-operacional"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "salesforce-arquitetura-operacional",
+          "nuvem-integracao-erp-crm"
+        ],
+        "scope": "Modernização, integração ERP/CRM e adoção operacional."
+      }
+    },
+    {
+      "id": "06-10",
+      "category": "administracao",
+      "topic": "Computação em nuvem",
+      "requestedTopics": "SaaS, PaaS, IaaS, arquitetura híbrida, escalabilidade e governança",
+      "before": {
+        "status": "sem artigo dedicado",
+        "articles": []
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "nuvem-integracao-erp-crm"
+        ],
+        "scope": "SaaS, PaaS, IaaS e arquitetura híbrida em nível introdutório."
+      }
+    },
+    {
+      "id": "06-11",
+      "category": "administracao",
+      "topic": "Experiência do cliente",
+      "requestedTopics": "Customer 360, NPS, CSAT, fidelização e relacionamento",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "atendimento-omnichannel"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "jornada-cliente-dependencias",
+          "arquitetura-visao-customer-360",
+          "customer-journey-360-laboratorio"
+        ],
+        "scope": "Customer 360, NPS/CSAT, continuidade e relacionamento."
+      }
+    },
+    {
+      "id": "06-12",
+      "category": "administracao",
+      "topic": "Administração de operações",
+      "requestedTopics": "Eficiência, qualidade, produtividade, capacidade e melhoria de serviços",
+      "before": {
+        "status": "cobertura existente, parcial ou introdutória",
+        "articles": [
+          "automatizar-processo-ruim",
+          "indicadores-atendimento"
+        ]
+      },
+      "after": {
+        "status": "contemplado por guia, análise ou proposta",
+        "articles": [
+          "indicadores-decisoes-gestores",
+          "capacidade-equipes-trabalho",
+          "mapear-melhorar-processos",
+          "estruturar-operacao-atendimento"
+        ],
+        "scope": "Eficiência, qualidade, produtividade, capacidade e melhoria."
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "HM-030",
+  "slug": "roadmap-tecnico-estrategico",
+  "category": "gestao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Roadmap técnico: prioridades, dependências e riscos visíveis",
+    "en": "Technical roadmaps: making priorities, dependencies and risks visible",
+    "es": "Roadmap técnico: prioridades, dependencias y riesgos visibles"
+  },
+  "excerpt": {
+    "pt": "Um roteiro para conectar objetivos, backlog e entregas sem transformar estimativas em promessas rígidas.",
+    "en": "Connect objectives, backlog and delivery without turning estimates into rigid promises.",
+    "es": "Cómo conectar objetivos, backlog y entregas sin convertir estimaciones en promesas rígidas."
+  },
+  "tags": [
+    "gestao",
+    "priorizacao",
+    "estrategia"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "necessidade-solucao",
+  "seriesOrder": 3,
+  "relatedArticles": [
+    "priorizar-projetos",
+    "tecnologia-valor-negocio"
+  ],
+  "sources": [
+    {
+      "title": "Schwaber e Sutherland — The Scrum Guide",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

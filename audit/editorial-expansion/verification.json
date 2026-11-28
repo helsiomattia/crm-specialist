@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-28",
+  "status": "passed",
+  "commands": [
+    {
+      "command": "npm.cmd run check",
+      "status": "passed",
+      "unitTests": 39,
+      "evidence": "check.log"
+    },
+    {
+      "command": "npm.cmd run build",
+      "status": "passed"
+    },
+    {
+      "command": "npm.cmd run test:blog",
+      "status": "passed",
+      "browser": "Microsoft Edge / Playwright",
+      "reports": [
+        {
+          "file": "blog-browser-results.json",
+          "status": "passed",
+          "checks": 8,
+          "date": "2026-11-28T19:07:07.503Z"
+        },
+        {
+          "file": "blog-public-results.json",
+          "status": "passed",
+          "checks": 5,
+          "date": "2026-11-28T19:08:02.371Z"
+        },
+        {
+          "file": "blog-editorial-results.json",
+          "status": "passed",
+          "checks": 6,
+          "date": "2026-11-28T19:09:01.954Z"
+        }
+      ]
+    },
+    {
+      "command": "node scripts/validate-data.mjs",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "note": "Avisos de conversão LF/CRLF, sem erro de whitespace."
+    }
+  ],
+  "catalog": {
+    "published": 58,
+    "originalsPreserved": 18,
+    "newArticles": 40,
+    "knowledgeLines": 67,
+    "backlogCompleted": 18,
+    "backlogOpen": 42
+  },
+  "visualReview": {
+    "desktop": 1440,
+    "mobile": 390,
+    "status": "reviewed",
+    "screenshots": "test-results/blog-expansion"
+  },
+  "scope": "Somente biblioteca do blog, planejamento editorial e seus validadores/testes. Sem push ou deploy remoto."
+}

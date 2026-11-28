@@ -1,0 +1,50 @@
+{
+  "id": "HM-039",
+  "slug": "idealizar-painel-operacional",
+  "category": "ideias",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Laboratório: um painel operacional que ajuda a priorizar atendimento",
+    "en": "Lab: an operations dashboard for service prioritization",
+    "es": "Laboratorio: un panel operativo para priorizar la atención"
+  },
+  "excerpt": {
+    "pt": "Proposta de painel com filas, capacidade, contexto e regras de prioridade explicáveis.",
+    "en": "A proposed dashboard combining queues, capacity, context and explainable priority rules.",
+    "es": "Propuesta de panel con colas, capacidad, contexto y reglas de prioridad explicables."
+  },
+  "tags": [
+    "prototipos",
+    "atendimento",
+    "indicadores"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "laboratorio-ideias",
+  "seriesOrder": 3,
+  "relatedArticles": [
+    "indicadores-atendimento",
+    "estruturar-operacao-atendimento"
+  ],
+  "sources": [
+    {
+      "title": "GOV.UK — Making prototypes",
+      "url": "https://www.gov.uk/service-manual/design/making-prototypes",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": "Proposta",
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

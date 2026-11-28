@@ -1,0 +1,50 @@
+{
+  "id": "HM-044",
+  "slug": "ferramentas-gestao-competencias",
+  "category": "ideias",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Salesforce Skill Shine: uma proposta de desenvolvimento por competências",
+    "en": "Salesforce Skill Shine: a competency development proposal",
+    "es": "Salesforce Skill Shine: una propuesta de desarrollo por competencias"
+  },
+  "excerpt": {
+    "pt": "Como estruturar trilhas, evidências e planos de desenvolvimento sem reduzir senioridade a certificados.",
+    "en": "Structure learning paths, evidence and development plans beyond certification counts.",
+    "es": "Estructurar rutas, evidencias y planes de desarrollo más allá de los certificados."
+  },
+  "tags": [
+    "prototipos",
+    "carreira",
+    "conhecimento"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "laboratorio-ideias",
+  "seriesOrder": 8,
+  "relatedArticles": [
+    "administracao-salesforce-arquitetura",
+    "lideranca-tecnica"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Career Paths",
+      "url": "https://trailhead.salesforce.com/career-path/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": "Proposta",
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

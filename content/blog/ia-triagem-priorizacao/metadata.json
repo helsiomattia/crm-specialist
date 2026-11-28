@@ -1,0 +1,50 @@
+{
+  "id": "HM-046",
+  "slug": "ia-triagem-priorizacao",
+  "category": "inovacao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "IA na triagem: classificar, priorizar e recomendar com critérios",
+    "en": "AI triage: classification, prioritization and recommendations with criteria",
+    "es": "IA en el triaje: clasificar, priorizar y recomendar con criterios"
+  },
+  "excerpt": {
+    "pt": "Como avaliar IA aplicada ao CRM sem delegar prazos, decisões e responsabilidade a uma sugestão probabilística.",
+    "en": "Evaluate AI in CRM while keeping deadlines, decisions and responsibility under control.",
+    "es": "Evaluar IA en CRM manteniendo control sobre plazos, decisiones y responsabilidades."
+  },
+  "tags": [
+    "ia",
+    "atendimento",
+    "indicadores"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "ia-responsavel",
+  "seriesOrder": 3,
+  "relatedArticles": [
+    "empresa-pronta-ia",
+    "idealizar-painel-operacional"
+  ],
+  "sources": [
+    {
+      "title": "NIST — AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

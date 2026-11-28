@@ -1,0 +1,50 @@
+{
+  "id": "HM-057",
+  "slug": "inteligencia-competitiva-decisoes",
+  "category": "administracao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Inteligência competitiva: transformar sinais em decisões verificáveis",
+    "en": "Competitive intelligence: turning signals into testable decisions",
+    "es": "Inteligencia competitiva: convertir señales en decisiones verificables"
+  },
+  "excerpt": {
+    "pt": "Como acompanhar tendências, oportunidades e ameaças distinguindo evidência, hipótese e recomendação.",
+    "en": "Track trends, opportunities and threats while separating evidence, hypotheses and recommendations.",
+    "es": "Seguir tendencias, oportunidades y amenazas diferenciando evidencia, hipótesis y recomendación."
+  },
+  "tags": [
+    "estrategia",
+    "dados",
+    "governanca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "administracao-dados",
+  "seriesOrder": 9,
+  "relatedArticles": [
+    "dados-decisoes",
+    "priorizar-projetos"
+  ],
+  "sources": [
+    {
+      "title": "SCIP — Ethics",
+      "url": "https://scip.world/ethics/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

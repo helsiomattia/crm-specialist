@@ -1,0 +1,55 @@
+{
+  "id": "HM-050",
+  "slug": "prompts-grounding-avaliacao",
+  "category": "inovacao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Prompts empresariais: instruções, grounding e avaliação de respostas",
+    "en": "Enterprise prompts: instructions, grounding and response evaluation",
+    "es": "Prompts empresariales: instrucciones, grounding y evaluación de respuestas"
+  },
+  "excerpt": {
+    "pt": "Um processo para testar consistência, uso de fontes e limites de atuação antes de ampliar um assistente.",
+    "en": "A process for testing consistency, source use and operating boundaries before expanding an assistant.",
+    "es": "Un proceso para probar consistencia, uso de fuentes y límites antes de ampliar un asistente."
+  },
+  "tags": [
+    "ia",
+    "qualidade",
+    "conhecimento"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "ia-responsavel",
+  "seriesOrder": 7,
+  "relatedArticles": [
+    "dados-qualidade-agentes",
+    "ia-reduzir-complexidade"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Ground Prompt Templates with Salesforce Resources",
+      "url": "https://help.salesforce.com/s/articleView?id=sf.prompt_builder_ground_template.htm&language=en_US&type=5",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "NIST — AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

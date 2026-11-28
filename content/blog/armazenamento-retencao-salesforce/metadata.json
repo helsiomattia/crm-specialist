@@ -1,0 +1,55 @@
+{
+  "id": "HM-026",
+  "slug": "armazenamento-retencao-salesforce",
+  "category": "salesforce",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Armazenamento e licenças Salesforce: otimizar sem apagar contexto",
+    "en": "Salesforce storage and licenses: optimize without losing context",
+    "es": "Almacenamiento y licencias Salesforce: optimizar sin perder contexto"
+  },
+  "excerpt": {
+    "pt": "Como inventariar consumo, definir retenção e avaliar limpeza, arquivamento e acesso antes de reduzir custos.",
+    "en": "Inventory consumption and evaluate retention, cleanup, archiving and access before reducing costs.",
+    "es": "Cómo inventariar consumo y evaluar retención, limpieza, archivo y acceso antes de reducir costos."
+  },
+  "tags": [
+    "salesforce",
+    "custos",
+    "governanca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "decisoes-arquitetura",
+  "seriesOrder": 4,
+  "relatedArticles": [
+    "custo-alem-licenca",
+    "salesforce-arquitetura-operacional"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Data and File Storage Allocations",
+      "url": "https://help.salesforce.com/s/articleView?id=limits.htm&language=en_US&type=5",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "AWS Well-Architected — Analyze total cost of ownership",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/cost05-bp03.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "HM-056",
+  "slug": "conhecimento-seci-ativos",
+  "category": "administracao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Conhecimento como ativo: do dado à prática com o modelo SECI",
+    "en": "Knowledge as an asset: from data to practice with the SECI model",
+    "es": "Conocimiento como activo: del dato a la práctica con el modelo SECI"
+  },
+  "excerpt": {
+    "pt": "Como relacionar experiência, documentação, aprendizado e continuidade sem confundir armazenamento com conhecimento.",
+    "en": "Connect experience, documentation, learning and continuity beyond information storage.",
+    "es": "Relacionar experiencia, documentación, aprendizaje y continuidad más allá del almacenamiento."
+  },
+  "tags": [
+    "conhecimento",
+    "gestao",
+    "estrategia"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "administracao-dados",
+  "seriesOrder": 8,
+  "relatedArticles": [
+    "plataforma-conhecimento",
+    "documentar-processos"
+  ],
+  "sources": [
+    {
+      "title": "Nonaka — A Dynamic Theory of Organizational Knowledge Creation (1994)",
+      "url": "https://www.uky.edu/~gmswan3/575/Nonaka_1994.pdf",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

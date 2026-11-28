@@ -1,0 +1,55 @@
+{
+  "id": "HM-037",
+  "slug": "revops-passagem-bastao",
+  "category": "processos",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "RevOps e passagem de bastão: conectar marketing, vendas e sucesso",
+    "en": "RevOps handoffs: connecting marketing, sales and customer success",
+    "es": "RevOps y traspasos: conectar marketing, ventas y éxito del cliente"
+  },
+  "excerpt": {
+    "pt": "Critérios, dados e responsabilidades para acompanhar qualificação, conversão, implantação e renovação.",
+    "en": "Define criteria, data and ownership across qualification, conversion, onboarding and renewal.",
+    "es": "Definir criterios, datos y responsabilidades entre calificación, conversión, implementación y renovación."
+  },
+  "tags": [
+    "processos",
+    "crm",
+    "estrategia"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "processos-empresariais",
+  "seriesOrder": 5,
+  "relatedArticles": [
+    "sales-cloud-pipeline-forecast",
+    "estrategia-arquitetura"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce Trailhead — Work Your Opportunities",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/leads_opportunities_lightning_experience/work-your-opportunities",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "GOV.UK — The Government Data Quality Framework",
+      "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

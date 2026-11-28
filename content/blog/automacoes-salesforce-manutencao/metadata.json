@@ -1,0 +1,50 @@
+{
+  "id": "HM-022",
+  "slug": "automacoes-salesforce-manutencao",
+  "category": "salesforce",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Flows sustentáveis: contratos, falhas e manutenção das automações",
+    "en": "Maintainable Flows: contracts, failures and automation ownership",
+    "es": "Flows sostenibles: contratos, fallos y mantenimiento de automatizaciones"
+  },
+  "excerpt": {
+    "pt": "Como organizar Screen Flows, automações de registro e Apex invocável sem esconder regras ou recuperação de erros.",
+    "en": "Organize Screen Flows, record automation and invocable Apex with explicit rules and error recovery.",
+    "es": "Cómo organizar Screen Flows, automatizaciones de registros y Apex invocable con reglas y recuperación explícitas."
+  },
+  "tags": [
+    "salesforce",
+    "automacao",
+    "qualidade"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "arquitetura-salesforce",
+  "seriesOrder": 4,
+  "relatedArticles": [
+    "flow-apex-lwc",
+    "automatizar-processo-ruim"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce Architects — Record-Triggered Automation",
+      "url": "https://architect.salesforce.com/docs/architect/decision-guides/guide/record-triggered.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

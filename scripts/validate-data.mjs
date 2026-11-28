@@ -20,7 +20,7 @@ for (const file of await listFiles('src')) {
 assert.deepEqual(localeErrors(resources, [...requiredKeys]), []);
 const blogPosts = await readBlogContent(process.cwd());
 const editorial = await validateEditorial(process.cwd(), blogPosts);
-console.log(`Blog passed: ${editorial.published} published, ${editorial.ready} ready for author review, ${blogPosts.filter(post => post.status === 'draft').length} drafts; ${editorial.backlog} backlog ideas.`);
+console.log(`Blog passed: ${editorial.published} published, ${editorial.ready} ready for author review, ${blogPosts.filter(post => post.status === 'draft').length} drafts; ${editorial.backlog} backlog entries (${editorial.backlogCompleted} completed, ${editorial.backlogOpen} open).`);
 
 // Execute the real Vite loaders, rather than searching for a function name in source text.
 const server = await createServer({ logLevel: 'error', optimizeDeps: { noDiscovery: true, include: [] }, server: { middlewareMode: true, watch: null } });

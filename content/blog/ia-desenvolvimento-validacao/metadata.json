@@ -1,0 +1,55 @@
+{
+  "id": "HM-051",
+  "slug": "ia-desenvolvimento-validacao",
+  "category": "inovacao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "IA no desenvolvimento: acelerar hipóteses, preservar a validação",
+    "en": "AI in development: accelerating hypotheses while preserving validation",
+    "es": "IA en desarrollo: acelerar hipótesis y mantener la validación"
+  },
+  "excerpt": {
+    "pt": "Como usar geração de código, diagnóstico e análise de metadados com revisão, testes e contexto do repositório.",
+    "en": "Use code generation, diagnosis and metadata analysis with review, tests and repository context.",
+    "es": "Usar generación de código, diagnóstico y análisis de metadatos con revisión, pruebas y contexto."
+  },
+  "tags": [
+    "ia",
+    "qualidade",
+    "salesforce"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "ia-responsavel",
+  "seriesOrder": 8,
+  "relatedArticles": [
+    "apex-lwc-apis-contratos",
+    "devops-salesforce-entrega"
+  ],
+  "sources": [
+    {
+      "title": "GitHub — Responsible use of security and quality AI features",
+      "url": "https://docs.github.com/en/code-security/responsible-use/security-and-quality-ai-features",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "Salesforce — Org Development Model",
+      "url": "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-build-mdapi.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

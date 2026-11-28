@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-28T19:09:01.954Z",
+  "checks": [
+    "320px: destaque único, busca única/Ctrl K, filtros combinados persistentes, menu responsivo, 9 séries acessíveis, temas persistentes, seletor escuro, PT/EN/ES sem overflow e biblioteca com 58 artigos.",
+    "390px: destaque único, busca única/Ctrl K, filtros combinados persistentes, menu responsivo, 9 séries acessíveis, temas persistentes, seletor escuro, PT/EN/ES sem overflow e biblioteca com 58 artigos.",
+    "768px: destaque único, busca única/Ctrl K, filtros combinados persistentes, menu responsivo, 9 séries acessíveis, temas persistentes, seletor escuro, PT/EN/ES sem overflow e biblioteca com 58 artigos.",
+    "1024px: destaque único, busca única/Ctrl K, filtros combinados persistentes, menu responsivo, 9 séries acessíveis, temas persistentes, seletor escuro, PT/EN/ES sem overflow e biblioteca com 58 artigos.",
+    "1440px: destaque único, busca única/Ctrl K, filtros combinados persistentes, menu responsivo, 9 séries acessíveis, temas persistentes, seletor escuro, PT/EN/ES sem overflow e biblioteca com 58 artigos.",
+    "1920px: destaque único, busca única/Ctrl K, filtros combinados persistentes, menu responsivo, 9 séries acessíveis, temas persistentes, seletor escuro, PT/EN/ES sem overflow e biblioteca com 58 artigos."
+  ],
+  "errors": [],
+  "status": "passed"
+}

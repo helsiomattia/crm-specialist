@@ -1,0 +1,50 @@
+{
+  "id": "HM-045",
+  "slug": "crm-servicos-profissionais",
+  "category": "ideias",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "CRM para serviços profissionais: do primeiro contato à continuidade",
+    "en": "CRM for professional services: from first contact to continuity",
+    "es": "CRM para servicios profesionales: del primer contacto a la continuidad"
+  },
+  "excerpt": {
+    "pt": "Proposta enxuta para organizar leads, clientes, serviços, casos, tarefas e histórico com responsabilidades claras.",
+    "en": "A focused proposal for leads, clients, services, cases, tasks and history with clear ownership.",
+    "es": "Propuesta acotada para leads, clientes, servicios, casos, tareas e historial con responsables claros."
+  },
+  "tags": [
+    "prototipos",
+    "crm",
+    "produtos"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "laboratorio-ideias",
+  "seriesOrder": 9,
+  "relatedArticles": [
+    "necessidade-ao-prototipo",
+    "revops-passagem-bastao"
+  ],
+  "sources": [
+    {
+      "title": "GOV.UK — Making prototypes",
+      "url": "https://www.gov.uk/service-manual/design/making-prototypes",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": "Proposta",
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

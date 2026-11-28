@@ -86,6 +86,8 @@ export async function validateEditorial(root, posts) {
     }
   }
   return { articles: posts.length, published: posts.filter(isPublicPost).length, ready: posts.filter(post => post.status === 'ready').length, backlog: backlog.length,
+    backlogCompleted: backlog.filter(item => item.status === 'completed').length,
+    backlogOpen: backlog.filter(item => !['completed', 'cancelled'].includes(item.status)).length,
     categories: taxonomy.categories.map(category => ({ slug: category.slug, articles: posts.filter(post => post.category === category.slug).length, ideas: backlog.filter(item => item.category === category.slug).length })),
     words: posts.map(post => ({ slug: post.slug, title: localized(post.title), words: post.wordCounts.pt, status: post.status })) };
 }

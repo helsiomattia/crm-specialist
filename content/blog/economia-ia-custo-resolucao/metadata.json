@@ -1,0 +1,55 @@
+{
+  "id": "HM-052",
+  "slug": "economia-ia-custo-resolucao",
+  "category": "inovacao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Economia da IA: calcular custo por resultado, além de tokens e créditos",
+    "en": "AI economics: measuring cost per outcome beyond tokens and credits",
+    "es": "Economía de la IA: calcular costo por resultado más allá de tokens y créditos"
+  },
+  "excerpt": {
+    "pt": "Um modelo de TCO e avaliação de retorno que inclui revisão humana, integrações, falhas e sustentação.",
+    "en": "A TCO and return model including human review, integrations, failures and ongoing operations.",
+    "es": "Un modelo de TCO y retorno que incluye revisión humana, integraciones, fallas y operación."
+  },
+  "tags": [
+    "ia",
+    "custos",
+    "indicadores"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "decisoes-arquitetura",
+  "seriesOrder": 6,
+  "relatedArticles": [
+    "custo-alem-licenca",
+    "ia-triagem-priorizacao"
+  ],
+  "sources": [
+    {
+      "title": "FinOps Foundation — Unit Economics",
+      "url": "https://www.finops.org/framework/capabilities/unit-economics/",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "AWS Well-Architected — Analyze total cost of ownership",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/cost05-bp03.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

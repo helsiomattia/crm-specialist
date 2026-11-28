@@ -1,0 +1,55 @@
+{
+  "id": "HM-049",
+  "slug": "dados-qualidade-agentes",
+  "category": "inovacao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Dados para agentes: identidade, Data Cloud e recuperação com RAG",
+    "en": "Data for agents: identity, Data Cloud and RAG retrieval",
+    "es": "Datos para agentes: identidad, Data Cloud y recuperación con RAG"
+  },
+  "excerpt": {
+    "pt": "Como conectar unificação, qualidade, retrievers e permissões sem tratar uma resposta fundamentada como infalível.",
+    "en": "Connect unification, quality, retrievers and permissions without assuming grounded answers are infallible.",
+    "es": "Conectar unificación, calidad, retrievers y permisos sin asumir que una respuesta fundamentada es infalible."
+  },
+  "tags": [
+    "ia",
+    "dados",
+    "seguranca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "ia-responsavel",
+  "seriesOrder": 6,
+  "relatedArticles": [
+    "empresa-pronta-ia",
+    "arquitetura-visao-customer-360"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Retrieve Data",
+      "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "GOV.UK — The Government Data Quality Framework",
+      "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

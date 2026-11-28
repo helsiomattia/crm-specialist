@@ -59,7 +59,8 @@
     ],
     "priority": "P1",
     "series": "service-operacoes",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "messagingsession-agentwork-eventos"
   },
   {
     "id": "IDEA-003",
@@ -152,7 +153,8 @@
     ],
     "priority": "P1",
     "series": "arquitetura-salesforce",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "objetos-padrao-customizados"
   },
   {
     "id": "IDEA-006",
@@ -183,7 +185,8 @@
     ],
     "priority": "P1",
     "series": "arquitetura-salesforce",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "automacoes-salesforce-manutencao"
   },
   {
     "id": "IDEA-007",
@@ -245,7 +248,8 @@
     ],
     "priority": "P1",
     "series": "arquitetura-salesforce",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "governanca-acessos-salesforce"
   },
   {
     "id": "IDEA-009",
@@ -307,7 +311,8 @@
     ],
     "priority": "P2",
     "series": "carreira-lideranca",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "administracao-salesforce-arquitetura"
   },
   {
     "id": "IDEA-011",
@@ -369,7 +374,8 @@
     ],
     "priority": "P1",
     "series": "administracao-dados",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "indicadores-decisoes-gestores"
   },
   {
     "id": "IDEA-013",
@@ -462,7 +468,8 @@
     ],
     "priority": "P1",
     "series": "decisoes-arquitetura",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "roadmap-tecnico-estrategico"
   },
   {
     "id": "IDEA-016",
@@ -617,7 +624,8 @@
     ],
     "priority": "P2",
     "series": "carreira-lideranca",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "governanca-leve"
   },
   {
     "id": "IDEA-021",
@@ -741,7 +749,8 @@
     ],
     "priority": "P1",
     "series": "service-operacoes",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "estruturar-operacao-atendimento"
   },
   {
     "id": "IDEA-025",
@@ -834,7 +843,8 @@
     ],
     "priority": "P1",
     "series": "processos-empresariais",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "processos-considerando-excecoes"
   },
   {
     "id": "IDEA-028",
@@ -865,7 +875,8 @@
     ],
     "priority": "P2",
     "series": "service-operacoes",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "jornada-cliente-dependencias"
   },
   {
     "id": "IDEA-029",
@@ -958,7 +969,8 @@
     ],
     "priority": "P1",
     "series": "laboratorio-ideias",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "idealizar-painel-operacional"
   },
   {
     "id": "IDEA-032",
@@ -989,7 +1001,8 @@
     ],
     "priority": "P1",
     "series": "laboratorio-ideias",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "arquitetura-visao-customer-360"
   },
   {
     "id": "IDEA-033",
@@ -1082,7 +1095,8 @@
     ],
     "priority": "P1",
     "series": "laboratorio-ideias",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "mapa-dependencias-automacoes-sistemas"
   },
   {
     "id": "IDEA-036",
@@ -1113,7 +1127,8 @@
     ],
     "priority": "P2",
     "series": "carreira-lideranca",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "ferramentas-gestao-competencias"
   },
   {
     "id": "IDEA-037",
@@ -1175,7 +1190,8 @@
     ],
     "priority": "P2",
     "series": "laboratorio-ideias",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "painel-inteligencia-comercial"
   },
   {
     "id": "IDEA-039",
@@ -1268,7 +1284,8 @@
     ],
     "priority": "P1",
     "series": "ia-responsavel",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "bots-tradicionais-agentes-ia"
   },
   {
     "id": "IDEA-042",
@@ -1299,7 +1316,8 @@
     ],
     "priority": "P1",
     "series": "ia-responsavel",
-    "status": "idea"
+    "status": "completed",
+    "articleSlug": "dados-qualidade-agentes"
   },
   {
     "id": "IDEA-043",

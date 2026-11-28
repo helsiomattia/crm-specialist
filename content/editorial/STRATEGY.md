@@ -2,6 +2,14 @@
 
 > Plano de 20/11/2026. Os títulos, categorias, tags e séries usam a taxonomia de `taxonomy.json`. Esta estratégia organiza conteúdo local e não autoriza push, deploy ou publicação externa.
 
+## Expansão de 28/11/2026
+
+A solicitação de ampliar a biblioteca pelo mapa de conhecimento resultou em 40 novos artigos e 58 publicações locais. Os 18 corpos originais foram preservados e revisados quanto à coerência com o novo mapa. A matriz `coverage-2026-11-28.json` relaciona as 67 linhas solicitadas aos textos e delimita sua profundidade. Os novos artigos são guias e análises focadas, sem alongamento artificial para atingir a faixa preferencial de palavras. Projetos novos são propostas identificadas, com cenários fictícios e critérios de avaliação.
+
+A revisão técnica/editorial e de confidencialidade deste lote está identificada como Codex, conforme a solicitação de criação, sem atribuir aprovação pessoal ao autor. Os arquivos entram no catálogo local; não houve publicação remota. O português continua sendo o idioma dos corpos. A revisão permite o avanço deste lote, sem tornar uma revisão pessoal do autor um fato presumido.
+
+O backlog mantém suas 60 referências de planejamento: 18 estão `completed`, com `articleSlug`, e 42 permanecem `idea`. As sequências da tabela abaixo registram o planejamento inicial; o catálogo atual e `seriesOrder` incluem a expansão. O relatório em `audit/editorial-expansion` preserva o inventário anterior, a cobertura e os resultados da validação.
+
 ## Posicionamento e público
 
 O Blog aproxima arquitetura Salesforce, gestão, processos, experimentação e administração empresarial. Sua pergunta recorrente é como uma decisão tecnológica altera o trabalho, a experiência do cliente, o custo de sustentação e a capacidade da organização de aprender.
@@ -14,7 +22,7 @@ Cada artigo tem uma categoria principal. Tags descrevem assuntos transversais; s
 
 O lote inicial contém 18 artigos completos em português, organizados em três por categoria. Seus metadados incluem títulos e resumos PT/EN/ES; isso não equivale a uma tradução integral do corpo. Após a correção de visibilidade solicitada em 20/11/2026, os artigos estão em `status: published` e entram no catálogo normal. A revisão técnica/editorial está atribuída ao Codex, sem afirmar que o autor realizou pessoalmente essa revisão. A liberação dos arquivos locais não implica deploy remoto.
 
-O arquivo `backlog.json` contém exatamente 60 oportunidades adicionais, dez por categoria, com os títulos solicitados no anexo. Cada item possui ID, slug, tags, objetivo, público, problema, ângulo, roteiro, palavras-chave, prioridade, estado e série. Todas as oportunidades permanecem em `status: idea`. Elas não devem aparecer como artigos publicados, receber data fictícia ou ser contadas como textos concluídos.
+O arquivo `backlog.json` foi iniciado com 60 oportunidades adicionais, dez por categoria, com os títulos solicitados no primeiro anexo. Cada item possui ID, slug, tags, objetivo, público, problema, ângulo, roteiro, palavras-chave, prioridade, estado e série. Uma pauta só conta como concluída quando está associada a um artigo; as restantes não devem aparecer como publicações nem receber datas fictícias.
 
 Ao transformar uma pauta em artigo, o ID `IDEA-*` continua sendo uma referência de planejamento. O artigo recebe metadados próprios e passa pelo fluxo completo de validação. A existência de um roteiro não satisfaz os critérios de profundidade, precisão e segurança editorial.
 

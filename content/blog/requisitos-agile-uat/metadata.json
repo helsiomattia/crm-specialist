@@ -1,0 +1,50 @@
+{
+  "id": "HM-033",
+  "slug": "requisitos-agile-uat",
+  "category": "gestao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Do requisito ao UAT: evidências para aceitar uma entrega",
+    "en": "From requirements to UAT: evidence for accepting delivery",
+    "es": "Del requisito al UAT: evidencias para aceptar una entrega"
+  },
+  "excerpt": {
+    "pt": "Descoberta, histórias, critérios de aceitação e validação com usuários conectados ao problema de negócio.",
+    "en": "Connect discovery, user stories, acceptance criteria and user validation to the business problem.",
+    "es": "Conectar descubrimiento, historias, criterios de aceptación y validación con el problema de negocio."
+  },
+  "tags": [
+    "gestao",
+    "qualidade",
+    "processos"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "necessidade-solucao",
+  "seriesOrder": 4,
+  "relatedArticles": [
+    "tecnologia-valor-negocio",
+    "necessidade-ao-prototipo"
+  ],
+  "sources": [
+    {
+      "title": "Schwaber e Sutherland — The Scrum Guide",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

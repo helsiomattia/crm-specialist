@@ -1,0 +1,807 @@
+{
+  "date": "2026-11-28",
+  "reviewer": "Codex — revisão técnica e editorial",
+  "originals": [
+    {
+      "id": "HM-001",
+      "slug": "salesforce-arquitetura-operacional",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-002",
+      "slug": "atendimento-omnichannel",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-003",
+      "slug": "flow-apex-lwc",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-004",
+      "slug": "tecnologia-valor-negocio",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-005",
+      "slug": "priorizar-projetos",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-006",
+      "slug": "lideranca-tecnica",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-007",
+      "slug": "automatizar-processo-ruim",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-008",
+      "slug": "indicadores-atendimento",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-009",
+      "slug": "documentar-processos",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-010",
+      "slug": "plataforma-conhecimento",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-011",
+      "slug": "mapa-chatbot",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-012",
+      "slug": "necessidade-ao-prototipo",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-013",
+      "slug": "empresa-pronta-ia",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-014",
+      "slug": "agentforce-amazon-connect",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-015",
+      "slug": "ia-reduzir-complexidade",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-016",
+      "slug": "estrategia-arquitetura",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-017",
+      "slug": "custo-alem-licenca",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    },
+    {
+      "id": "HM-018",
+      "slug": "dados-decisoes",
+      "bodyUnchanged": true,
+      "review": "Coerência com o mapa, escopo, exemplos, referências e classificação editorial; mantido e complementado por artigos relacionados no mapa."
+    }
+  ],
+  "newArticles": [
+    {
+      "id": "HM-019",
+      "slug": "governanca-acessos-salesforce",
+      "words": 706,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-020",
+      "slug": "service-cloud-entitlements-sla",
+      "words": 658,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-021",
+      "slug": "messagingsession-agentwork-eventos",
+      "words": 692,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-022",
+      "slug": "automacoes-salesforce-manutencao",
+      "words": 665,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-023",
+      "slug": "objetos-padrao-customizados",
+      "words": 683,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-024",
+      "slug": "apex-lwc-apis-contratos",
+      "words": 672,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-025",
+      "slug": "sales-cloud-pipeline-forecast",
+      "words": 642,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-026",
+      "slug": "armazenamento-retencao-salesforce",
+      "words": 652,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-027",
+      "slug": "devops-salesforce-entrega",
+      "words": 641,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-028",
+      "slug": "administracao-salesforce-arquitetura",
+      "words": 669,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-029",
+      "slug": "indicadores-decisoes-gestores",
+      "words": 568,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-030",
+      "slug": "roadmap-tecnico-estrategico",
+      "words": 564,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-031",
+      "slug": "capacidade-equipes-trabalho",
+      "words": 543,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-032",
+      "slug": "governanca-leve",
+      "words": 551,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-033",
+      "slug": "requisitos-agile-uat",
+      "words": 538,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-034",
+      "slug": "mapear-melhorar-processos",
+      "words": 571,
+      "sources": 3,
+      "maturity": null
+    },
+    {
+      "id": "HM-035",
+      "slug": "estruturar-operacao-atendimento",
+      "words": 538,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-036",
+      "slug": "processos-considerando-excecoes",
+      "words": 539,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-037",
+      "slug": "revops-passagem-bastao",
+      "words": 562,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-038",
+      "slug": "jornada-cliente-dependencias",
+      "words": 557,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-039",
+      "slug": "idealizar-painel-operacional",
+      "words": 567,
+      "sources": 1,
+      "maturity": "Proposta"
+    },
+    {
+      "id": "HM-040",
+      "slug": "arquitetura-visao-customer-360",
+      "words": 564,
+      "sources": 1,
+      "maturity": "Proposta"
+    },
+    {
+      "id": "HM-041",
+      "slug": "customer-journey-360-laboratorio",
+      "words": 563,
+      "sources": 1,
+      "maturity": "Proposta"
+    },
+    {
+      "id": "HM-042",
+      "slug": "painel-inteligencia-comercial",
+      "words": 552,
+      "sources": 1,
+      "maturity": "Proposta"
+    },
+    {
+      "id": "HM-043",
+      "slug": "mapa-dependencias-automacoes-sistemas",
+      "words": 534,
+      "sources": 1,
+      "maturity": "Proposta"
+    },
+    {
+      "id": "HM-044",
+      "slug": "ferramentas-gestao-competencias",
+      "words": 567,
+      "sources": 1,
+      "maturity": "Proposta"
+    },
+    {
+      "id": "HM-045",
+      "slug": "crm-servicos-profissionais",
+      "words": 569,
+      "sources": 1,
+      "maturity": "Proposta"
+    },
+    {
+      "id": "HM-046",
+      "slug": "ia-triagem-priorizacao",
+      "words": 526,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-047",
+      "slug": "bots-tradicionais-agentes-ia",
+      "words": 535,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-048",
+      "slug": "arquitetura-ia-mcp-a2a",
+      "words": 523,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-049",
+      "slug": "dados-qualidade-agentes",
+      "words": 543,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-050",
+      "slug": "prompts-grounding-avaliacao",
+      "words": 541,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-051",
+      "slug": "ia-desenvolvimento-validacao",
+      "words": 538,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-052",
+      "slug": "economia-ia-custo-resolucao",
+      "words": 537,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-053",
+      "slug": "governanca-ti-cobit-itil",
+      "words": 534,
+      "sources": 2,
+      "maturity": null
+    },
+    {
+      "id": "HM-054",
+      "slug": "balanced-scorecard-metas",
+      "words": 526,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-055",
+      "slug": "marketing-analytics-atribuicao",
+      "words": 519,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-056",
+      "slug": "conhecimento-seci-ativos",
+      "words": 540,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-057",
+      "slug": "inteligencia-competitiva-decisoes",
+      "words": 525,
+      "sources": 1,
+      "maturity": null
+    },
+    {
+      "id": "HM-058",
+      "slug": "nuvem-integracao-erp-crm",
+      "words": 555,
+      "sources": 2,
+      "maturity": null
+    }
+  ],
+  "completedBacklog": [
+    "IDEA-002",
+    "IDEA-005",
+    "IDEA-006",
+    "IDEA-008",
+    "IDEA-010",
+    "IDEA-012",
+    "IDEA-015",
+    "IDEA-020",
+    "IDEA-024",
+    "IDEA-027",
+    "IDEA-028",
+    "IDEA-031",
+    "IDEA-032",
+    "IDEA-035",
+    "IDEA-036",
+    "IDEA-038",
+    "IDEA-041",
+    "IDEA-042"
+  ],
+  "remainingBacklog": 42,
+  "validation": {
+    "articles": 58,
+    "published": 58,
+    "ready": 0,
+    "backlog": 60,
+    "backlogCompleted": 18,
+    "backlogOpen": 42,
+    "categories": [
+      {
+        "slug": "salesforce",
+        "articles": 13,
+        "ideas": 10
+      },
+      {
+        "slug": "gestao",
+        "articles": 8,
+        "ideas": 10
+      },
+      {
+        "slug": "processos",
+        "articles": 8,
+        "ideas": 10
+      },
+      {
+        "slug": "ideias",
+        "articles": 10,
+        "ideas": 10
+      },
+      {
+        "slug": "inovacao",
+        "articles": 10,
+        "ideas": 10
+      },
+      {
+        "slug": "administracao",
+        "articles": 9,
+        "ideas": 10
+      }
+    ],
+    "words": [
+      {
+        "slug": "governanca-acessos-salesforce",
+        "title": "Governança de acessos Salesforce: da licença ao registro",
+        "words": 706,
+        "status": "published"
+      },
+      {
+        "slug": "service-cloud-entitlements-sla",
+        "title": "Service Cloud: desenhando Cases, Entitlements e SLAs verificáveis",
+        "words": 658,
+        "status": "published"
+      },
+      {
+        "slug": "messagingsession-agentwork-eventos",
+        "title": "MessagingSession, AgentWork e PSR: reconstruindo a jornada de atendimento",
+        "words": 692,
+        "status": "published"
+      },
+      {
+        "slug": "automacoes-salesforce-manutencao",
+        "title": "Flows sustentáveis: contratos, falhas e manutenção das automações",
+        "words": 665,
+        "status": "published"
+      },
+      {
+        "slug": "objetos-padrao-customizados",
+        "title": "Objetos padrão ou customizados: modelar significado antes de campos",
+        "words": 683,
+        "status": "published"
+      },
+      {
+        "slug": "apex-lwc-apis-contratos",
+        "title": "Apex, SOQL, LWC e APIs: contratos que resistem às falhas",
+        "words": 672,
+        "status": "published"
+      },
+      {
+        "slug": "sales-cloud-pipeline-forecast",
+        "title": "Sales Cloud: do lead ao forecast com critérios verificáveis",
+        "words": 642,
+        "status": "published"
+      },
+      {
+        "slug": "armazenamento-retencao-salesforce",
+        "title": "Armazenamento e licenças Salesforce: otimizar sem apagar contexto",
+        "words": 652,
+        "status": "published"
+      },
+      {
+        "slug": "devops-salesforce-entrega",
+        "title": "DevOps Salesforce: do Git ao diagnóstico depois do deploy",
+        "words": 641,
+        "status": "published"
+      },
+      {
+        "slug": "administracao-salesforce-arquitetura",
+        "title": "Carreiras Salesforce: competências, PDI e evolução além da certificação",
+        "words": 669,
+        "status": "published"
+      },
+      {
+        "slug": "indicadores-decisoes-gestores",
+        "title": "Indicadores para gestores: transformar um painel em decisões",
+        "words": 568,
+        "status": "published"
+      },
+      {
+        "slug": "roadmap-tecnico-estrategico",
+        "title": "Roadmap técnico: prioridades, dependências e riscos visíveis",
+        "words": 564,
+        "status": "published"
+      },
+      {
+        "slug": "capacidade-equipes-trabalho",
+        "title": "Capacidade de equipes: planejar trabalho sem confundir ocupação e produtividade",
+        "words": 543,
+        "status": "published"
+      },
+      {
+        "slug": "governanca-leve",
+        "title": "Governança leve: responsabilidades claras e mudanças rastreáveis",
+        "words": 551,
+        "status": "published"
+      },
+      {
+        "slug": "requisitos-agile-uat",
+        "title": "Do requisito ao UAT: evidências para aceitar uma entrega",
+        "words": 538,
+        "status": "published"
+      },
+      {
+        "slug": "mapear-melhorar-processos",
+        "title": "Mapear e melhorar processos: do AS IS ao TO BE com evidências",
+        "words": 571,
+        "status": "published"
+      },
+      {
+        "slug": "estruturar-operacao-atendimento",
+        "title": "Estruturar atendimento: níveis, filas e responsabilidades",
+        "words": 538,
+        "status": "published"
+      },
+      {
+        "slug": "processos-considerando-excecoes",
+        "title": "Processos que consideram exceções: controles, auditoria e runbooks",
+        "words": 539,
+        "status": "published"
+      },
+      {
+        "slug": "revops-passagem-bastao",
+        "title": "RevOps e passagem de bastão: conectar marketing, vendas e sucesso",
+        "words": 562,
+        "status": "published"
+      },
+      {
+        "slug": "jornada-cliente-dependencias",
+        "title": "Jornada do cliente: relacionar experiência, operação e indicadores",
+        "words": 557,
+        "status": "published"
+      },
+      {
+        "slug": "idealizar-painel-operacional",
+        "title": "Laboratório: um painel operacional que ajuda a priorizar atendimento",
+        "words": 567,
+        "status": "published"
+      },
+      {
+        "slug": "arquitetura-visao-customer-360",
+        "title": "CRM Intelligence 360: uma proposta para conectar contexto e oportunidades",
+        "words": 564,
+        "status": "published"
+      },
+      {
+        "slug": "customer-journey-360-laboratorio",
+        "title": "Customer Journey 360: uma linha do tempo que preserva contexto",
+        "words": 563,
+        "status": "published"
+      },
+      {
+        "slug": "painel-inteligencia-comercial",
+        "title": "Revenue & Churn Intelligence: investigar receita e risco de perda",
+        "words": 552,
+        "status": "published"
+      },
+      {
+        "slug": "mapa-dependencias-automacoes-sistemas",
+        "title": "Architecture Control Center: mapear dependências e impacto de mudanças",
+        "words": 534,
+        "status": "published"
+      },
+      {
+        "slug": "ferramentas-gestao-competencias",
+        "title": "Salesforce Skill Shine: uma proposta de desenvolvimento por competências",
+        "words": 567,
+        "status": "published"
+      },
+      {
+        "slug": "crm-servicos-profissionais",
+        "title": "CRM para serviços profissionais: do primeiro contato à continuidade",
+        "words": 569,
+        "status": "published"
+      },
+      {
+        "slug": "ia-triagem-priorizacao",
+        "title": "IA na triagem: classificar, priorizar e recomendar com critérios",
+        "words": 526,
+        "status": "published"
+      },
+      {
+        "slug": "bots-tradicionais-agentes-ia",
+        "title": "Bots determinísticos, agentes e experiências híbridas: escolher a autonomia",
+        "words": 535,
+        "status": "published"
+      },
+      {
+        "slug": "arquitetura-ia-mcp-a2a",
+        "title": "Arquitetura de IA: contexto, APIs, MCP e A2A com responsabilidades claras",
+        "words": 523,
+        "status": "published"
+      },
+      {
+        "slug": "dados-qualidade-agentes",
+        "title": "Dados para agentes: identidade, Data Cloud e recuperação com RAG",
+        "words": 543,
+        "status": "published"
+      },
+      {
+        "slug": "prompts-grounding-avaliacao",
+        "title": "Prompts empresariais: instruções, grounding e avaliação de respostas",
+        "words": 541,
+        "status": "published"
+      },
+      {
+        "slug": "ia-desenvolvimento-validacao",
+        "title": "IA no desenvolvimento: acelerar hipóteses, preservar a validação",
+        "words": 538,
+        "status": "published"
+      },
+      {
+        "slug": "economia-ia-custo-resolucao",
+        "title": "Economia da IA: calcular custo por resultado, além de tokens e créditos",
+        "words": 537,
+        "status": "published"
+      },
+      {
+        "slug": "governanca-ti-cobit-itil",
+        "title": "Governança de TI: conectar COBIT, ITIL e decisões do negócio",
+        "words": 534,
+        "status": "published"
+      },
+      {
+        "slug": "balanced-scorecard-metas",
+        "title": "Balanced Scorecard: conectar estratégia, metas e aprendizado",
+        "words": 526,
+        "status": "published"
+      },
+      {
+        "slug": "marketing-analytics-atribuicao",
+        "title": "Marketing analytics: medir engajamento, conversão e atribuição com contexto",
+        "words": 519,
+        "status": "published"
+      },
+      {
+        "slug": "conhecimento-seci-ativos",
+        "title": "Conhecimento como ativo: do dado à prática com o modelo SECI",
+        "words": 540,
+        "status": "published"
+      },
+      {
+        "slug": "inteligencia-competitiva-decisoes",
+        "title": "Inteligência competitiva: transformar sinais em decisões verificáveis",
+        "words": 525,
+        "status": "published"
+      },
+      {
+        "slug": "nuvem-integracao-erp-crm",
+        "title": "Nuvem e integração ERP/CRM: modernizar com responsabilidades claras",
+        "words": 555,
+        "status": "published"
+      },
+      {
+        "slug": "salesforce-arquitetura-operacional",
+        "title": "Salesforce não é apenas um CRM: é parte da arquitetura operacional de uma empresa.",
+        "words": 1099,
+        "status": "published"
+      },
+      {
+        "slug": "atendimento-omnichannel",
+        "title": "O que existe por trás de um atendimento omnichannel bem estruturado.",
+        "words": 1082,
+        "status": "published"
+      },
+      {
+        "slug": "flow-apex-lwc",
+        "title": "Flow, Apex ou LWC? Como decidir sem criar complexidade desnecessária.",
+        "words": 1024,
+        "status": "published"
+      },
+      {
+        "slug": "tecnologia-valor-negocio",
+        "title": "Tecnologia não entrega valor sozinha: a importância de entender o negócio.",
+        "words": 1032,
+        "status": "published"
+      },
+      {
+        "slug": "priorizar-projetos",
+        "title": "Como priorizar projetos quando tudo parece urgente.",
+        "words": 1059,
+        "status": "published"
+      },
+      {
+        "slug": "lideranca-tecnica",
+        "title": "Liderança técnica não começa com um cargo de liderança.",
+        "words": 1039,
+        "status": "published"
+      },
+      {
+        "slug": "automatizar-processo-ruim",
+        "title": "Automatizar um processo ruim não resolve o problema.",
+        "words": 1103,
+        "status": "published"
+      },
+      {
+        "slug": "indicadores-atendimento",
+        "title": "O que seus indicadores de atendimento realmente estão medindo?",
+        "words": 1100,
+        "status": "published"
+      },
+      {
+        "slug": "documentar-processos",
+        "title": "Como documentar processos sem transformar conhecimento em burocracia.",
+        "words": 1094,
+        "status": "published"
+      },
+      {
+        "slug": "plataforma-conhecimento",
+        "title": "Uma plataforma de gestão do conhecimento para conectar pessoas, processos e sistemas.",
+        "words": 1076,
+        "status": "published"
+      },
+      {
+        "slug": "mapa-chatbot",
+        "title": "Como um mapa interativo pode revelar a complexidade de um chatbot.",
+        "words": 1065,
+        "status": "published"
+      },
+      {
+        "slug": "necessidade-ao-prototipo",
+        "title": "Da necessidade operacional ao protótipo: meu método para desenhar soluções.",
+        "words": 1073,
+        "status": "published"
+      },
+      {
+        "slug": "empresa-pronta-ia",
+        "title": "Antes de implementar IA, descubra se sua empresa está pronta.",
+        "words": 1098,
+        "status": "published"
+      },
+      {
+        "slug": "agentforce-amazon-connect",
+        "title": "Agentforce ou Amazon Connect? A decisão vai além da tecnologia.",
+        "words": 1096,
+        "status": "published"
+      },
+      {
+        "slug": "ia-reduzir-complexidade",
+        "title": "A IA deve reduzir a complexidade da operação, não criar outra camada.",
+        "words": 1112,
+        "status": "published"
+      },
+      {
+        "slug": "estrategia-arquitetura",
+        "title": "A estratégia empresarial precisa conversar com a arquitetura tecnológica.",
+        "words": 1115,
+        "status": "published"
+      },
+      {
+        "slug": "custo-alem-licenca",
+        "title": "Por que o custo de uma solução vai muito além do preço da licença.",
+        "words": 1129,
+        "status": "published"
+      },
+      {
+        "slug": "dados-decisoes",
+        "title": "Dados não geram decisões: pessoas, processos e contexto geram.",
+        "words": 1084,
+        "status": "published"
+      }
+    ]
+  }
+}

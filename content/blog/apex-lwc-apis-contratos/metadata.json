@@ -1,0 +1,55 @@
+{
+  "id": "HM-024",
+  "slug": "apex-lwc-apis-contratos",
+  "category": "salesforce",
+  "type": "technical",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Apex, SOQL, LWC e APIs: contratos que resistem às falhas",
+    "en": "Apex, SOQL, LWC and APIs: contracts that withstand failures",
+    "es": "Apex, SOQL, LWC y API: contratos que resisten los fallos"
+  },
+  "excerpt": {
+    "pt": "Como distribuir responsabilidades entre interface, serviço e integração, com autorização, testes e recuperação.",
+    "en": "Distribute responsibilities across interfaces, services and integrations with authorization, testing and recovery.",
+    "es": "Cómo distribuir responsabilidades entre interfaz, servicio e integración con autorización, pruebas y recuperación."
+  },
+  "tags": [
+    "salesforce",
+    "integracoes",
+    "seguranca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "arquitetura-salesforce",
+  "seriesOrder": 6,
+  "relatedArticles": [
+    "flow-apex-lwc",
+    "salesforce-arquitetura-operacional"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce — Secure Apex Classes",
+      "url": "https://developer.salesforce.com/docs/platform/lwc/guide/apex-security",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "Salesforce — Get Started with Named Credentials",
+      "url": "https://developer.salesforce.com/docs/platform/named-credentials/guide/get-started.html",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

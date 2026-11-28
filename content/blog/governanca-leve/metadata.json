@@ -1,0 +1,50 @@
+{
+  "id": "HM-032",
+  "slug": "governanca-leve",
+  "category": "gestao",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Governança leve: responsabilidades claras e mudanças rastreáveis",
+    "en": "Lightweight governance: clear responsibilities and traceable change",
+    "es": "Gobernanza ligera: responsabilidades claras y cambios trazables"
+  },
+  "excerpt": {
+    "pt": "Como organizar decisões, mudanças e comunicação com stakeholders sem criar aprovação para tudo.",
+    "en": "Organize decisions, changes and stakeholder communication with proportional controls.",
+    "es": "Cómo organizar decisiones, cambios y comunicación con controles proporcionales."
+  },
+  "tags": [
+    "gestao",
+    "governanca",
+    "lideranca"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "decisoes-arquitetura",
+  "seriesOrder": 5,
+  "relatedArticles": [
+    "estrategia-arquitetura",
+    "priorizar-projetos"
+  ],
+  "sources": [
+    {
+      "title": "ISACA — COBIT",
+      "url": "https://www.isaca.org/en/resources/cobit",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

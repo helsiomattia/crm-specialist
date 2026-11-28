@@ -1,0 +1,50 @@
+{
+  "id": "HM-038",
+  "slug": "jornada-cliente-dependencias",
+  "category": "processos",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Jornada do cliente: relacionar experiência, operação e indicadores",
+    "en": "Customer journeys: connecting experience, operations and metrics",
+    "es": "Jornada del cliente: relacionar experiencia, operación e indicadores"
+  },
+  "excerpt": {
+    "pt": "Como mapear momentos de atrito e usar NPS, CSAT e dados operacionais com contexto.",
+    "en": "Map friction points and interpret NPS, CSAT and operational data in context.",
+    "es": "Mapear fricciones e interpretar NPS, CSAT y datos operativos con contexto."
+  },
+  "tags": [
+    "processos",
+    "experiencia-cliente",
+    "indicadores"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "processos-empresariais",
+  "seriesOrder": 6,
+  "relatedArticles": [
+    "indicadores-atendimento",
+    "revops-passagem-bastao"
+  ],
+  "sources": [
+    {
+      "title": "Bain — Measuring Your Net Promoter Score",
+      "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score/",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-28",
+  "articles": [
+    {
+      "slug": "salesforce-arquitetura-operacional",
+      "id": "HM-001",
+      "title": "Salesforce não é apenas um CRM: é parte da arquitetura operacional de uma empresa.",
+      "words": 1099,
+      "bodySha256": "56a66ab4305fbfc56f328bb7647f2fc7d33f57bbaec84e93097a05f65cf54e64"
+    },
+    {
+      "slug": "atendimento-omnichannel",
+      "id": "HM-002",
+      "title": "O que existe por trás de um atendimento omnichannel bem estruturado.",
+      "words": 1082,
+      "bodySha256": "a5235ae6a95e44b5cfc41b5b11447b68339f824aae4f45760c82600170a5dd2f"
+    },
+    {
+      "slug": "flow-apex-lwc",
+      "id": "HM-003",
+      "title": "Flow, Apex ou LWC? Como decidir sem criar complexidade desnecessária.",
+      "words": 1024,
+      "bodySha256": "ef9403e40d0f93985178f7f0cf2e7e449868add796119f632908c468f237bb75"
+    },
+    {
+      "slug": "tecnologia-valor-negocio",
+      "id": "HM-004",
+      "title": "Tecnologia não entrega valor sozinha: a importância de entender o negócio.",
+      "words": 1032,
+      "bodySha256": "0d48fea216082c23d49746fab9ebbb742e91aa76900743d06ac05f9c5ba4eed6"
+    },
+    {
+      "slug": "priorizar-projetos",
+      "id": "HM-005",
+      "title": "Como priorizar projetos quando tudo parece urgente.",
+      "words": 1059,
+      "bodySha256": "285827d52f5be98cfff649a31f755ad3efa93788aeaa99408b893d048e185daa"
+    },
+    {
+      "slug": "lideranca-tecnica",
+      "id": "HM-006",
+      "title": "Liderança técnica não começa com um cargo de liderança.",
+      "words": 1039,
+      "bodySha256": "09c546974b1b6285563481e2c03d63899bf98719db3d65af8d20c9af8c9c0cee"
+    },
+    {
+      "slug": "automatizar-processo-ruim",
+      "id": "HM-007",
+      "title": "Automatizar um processo ruim não resolve o problema.",
+      "words": 1103,
+      "bodySha256": "ba49c249538cb71cfad9b5dd2bfd52bec485850de3e13e9bd1d8782c9786850a"
+    },
+    {
+      "slug": "indicadores-atendimento",
+      "id": "HM-008",
+      "title": "O que seus indicadores de atendimento realmente estão medindo?",
+      "words": 1100,
+      "bodySha256": "e63012ab81cbc62eb182c45ef9ffdd50a5834905da302f7df4a384abf8b6dfb5"
+    },
+    {
+      "slug": "documentar-processos",
+      "id": "HM-009",
+      "title": "Como documentar processos sem transformar conhecimento em burocracia.",
+      "words": 1094,
+      "bodySha256": "2fff87799c9ccd25ac74585a27d76122333c667c016caaf06026f0d5b7023192"
+    },
+    {
+      "slug": "plataforma-conhecimento",
+      "id": "HM-010",
+      "title": "Uma plataforma de gestão do conhecimento para conectar pessoas, processos e sistemas.",
+      "words": 1076,
+      "bodySha256": "539b347e410653c2581a1a9539931e1ced0332e1cbae1267b3819515ca010556"
+    },
+    {
+      "slug": "mapa-chatbot",
+      "id": "HM-011",
+      "title": "Como um mapa interativo pode revelar a complexidade de um chatbot.",
+      "words": 1065,
+      "bodySha256": "60947b1d8b216e7dce303eb763596c29b668bfe8702d195590724a59f91dc74c"
+    },
+    {
+      "slug": "necessidade-ao-prototipo",
+      "id": "HM-012",
+      "title": "Da necessidade operacional ao protótipo: meu método para desenhar soluções.",
+      "words": 1073,
+      "bodySha256": "1fb81bf8453aae4ff8cd166a32007a7e791f3cb56d2c125194aa69690ec0f26b"
+    },
+    {
+      "slug": "empresa-pronta-ia",
+      "id": "HM-013",
+      "title": "Antes de implementar IA, descubra se sua empresa está pronta.",
+      "words": 1098,
+      "bodySha256": "bfbb9427083a803f787b6905b30dc94b3a8de44e869fce72cf2e3a2f8f026d5d"
+    },
+    {
+      "slug": "agentforce-amazon-connect",
+      "id": "HM-014",
+      "title": "Agentforce ou Amazon Connect? A decisão vai além da tecnologia.",
+      "words": 1096,
+      "bodySha256": "64b4ceb6c606e6764c22fe988f7cef40c6bde5a468c3ee5bdd0c5992bc5a9810"
+    },
+    {
+      "slug": "ia-reduzir-complexidade",
+      "id": "HM-015",
+      "title": "A IA deve reduzir a complexidade da operação, não criar outra camada.",
+      "words": 1112,
+      "bodySha256": "b4548c328b23e37949217f626de9b746b63cc4870f553e4b191d1cf6ca8cbe4d"
+    },
+    {
+      "slug": "estrategia-arquitetura",
+      "id": "HM-016",
+      "title": "A estratégia empresarial precisa conversar com a arquitetura tecnológica.",
+      "words": 1115,
+      "bodySha256": "3a9b5baf5fac1532ecd858b4bd309f55dab77e5b271d9cbdc3b259f527944af7"
+    },
+    {
+      "slug": "custo-alem-licenca",
+      "id": "HM-017",
+      "title": "Por que o custo de uma solução vai muito além do preço da licença.",
+      "words": 1129,
+      "bodySha256": "10d74cac9f5762212d299febce908f9c1eabe5fdf04cad304f0d9b861f1b5791"
+    },
+    {
+      "slug": "dados-decisoes",
+      "id": "HM-018",
+      "title": "Dados não geram decisões: pessoas, processos e contexto geram.",
+      "words": 1084,
+      "bodySha256": "aca2b757e03a7215fffed3af1fc7a854ca5c58db7e261b7b66d2538871f27544"
+    }
+  ]
+}

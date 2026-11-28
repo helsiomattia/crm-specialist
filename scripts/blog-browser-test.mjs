@@ -7,6 +7,7 @@ import viteConfig from '../vite.config.js';
 import { blogContentPlugin, readBlogContent } from './lib/blog-content.mjs';
 import { startTestServer } from './lib/test-server.mjs';
 import { blogFixture } from '../tests/helpers/blog-fixture.mjs';
+import { markdownOutline } from '../src/utils/blog-markdown.js';
 
 const { chromium } = await import(process.env.HM_PLAYWRIGHT_MODULE || 'playwright');
 const output = process.env.HM_TEST_OUTPUT || 'test-results';
@@ -79,8 +80,8 @@ try {
     assert.equal(await page.locator('#blog-main article').count(), 2);
     await page.getByLabel('Buscar artigos', { exact: true }).fill('INTEGRACAO');
     assert.equal(await page.locator('#blog-main article').count(), 1);
-    await page.getByRole('combobox', { name: 'Filtrar por tema', exact: true }).click();
-    await page.getByRole('option', { name: 'Processos & Operações', exact: true }).click();
+    if (width < 1100) await page.locator('.blog-sidebar summary').click();
+    await page.getByRole('button', { name: /Processos & Operações/ }).click();
     await page.getByText('Nenhum artigo encontrado.', { exact: true }).waitFor();
     await page.getByRole('button', { name: 'Limpar filtros' }).click();
     assert.equal(await page.locator('#blog-main article').count(), 2);
@@ -143,22 +144,25 @@ try {
     const context = await browser.newContext({ viewport: { width, height: 1000 }, locale: 'pt-BR', reducedMotion: 'reduce' });
     await context.route('**/*', route => new URL(route.request().url()).origin === local ? route.continue() : route.abort());
     const page = await context.newPage(); page.on('pageerror', error => report.errors.push(error.stack));
-    await page.goto(`${local}/blog`); await page.getByRole('status').filter({ hasText: '18 artigos encontrados' }).waitFor();
-    assert.equal(await page.locator('#blog-main article').count(), 13);
+    await page.goto(`${local}/blog`); await page.getByRole('status').filter({ hasText: `${realPosts.length} artigos encontrados` }).waitFor();
+    assert.equal(await page.locator('#blog-main article').count(), 4);
     assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex, follow');
     await noOverflow(page);
     if (width === 1440 || width === 390) await page.screenshot({ path: `${output}/editorial-index-${width}.png`, fullPage: true });
+    await page.getByRole('link', { name: 'Ver todos os artigos', exact: true }).click();
+    assert.equal(await page.locator('#blog-main article').count(), 12);
     await page.getByRole('button', { name: 'Ir para página 2', exact: true }).click();
-    assert.equal(await page.locator('#blog-main article').count(), 6);
+    assert.equal(await page.locator('#blog-main article').count(), Math.min(12, realPosts.length - 12));
     if (width === 1440) for (const post of realPosts) {
       await page.goto(`${local}/blog/${post.slug}`); await page.locator('.blog-prose h2').first().waitFor();
-      assert.equal(await page.locator('h1').count(), 1); assert((await page.locator('.blog-prose').innerText()).length > 4000);
+      assert.equal(await page.locator('h1').count(), 1);
+      assert.equal((await page.locator('.blog-prose').innerText()).replace(/\s/g, ''), markdownOutline(post.bodies.pt).text.replace(/\s/g, ''), `${post.slug}: corpo completo`);
       const ids = await page.locator('.blog-prose [id]').evaluateAll(nodes => nodes.map(node => node.id)); assert.equal(new Set(ids).size, ids.length);
       await noOverflow(page);
     }
     await page.goto(`${local}/blog/salesforce-arquitetura-operacional`); await page.locator('.blog-prose h2').first().waitFor(); await noOverflow(page);
     if (width === 1440 || width === 390) await page.screenshot({ path: `${output}/editorial-article-${width}.png`, fullPage: true });
-    note(`${width}px: conteúdo real, prévia identificada/noindex, paginação 12+6, leitura responsiva${width === 1440 ? ' e todos os 18 artigos carregados' : ''}`);
+    note(`${width}px: conteúdo real, prévia identificada/noindex, paginação dinâmica, leitura responsiva${width === 1440 ? ` e todos os ${realPosts.length} artigos carregados integralmente` : ''}`);
     await context.close();
   }
   assert.equal(report.errors.length, 0);

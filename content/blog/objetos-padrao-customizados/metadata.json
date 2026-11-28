@@ -1,0 +1,55 @@
+{
+  "id": "HM-023",
+  "slug": "objetos-padrao-customizados",
+  "category": "salesforce",
+  "type": "architecture",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Objetos padrão ou customizados: modelar significado antes de campos",
+    "en": "Standard or custom objects: model meaning before fields",
+    "es": "Objetos estándar o personalizados: modelar significado antes de campos"
+  },
+  "excerpt": {
+    "pt": "Critérios para escolher objetos, relacionamentos e limites de integração sem transformar o CRM em um cadastro ambíguo.",
+    "en": "Choose objects, relationships and integration boundaries without creating an ambiguous CRM model.",
+    "es": "Criterios para elegir objetos, relaciones y límites de integración sin crear un modelo CRM ambiguo."
+  },
+  "tags": [
+    "salesforce",
+    "arquitetura",
+    "dados"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "arquitetura-salesforce",
+  "seriesOrder": 5,
+  "relatedArticles": [
+    "salesforce-arquitetura-operacional",
+    "dados-decisoes"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce Architects — Integration Patterns",
+      "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/integration-patterns.html",
+      "checkedAt": "2026-11-28"
+    },
+    {
+      "title": "GOV.UK — The Government Data Quality Framework",
+      "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

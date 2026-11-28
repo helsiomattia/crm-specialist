@@ -1,0 +1,50 @@
+{
+  "id": "HM-025",
+  "slug": "sales-cloud-pipeline-forecast",
+  "category": "salesforce",
+  "type": "guide",
+  "status": "published",
+  "editorialStatus": "published",
+  "confidentialityStatus": "validated",
+  "factualStatus": "validated",
+  "title": {
+    "pt": "Sales Cloud: do lead ao forecast com critérios verificáveis",
+    "en": "Sales Cloud: from lead to forecast with verifiable criteria",
+    "es": "Sales Cloud: del lead al forecast con criterios verificables"
+  },
+  "excerpt": {
+    "pt": "Como organizar qualificação, oportunidades, roteamento e previsões sem confundir preenchimento com avanço comercial.",
+    "en": "Organize qualification, opportunities, routing and forecasts without confusing data entry with commercial progress.",
+    "es": "Cómo organizar calificación, oportunidades, asignación y previsiones sin confundir registros con avance comercial."
+  },
+  "tags": [
+    "salesforce",
+    "crm",
+    "indicadores"
+  ],
+  "author": "Helsio Mattia",
+  "language": "pt",
+  "languages": [
+    "pt"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": null,
+  "reviewedAt": "2026-11-28",
+  "featured": false,
+  "series": "arquitetura-salesforce",
+  "seriesOrder": 7,
+  "relatedArticles": [
+    "dados-decisoes",
+    "tecnologia-valor-negocio"
+  ],
+  "sources": [
+    {
+      "title": "Salesforce Trailhead — Work Your Opportunities",
+      "url": "https://trailhead.salesforce.com/content/learn/modules/leads_opportunities_lightning_experience/work-your-opportunities",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "maturity": null,
+  "approvedBy": "Codex — revisão técnica e editorial",
+  "reviewNotes": "Expansão solicitada em 28/11/2026. Revisão técnica e editorial por Codex: coerência conceitual, fontes primárias, metadados, relações e confidencialidade. Exemplos sintéticos identificados; propostas sem alegação de implantação ou resultado real. Original em português, títulos e resumos PT/EN/ES. Sem atribuir revisão pessoal ao autor. A liberação altera somente o catálogo local."
+}

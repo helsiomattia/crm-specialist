@@ -280,7 +280,7 @@ export default function App() {
       <CssBaseline />
       <GlobalStyles styles={globalStyles} />
       <Box sx={{ overflowX: 'hidden', '@supports (overflow-x: clip)': { overflowX: 'clip' } }}>
-        <Navbar activePage={appRoute.type === 'blog' || appRoute.type === 'blogArticle' ? 'blog' : undefined} />
+        {appRoute.type !== 'blog' && appRoute.type !== 'blogArticle' && <Navbar />}
         {appRoute.type === 'blog' || appRoute.type === 'blogArticle' ? (
           <Suspense fallback={<LoadingFallback />}>
             {appRoute.type === 'blogArticle' ? <BlogArticlePage slug={appRoute.slug} language={appRoute.language} /> : <BlogPage collection={appRoute.collection} slug={appRoute.slug} />}
@@ -311,7 +311,7 @@ export default function App() {
             </main>
           </>
         )}
-        <Footer />
+        {appRoute.type !== 'blog' && appRoute.type !== 'blogArticle' && <Footer />}
       </Box>
     </ThemeProvider>
   );
